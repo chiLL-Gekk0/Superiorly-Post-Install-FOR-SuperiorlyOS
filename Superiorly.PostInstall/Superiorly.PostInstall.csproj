@@ -46,10 +46,17 @@
     <EmbeddedResource Include="..\data\tooltips.json" LogicalName="Superiorly.PostInstall.data.tooltips.json" />
     <Content Include="..\data\actions.json" CopyToOutputDirectory="PreserveNewest" Link="data\actions.json" />
     <Content Include="..\data\tooltips.json" CopyToOutputDirectory="PreserveNewest" Link="data\tooltips.json" />
+    <Content Include="Assets\Bundle\NSudo_8.2_All_Components.zip" Link="Tools\NSudo_8.2_All_Components.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudo_8.2_All_Components.zip')" />
+    <Content Include="Assets\Bundle\NSudoLG.exe" Link="Tools\NSudoLG.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudoLG.exe')" />
+    <Content Include="Assets\Bundle\PerformanceMeasurementTool_Danske101.zip" Link="Tools\PerformanceMeasurementTool_Danske101.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\PerformanceMeasurementTool_Danske101.zip')" />
     <Resource Include="Assets\Logos\*.png" />
     <Resource Include="Assets\guest.png" />
     <Resource Include="Assets\Fonts\ClimateCrisis-1979.otf" />
   </ItemGroup>
+
+  <Target Name="CopyAmdTools" AfterTargets="Build">
+    <Copy SourceFiles="$(ProjectDir)Assets\Bundle\RadeonMod.exe" DestinationFolder="$(OutputPath)AMD Tweaks" SkipUnchangedFiles="true" Condition="Exists('$(ProjectDir)Assets\Bundle\RadeonMod.exe')" />
+  </Target>
 
   <!-- ponytail: CalVer auto-version (UTC date, no manual bumps, no new deps).
        yyyy.M.d.HHmm fits Win32 4x16-bit fields (HHmm max 2359) and System.Version parsing in UpdateService. -->

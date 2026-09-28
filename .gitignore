@@ -26,5 +26,6 @@ node_modules/
 PublishProfiles/
 tools/R2-credentials.txt
 
-# Downloadable at runtime (actions.json handles install)
+# Dev-only local bundle (optional Content when present; never committed)
+Superiorly.PostInstall/Assets/Bundle/
 

@@ -2,7 +2,9 @@
 
 Downloaded on demand from the public mirror
 `github.com/chiLL-Gekk0/Superiorly-PostInstall-Assets` (SHA256-checked),
-unless noted otherwise:
+unless noted otherwise. A dev machine may drop verified copies under
+`Superiorly.PostInstall/Assets/Bundle/` (untracked, optional) for offline
+builds; the app prefers them after SHA check.
 
 - **NSudo 8.2** (`NSudo_8.2_All_Components.zip`, `NSudoLG.exe`) —
   MIT, (c) M2-Team and Contributors. https://github.com/M2TeamArchived/NSudo
