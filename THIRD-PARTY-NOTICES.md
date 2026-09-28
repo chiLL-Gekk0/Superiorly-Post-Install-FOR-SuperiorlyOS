@@ -1,6 +1,8 @@
 # Third-party notices
 
-Bundled (shipped inside the installer, under `Assets/Bundle/Tools/` / `Assets/Bundle/Nvidia Profiles/`):
+Downloaded on demand from the public mirror
+`github.com/chiLL-Gekk0/Superiorly-PostInstall-Assets` (SHA256-checked),
+unless noted otherwise:
 
 - **NSudo 8.2** (`NSudo_8.2_All_Components.zip`, `NSudoLG.exe`) —
   MIT, (c) M2-Team and Contributors. https://github.com/M2TeamArchived/NSudo
@@ -8,9 +10,7 @@ Bundled (shipped inside the installer, under `Assets/Bundle/Tools/` / `Assets/Bu
   MIT, (c) Intel Corporation. https://github.com/intel/presentmon
 - **EXPERIMENTAL-*/Global-Test/Latency-Test `.nip` profiles** — created by
   Superiorly for this project (MIT, same as this repo).
-- **RadeonMod** (`Assets/Bundle/!AMD Tweaks\RadeonMod.exe`, freeware via Guru3D) — bundled
-  for offline use; no redistribution grant found, kept as-shipped with vendor
-  fallback in-app.
+- **RadeonMod** (freeware via Guru3D) — manual drop-in or vendor download, not shipped.
   https://www.guru3d.com/download/amd-registry-editor-download/
 - UI brand icons (`Assets/Logos/*.png`) remain property of their owners,
   used nominatively to identify each vendor.

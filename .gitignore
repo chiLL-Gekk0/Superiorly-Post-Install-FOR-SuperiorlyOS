@@ -27,6 +27,4 @@ PublishProfiles/
 tools/R2-credentials.txt
 
 # Downloadable at runtime (actions.json handles install)
-Superiorly.PostInstall/Assets/Bundle/!AMD Tweaks/MoreClockTool.exe
-Superiorly.PostInstall/Assets/Bundle/!AMD Tweaks/MorePowerTool.exe
-Superiorly.PostInstall/Assets/Bundle/!AMD Tweaks/RadeonSoftwareSlimmer.exe
+

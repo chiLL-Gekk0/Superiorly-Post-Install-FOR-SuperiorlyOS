@@ -7,16 +7,17 @@ from a plaintext JSON catalog (`data/actions.json`) you can read and audit.
 ## Build
 
 Requires .NET 8 SDK and Inno Setup 6 (for the installer only).
-Clone with submodules: `git clone --recursive <url>` (or `git submodule update --init` in an existing clone) — `Superiorly.PostInstall/Assets/Bundle` (tools, NIP profiles, AMD utils) lives in its own repo.
 
 ```powershell
 dotnet build Superiorly.PostInstall/Superiorly.PostInstall.csproj   # fast check
 .\dist.build.ps1                                                     # publish + installer
 ```
 
-The installer packages the publish output plus the bundled `Assets/Bundle/Tools/` and
-`Assets/Bundle/Nvidia Profiles/` folders straight into
+The installer packages the publish output straight into
 `Superiorly.PostInstall-Setup-<CalVer>.exe` (CalVer `yyyy.M.d.HHmm`, UTC).
+Tools and NIP profiles download on demand from the public mirror
+`github.com/chiLL-Gekk0/Superiorly-PostInstall-Assets` (NSudo also tries
+GitHub releases first); all downloads are SHA256-checked.
 
 ## Notes
 

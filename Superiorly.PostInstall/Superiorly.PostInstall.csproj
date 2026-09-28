@@ -46,24 +46,10 @@
     <EmbeddedResource Include="..\data\tooltips.json" LogicalName="Superiorly.PostInstall.data.tooltips.json" />
     <Content Include="..\data\actions.json" CopyToOutputDirectory="PreserveNewest" Link="data\actions.json" />
     <Content Include="..\data\tooltips.json" CopyToOutputDirectory="PreserveNewest" Link="data\tooltips.json" />
-    <Content Include="Assets\Bundle\Nvidia Profiles\EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" Link="Nvidia Profiles\EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\Bundle\Nvidia Profiles\EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" Link="Nvidia Profiles\EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\Bundle\Nvidia Profiles\EXPERIMENTAL-AGGRESSIVE-TEST.nip" Link="Nvidia Profiles\EXPERIMENTAL-AGGRESSIVE-TEST.nip" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\Bundle\Nvidia Profiles\EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" Link="Nvidia Profiles\EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\Bundle\Nvidia Profiles\Global-Test-Experimental.nip" Link="Nvidia Profiles\Global-Test-Experimental.nip" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\Bundle\Nvidia Profiles\Latency-Test-Experimental.nip" Link="Nvidia Profiles\Latency-Test-Experimental.nip" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\Bundle\Tools\NSudo_8.2_All_Components.zip" Link="Tools\NSudo_8.2_All_Components.zip" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\Bundle\Tools\NSudoLG.exe" Link="Tools\NSudoLG.exe" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\Bundle\Tools\PerformanceMeasurementTool_Danske101.zip" Link="Tools\PerformanceMeasurementTool_Danske101.zip" CopyToOutputDirectory="PreserveNewest" />
     <Resource Include="Assets\Logos\*.png" />
     <Resource Include="Assets\guest.png" />
     <Resource Include="Assets\Fonts\ClimateCrisis-1979.otf" />
   </ItemGroup>
-
-
-  <Target Name="CopyAmdTools" AfterTargets="Build">
-    <Copy SourceFiles="$(ProjectDir)Assets\Bundle\!AMD Tweaks\RadeonMod.exe" DestinationFolder="$(OutputPath)AMD Tweaks" SkipUnchangedFiles="true" />
-  </Target>
 
   <!-- ponytail: CalVer auto-version (UTC date, no manual bumps, no new deps).
        yyyy.M.d.HHmm fits Win32 4x16-bit fields (HHmm max 2359) and System.Version parsing in UpdateService. -->

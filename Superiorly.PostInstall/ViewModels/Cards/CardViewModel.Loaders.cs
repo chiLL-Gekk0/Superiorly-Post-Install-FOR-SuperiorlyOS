@@ -9,39 +9,60 @@ namespace Superiorly.PostInstall.ViewModels;
 
 public partial class CardViewModel : ObservableObject {
 
-    // ponytail: EXPERIMENTAL nips ship in the bundle (Nvidia Profiles), SHA256-checked below
-    private static readonly (string Name, string Sha)[] BundledNips =
+    // ponytail: EXPERIMENTAL nips fetch from the public mirror (SHA256), cached beside the app
+    private static readonly (string Name, string Url, string Sha)[] MirrorNips =
     {
-        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip", "AD79219730A3364C2DE37824E16FA5766F88A3FDDFEE148BCACED2D89814D329"),
-        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip", "897B733242FB9160C6224B8D6B036D3CC27F37A3F1B90367A42EB5119F312274"),
-        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip", "B48F3DB395E0E6758D9B4487360CD7FC65862443E07695B67824A587B3C31BD2"),
-        ("EXPERIMENTAL-AGGRESSIVE-TEST.nip", "AA149815190F3B0E17B4B899AC6C1D90C7BB51CA03424B4E07BECCBC337A4A07"),
-        ("Global-Test-Experimental.nip", "1E1147EF1A36FA231F67BC098981E8A659066E02BC1EA496E1627B851D65CE02"),
-        ("Latency-Test-Experimental.nip", "B0580C050C689D62E21897F953980FA874D5EFAE4ABC8F6433D3F48C7E9B1BFF"),
+        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip", "AD79219730A3364C2DE37824E16FA5766F88A3FDDFEE148BCACED2D89814D329"),
+        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip", "897B733242FB9160C6224B8D6B036D3CC27F37A3F1B90367A42EB5119F312274"),
+        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH%2BRTCORE-V2.nip", "B48F3DB395E0E6758D9B4487360CD7FC65862443E07695B67824A587B3C31BD2"),
+        ("EXPERIMENTAL-AGGRESSIVE-TEST.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/EXPERIMENTAL-AGGRESSIVE-TEST.nip", "AA149815190F3B0E17B4B899AC6C1D90C7BB51CA03424B4E07BECCBC337A4A07"),
+        ("Global-Test-Experimental.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/Global-Test-Experimental.nip", "1E1147EF1A36FA231F67BC098981E8A659066E02BC1EA496E1627B851D65CE02"),
+        ("Latency-Test-Experimental.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/Latency-Test-Experimental.nip", "B0580C050C689D62E21897F953980FA874D5EFAE4ABC8F6433D3F48C7E9B1BFF"),
     };
 
-    // ponytail: bundled profiles only — no downloads; a hash mismatch means a broken install
-    private void EnsureLocalNips()
+    private static readonly System.Net.Http.HttpClient NipHttp = CreateNipHttp();
+    private static int _nipFetchState;
+    private static System.Net.Http.HttpClient CreateNipHttp()
     {
+        var h = new System.Net.Http.HttpClient { Timeout = TimeSpan.FromMinutes(2) };
+        h.DefaultRequestHeaders.UserAgent.ParseAdd("Superiorly.PostInstall");
+        return h;
+    }
+
+    private async Task EnsureNipsAsync()
+    {
+        if (System.Threading.Interlocked.CompareExchange(ref _nipFetchState, 1, 0) != 0) return;
         try
         {
             var nipDir = Path.Combine(AppContext.BaseDirectory, "Nvidia Profiles");
-            if (!Directory.Exists(nipDir)) return;
-            using var sha = System.Security.Cryptography.SHA256.Create();
-            foreach (var n in BundledNips)
+            try { Directory.CreateDirectory(nipDir); } catch { return; }
+            using var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromMinutes(2));
+            foreach (var n in MirrorNips)
             {
-                var p = Path.Combine(nipDir, n.Name);
-                if (!File.Exists(p)) continue;
+                var dest = Path.Combine(nipDir, n.Name);
+                if (File.Exists(dest)) continue;
                 try
                 {
-                    using var fh = File.OpenRead(p);
-                    if (!Convert.ToHexString(sha.ComputeHash(fh)).Equals(n.Sha, StringComparison.OrdinalIgnoreCase))
-                        _owner.Notify(n.Name + ": SHA256 mismatch, reinstall the app", null, Title, char.ConvertFromUtf32(0xE711));
+                    using var cts2 = System.Threading.CancellationTokenSource.CreateLinkedTokenSource(cts.Token);
+                    cts2.CancelAfter(TimeSpan.FromSeconds(30));
+                    using var res = await NipHttp.GetAsync(n.Url, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cts2.Token).ConfigureAwait(false);
+                    res.EnsureSuccessStatusCode();
+                    var tmp = dest + ".part";
+                    using (var net = await res.Content.ReadAsStreamAsync(cts2.Token).ConfigureAwait(false))
+                    using (var fs = File.Create(tmp)) { await net.CopyToAsync(fs, cts2.Token).ConfigureAwait(false); }
+                    using (var sha = System.Security.Cryptography.SHA256.Create())
+                    using (var fh = File.OpenRead(tmp))
+                    {
+                        if (!Convert.ToHexString(sha.ComputeHash(fh)).Equals(n.Sha, StringComparison.OrdinalIgnoreCase)) { try { File.Delete(tmp); } catch { } continue; }
+                    }
+                    File.Move(tmp, dest, true);
                 }
-                catch { }
+                catch { try { File.Delete(dest + ".part"); } catch { } }
             }
+            var d = System.Windows.Application.Current?.Dispatcher;
+            if (d != null) await d.InvokeAsync(LoadNipProfiles);
         }
-        catch { }
+        finally { System.Threading.Interlocked.Exchange(ref _nipFetchState, 0); }
     }
     private void LoadNipProfiles()
     {

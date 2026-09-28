@@ -96,7 +96,7 @@ public partial class CardViewModel : ObservableObject {
             Win32Refresh();
             UpdateWin32Preview();
         }
-        if (_action.Id == "apply-nip") { LoadNipProfiles(); EnsureLocalNips(); }
+        if (_action.Id == "apply-nip") { LoadNipProfiles(); _ = EnsureNipsAsync(); }
         if (_action.Id is "radeonsoftwareslimmer" or "moreclocktool" or "morepowertool" or "radeonmod")
             LoadAmdTool();
         if (_action.Id == "cru")
