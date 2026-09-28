@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Superiorly Post-Install</AssemblyName>
+    <Version>1.0.0</Version>
+    <AssemblyTitle>Superiorly Post-Install</AssemblyTitle>
+    <Product>Superiorly Post-Install</Product>
+    <Company>Superiorly</Company>
+    <Copyright>Copyright (c) 2026 Superiorly</Copyright>
+    <Trademark>Superiorly</Trademark>
+    <Description>Superiorly Post-Install. Free and open source (MIT).</Description>
+    <AssemblyCopyright>Copyright (c) 2026 Superiorly (MIT)</AssemblyCopyright>
+    <ApplicationManifest>..\manifests\app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <PublishSingleFile>false</PublishSingleFile>
+    <SelfContained>false</SelfContained>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <PublishTrimmed>false</PublishTrimmed>
+    <TrimMode>partial</TrimMode>
+    <DebugType>None</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <RetainVMGarbageCollection>false</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\data\actions.json" LogicalName="Superiorly.PostInstall.data.actions.json" Condition="'$(Configuration)'!='Release'" />
+    <EmbeddedResource Include="..\data\tooltips.json" LogicalName="Superiorly.PostInstall.data.tooltips.json" />
+    <Content Include="..\data\actions.json" CopyToOutputDirectory="PreserveNewest" Link="data\actions.json" />
+    <Content Include="..\data\tooltips.json" CopyToOutputDirectory="PreserveNewest" Link="data\tooltips.json" />
+    <Content Include="Nvidia Profiles\EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Nvidia Profiles\EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Nvidia Profiles\EXPERIMENTAL-AGGRESSIVE-TEST.nip" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Nvidia Profiles\EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Nvidia Profiles\Global-Test-Experimental.nip" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Nvidia Profiles\Latency-Test-Experimental.nip" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Tools\NSudo_8.2_All_Components.zip" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Tools\NSudoLG.exe" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Tools\PerformanceMeasurementTool_Danske101.zip" CopyToOutputDirectory="PreserveNewest" />
+    <Resource Include="Assets\Logos\*.png" />
+    <Resource Include="Assets\guest.png" />
+    <Resource Include="Assets\Fonts\ClimateCrisis-1979.otf" />
+  </ItemGroup>
+
+
+  <Target Name="CopyAmdTools" AfterTargets="Build">
+    <Copy SourceFiles="$(ProjectDir)!AMD Tweaks\RadeonMod.exe" DestinationFolder="$(OutputPath)AMD Tweaks" SkipUnchangedFiles="true" />
+  </Target>
+
+  <!-- ponytail: CalVer auto-version (UTC date, no manual bumps, no new deps).
+       yyyy.M.d.HHmm fits Win32 4x16-bit fields (HHmm max 2359) and System.Version parsing in UpdateService. -->
+  <Target Name="CalVerVersion" BeforeTargets="BeforeBuild">
+    <PropertyGroup>
+      <CalVer>$([System.DateTime]::UtcNow.ToString("yyyy.M.d.HHmm"))</CalVer>
+      <Version>$(CalVer)</Version>
+      <AssemblyVersion>$(CalVer)</AssemblyVersion>
+      <FileVersion>$(CalVer)</FileVersion>
+      <InformationalVersion>$(CalVer)</InformationalVersion>
+    </PropertyGroup>
+  </Target>
+
+</Project>

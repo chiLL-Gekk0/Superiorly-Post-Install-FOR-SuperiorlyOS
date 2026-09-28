@@ -1,0 +1,32 @@
+bin/
+obj/
+dist/
+*.user
+.vs/
+*.DotSettings.user
+*.suo
+.idea/
+*.log
+*.pdb
+*.tmp
+packages/
+project.nuget.cache
+Thumbs.db
+desktop.ini
+.DS_Store
+graft/
+launchSettings.json
+TestResults/
+installer/out/
+Superiorly.PostInstall-Setup-*.exe
+node_modules/
+*.bak
+*.orig
+*.pubxml
+PublishProfiles/
+tools/R2-credentials.txt
+
+# Downloadable at runtime (actions.json handles install)
+Superiorly.PostInstall/!AMD Tweaks/MoreClockTool.exe
+Superiorly.PostInstall/!AMD Tweaks/MorePowerTool.exe
+Superiorly.PostInstall/!AMD Tweaks/RadeonSoftwareSlimmer.exe

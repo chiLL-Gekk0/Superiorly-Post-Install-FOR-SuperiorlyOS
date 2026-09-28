@@ -1,0 +1,40 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Superiorly Light — soft neutrals, no pure white surfaces; Crimson #C1004E kept (AA on light) -->
+    <Color x:Key="C_Bg">#ECECF0</Color>
+    <SolidColorBrush x:Key="B_Bg" Color="{StaticResource C_Bg}" />
+    <SolidColorBrush x:Key="B_WindowBorder" Color="#D0D0D8" />
+    <SolidColorBrush x:Key="B_Surface" Color="#E9E9EF" />
+    <SolidColorBrush x:Key="B_Card" Color="#F8F8FB" />
+    <SolidColorBrush x:Key="B_CardHover" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="B_CardBorder" Color="#B9B9C4" />
+    <SolidColorBrush x:Key="B_TextPrimary" Color="#17171C" />
+    <SolidColorBrush x:Key="B_TextSecondary" Color="#43434C" />
+    <SolidColorBrush x:Key="B_TextOnColor" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="B_Accent" Color="#C1004E" />
+    <SolidColorBrush x:Key="B_AccentHover" Color="#E1145F" />
+    <SolidColorBrush x:Key="B_AccentSubtle" Color="#F9E2EC" />
+    <SolidColorBrush x:Key="B_Update" Color="#0B6BCB" />
+    <SolidColorBrush x:Key="B_UpdateHover" Color="#0959A8" />
+    <SolidColorBrush x:Key="B_UpdateSoft" Color="#1A0B6BCB" />
+    <SolidColorBrush x:Key="B_UpdateText" Color="#0B6BCB" />
+    <SolidColorBrush x:Key="B_TitlebarHover" Color="#DEDEE6" />
+    <SolidColorBrush x:Key="B_SwitchOff" Color="#B9B9C4" />
+    <SolidColorBrush x:Key="B_Success" Color="#C1004E" />
+    <SolidColorBrush x:Key="B_Sidebar" Color="#E3E3EA"/>
+    <SolidColorBrush x:Key="B_SidebarText" Color="#17171C"/>
+    <SolidColorBrush x:Key="B_HomeBand" Color="#E9E9EF"/>
+    <SolidColorBrush x:Key="B_HomeBandText" Color="#17171C"/>
+    <SolidColorBrush x:Key="B_OnAccent" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="B_Overlay" Color="#80000000"/>
+    <SolidColorBrush x:Key="B_ActiveRow" Color="#1AC1004E"/>
+    <SolidColorBrush x:Key="B_SwitchTrack" Color="#33C1004E"/>
+    <SolidColorBrush x:Key="B_SwitchThumb" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="B_LogoTile" Color="#E9E9EF"/>
+    <SolidColorBrush x:Key="B_ScoreLow" Color="#D92D20"/>
+    <SolidColorBrush x:Key="B_ScoreMid" Color="#B54708"/>
+    <SolidColorBrush x:Key="B_ScoreHigh" Color="#067647"/>
+    <SolidColorBrush x:Key="B_ScoreMuted" Color="#71717A"/>
+
+</ResourceDictionary>

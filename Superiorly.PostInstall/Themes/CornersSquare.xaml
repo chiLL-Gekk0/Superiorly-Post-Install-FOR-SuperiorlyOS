@@ -1,0 +1,8 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <!-- Windows 10 style — square (current look) -->
+    <CornerRadius x:Key="R_S">0</CornerRadius>
+    <CornerRadius x:Key="R_M">0</CornerRadius>
+    <CornerRadius x:Key="R_Sidebar">0,0,0,0</CornerRadius>
+</ResourceDictionary>

@@ -1,0 +1,8 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <!-- Windows 11 style — rounded (window excluded, native rounding applies) -->
+    <CornerRadius x:Key="R_S">6</CornerRadius>
+    <CornerRadius x:Key="R_M">12</CornerRadius>
+    <CornerRadius x:Key="R_Sidebar">0,12,0,0</CornerRadius>
+</ResourceDictionary>
