@@ -15,6 +15,8 @@ $CalVer = (Get-Date).ToUniversalTime().ToString("yyyy.M.d.HHmm")
 $useR2R = (-not $Fast)
 Write-Output "CalVer=$CalVer R2R=$useR2R"
 
+# 0b. Bundle submodule must be checked out (Content/CopyAmdTools need the files).
+if (-not (Test-Path -LiteralPath "$root/Superiorly.PostInstall/Assets/Bundle/Tools/NSudo_8.2_All_Components.zip")) { throw "bundle assets missing: run git submodule update --init" }
 # 1. Preflight: kill running app with retry (fixed Sleep 3 in publish.ps1 is racy).
 foreach ($i in 1..5) {
     $p = Get-Process -Name "Superiorly.PostInstall" -ErrorAction SilentlyContinue

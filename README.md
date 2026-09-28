@@ -6,7 +6,8 @@ from a plaintext JSON catalog (`data/actions.json`) you can read and audit.
 
 ## Build
 
-Requires .NET 8 SDK and Inno Setup 6 (for the installer only):
+Requires .NET 8 SDK and Inno Setup 6 (for the installer only).
+Clone with submodules: `git clone --recursive <url>` (or `git submodule update --init` in an existing clone) — `Superiorly.PostInstall/Assets/Bundle` (tools, NIP profiles, AMD utils) lives in its own repo.
 
 ```powershell
 dotnet build Superiorly.PostInstall/Superiorly.PostInstall.csproj   # fast check
