@@ -13,8 +13,8 @@ dotnet build Superiorly.PostInstall/Superiorly.PostInstall.csproj   # fast check
 .\dist.build.ps1                                                     # publish + installer
 ```
 
-The installer packages the publish output plus the bundled `Tools/` and
-`Nvidia Profiles/` folders straight into
+The installer packages the publish output plus the bundled `Assets/Bundle/Tools/` and
+`Assets/Bundle/Nvidia Profiles/` folders straight into
 `Superiorly.PostInstall-Setup-<CalVer>.exe` (CalVer `yyyy.M.d.HHmm`, UTC).
 
 ## Notes

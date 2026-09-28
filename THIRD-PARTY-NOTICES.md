@@ -1,6 +1,6 @@
 # Third-party notices
 
-Bundled (shipped inside the installer, under `Tools/` / `Nvidia Profiles/`):
+Bundled (shipped inside the installer, under `Assets/Bundle/Tools/` / `Assets/Bundle/Nvidia Profiles/`):
 
 - **NSudo 8.2** (`NSudo_8.2_All_Components.zip`, `NSudoLG.exe`) —
   MIT, (c) M2-Team and Contributors. https://github.com/M2TeamArchived/NSudo
@@ -8,7 +8,7 @@ Bundled (shipped inside the installer, under `Tools/` / `Nvidia Profiles/`):
   MIT, (c) Intel Corporation. https://github.com/intel/presentmon
 - **EXPERIMENTAL-*/Global-Test/Latency-Test `.nip` profiles** — created by
   Superiorly for this project (MIT, same as this repo).
-- **RadeonMod** (`!AMD Tweaks\RadeonMod.exe`, freeware via Guru3D) — bundled
+- **RadeonMod** (`Assets/Bundle/!AMD Tweaks\RadeonMod.exe`, freeware via Guru3D) — bundled
   for offline use; no redistribution grant found, kept as-shipped with vendor
   fallback in-app.
   https://www.guru3d.com/download/amd-registry-editor-download/
