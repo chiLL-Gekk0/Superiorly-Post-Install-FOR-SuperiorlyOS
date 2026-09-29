@@ -1,0 +1,56 @@
+namespace Superiorly.PostInstall.Services;
+
+public static partial class TranslationService
+{
+    private static readonly Dictionary<string, string> ActionTitles_de = new()
+    {
+
+            ["group-sys-services"]="Services & Performance", ["group-sys-network"]="Network & Sharing", ["group-sys-shell"]="Explorer, Start & Taskbar", ["group-sys-recovery"]="Files, Recovery & Power", ["group-sys-privacy"]="Telemetry & Suggestions",
+            ["show-tray-icons"]="Show tray icons", ["menus-delay"]="Menus delay", ["network-throttling"]="Network throttling", ["error-reporting"]="Error reporting", ["compat-assistant"]="Compatibility assistant", ["sticky-keys"]="Sticky keys", ["smb1"]="SMBv1 protocol", ["smb2"]="SMBv2 protocol", ["ntfs-timestamp"]="NTFS timestamp", ["system-restore"]="System restore", ["superfetch"]="Superfetch", ["homegroup"]="HomeGroup", ["media-sharing"]="Media sharing", ["regbackup"]="Periodic registry backup", ["compact-mode"]="Compact mode", ["long-paths"]="Long paths", ["quickaccess-history"]="Quick access history", ["insider-service"]="Insider service", ["sensor-services"]="Sensor services", ["search-index"]="Search index", ["telemetry-services"]="Telemetry services", ["modern-standby"]="Modern standby", ["widgets-board"]="Widgets board", ["news-interests"]="News and interests", ["store-updates"]="Store suggested apps", ["telemetry-tasks"]="Telemetry tasks", ["cortana"]="Cortana and web search", ["startmenu-ads"]="Start menu ads", ["gamebar"]="Game Bar and DVR", ["gamemode"]="Game Mode", ["ink-workspace"]="Windows Ink workspace", ["spelling-typing"]="Spelling and typing", ["cloud-clipboard"]="Cloud clipboard", ["cast-to-device"]="Cast to device", ["chrome-debloat"]="Chrome debloat", ["firefox-debloat"]="Firefox debloat", ["office-debloat"]="Office debloat", ["vs-telemetry"]="Visual Studio telemetry", ["nvidia-telemetry"]="NVIDIA telemetry", ["vscode"]="VS Code",
+            ["chrome"]="Google Chrome", ["firefox"]="Mozilla Firefox", ["librewolf"]="LibreWolf", ["brave"]="Brave",
+            ["thorium"]="Thorium AVX2", ["edge"]="Microsoft Edge", ["vivaldi"]="Vivaldi", ["opera"]="Opera",
+            ["operagx"]="Opera GX", ["comet"]="Perplexity Comet", ["floorp"]="Floorp", ["waterfox"]="Waterfox",
+            ["ungoogled"]="Ungoogled Chromium", ["zen"]="Zen Browser", ["arc"]="Arc", ["duckduckgo"]="DuckDuckGo",
+            ["mullvad"]="Mullvad Browser", ["pale-moon"]="Pale Moon", ["yandex"]="Yandex Browser",
+            ["epic-browser"]="Epic Privacy Browser", ["cachy-browser"]="Cachy Browser", ["kagi-orion"]="Kagi Orion",
+            ["tor-browser"]="Tor Browser", ["chromium"]="Chromium", ["avast-secure"]="Avast Secure Browser",
+            ["whale"]="Naver Whale", ["falkon"]="Falkon", ["dia"]="Dia", ["brave-debloat"]="Brave Debloat", ["edge-debloat"]="Edge Debloat",
+            ["process-explorer"]="Process Explorer", ["nsudo"]="NSudo", ["driverview"]="DriverView",
+            ["cru"]="Benutzerdefiniertes Auflösungsprogramm (CRU)", ["windows-update-manager"]="Windows-Update-Manager",
+            ["mousetester"]="MouseTester", ["geek-uninstaller"]="Geek Uninstaller", ["measuresleep"]="MeasureSleep",
+            ["ocat"]="OCAT", ["onboard-memory-manager"]="OnboardMemoryManager",
+            ["performance-measurement"]="PerformanceMeasurementTool",
+            ["msstore-downloader"]="Microsoft Store-Downloader",
+            ["autoruns"]="Autoruns", ["devicecleanup"]="DeviceCleanup", ["gointerruptpolicy"]="GoInterruptPolicy",
+            ["serviwin"]="Serviwin", ["usbtreeview"]="UsbTreeView", ["ddu"]="DDU",
+            ["filterkeysetter"]="FilterKeysSetter", ["throttlestop"]="ThrottleStop",
+            ["radeonsoftwareslimmer"]="RadeonSoftwareSlimmer", ["moreclocktool"]="MoreClockTool",
+            ["morepowertool"]="MorePowerTool", ["radeonmod"]="RadeonMod",
+            ["nvcleanstall"]="NVCleanstall", ["nvidia-inspector"]="NVIDIA Profile Inspector", ["apply-nip"]="NIP anwenden",
+            ["force-pstate0"]="PState0 erzwingen", ["group-cpu-scheduling"]="CPU & Planung",
+            ["lazymodetimeout"]="LazyModeTimeout", ["systemresponsiveness"]="SystemResponsiveness",
+            ["receive-buffers"]="Empfangspuffer", ["transmit-buffers"]="Sendepuffer",
+            ["csrss-priority"]="CSRS-Priorität", ["iolatencycap"]="IoLatencyCap", ["iopagelocklimit"]="IOPageLockLimit",
+            ["group-network"]="Netzwerk", ["nagle-algorithm"]="Nagle-Algorithmus", ["nolazymode"]="NoLazyMode",
+            ["tsc-sync-policy"]="TSC-Synchronisierungsrichtlinie", ["group-timer-interrupts"]="Timer & Interrupts",
+            ["useplatformtick"]="useplatformtick", ["group-gpu-display"]="GPU & Anzeige",
+            ["disable-mpo"]="Multi-Plane-Overlay (MPO) deaktivieren", ["disable-interrupt-steering"]="Interrupt-Steering deaktivieren",
+            ["group-power"]="Energie", ["disable-power-throttling"]="Energiedrosselung deaktivieren",
+            ["group-system-tools"]="Systemtools", ["group-maintenance"]="Wartung", ["group-benchmarks-peripherals"]="Benchmarks und Peripherie",
+            ["threaded-dpc"]="Threaded-DPC", ["cpu-idle"]="CPU-Leerlauf (Energieplan)",
+            ["force-direct-flip"]="Direct Flip erzwingen", ["force-independent-flip"]="Independent Flip erzwingen",
+            ["force-flip-true-immediate"]="Echten Immediate-Flip-Modus erzwingen", ["group-memory-io"]="Speicher & E/A",
+            ["disablepagingexecutive"]="DisablePagingExecutive", ["disablepagecombining"]="DisablePageCombining",
+            ["queued-present-limit"]="Warteschlangen-Präsentationslimit", ["win32priorityseparation"]="Win32PrioritySeparation",
+            ["powerplan-manager"]="Energiepläne", ["wifi"]="WLAN", ["bluetooth"]="Bluetooth",
+            ["hop-limit"]="HopLimit (Hotspot)", ["printer"]="Drucker",
+            ["task-manager"]="Task-Manager zu Process Explorer", ["textinputhost"]="TextInputHost",
+            ["vbs"]="VBS (virtualisierungsbasierte Sicherheit)", ["hvci"]="HVCI (Speicherintegrität)",
+            ["core-isolation"]="Kernisolierung", ["firewall"]="Firewall", ["lua"]="UAC / LUA",
+            ["vulnerable-driver-blocklist"]="Sperrliste für anfällige Treiber", ["nx-mode"]="No-Execute-(NX-)Modus",
+            ["xbox"]="Xbox-Dienste", ["fivem-safe-services"]="Sichere FiveM/Minecraft-Dienste",
+            ["windows-update-drivers"]="Windows-Update-Treiber", ["start-menu"]="Startmenü",
+            ["use-default-tile"]="Standardkachel verwenden",             ["fix-intel-panel"]="Intel-Systemsteuerung reparieren",
+        
+    };
+}

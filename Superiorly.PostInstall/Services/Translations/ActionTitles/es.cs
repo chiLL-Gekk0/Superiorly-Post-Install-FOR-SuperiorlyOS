@@ -1,0 +1,56 @@
+namespace Superiorly.PostInstall.Services;
+
+public static partial class TranslationService
+{
+    private static readonly Dictionary<string, string> ActionTitles_es = new()
+    {
+
+            ["group-sys-services"]="Servicios y rendimiento", ["group-sys-network"]="Red y uso compartido", ["group-sys-shell"]="Explorador, Inicio y barra de tareas", ["group-sys-recovery"]="Archivos, recuperación y energía", ["group-sys-privacy"]="Telemetría y sugerencias",
+            ["show-tray-icons"]="Mostrar iconos de bandeja", ["menus-delay"]="Retraso de menús", ["network-throttling"]="Limitación de red", ["error-reporting"]="Informe de errores", ["compat-assistant"]="Asistente de compatibilidad", ["sticky-keys"]="Teclas especiales", ["smb1"]="Protocolo SMBv1", ["smb2"]="Protocolo SMBv2", ["ntfs-timestamp"]="Marca de tiempo NTFS", ["system-restore"]="Restaurar sistema", ["superfetch"]="Superfetch", ["homegroup"]="Grupo Hogar", ["media-sharing"]="Uso compartido multimedia", ["regbackup"]="Copia periódica del registro", ["compact-mode"]="Modo compacto", ["long-paths"]="Rutas largas", ["quickaccess-history"]="Historial de acceso rápido", ["insider-service"]="Servicio Insider", ["sensor-services"]="Servicios de sensores", ["search-index"]="Índice de búsqueda", ["telemetry-services"]="Servicios de telemetría", ["modern-standby"]="Suspensión moderna", ["widgets-board"]="Panel de widgets", ["news-interests"]="Noticias e intereses", ["store-updates"]="Apps sugeridas de la tienda", ["telemetry-tasks"]="Tareas de telemetría", ["cortana"]="Cortana y búsqueda web", ["startmenu-ads"]="Anuncios del menú Inicio", ["gamebar"]="Game Bar y DVR", ["gamemode"]="Modo juego", ["ink-workspace"]="Espacio de tinta", ["spelling-typing"]="Corrección y escritura", ["cloud-clipboard"]="Portapapeles en la nube", ["cast-to-device"]="Transmitir a dispositivo", ["chrome-debloat"]="Debloat de Chrome", ["firefox-debloat"]="Debloat de Firefox", ["office-debloat"]="Debloat de Office", ["vs-telemetry"]="Telemetría de Visual Studio", ["nvidia-telemetry"]="Telemetría de NVIDIA", ["vscode"]="VS Code",
+            ["chrome"]="Google Chrome", ["firefox"]="Mozilla Firefox", ["librewolf"]="LibreWolf", ["brave"]="Brave",
+            ["thorium"]="Thorium AVX2", ["edge"]="Microsoft Edge", ["vivaldi"]="Vivaldi", ["opera"]="Opera",
+            ["operagx"]="Opera GX", ["comet"]="Perplexity Comet", ["floorp"]="Floorp", ["waterfox"]="Waterfox",
+            ["ungoogled"]="Ungoogled Chromium", ["zen"]="Zen Browser", ["arc"]="Arc", ["duckduckgo"]="DuckDuckGo",
+            ["mullvad"]="Mullvad Browser", ["pale-moon"]="Pale Moon", ["yandex"]="Yandex Browser",
+            ["epic-browser"]="Epic Privacy Browser", ["cachy-browser"]="Cachy Browser", ["kagi-orion"]="Kagi Orion",
+            ["tor-browser"]="Tor Browser", ["chromium"]="Chromium", ["avast-secure"]="Avast Secure Browser",
+            ["whale"]="Naver Whale", ["falkon"]="Falkon", ["dia"]="Dia", ["brave-debloat"]="Brave Debloat", ["edge-debloat"]="Edge Debloat",
+            ["process-explorer"]="Process Explorer", ["nsudo"]="NSudo", ["driverview"]="DriverView",
+            ["cru"]="Utilidad de resolución personalizada (CRU)", ["windows-update-manager"]="Administrador de Windows Update",
+            ["mousetester"]="MouseTester", ["geek-uninstaller"]="Geek Uninstaller", ["measuresleep"]="MeasureSleep",
+            ["ocat"]="OCAT", ["onboard-memory-manager"]="OnboardMemoryManager",
+            ["performance-measurement"]="PerformanceMeasurementTool",
+            ["msstore-downloader"]="Descargador de Microsoft Store",
+            ["autoruns"]="Autoruns", ["devicecleanup"]="DeviceCleanup", ["gointerruptpolicy"]="GoInterruptPolicy",
+            ["serviwin"]="Serviwin", ["usbtreeview"]="UsbTreeView", ["ddu"]="DDU",
+            ["filterkeysetter"]="FilterKeysSetter", ["throttlestop"]="ThrottleStop",
+            ["radeonsoftwareslimmer"]="RadeonSoftwareSlimmer", ["moreclocktool"]="MoreClockTool",
+            ["morepowertool"]="MorePowerTool", ["radeonmod"]="RadeonMod",
+            ["nvcleanstall"]="NVCleanstall", ["nvidia-inspector"]="NVIDIA Profile Inspector", ["apply-nip"]="Aplicar NIP",
+            ["force-pstate0"]="Forzar PState0", ["group-cpu-scheduling"]="CPU y programación",
+            ["lazymodetimeout"]="LazyModeTimeout", ["systemresponsiveness"]="SystemResponsiveness",
+            ["receive-buffers"]="Búferes de recepción", ["transmit-buffers"]="Búferes de transmisión",
+            ["csrss-priority"]="Prioridad CSRS", ["iolatencycap"]="IoLatencyCap", ["iopagelocklimit"]="IOPageLockLimit",
+            ["group-network"]="Red", ["nagle-algorithm"]="Algoritmo de Nagle", ["nolazymode"]="NoLazyMode",
+            ["tsc-sync-policy"]="Política de sincronización TSC", ["group-timer-interrupts"]="Temporizador e interrupciones",
+            ["useplatformtick"]="useplatformtick", ["group-gpu-display"]="GPU y pantalla",
+            ["disable-mpo"]="Desactivar superposición multiplano (MPO)", ["disable-interrupt-steering"]="Desactivar redirección de interrupciones",
+            ["group-power"]="Energía", ["disable-power-throttling"]="Desactivar limitación de energía",
+            ["group-system-tools"]="Herramientas del sistema", ["group-maintenance"]="Mantenimiento", ["group-benchmarks-peripherals"]="Benchmarks y periféricos",
+            ["threaded-dpc"]="DPC en hilos", ["cpu-idle"]="Inactividad de CPU (plan de energía)",
+            ["force-direct-flip"]="Forzar volteo directo", ["force-independent-flip"]="Forzar volteo independiente",
+            ["force-flip-true-immediate"]="Forzar modo inmediato real", ["group-memory-io"]="Memoria y E/S",
+            ["disablepagingexecutive"]="DisablePagingExecutive", ["disablepagecombining"]="DisablePageCombining",
+            ["queued-present-limit"]="Límite de presentación en cola", ["win32priorityseparation"]="Win32PrioritySeparation",
+            ["powerplan-manager"]="Planes de energía", ["wifi"]="Wi-Fi", ["bluetooth"]="Bluetooth",
+            ["hop-limit"]="HopLimit (punto de acceso)", ["printer"]="Impresoras",
+            ["task-manager"]="Task Manager a Process Explorer", ["textinputhost"]="TextInputHost",
+            ["vbs"]="VBS (seguridad basada en virtualización)", ["hvci"]="HVCI (integridad de memoria)",
+            ["core-isolation"]="Aislamiento del núcleo", ["firewall"]="Firewall", ["lua"]="UAC / LUA",
+            ["vulnerable-driver-blocklist"]="Lista de bloqueo de controladores vulnerables", ["nx-mode"]="Modo No-Execute (NX)",
+            ["xbox"]="Servicios de Xbox", ["fivem-safe-services"]="Servicios seguros FiveM/Minecraft",
+            ["windows-update-drivers"]="Controladores de Windows Update", ["start-menu"]="Menú Inicio",
+            ["use-default-tile"]="Usar mosaico predeterminado",             ["fix-intel-panel"]="Reparar panel de Intel",
+        
+    };
+}
