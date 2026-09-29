@@ -7,7 +7,7 @@ namespace Superiorly.PostInstall.Converters;
 
 public class SecurityColorConverter : IValueConverter
 {
-    // ponytail: themed via TryFindResource (B_Score*) so scores stay readable on both canvases; frozen fallbacks if theme missing.
+    // themed via tryfindresource so scores stay readable; frozen fallbacks if theme missing
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         if (value is int score)

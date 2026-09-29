@@ -6,7 +6,6 @@ namespace Superiorly.PostInstall.Services;
 // light / dark / auto (auto follows Windows AppsUseLightTheme; live refresh via WM_SETTINGCHANGE)
 public sealed class ThemeService : IThemeService
 {
-    // ponytail: lazy so startup parses only the used theme
     private static readonly Lazy<ResourceDictionary> Light = new(() => new() { Source = new Uri("pack://application:,,,/Themes/Light.xaml") });
     private static readonly Lazy<ResourceDictionary> Dark = new(() => new() { Source = new Uri("pack://application:,,,/Themes/Dark.xaml") });
     private static readonly Lazy<ResourceDictionary> CornersSquare = new(() => new() { Source = new Uri("pack://application:,,,/Themes/CornersSquare.xaml") });

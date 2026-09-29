@@ -32,7 +32,7 @@ public partial class MainWindow : Window
 
     private void OnDismissingNotification(Models.NotificationItem item)
     {
-        // ponytail: exit animation runs in code (XAML EnterActions never fires here — verified headless)
+        // exit animation in code, xaml enter actions never fire here
         if (DataContext is not MainViewModel vm) return;
         try
         {
@@ -63,7 +63,7 @@ public partial class MainWindow : Window
     {
         try
         {
-            // ponytail: clip follows the theme radius so rounded bands keep round corners
+            // clip follows the theme radius so rounded bands keep round corners
             var r = FindResource("R_M") is CornerRadius cr ? cr.TopLeft : 0;
             CardsClipGrid.Clip = new RectangleGeometry(new Rect(0, 0, size.Width, size.Height), r, r);
         }

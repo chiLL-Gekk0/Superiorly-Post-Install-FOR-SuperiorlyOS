@@ -45,15 +45,15 @@ public partial class MainWindow : Window
 
 
 
-        // ponytail: per-section scroll memory — save on scroll, restore once after refill
+        // per-section scroll memory: save on scroll, restore once after refill
         string ScrollKey() => ((DataContext as MainViewModel)?.SelectedSection?.Id ?? "") + "/" + ((DataContext as MainViewModel)?.SelectedTab?.Id ?? "");
         CardsScroll.ScrollChanged += (_, _) =>
         {
-            // ponytail: programmatic scrolls must not overwrite memory (see restore below)
+            // programmatic scrolls must not overwrite memory
             if (_suppressScrollSave) return;
             try { _scrollMemory[ScrollKey()] = CardsScroll.VerticalOffset; } catch { }
         };
-        // ponytail: scrollbar visible only while actively scrolling, fade out after 1s idle
+        // scrollbar visible only while scrolling, fade out after 1s idle
         _scrollbarIdle.Tick += (_, _) => { _scrollbarIdle.Stop(); var b = CardsBar(); if (b != null && b.IsMouseOver) { _scrollbarIdle.Start(); return; } FadeCardsBar(0, 350, false); };
         CardsScroll.ScrollChanged += (_, e) => { if (e.VerticalChange != 0) { FadeCardsBar(1, 200, true); _scrollbarIdle.Stop(); _scrollbarIdle.Start(); } };
         CardsScroll.Loaded += (_, _) => HookCardsBar();
@@ -70,7 +70,7 @@ public partial class MainWindow : Window
                 _restoreScrollArmed = false;
                 try
                 {
-                    // ponytail: restore-first single decision point — saved offset wins, else top.
+                    // restore-first: saved offset wins, else top
                     // No zeroing in the arm above: its synchronous ScrollChanged would erase the NEW key's offset.
                     var off = _scrollMemory.TryGetValue(ScrollKey(), out var o) ? o : 0;
                     Dispatcher.BeginInvoke(() =>
@@ -141,7 +141,7 @@ public partial class MainWindow : Window
         const int wmSettingChange = 0x001A;
         if (msg == wmSettingChange && lParam != IntPtr.Zero)
         {
-            // ponytail: auto theme follows Windows light/dark live, no polling, no new deps
+            // auto theme follows windows light/dark live, no polling, no new deps
             try
             {
                 if (Marshal.PtrToStringUni(lParam) == "ImmersiveColorSet" && DataContext is MainViewModel vm)

@@ -7,7 +7,7 @@ using Superiorly.PostInstall.Views;
 
 namespace Superiorly.PostInstall;
 
-// ponytail: entry point (BAML x:Class + startup object).
+// entry point: baml class plus startup object
 public partial class App : Application
 {
     public new static App Current => (App)Application.Current;

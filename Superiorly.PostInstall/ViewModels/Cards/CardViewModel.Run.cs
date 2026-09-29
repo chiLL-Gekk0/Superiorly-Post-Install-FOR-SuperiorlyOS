@@ -12,7 +12,7 @@ public partial class CardViewModel : ObservableObject {
     internal async Task RunAsync(ActionOption option)
     {
         if (option.Commands.Count == 0) return;
-        // ponytail: search re-entry cancels the previous search instead of staying dead on IsBusy
+        // allow search re-entry to cancel prior run
         var isSearchRetry = IsSearchCard && option.Label.Equals("Search", StringComparison.OrdinalIgnoreCase) && Running;
         if (Running && !isSearchRetry) return;
         if (isSearchRetry) { try { _cts?.Cancel(); } catch { } }

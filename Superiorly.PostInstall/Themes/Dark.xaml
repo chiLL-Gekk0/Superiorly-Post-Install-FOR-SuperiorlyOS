@@ -1,7 +1,6 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!-- Superiorly Dark — Black #000000 / Crimson #C1004E / Graphite #17171C / Ash #9A9AA3 / White #FFFFFF -->
     <Color x:Key="C_Bg">#000000</Color>
     <SolidColorBrush x:Key="B_Bg" Color="{StaticResource C_Bg}" />
     <SolidColorBrush x:Key="B_WindowBorder" Color="#232329" />

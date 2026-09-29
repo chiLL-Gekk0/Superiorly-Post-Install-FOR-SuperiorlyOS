@@ -21,7 +21,6 @@ public sealed class ActionItem
     // every command exiting 0 means the action is currently on
     public List<string> Check { get; set; } = new();
 
-    // commands to launch the program when it is already installed
     public List<string> Launch { get; set; } = new();
 
     public BrowserTip? Tip { get; set; }

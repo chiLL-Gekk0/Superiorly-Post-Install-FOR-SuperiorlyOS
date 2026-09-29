@@ -17,7 +17,7 @@ public interface IUpdateService
 public sealed class UpdateService : IUpdateService
 {
     private static readonly HttpClient Http = new();
-    // ponytail: public repo releases are the update channel (free, versioned); single x86 Setup asset.
+    // public repo releases are the update channel; single x86 setup asset
     private const string ReleasesUrl = "https://api.github.com/repos/chiLL-Gekk0/Superiorly-Post-Install-FOR-SuperiorlyOS/releases/latest";
     private const string AssetPrefix = "Superiorly.PostInstall-Setup-";
 

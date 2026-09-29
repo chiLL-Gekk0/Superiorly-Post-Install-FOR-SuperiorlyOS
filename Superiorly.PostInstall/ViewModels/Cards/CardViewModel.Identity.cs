@@ -42,6 +42,6 @@ public partial class CardViewModel : ObservableObject {
     public string TipData => TipText(_action.Tip?.Data);
     public int TipSecurity => _action.Tip?.Security ?? 0;
     public string TipSecurityText => $"{TipSecurity}/10";
-    // ponytail: debloat policies are not a security score — hide the ranking there only
+    // debloat has no security score; hide ranking there
     public bool ShowSecurity => HasTip && TipSecurity > 0 && ActionId is not "brave-debloat" and not "edge-debloat";
 }

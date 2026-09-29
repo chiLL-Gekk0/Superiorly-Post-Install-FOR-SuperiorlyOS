@@ -103,7 +103,7 @@ public partial class CardViewModel : ObservableObject {
             LoadCruTools();
         if (_action.Id == "powerplan-manager")
         {
-            // ponytail: paint instantly from startup-warmed cache, refresh in background
+            // paint from warmed cache, refresh in background
             if (_powerPlanOutputCache != null)
             {
                 try { ApplyPlans(ParsePlanOutput(_powerPlanOutputCache)); } catch { }

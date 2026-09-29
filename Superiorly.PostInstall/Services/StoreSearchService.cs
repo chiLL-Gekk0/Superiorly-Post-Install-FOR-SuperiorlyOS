@@ -28,8 +28,7 @@ public sealed class StoreSearchService : IStoreSearchService
     {
         var q = query.Trim();
         if (q.Length == 0) return [];
-        // ponytail: ONE winget spawn (all sources) + store API in parallel; stream each leg as it
-        // finishes so first results paint in ~1-3s; soft cap ~8s then merge partials (rival tradeoff).
+        // one winget spawn plus store api in parallel; stream each leg, soft cap ~8s then merge partials
         using var softCts = CancellationTokenSource.CreateLinkedTokenSource(token);
         var storeTask = QueryStoreApiAsync(q, softCts.Token);
         var wingetTask = Task.Run(() => QueryWinget(q, null, softCts.Token), softCts.Token);
@@ -57,7 +56,7 @@ public sealed class StoreSearchService : IStoreSearchService
         List<StoreHit> final;
         if (storeAccum.Count == 0 && wingetAccum.Count == 0)
         {
-            // ponytail: both legs failed/empty — msstore-only retry is a rare last resort
+            // both legs empty; msstore-only retry as last resort
             var ms = await Task.Run(() => QueryWinget(q, "msstore", token), token).ConfigureAwait(false);
             final = Merge([], ms, q).ToList();
         }
@@ -75,8 +74,7 @@ public sealed class StoreSearchService : IStoreSearchService
         var hits = new List<StoreHit>();
         try
         {
-            // ponytail: v9.0 pages = same backend as the winget msstore source; official listings first.
-            // Cards carry Title+ProductId adjacent; trailers without ProductId are skipped by Accept.
+            // v9.0 pages share the winget msstore backend; cards without product id are trailers, skipped
             var url = $"https://storeedgefd.dsx.mp.microsoft.com/v9.0/pages/searchResults?market=US&locale=en-US&deviceFamily=windows.desktop&query={Uri.EscapeDataString(query)}";
             using var response = await Http.GetAsync(url, token).ConfigureAwait(false);
             response.EnsureSuccessStatusCode();
@@ -161,7 +159,7 @@ public sealed class StoreSearchService : IStoreSearchService
         }
         foreach (var hit in winget)
         {
-            // ponytail: Store Downloader lists Store catalog only (winget-source rows belong to winget, not the Store)
+            // store downloader lists store catalog only; winget rows belong to winget
             if (!string.Equals(hit.Source, "msstore", StringComparison.OrdinalIgnoreCase)) continue;
             var key = Normalize(hit.Name);
             if (byName.TryGetValue(key, out var existing))

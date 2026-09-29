@@ -1,6 +1,6 @@
-; Superiorly PostInstall — Inno Setup script (x86-only binary, machine-wide install).
-; Built by dist.build.ps1 -Installer (iscc /DMyAppVersion=<CalVer> /DDistDir=<dist> /DOutDir=<out>).
-; AppId is IMMUTABLE — changing it orphans Add/Remove entries and the uninstall log.
+; x86-only binary, machine-wide install
+; built by dist.build.ps1 with iscc /dmyappversion /ddistdir /doutdir
+; keep appid stable, changing it orphans uninstall entries
 #ifndef MyAppName
   #define MyAppName "Superiorly Post-Install"
 #endif
@@ -22,7 +22,7 @@ AppVerName={#MyAppName} {#MyAppVersion}
 DefaultDirName={autopf}\Superiorly Post-Install
 DefaultGroupName=Superiorly Post-Install
 PrivilegesRequired=admin
-; ponytail: 32-bit setup default (x86compatible) covers x86+x64; ARM out of scope.
+; 32-bit setup covers x86 and x64, arm out of scope
 OutputDir={#OutDir}
 OutputBaseFilename=Superiorly.PostInstall-Setup-{#MyAppVersion}
 VersionInfoVersion={#MyAppVersion}
@@ -30,7 +30,7 @@ Compression=lzma2
 SolidCompression=yes
 CloseApplications=yes
 UninstallDisplayName={#MyAppName}
-; ponytail: no bundled .NET (preinstalled per requirements).
+; no bundled runtime, dotnet preinstalled
 
 [Files]
 Source: "{#DistDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs

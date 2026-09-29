@@ -120,7 +120,7 @@ public class StretchyWrapPanel : Panel
     {
         double x = 0;
         double scale = StretchProportionally && lineU < totalU ? totalU / lineU : 1;
-        // ponytail: equal shares keep cards uniform; proportional scale made them content-sized
+        // equal shares keep cards uniform; proportional scaling made them content-sized
         int count = end - start;
         bool even = StretchProportionally && lineU < totalU && count > 0;
         double share = even ? totalU / count : 0;

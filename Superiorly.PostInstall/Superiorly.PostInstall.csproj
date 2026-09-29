@@ -58,8 +58,7 @@
     <Copy SourceFiles="$(ProjectDir)Assets\Bundle\RadeonMod.exe" DestinationFolder="$(OutputPath)AMD Tweaks" SkipUnchangedFiles="true" Condition="Exists('$(ProjectDir)Assets\Bundle\RadeonMod.exe')" />
   </Target>
 
-  <!-- ponytail: CalVer auto-version (UTC date, no manual bumps, no new deps).
-       yyyy.M.d.HHmm fits Win32 4x16-bit fields (HHmm max 2359) and System.Version parsing in UpdateService. -->
+  <!-- calver from utc date; hhmm fits win32 version fields and update parsing -->
   <Target Name="CalVerVersion" BeforeTargets="BeforeBuild">
     <PropertyGroup>
       <CalVer>$([System.DateTime]::UtcNow.ToString("yyyy.M.d.HHmm"))</CalVer>

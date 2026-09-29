@@ -9,7 +9,7 @@ namespace Superiorly.PostInstall.ViewModels;
 
 public partial class CardViewModel : ObservableObject {
 
-    // ponytail: EXPERIMENTAL nips fetch from the public mirror (SHA256), cached beside the app
+    // experimental nips from public mirror, sha256 verified, cached locally
     private static readonly (string Name, string Url, string Sha)[] MirrorNips =
     {
         ("EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip", "AD79219730A3364C2DE37824E16FA5766F88A3FDDFEE148BCACED2D89814D329"),

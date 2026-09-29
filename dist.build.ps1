@@ -1,7 +1,4 @@
-<# dist.build.ps1 — publish + Inno Setup installer (single x86 binary, MIT open source).
-   Catalog ships as plaintext JSON (no encryption, no seal). Usage:
-   .\dist.build.ps1 [-Fast]
-   -Fast       inner loop: R2R off, conditional restore, prebuilt tools (~2-4x faster) #>
+<# publish + installer, single x86 binary; catalog is plaintext json; -fast skips r2r and restore for inner loop #>
 param(
     [switch]$Fast
 )
@@ -10,12 +7,12 @@ $root = $PSScriptRoot
 $proj = "$root/Superiorly.PostInstall/Superiorly.PostInstall.csproj"
 $pub = "$root/Superiorly.PostInstall/bin/Release/net8.0-windows/win-x86/publish"
 
-# 0. Pin CalVer once (csproj CalVerVersion would tick mid-run -> version drift).
+# pin calver once, reticking mid-run drifts version
 $CalVer = (Get-Date).ToUniversalTime().ToString("yyyy.M.d.HHmm")
 $useR2R = (-not $Fast)
 Write-Output "CalVer=$CalVer R2R=$useR2R"
 
-# 1. Preflight: kill running app with retry (fixed Sleep 3 in publish.ps1 is racy).
+# kill running app with retry, single sleep is racy
 foreach ($i in 1..5) {
     $p = Get-Process -Name "Superiorly.PostInstall" -ErrorAction SilentlyContinue
     if (-not $p) { break }
@@ -24,7 +21,7 @@ foreach ($i in 1..5) {
 }
 if (Get-Process -Name "Superiorly.PostInstall" -ErrorAction SilentlyContinue) { throw "app still running, aborting" }
 
-# 2. Conditional restore (project.assets.json newer than inputs -> skip). R2R needs the flag at restore (NETSDK1094).
+# skip restore when assets are fresh; r2r flag required at restore
 $assets = "$root/Superiorly.PostInstall/obj/project.assets.json"
 $stale = $true
 if ((Test-Path -LiteralPath $assets) -and (Test-Path -LiteralPath $proj)) {
@@ -44,17 +41,16 @@ if (-not $stale) { $restoreArgs += "--no-restore" }
 $r2rArgs = @()
 if ($useR2R) { $r2rArgs += "/p:PublishReadyToRun=true" }
 
-# 3. Publish with pinned version (global /p: wins over CalVerVersion target).
+# publish with pinned version, command line wins over target
 & dotnet publish $proj -c Release -r win-x86 --nologo -v q @restoreArgs @r2rArgs /p:CalVer=$CalVer /p:Version=$CalVer /p:AssemblyVersion=$CalVer /p:FileVersion=$CalVer /p:InformationalVersion=$CalVer
 if ($LASTEXITCODE -ne 0) { throw "publish failed" }
 
-# 4. Version stamp (publish output is the single source of truth; no dist/ copy anymore).
+# reread version from publish output, single source of truth
 $pubVer = (Get-Item -LiteralPath "$pub/Superiorly Post-Install.exe").VersionInfo.FileVersion
 if ([string]::IsNullOrEmpty($pubVer)) { throw "no version stamped" }
 $CalVer = $pubVer
 Write-Output "OK version=$pubVer"
 
-# 5. Installer (Inno Setup; packages $pub straight into the Setup exe).
 $iscc = $null
 foreach ($hive in @("HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall", "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall", "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall")) {
     $k = Get-ChildItem -LiteralPath $hive -ErrorAction SilentlyContinue | ForEach-Object { Get-ItemProperty $_.PSPath -ErrorAction SilentlyContinue } | Where-Object { $_.DisplayName -match "^Inno Setup version 6" } | Select-Object -First 1

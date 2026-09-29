@@ -8,14 +8,13 @@ internal static class PowerShellHelper
 {
     private static readonly Regex WingetIdRx = new(@"winget\s+install\s+--id\s+([^\s""']+)", RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
-    // ponytail: x86-on-x64 (WOW64) compat — true only for x86 process on 64-bit OS.
     public static bool PreferOs64View => Environment.Is64BitOperatingSystem && !Environment.Is64BitProcess;
 
     public static string ExePath { get; } = ResolveExePath();
 
     private static string ResolveExePath()
     {
-        // Sysnative is the MS-recommended alias to reach 64-bit System32 from a 32-bit process (Vista+).
+        // sysnative reaches 64-bit system32 from a 32-bit process
         if (PreferOs64View)
         {
             var sysnative = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "Sysnative", "WindowsPowerShell", "v1.0", "powershell.exe");
@@ -113,7 +112,7 @@ internal static class PowerShellHelper
         return false;
     }
 
-    // ponytail: these fail benignly all the time (absent key/process, already running/stopped, missing service on some builds) — toggle state is verified afterwards via check
+    // these fail benignly; state verified afterwards via check
     public static bool IsBestEffortCommand(string command)
     {
         var t = command.TrimStart();
@@ -134,7 +133,7 @@ internal static class PowerShellHelper
             if (t.Contains("Invoke-WebRequest", StringComparison.OrdinalIgnoreCase)) return true;
             if (t.Contains("Expand-Archive", StringComparison.OrdinalIgnoreCase)) return true;
             if (t.Contains("Start-BitsTransfer", StringComparison.OrdinalIgnoreCase)) return true;
-            // ponytail: dism feature ops take minutes; sc.exe service batches take seconds — both need progress instead of a dead switch
+            // dism takes minutes, sc.exe batches seconds; both need progress
             if (t.StartsWith("dism ", StringComparison.OrdinalIgnoreCase)) return true;
             if (t.StartsWith("sc.exe ", StringComparison.OrdinalIgnoreCase)) return true;
         }

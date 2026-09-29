@@ -3,7 +3,6 @@ using System.Text.Json;
 
 namespace Superiorly.PostInstall.Services;
 
-// persists user preferences under %appdata%, one small file
 public sealed class JsonSettingsService : ISettingsService
 {
     private static readonly JsonSerializerOptions Options = new() { WriteIndented = true };

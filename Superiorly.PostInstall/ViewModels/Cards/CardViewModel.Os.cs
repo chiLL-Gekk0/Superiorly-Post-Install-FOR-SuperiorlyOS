@@ -9,13 +9,13 @@ namespace Superiorly.PostInstall.ViewModels;
 
 public partial class CardViewModel : ObservableObject {
 
-    // ponytail: WOW64 compat lives in Services.PowerShellHelper (shared by all launchers); path intent here.
+    // wow64 compat lives in services.powershellhelper; path mapping here
     private static bool PreferOs64View => Services.PowerShellHelper.PreferOs64View;
     private static string PowerShellExe => Services.PowerShellHelper.ExePath;
 
     private static string ExpandOsPaths(string s)
     {
-        // Catalog authors mean the native 64-bit dir; preserve that intent. (x86) token first: it contains the plain token as prefix.
+        // keep 64-bit intent; check (x86) first since it contains plain token
         if (PreferOs64View)
         {
             s = s.Replace("$env:ProgramFiles(x86)", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), StringComparison.OrdinalIgnoreCase);

@@ -19,7 +19,6 @@ public partial class CardViewModel : ObservableObject {
 
     private async Task DeletePowerPlanAsync()
     {
-        // ponytail: never delete official Microsoft schemes — customs only
         var selected = Items.OfType<PowerPlanItem>().Where(p => p.IsChecked && !p.IsOfficial).ToList();
         if (selected.Count == 0) return;
         if (selected.Any(p => p.IsActive))
@@ -72,7 +71,7 @@ public partial class CardViewModel : ObservableObject {
 
     private static string? _powerPlanOutputCache;
 
-    // ponytail: warmed once at startup so the card paints instantly; refresh still runs in background
+    // warm cache at startup for instant paint
     public static void WarmupPowerPlans()
     {
         _ = Task.Run(() =>

@@ -60,7 +60,7 @@ public sealed class JsonCatalogProvider : ICatalogProvider
         return node.Deserialize<CatalogDefinition>(Options) ?? new CatalogDefinition();
     }
 
-    // ponytail: editors save UTF-16 by default; sniff the BOM so a wrong encoding never bricks startup
+    // editors may save utf-16; sniff bom so wrong encoding never breaks startup
     private static string DecodeCatalog(byte[] raw)
     {
         string s;

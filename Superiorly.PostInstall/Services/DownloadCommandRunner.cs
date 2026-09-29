@@ -16,7 +16,7 @@ public sealed class DownloadCommandRunner : IDownloadCommandRunner
     private static readonly Regex DownloadRx = new(@"\(New-Object Net\.WebClient\)\.DownloadFile\('(?<url>[^']+)','(?<dest>[^']+)'\)", RegexOptions.Compiled);
     private static readonly HttpClient Http = new() { Timeout = TimeSpan.FromMinutes(10) };
 
-    // ponytail: some hosts block bot-like UAs (Python-urllib -> 403); identify or die
+    // some hosts block bot-like user agents; identify or fail
     static DownloadCommandRunner() => Http.DefaultRequestHeaders.UserAgent.ParseAdd("Superiorly.PostInstall");
 
     public async Task<bool> RunAllAsync(IEnumerable<string> commands, IProgress<int>? progress = null, CancellationToken ct = default, bool fastAnimate = false)

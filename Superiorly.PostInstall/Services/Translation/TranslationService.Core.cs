@@ -7,7 +7,7 @@ public static partial class TranslationService
     public static string Normalize(string? lang) =>
         string.IsNullOrEmpty(lang) ? "en" : Supported.Contains(lang) ? lang : "en";
 
-    // ponytail: "en" is the canonical key set (matches Normalize default); no English prose is hardcoded at call sites
+    // en is the canonical key set; no english prose hardcoded at call sites
     public static bool HasActionInfo(string id) =>
         ActionInfo.TryGetValue("en", out var d) && d.ContainsKey(id);
 

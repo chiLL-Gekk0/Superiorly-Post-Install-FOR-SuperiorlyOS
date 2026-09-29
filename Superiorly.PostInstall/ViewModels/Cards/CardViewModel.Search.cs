@@ -71,7 +71,6 @@ public partial class CardViewModel : ObservableObject {
 
     public bool HasNoSearchResults => SearchExecuted && !IsSearching && StoreResults.Count == 0;
 
-    // ponytail: skeleton only when there is nothing to show yet
     public bool ShowSkeletons => IsSearching && StoreResults.Count == 0;
 
     partial void OnIsSearchingChanged(bool value) { OnPropertyChanged(nameof(HasSearchResults)); OnPropertyChanged(nameof(HasNoSearchResults)); OnPropertyChanged(nameof(ShowSkeletons)); }

@@ -54,7 +54,7 @@ public partial class CardTemplates : ResourceDictionary
             _activeInfoPopup.IsOpen = true;
             try
             {
-                // ponytail: explicit open animation — PopupAnimation alone renders instant on some systems
+                // animate open explicitly; popupanimation alone renders instant on some systems
                 if (_activeInfoPopup.Child is FrameworkElement card)
                 {
                     card.RenderTransform = new TranslateTransform();
