@@ -6,8 +6,8 @@
                     <TextBlock Text="POST INSTALL" VerticalAlignment="Center" FontSize="9" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Margin="8,0,0,0" Opacity="0.7"/>
                 </StackPanel>
                 <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" shell:WindowChrome.IsHitTestVisibleInChrome="True">
-                    <Button Style="{StaticResource CaptionButton}" FontSize="18" Command="{Binding ToggleThemeCommand}" ToolTip="{Binding ThemeToggleTip}" Content="{Binding ThemeToggleGlyph}"/>
-                    <Button Style="{StaticResource CaptionButton}" Content="&#xE713;" FontSize="18" Command="{Binding ShowSettingsDialogCommand}" ToolTip="{Binding SettingsTitle}"/>
+                    <Button Style="{DynamicResource CaptionButton}" FontSize="18" Command="{Binding ToggleThemeCommand}" ToolTip="{Binding ThemeToggleTip}" Content="{Binding ThemeToggleGlyph}"/>
+                    <Button Style="{DynamicResource CaptionButton}" Content="&#xE713;" FontSize="18" Command="{Binding ShowSettingsDialogCommand}" ToolTip="{Binding SettingsTitle}"/>
                     <Button Content="{Binding UpdateAvailableLabel}" FontSize="12" FontWeight="SemiBold"
                             Command="{Binding CheckUpdatesCommand}"
                             ToolTip="{Binding UpdateLabel}"
@@ -45,20 +45,9 @@
                             </Style>
                         </Button.Style>
                     </Button>
-                    <Button Style="{StaticResource CaptionButton}" Click="OnMinimizeClick" ToolTip="{Binding MinimizeLabel}" Content="&#xE921;"/>
-                    <Button x:Name="MaximizeButton" Click="OnMaximizeClick" ToolTip="{Binding MaximizeLabel}">
-                        <Button.Style>
-                            <Style TargetType="Button" BasedOn="{StaticResource CaptionButton}">
-                                <Setter Property="Content" Value="&#xE922;"/>
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=WindowState}" Value="Maximized">
-                                        <Setter Property="Content" Value="&#xE923;"/>
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                    </Button>
-                    <Button Style="{StaticResource CloseCaptionButton}" Click="OnCloseClick" ToolTip="{Binding CloseLabel}" Content="&#xE8BB;"/>
+                    <Button Style="{DynamicResource CaptionButton}" Click="OnMinimizeClick" ToolTip="{Binding MinimizeLabel}" Content="&#xE921;"/>
+                    <Button x:Name="MaximizeButton" Click="OnMaximizeClick" ToolTip="{Binding MaximizeLabel}" Style="{DynamicResource MaximizeCaptionButton}"/>
+                    <Button Style="{DynamicResource CloseCaptionButton}" Click="OnCloseClick" ToolTip="{Binding CloseLabel}" Content="&#xE8BB;"/>
                 </StackPanel>
             </DockPanel>
 </UserControl>

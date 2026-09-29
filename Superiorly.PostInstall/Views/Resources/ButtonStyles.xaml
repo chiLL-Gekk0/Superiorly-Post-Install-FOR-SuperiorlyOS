@@ -187,4 +187,65 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="MaximizeCaptionButton" TargetType="Button" BasedOn="{StaticResource CaptionButton}">
+            <Setter Property="Content" Value="&#xE922;"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=WindowState}" Value="Maximized">
+                    <Setter Property="Content" Value="&#xE923;"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SelectableWin10Button" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsWin10Style}" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SelectableWin11Button" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsWin11Style}" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SelectableLightButton" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsLightTheme}" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SelectableDarkButton" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsDarkTheme}" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SelectableAutoButton" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsAutoTheme}" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="DownloadProgressStyle" TargetType="ProgressBar" BasedOn="{StaticResource TipProgress}">
+            <Setter Property="Visibility" Value="Visible"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsProgressIndeterminate}" Value="True">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
 </ResourceDictionary>

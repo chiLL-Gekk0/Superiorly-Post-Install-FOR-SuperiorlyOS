@@ -1,3 +1,4 @@
+using System.IO;
 using System.Reflection;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
@@ -57,7 +58,17 @@ public partial class App : Application
         }
         catch (Exception ex)
         {
-            MessageBox.Show("Startup failed: " + ex.Message, "Superiorly Community", MessageBoxButton.OK, MessageBoxImage.Error);
+            // full chain (type, stack, inner) lands in temp so any future startup failure names its cause
+            var log = "";
+            try
+            {
+                var dir = Path.Combine(Path.GetTempPath(), "Superiorly.PostInstall");
+                Directory.CreateDirectory(dir);
+                log = Path.Combine(dir, "startup-error.log");
+                File.WriteAllText(log, ex.ToString());
+            }
+            catch { }
+            MessageBox.Show("Startup failed: " + ex.Message + (log == "" ? "" : " (details: " + log + ")"), "Superiorly Community", MessageBoxButton.OK, MessageBoxImage.Error);
             Shutdown();
         }
     }

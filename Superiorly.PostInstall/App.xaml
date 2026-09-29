@@ -1,8 +1,11 @@
 <Application x:Class="Superiorly.PostInstall.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:Superiorly.PostInstall.Converters"
              ShutdownMode="OnMainWindowClose">
     <Application.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+        <converters:InverseBooleanConverter x:Key="InverseBool"/>
         <Style x:Key="{x:Static SystemParameters.FocusVisualStyleKey}">
             <Setter Property="Control.Template">
                 <Setter.Value>

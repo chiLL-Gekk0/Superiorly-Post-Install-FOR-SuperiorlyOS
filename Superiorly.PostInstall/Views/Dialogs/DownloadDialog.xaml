@@ -4,17 +4,7 @@
                     <StackPanel>
                         <TextBlock Text="{Binding DownloadTitle}" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}"/>
                         <TextBlock Text="{Binding DownloadStatus}" Margin="0,6,0,14" FontSize="12" Foreground="{DynamicResource B_TextSecondary}" TextWrapping="Wrap"/>
-                        <ProgressBar Value="{Binding DownloadPercent}" Maximum="100" Foreground="{DynamicResource B_Success}" BorderThickness="0">
-                            <ProgressBar.Style>
-                                <Style TargetType="ProgressBar" BasedOn="{StaticResource TipProgress}">
-                                    <Setter Property="Visibility" Value="Visible"/>
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Binding IsProgressIndeterminate}" Value="True">
-                                            <Setter Property="Visibility" Value="Collapsed"/>
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </ProgressBar.Style>
+                        <ProgressBar Value="{Binding DownloadPercent}" Maximum="100" Style="{DynamicResource DownloadProgressStyle}" Foreground="{DynamicResource B_Success}" BorderThickness="0">
                         </ProgressBar>
                         <ProgressBar Height="6" Minimum="0" Maximum="100" IsIndeterminate="True" Foreground="{DynamicResource B_Success}" Background="{DynamicResource B_SwitchTrack}" BorderThickness="0" Visibility="{Binding IsProgressIndeterminate, Converter={StaticResource BoolToVis}}"/>
                         <TextBlock Text="{Binding DownloadPercent, StringFormat='{}{0}%'}" HorizontalAlignment="Right" Margin="0,6,0,0" FontSize="11" Foreground="{DynamicResource B_TextSecondary}">
