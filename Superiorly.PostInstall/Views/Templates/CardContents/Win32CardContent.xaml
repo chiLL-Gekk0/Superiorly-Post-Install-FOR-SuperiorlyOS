@@ -68,10 +68,10 @@
                                                                     <ColumnDefinition Width="Auto"/>
                                                                 </Grid.ColumnDefinitions>
                                                                 <TextBlock Text="PsPrioritySeparation" FontSize="10" Foreground="{DynamicResource B_TextSecondary}" VerticalAlignment="Center"/>
-                                                                <ComboBox Grid.Column="1" Style="{StaticResource Win32ComboBox}"
+                                                                <ComboBox Grid.Column="1" Style="{DynamicResource Win32ComboBox}"
                                                                            ItemsSource="{Binding Options}" SelectedValue="{Binding Win32SelectedPs}"
                                                                            SelectedValuePath="Label" DisplayMemberPath="Label"
-                                                                           ItemContainerStyle="{StaticResource Win32ComboBoxItem}"/>
+                                                                           ItemContainerStyle="{DynamicResource Win32ComboBoxItem}"/>
                                                             </Grid>
 
                                                             <Grid Margin="0,0,0,4">
@@ -130,11 +130,11 @@
 
                                                 <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
                                                     <Button Content="{Binding OpenQuantumLabel}" Command="{Binding Win32OpenMapCommand}"
-                                                            Style="{StaticResource OptionButton}" Height="30" MinWidth="120" Margin="0,0,8,0"/>
+                                                            Style="{DynamicResource OptionButton}" Height="30" MinWidth="120" Margin="0,0,8,0"/>
                                                     <Button Content="{Binding RestoreDefaultLabel}" Command="{Binding Win32RestoreDefaultCommand}"
-                                                            Style="{StaticResource OptionButton}" Height="30" MinWidth="100" Margin="0,0,8,0"/>
+                                                            Style="{DynamicResource OptionButton}" Height="30" MinWidth="100" Margin="0,0,8,0"/>
                                                     <Button Content="{Binding ApplyLabel}" Command="{Binding Win32ApplyCommand}"
-                                                            Style="{StaticResource OptionButtonSuccess}" Height="30" MinWidth="80"/>
+                                                            Style="{DynamicResource OptionButtonSuccess}" Height="30" MinWidth="80"/>
                                                 </StackPanel>
 </Grid>
 </UserControl>

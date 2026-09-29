@@ -19,7 +19,7 @@ public partial class App : Application
 
     public App()
     {
-        DispatcherUnhandledException += (_, e) => { try { System.Diagnostics.Debug.WriteLine(e.Exception.ToString()); } catch { } e.Handled = true; };
+        DispatcherUnhandledException += (_, e) => { try { System.Diagnostics.Debug.WriteLine(e.Exception.ToString()); try { System.IO.Directory.CreateDirectory(System.IO.Path.Combine(System.IO.Path.GetTempPath(), "Superiorly.PostInstall")); System.IO.File.AppendAllText(System.IO.Path.Combine(System.IO.Path.GetTempPath(), "Superiorly.PostInstall", "ui-error.log"), System.DateTime.UtcNow.ToString("O") + " " + e.Exception.ToString() + "\n"); } catch { } } catch { } e.Handled = true; };
         var services = new ServiceCollection();
         services.AddSingleton<ISettingsService, JsonSettingsService>();
         services.AddSingleton<IThemeService, ThemeService>();

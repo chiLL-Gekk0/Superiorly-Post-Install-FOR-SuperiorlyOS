@@ -79,9 +79,9 @@
                                                         </Button>
                                                     </Grid>
                                                     <Button Grid.Column="2" Content="{Binding SearchLabel}" Command="{Binding ResearchCommand, FallbackValue={x:Null}}"
-                                                            Style="{StaticResource OptionButtonSuccess}" Height="30" MinWidth="80" Margin="0"/>
+                                                            Style="{DynamicResource OptionButtonSuccess}" Height="30" MinWidth="80" Margin="0"/>
                                                     <Button Grid.Column="4" Content="{Binding InstallLabel}" Command="{Binding InstallSelectedCommand}"
-                                                            Style="{StaticResource OptionButton}" Height="30" MinWidth="80" Margin="0"/>
+                                                            Style="{DynamicResource OptionButton}" Height="30" MinWidth="80" Margin="0"/>
                                                 </Grid>
 
                                                 <Border Grid.Row="3" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}"

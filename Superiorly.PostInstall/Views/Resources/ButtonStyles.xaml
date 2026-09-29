@@ -248,4 +248,79 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="ListLoadButton" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Setter Property="Visibility" Value="Visible"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsPowerPlanCard}" Value="True">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ListActivateButton" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsPowerPlanCard}" Value="True"/>
+                        <Condition Binding="{Binding HasCheckedItems}" Value="True"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Visibility" Value="Visible"/>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ListImportButton" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsPowerPlanCard}" Value="True">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ListExportButton" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsPowerPlanCard}" Value="True"/>
+                        <Condition Binding="{Binding HasCheckedItems}" Value="True"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Visibility" Value="Visible"/>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ListSelectAllButton" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding HasItems}" Value="True">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ListUnselectAllButton" TargetType="Button" BasedOn="{StaticResource OptionButton}">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding HasItems}" Value="True">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsPowerPlanCard}" Value="True"/>
+                        <Condition Binding="{Binding HasCheckedItems}" Value="False"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ListDeleteButton" TargetType="Button" BasedOn="{StaticResource OptionButtonDanger}">
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding IsPowerPlanCard}" Value="True"/>
+                        <Condition Binding="{Binding HasCheckedCustomItems}" Value="True"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Visibility" Value="Visible"/>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
 </ResourceDictionary>
