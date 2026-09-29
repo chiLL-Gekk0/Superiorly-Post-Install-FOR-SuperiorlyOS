@@ -1,0 +1,118 @@
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework" xmlns:converters="clr-namespace:Superiorly.PostInstall.Converters" xmlns:models="clr-namespace:Superiorly.PostInstall.Models" xmlns:vm="clr-namespace:Superiorly.PostInstall.ViewModels" x:Class="Superiorly.PostInstall.Views.Dialogs.SettingsDialog">
+            <Grid Background="{DynamicResource B_Overlay}" Visibility="{Binding IsSettingsDialogOpen, Converter={StaticResource BoolToVis}}" UseLayoutRounding="True" SnapsToDevicePixels="True" PreviewMouseLeftButtonDown="SettingsOverlay_Click">
+                <Grid.InputBindings>
+                    <KeyBinding Key="Escape" Command="{Binding HideSettingsDialogCommand}"/>
+                </Grid.InputBindings>
+                <Border Background="{DynamicResource B_Surface}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1" CornerRadius="{DynamicResource R_M}" Padding="22,18" Width="340" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="True" SnapsToDevicePixels="True" TextOptions.TextFormattingMode="Display">
+                    <StackPanel>
+                        <Grid Margin="0,0,0,12">
+                            <TextBlock Text="{Binding SettingsTitle}" FontSize="14" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" VerticalAlignment="Center"/>
+                            <Button Content="&#xE106;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="10" Width="28" Height="28" HorizontalAlignment="Right" Cursor="Hand" Command="{Binding HideSettingsDialogCommand}" ToolTip="{Binding CloseLabel}">
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="Transparent"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                        <Setter Property="Foreground" Value="{DynamicResource B_TextSecondary}"/>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <Border Background="{TemplateBinding Background}">
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="Foreground" Value="{DynamicResource B_TextPrimary}"/>
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                        <TextBlock Text="{Binding LanguageLabel}" FontSize="12" Foreground="{DynamicResource B_TextSecondary}" Margin="0,0,0,6"/>
+                        <ComboBox ItemsSource="{Binding Languages}" SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}" Style="{StaticResource LanguageComboBox}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" FontSize="12" Foreground="{DynamicResource B_TextPrimary}" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+                        <TextBlock Text="{Binding StyleLabel}" FontSize="12" Foreground="{DynamicResource B_TextSecondary}" Margin="0,14,0,6"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" Height="32" Margin="0,0,4,0" Command="{Binding SetCornerStyleCommand}" CommandParameter="win10" Content="{Binding Win10StyleLabel}" ToolTip="{Binding SquareLabel}">
+                                <Button.Style>
+                                    <Style TargetType="Button" BasedOn="{StaticResource OptionButton}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsWin10Style}" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                                                <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <Button Grid.Column="1" Height="32" Margin="4,0,0,0" Command="{Binding SetCornerStyleCommand}" CommandParameter="win11" Content="{Binding Win11StyleLabel}" ToolTip="{Binding RoundedLabel}">
+                                <Button.Style>
+                                    <Style TargetType="Button" BasedOn="{StaticResource OptionButton}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsWin11Style}" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                                                <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                        <TextBlock Text="{Binding ThemeLabel}" FontSize="12" Foreground="{DynamicResource B_TextSecondary}" Margin="0,14,0,6"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" Height="32" Margin="0,0,4,0" Command="{Binding SetAppThemeCommand}" CommandParameter="light" Content="{Binding LightThemeLabel}">
+                                <Button.Style>
+                                    <Style TargetType="Button" BasedOn="{StaticResource OptionButton}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsLightTheme}" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                                                <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <Button Grid.Column="1" Height="32" Margin="2,0,2,0" Command="{Binding SetAppThemeCommand}" CommandParameter="dark" Content="{Binding DarkThemeLabel}">
+                                <Button.Style>
+                                    <Style TargetType="Button" BasedOn="{StaticResource OptionButton}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsDarkTheme}" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                                                <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                            <Button Grid.Column="2" Height="32" Margin="4,0,0,0" Command="{Binding SetAppThemeCommand}" CommandParameter="auto" Content="{Binding AutoThemeLabel}">
+                                <Button.Style>
+                                    <Style TargetType="Button" BasedOn="{StaticResource OptionButton}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsAutoTheme}" Value="True">
+                                                <Setter Property="Background" Value="{DynamicResource B_Accent}"/>
+                                                <Setter Property="Foreground" Value="{DynamicResource B_OnAccent}"/>
+                                                <Setter Property="BorderBrush" Value="{DynamicResource B_Accent}"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+            </Grid>
+</UserControl>

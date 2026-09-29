@@ -1,0 +1,140 @@
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework" xmlns:converters="clr-namespace:Superiorly.PostInstall.Converters" xmlns:models="clr-namespace:Superiorly.PostInstall.Models" xmlns:vm="clr-namespace:Superiorly.PostInstall.ViewModels" x:Class="Superiorly.PostInstall.Views.Templates.CardContents.Win32CardContent">
+<Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Grid Grid.Row="0" Margin="0,0,0,6">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="6"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Border Grid.Column="0" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}"
+                                                            BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="10">
+                                                        <StackPanel>
+                                                            <TextBlock Text="{Binding CurrentWin32Label}" FontSize="11" FontWeight="SemiBold"
+                                                                       Foreground="{DynamicResource B_TextPrimary}" Margin="0,0,0,4"/>
+                                                            <Grid Margin="0,0,0,2">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <TextBlock Text="Win32PrioritySeparation (Hex)" FontSize="10" Foreground="{DynamicResource B_TextSecondary}"/>
+                                                                <TextBlock Grid.Column="1" Text="{Binding Win32CurrentHex}" FontSize="10" FontWeight="SemiBold"
+                                                                           Foreground="{DynamicResource B_TextPrimary}"/>
+                                                            </Grid>
+                                                            <Grid Margin="0,0,0,2">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <TextBlock Text="Win32PrioritySeparation (Binary)" FontSize="10" Foreground="{DynamicResource B_TextSecondary}"/>
+                                                                <TextBlock Grid.Column="1" Text="{Binding Win32CurrentBinary}" FontSize="10" FontWeight="SemiBold"
+                                                                           Foreground="{DynamicResource B_TextPrimary}"/>
+                                                            </Grid>
+                                                            <Grid Margin="0,0,0,2">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <TextBlock Text="PsPrioritySeparation" FontSize="10" Foreground="{DynamicResource B_TextSecondary}"/>
+                                                                <TextBlock Grid.Column="1" Text="{Binding Win32CurrentPs}" FontSize="10" FontWeight="SemiBold"
+                                                                           Foreground="{DynamicResource B_TextPrimary}"/>
+                                                            </Grid>
+                                                            <Grid Margin="0,0,0,0">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <TextBlock Text="Quantum" FontSize="10" Foreground="{DynamicResource B_TextSecondary}"/>
+                                                                <TextBlock Grid.Column="1" Text="{Binding Win32CurrentQuantum}" FontSize="10" FontWeight="SemiBold"
+                                                                           Foreground="{DynamicResource B_TextPrimary}"/>
+                                                            </Grid>
+                                                        </StackPanel>
+                                                    </Border>
+
+                                                    <Border Grid.Column="2" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}"
+                                                            BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="10">
+                                                        <StackPanel>
+                                                            <TextBlock Text="{Binding ModifyQuantumLabel}" FontSize="11" FontWeight="SemiBold"
+                                                                       Foreground="{DynamicResource B_TextPrimary}" Margin="0,0,0,6"/>
+
+                                                            <Grid Margin="0,0,0,4">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <TextBlock Text="PsPrioritySeparation" FontSize="10" Foreground="{DynamicResource B_TextSecondary}" VerticalAlignment="Center"/>
+                                                                <ComboBox Grid.Column="1" Style="{StaticResource Win32ComboBox}"
+                                                                           ItemsSource="{Binding Options}" SelectedValue="{Binding Win32SelectedPs}"
+                                                                           SelectedValuePath="Label" DisplayMemberPath="Label"
+                                                                           ItemContainerStyle="{StaticResource Win32ComboBoxItem}"/>
+                                                            </Grid>
+
+                                                            <Grid Margin="0,0,0,4">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                    <ColumnDefinition Width="8"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <TextBlock Text="{Binding QuantumLengthLabel}" FontSize="10" Foreground="{DynamicResource B_TextSecondary}" VerticalAlignment="Center"/>
+                                                                <RadioButton Grid.Column="1" Content="{Binding VariableLabel}" GroupName="QuantumLength" FontSize="10"
+                                                                             Foreground="{DynamicResource B_TextPrimary}" VerticalAlignment="Center"
+                                                                             IsChecked="{Binding Win32LengthFixed, Converter={StaticResource InverseBool}, Mode=TwoWay}"/>
+                                                                <RadioButton Grid.Column="3" Content="{Binding FixLabel}" GroupName="QuantumLength" FontSize="10"
+                                                                             Foreground="{DynamicResource B_TextPrimary}" VerticalAlignment="Center"
+                                                                             IsChecked="{Binding Win32LengthFixed, Mode=TwoWay}"/>
+                                                            </Grid>
+
+                                                            <Grid Margin="0,0,0,6">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                    <ColumnDefinition Width="8"/>
+                                                                    <ColumnDefinition Width="Auto"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <TextBlock Text="{Binding QuantumIntervalLabel}" FontSize="10" Foreground="{DynamicResource B_TextSecondary}" VerticalAlignment="Center"/>
+                                                                <RadioButton Grid.Column="1" Content="{Binding ShortLabel}" GroupName="QuantumInterval" FontSize="10"
+                                                                             Foreground="{DynamicResource B_TextPrimary}" VerticalAlignment="Center"
+                                                                             IsChecked="{Binding Win32IntervalLong, Converter={StaticResource InverseBool}, Mode=TwoWay}"/>
+                                                                  <RadioButton Grid.Column="3" Content="{Binding LongLabel}" GroupName="QuantumInterval" FontSize="10"
+                                                                              Foreground="{DynamicResource B_TextPrimary}" VerticalAlignment="Center"
+                                                                              IsChecked="{Binding Win32IntervalLong, Mode=TwoWay}"/>
+                                                             </Grid>
+
+                                                             <Border Background="{DynamicResource B_Surface}" CornerRadius="{DynamicResource R_S}" Padding="10,6">
+                                                                <Grid>
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition Width="*"/>
+                                                                        <ColumnDefinition Width="Auto"/>
+                                                                    </Grid.ColumnDefinitions>
+                                                    <StackPanel>
+                                                                        <TextBlock Text="{Binding PreviewHexLabel}" FontSize="10" Foreground="{DynamicResource B_TextSecondary}"/>
+                                                                        <TextBlock Text="{Binding Win32PreviewHex}" FontSize="12" FontWeight="SemiBold"
+                                                                                   Foreground="{DynamicResource B_TextPrimary}"/>
+                                                                    </StackPanel>
+                                                                    <StackPanel Grid.Column="1">
+                                                                        <TextBlock Text="{Binding PreviewBitsLabel}" FontSize="10" Foreground="{DynamicResource B_TextSecondary}"/>
+                                                                        <TextBlock Text="{Binding Win32PreviewBinary}" FontSize="12" FontWeight="SemiBold"
+                                                                                   Foreground="{DynamicResource B_TextPrimary}"/>
+                                                                    </StackPanel>
+                                                                </Grid>
+                                                            </Border>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </Grid>
+
+                                                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                                                    <Button Content="{Binding OpenQuantumLabel}" Command="{Binding Win32OpenMapCommand}"
+                                                            Style="{StaticResource OptionButton}" Height="30" MinWidth="120" Margin="0,0,8,0"/>
+                                                    <Button Content="{Binding RestoreDefaultLabel}" Command="{Binding Win32RestoreDefaultCommand}"
+                                                            Style="{StaticResource OptionButton}" Height="30" MinWidth="100" Margin="0,0,8,0"/>
+                                                    <Button Content="{Binding ApplyLabel}" Command="{Binding Win32ApplyCommand}"
+                                                            Style="{StaticResource OptionButtonSuccess}" Height="30" MinWidth="80"/>
+                                                </StackPanel>
+</Grid>
+</UserControl>

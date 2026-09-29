@@ -1,0 +1,47 @@
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework" xmlns:converters="clr-namespace:Superiorly.PostInstall.Converters" xmlns:models="clr-namespace:Superiorly.PostInstall.Models" xmlns:vm="clr-namespace:Superiorly.PostInstall.ViewModels" x:Class="Superiorly.PostInstall.Views.Dialogs.QuantumMapDialog">
+            <Grid Background="{DynamicResource B_Overlay}" Visibility="{Binding IsQuantumMapOpen, Converter={StaticResource BoolToVis}}" PreviewMouseLeftButtonDown="OverlayBackground_Click">
+                <Grid.InputBindings>
+                    <KeyBinding Key="Escape" Command="{Binding CloseQuantumMapCommand}"/>
+                </Grid.InputBindings>
+                <Border Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1" CornerRadius="{DynamicResource R_S}" MinWidth="380" MaxWidth="440" MaxHeight="540" Padding="16" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Margin="0,0,0,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel>
+                                <TextBlock Text="{Binding QuantumTitle}" FontSize="15" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}"/>
+                                <TextBlock Text="{Binding QuantumSubtitle}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" Margin="0,2,0,0"/>
+                            </StackPanel>
+                            <Button Grid.Column="1" Content="&#xE711;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="12" Width="26" Height="26" Background="Transparent" BorderThickness="0" Foreground="{DynamicResource B_TextSecondary}" Cursor="Hand" Command="{Binding CloseQuantumMapCommand}" VerticalAlignment="Top"/>
+                        </Grid>
+                        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                            <ItemsControl ItemsSource="{Binding QuantumRows}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Margin="0,2" CornerRadius="{DynamicResource R_S}" Padding="10,7" Cursor="Hand" Background="{DynamicResource B_CardHover}">
+                                            <Border.InputBindings>
+                                                <MouseBinding Gesture="LeftClick" Command="{Binding DataContext.PickQuantumCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding Hex}"/>
+                                            </Border.InputBindings>
+                                            <StackPanel>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Hex}" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}"/>
+                                                    <TextBlock Text="{Binding Dec}" FontSize="11" Margin="8,0,0,0" Foreground="{DynamicResource B_TextSecondary}" VerticalAlignment="Center"/>
+                                                    <Border Margin="6,1,0,0" VerticalAlignment="Center" Background="{DynamicResource B_AccentSubtle}" CornerRadius="{DynamicResource R_S}" Padding="6,1" Visibility="{Binding IsCurrent, Converter={StaticResource BoolToVis}}"><TextBlock FontSize="10" FontWeight="SemiBold" Foreground="{DynamicResource B_Accent}" Text="{Binding DataContext.CurrentBadge, RelativeSource={RelativeSource AncestorType=Window}}"/></Border>
+                                                </StackPanel>
+                                                <TextBlock Text="{Binding Desc}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" Margin="0,1,0,0"/>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        </ScrollViewer>
+                    </Grid>
+                </Border>
+            </Grid>
+</UserControl>

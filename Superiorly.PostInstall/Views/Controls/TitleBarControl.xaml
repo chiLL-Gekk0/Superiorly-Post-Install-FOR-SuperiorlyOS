@@ -1,0 +1,64 @@
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework" xmlns:converters="clr-namespace:Superiorly.PostInstall.Converters" xmlns:models="clr-namespace:Superiorly.PostInstall.Models" xmlns:vm="clr-namespace:Superiorly.PostInstall.ViewModels" x:Class="Superiorly.PostInstall.Views.Controls.TitleBarControl">
+            <DockPanel Grid.Row="0" Background="Transparent" LastChildFill="False">
+                <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" Margin="18,0,0,0">
+                    <TextBlock Text="{Binding AppTitle}" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Opacity="0.95"/>
+                    <Border Width="1" Height="14" Background="{DynamicResource B_CardBorder}" Margin="10,0,0,0" VerticalAlignment="Center" Opacity="0.6"/>
+                    <TextBlock Text="POST INSTALL" VerticalAlignment="Center" FontSize="9" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Margin="8,0,0,0" Opacity="0.7"/>
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" shell:WindowChrome.IsHitTestVisibleInChrome="True">
+                    <Button Style="{StaticResource CaptionButton}" FontSize="18" Command="{Binding ToggleThemeCommand}" ToolTip="{Binding ThemeToggleTip}" Content="{Binding ThemeToggleGlyph}"/>
+                    <Button Style="{StaticResource CaptionButton}" Content="&#xE713;" FontSize="18" Command="{Binding ShowSettingsDialogCommand}" ToolTip="{Binding SettingsTitle}"/>
+                    <Button Content="{Binding UpdateAvailableLabel}" FontSize="12" FontWeight="SemiBold"
+                            Command="{Binding CheckUpdatesCommand}"
+                            ToolTip="{Binding UpdateLabel}"
+                            Visibility="{Binding HasUpdate, Converter={StaticResource BoolToVis}}"
+                            Foreground="{DynamicResource B_UpdateText}"
+                            Background="{DynamicResource B_UpdateSoft}"
+                            BorderBrush="{DynamicResource B_Update}" BorderThickness="1" Padding="10,4" Margin="0,0,4,0"
+                            VerticalAlignment="Center" Cursor="Hand">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Width" Value="Auto"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border x:Name="bg" Background="{TemplateBinding Background}"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                                    CornerRadius="{DynamicResource R_S}" Padding="{TemplateBinding Padding}">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter TargetName="bg" Property="Background" Value="{DynamicResource B_UpdateHover}"/>
+                                                    <Setter Property="Foreground" Value="#FFFFFF"/>
+                                                </Trigger>
+                                                <DataTrigger Binding="{Binding IsDownloading}" Value="True">
+                                                    <Setter Property="IsEnabled" Value="False"/>
+                                                    <Setter Property="Opacity" Value="0.5"/>
+                                                    <Setter Property="ToolTip" Value="{Binding DownloadStatus}"/>
+                                                </DataTrigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button Style="{StaticResource CaptionButton}" Click="OnMinimizeClick" ToolTip="{Binding MinimizeLabel}" Content="&#xE921;"/>
+                    <Button x:Name="MaximizeButton" Click="OnMaximizeClick" ToolTip="{Binding MaximizeLabel}">
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource CaptionButton}">
+                                <Setter Property="Content" Value="&#xE922;"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Window}, Path=WindowState}" Value="Maximized">
+                                        <Setter Property="Content" Value="&#xE923;"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button Style="{StaticResource CloseCaptionButton}" Click="OnCloseClick" ToolTip="{Binding CloseLabel}" Content="&#xE8BB;"/>
+                </StackPanel>
+            </DockPanel>
+</UserControl>

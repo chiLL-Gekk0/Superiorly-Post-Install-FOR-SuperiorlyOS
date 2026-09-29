@@ -1,0 +1,184 @@
+<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework" xmlns:converters="clr-namespace:Superiorly.PostInstall.Converters" xmlns:models="clr-namespace:Superiorly.PostInstall.Models" xmlns:vm="clr-namespace:Superiorly.PostInstall.ViewModels" x:Class="Superiorly.PostInstall.Views.Templates.CardContents.SearchCardContent">
+<Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                    <RowDefinition Height="Auto"/>
+                                                </Grid.RowDefinitions>
+
+                                                <StackPanel Grid.Row="0" Margin="0,0,0,6">
+                                                    <TextBlock Text="{Binding Title}" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}"/>
+                                                    <TextBlock Text="{Binding Description}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" Margin="0,1,0,0"/>
+                                                </StackPanel>
+
+                                                <Grid Grid.Row="1" Margin="0,0,0,6">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/><ColumnDefinition Width="8"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="8"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid Grid.Column="0">
+                                                        <TextBox x:Name="SearchTextBox" Grid.Column="0"
+                                                                 Text="{Binding UserInput, UpdateSourceTrigger=PropertyChanged}"
+                                                                 Height="30" VerticalContentAlignment="Center"
+                                                                 Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}"
+                                                                 BorderThickness="1" Foreground="{DynamicResource B_TextPrimary}"
+                                                                 SelectionBrush="{DynamicResource B_Accent}" SelectionOpacity="0.35"
+                                                                 SelectionTextBrush="{DynamicResource B_TextPrimary}" CaretBrush="{DynamicResource B_TextPrimary}"
+                                                                 Padding="10,0,28,0" FontSize="12" TabIndex="0">
+                                                            <TextBox.InputBindings>
+                                                                <KeyBinding Key="Return" Command="{Binding ResearchCommand, FallbackValue={x:Null}}"/>
+                                                            </TextBox.InputBindings>
+                                                        </TextBox>
+                                                        <TextBlock Text="{Binding SearchPlaceholder}" IsHitTestVisible="False"
+                                                                   VerticalAlignment="Center" Margin="14,0,0,0"
+                                                                   Foreground="{DynamicResource B_TextSecondary}" FontSize="12">
+                                                            <TextBlock.Style>
+                                                                <Style TargetType="TextBlock">
+                                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding Text, ElementName=SearchTextBox}" Value="">
+                                                                            <Setter Property="Visibility" Value="Visible"/>
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </TextBlock.Style>
+                                                        </TextBlock>
+                                                        <Button Content="&#x2715;" Width="22" Height="22" Cursor="Hand"
+                                                                HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,6,0"
+                                                                FontSize="10" Command="{Binding ClearSearchCommand}">
+                                                            <Button.Style>
+                                                                <Style TargetType="Button">
+                                                                    <Setter Property="Background" Value="Transparent"/>
+                                                                    <Setter Property="BorderThickness" Value="0"/>
+                                                                    <Setter Property="Foreground" Value="{DynamicResource B_TextSecondary}"/>
+                                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                                    <Setter Property="Template">
+                                                                        <Setter.Value>
+                                                                            <ControlTemplate TargetType="Button">
+                                                                                <Border Background="{TemplateBinding Background}">
+                                                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                                                </Border>
+                                                                                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource B_TextPrimary}"/>
+                    </Trigger>
+                                                                                </ControlTemplate.Triggers>
+                                                                            </ControlTemplate>
+                                                                        </Setter.Value>
+                                                                    </Setter>
+                                                                    <Style.Triggers>
+                                                                        <DataTrigger Binding="{Binding Text, ElementName=SearchTextBox}" Value="">
+                                                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                                                        </DataTrigger>
+                                                                    </Style.Triggers>
+                                                                </Style>
+                                                            </Button.Style>
+                                                        </Button>
+                                                    </Grid>
+                                                    <Button Grid.Column="2" Content="{Binding SearchLabel}" Command="{Binding ResearchCommand, FallbackValue={x:Null}}"
+                                                            Style="{StaticResource OptionButtonSuccess}" Height="30" MinWidth="80" Margin="0"/>
+                                                    <Button Grid.Column="4" Content="{Binding InstallLabel}" Command="{Binding InstallSelectedCommand}"
+                                                            Style="{StaticResource OptionButton}" Height="30" MinWidth="80" Margin="0"/>
+                                                </Grid>
+
+                                                <Border Grid.Row="3" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}"
+                                                        BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="10"
+                                                        MaxHeight="300"
+                                                        Visibility="{Binding HasSearchResults, Converter={StaticResource BoolToVis}}">
+                                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                                        <ItemsControl ItemsSource="{Binding StoreResults}">
+                                                            <ItemsControl.ItemTemplate>
+                                                                <DataTemplate>
+                                                                    <Border Margin="2,4" Padding="10,8" Background="{DynamicResource B_Surface}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1" CornerRadius="{DynamicResource R_S}">
+                                                                        <Grid>
+                                                                            <Grid.ColumnDefinitions>
+                                                                                <ColumnDefinition Width="28"/>
+                                                                                <ColumnDefinition Width="*"/>
+                                                                            </Grid.ColumnDefinitions>
+                                                                            <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" VerticalAlignment="Center" Cursor="Hand"/>
+                                                                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                                                                <TextBlock Text="{Binding Name}" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" TextTrimming="CharacterEllipsis"/>
+                                                                                <TextBlock Text="{Binding PackageId}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" Opacity="0.85" TextTrimming="CharacterEllipsis"/>
+                                                                                <TextBlock Text="{Binding Publisher}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" Opacity="0.7" TextTrimming="CharacterEllipsis">
+                                                                                    <TextBlock.Style>
+                                                                                        <Style TargetType="TextBlock">
+                                                                                            <Style.Triggers>
+                                                                                                <DataTrigger Binding="{Binding Publisher}" Value="">
+                                                                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                                                                </DataTrigger>
+                                                                                                <DataTrigger Binding="{Binding Publisher}" Value="{x:Null}">
+                                                                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                                                                </DataTrigger>
+                                                                                            </Style.Triggers>
+                                                                                        </Style>
+                                                                                    </TextBlock.Style>
+                                                                                </TextBlock>
+                                                                            </StackPanel>
+                                                                        </Grid>
+                                                                    </Border>
+                                                                </DataTemplate>
+                                                            </ItemsControl.ItemTemplate>
+                                                        </ItemsControl>
+                                                    </ScrollViewer>
+                                                </Border>
+                                                <Border Grid.Row="3" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}"
+                                                        BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="10">
+                                                    <Border.Style>
+                                                        <Style TargetType="Border">
+                                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding ShowSkeletons}" Value="True">
+                                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                                    <DataTrigger.EnterActions>
+                                                                        <BeginStoryboard x:Name="skelPulse">
+                                                                            <Storyboard>
+                                                                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0.35" Duration="0:0:0.8" AutoReverse="True" RepeatBehavior="Forever"/>
+                                                                            </Storyboard>
+                                                                        </BeginStoryboard>
+                                                                    </DataTrigger.EnterActions>
+                                                                    <DataTrigger.ExitActions>
+                                                                        <RemoveStoryboard BeginStoryboardName="skelPulse"/>
+                                                                    </DataTrigger.ExitActions>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Border.Style>
+                                                    <StackPanel>
+                                                        <Border Margin="2,4" Padding="10,8" Background="{DynamicResource B_Surface}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1" CornerRadius="{DynamicResource R_S}">
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions><ColumnDefinition Width="28"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                                                                <Border Width="16" Height="16" CornerRadius="3" Background="{DynamicResource B_SwitchTrack}" VerticalAlignment="Center"/>
+                                                                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                                                    <Border Width="220" Height="12" CornerRadius="3" Background="{DynamicResource B_SwitchTrack}" HorizontalAlignment="Left" Margin="0,0,0,6"/>
+                                                                    <Border Width="150" Height="10" CornerRadius="3" Background="{DynamicResource B_SwitchTrack}" HorizontalAlignment="Left"/>
+                                                                </StackPanel>
+                                                            </Grid>
+                                                        </Border>
+                                                        <Border Margin="2,4" Padding="10,8" Background="{DynamicResource B_Surface}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1" CornerRadius="{DynamicResource R_S}">
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions><ColumnDefinition Width="28"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                                                                <Border Width="16" Height="16" CornerRadius="3" Background="{DynamicResource B_SwitchTrack}" VerticalAlignment="Center"/>
+                                                                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                                                    <Border Width="180" Height="12" CornerRadius="3" Background="{DynamicResource B_SwitchTrack}" HorizontalAlignment="Left" Margin="0,0,0,6"/>
+                                                                    <Border Width="120" Height="10" CornerRadius="3" Background="{DynamicResource B_SwitchTrack}" HorizontalAlignment="Left"/>
+                                                                </StackPanel>
+                                                            </Grid>
+                                                        </Border>
+                                                        <Border Margin="2,4" Padding="10,8" Background="{DynamicResource B_Surface}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1" CornerRadius="{DynamicResource R_S}">
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions><ColumnDefinition Width="28"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                                                                <Border Width="16" Height="16" CornerRadius="3" Background="{DynamicResource B_SwitchTrack}" VerticalAlignment="Center"/>
+                                                                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                                                    <Border Width="200" Height="12" CornerRadius="3" Background="{DynamicResource B_SwitchTrack}" HorizontalAlignment="Left" Margin="0,0,0,6"/>
+                                                                    <Border Width="130" Height="10" CornerRadius="3" Background="{DynamicResource B_SwitchTrack}" HorizontalAlignment="Left"/>
+                                                                </StackPanel>
+                                                            </Grid>
+                                                        </Border>
+                                                    </StackPanel>
+                                                </Border>
+                                                <TextBlock Grid.Row="3" Text="{Binding NoResultsLabel}" FontSize="12" FontStyle="Italic" Foreground="{DynamicResource B_TextSecondary}" HorizontalAlignment="Center" TextAlignment="Center" Margin="0,8,0,0" Visibility="{Binding HasNoSearchResults, Converter={StaticResource BoolToVis}}"/>
+</Grid>
+</UserControl>
