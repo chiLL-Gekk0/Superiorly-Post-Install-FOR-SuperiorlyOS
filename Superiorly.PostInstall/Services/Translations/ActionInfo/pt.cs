@@ -59,7 +59,6 @@ public static partial class TranslationService
             ["win32priorityseparation"]="Estratégia de quantum da CPU. Padrão 2 (curto/variável/impulso 3:1). 0x26 = impulso 2:1. 0x18 = longo/fixo/sem impulso (estilo servidor).",
             ["vbs"]="Isola processos críticos do kernel com virtualização de hardware. Ativa KDP e Credential Guard. Custo: 1-5% em cargas intensivas de E/S. Desative só por compatibilidade com Hyper-V de terceiros.",
             ["hvci"]="Verifica a integridade do código do kernel dentro do hipervisor VBS e bloqueia drivers sem assinatura ou vulneráveis. Bloqueia ataques BYOVD. Impacto: 2-5% em E/S com drivers. Desative só ante telas azuis ou conflitos com anticheats.",
-            ["core-isolation"]="Combina integridade de memória (HVCI) com Credential Guard para proteger segredos LSA. Evita roubo de credenciais. Custo: ~2-5% de E/S + 100 MB de RAM. Desative só por conflitos com anticheats.",
             ["firewall"]="Inspeção de pacotes com estado e filtragem por aplicativo. BFE é necessário para IPsec, WFP e VPN. Custo: <0,1% de CPU. Desativar expõe SMB e RDP a movimento lateral. Mantenha ativado.",
             ["lua"]="Separa contextos de token padrão e elevado para mínimo privilégio. Desativar permite a qualquer processo escrever no sistema. Mantenha ativado.",
             ["vulnerable-driver-blocklist"]="Bloqueia na inicialização drivers do kernel explorados via HVCI + CI. Contra ataques BYOVD. Sem custo em execução. Ative sempre salvo se precisar de um driver legado.",

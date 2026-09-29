@@ -36,7 +36,7 @@ public sealed class JsonCatalogProvider : ICatalogProvider
         if (File.Exists(tipsPath))
         {
             var tipsJson = File.ReadAllText(tipsPath);
-            var tooltips = JsonSerializer.Deserialize<Dictionary<string, BrowserTip>>(tipsJson, Options);
+            var tooltips = JsonSerializer.Deserialize<Dictionary<string, int>>(tipsJson, Options);
             if (tooltips != null) catalog.Tooltips = tooltips;
         }
         else
@@ -45,7 +45,7 @@ public sealed class JsonCatalogProvider : ICatalogProvider
             using var tips = asm.GetManifestResourceStream("Superiorly.PostInstall.data.tooltips.json");
             if (tips != null)
             {
-                var tooltips = JsonSerializer.Deserialize<Dictionary<string, BrowserTip>>(tips, Options);
+                var tooltips = JsonSerializer.Deserialize<Dictionary<string, int>>(tips, Options);
                 if (tooltips != null) catalog.Tooltips = tooltips;
             }
         }

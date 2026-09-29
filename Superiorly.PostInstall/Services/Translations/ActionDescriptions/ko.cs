@@ -104,7 +104,6 @@ public static partial class TranslationService
             ["textinputhost"]="IFEO Debugger를 통해 TextInputHost를 활성화하거나 비활성화합니다(재부팅 권장).",
             ["vbs"]="Virtualization Based Security를 활성화하거나 비활성화합니다(재부팅 필요).",
             ["hvci"]="HVCI와 Memory Integrity를 활성화하거나 비활성화합니다(재부팅 필요).",
-            ["core-isolation"]="Core Isolation과 Memory Integrity를 활성화하거나 비활성화합니다(재부팅 필요).",
             ["firewall"]="Windows Defender Firewall 및 Base Filtering Engine을 활성화하거나 비활성화합니다(재부팅 필요).",
             ["lua"]="Limited User Account Control을 활성화하거나 비활성화합니다(재부팅 필요).",
             ["vulnerable-driver-blocklist"]="Windows Vulnerable Driver Blocklist를 활성화하거나 비활성화합니다(재부팅 필요).",

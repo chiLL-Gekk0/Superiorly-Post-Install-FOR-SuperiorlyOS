@@ -31,7 +31,7 @@ public static partial class TranslationService
             ["force-flip-true-immediate"]="Wymuszenie trybu natychmiastowego", ["group-memory-io"]="Pamięć i We/Wy", ["disablepagingexecutive"]="DisablePagingExecutive", ["disablepagecombining"]="DisablePageCombining",
             ["queued-present-limit"]="Limit prezentacji w kolejce", ["win32priorityseparation"]="Win32PrioritySeparation", ["powerplan-manager"]="Plany zasilania", ["wifi"]="Wi-Fi",
             ["bluetooth"]="Bluetooth", ["hop-limit"]="HopLimit (hotspot)", ["printer"]="Drukarki", ["task-manager"]="Task Manager do Process Explorer",
-            ["textinputhost"]="TextInputHost", ["vbs"]="VBS (zabezpieczenia oparte na wirtualizacji)", ["hvci"]="HVCI (integralność pamięci)", ["core-isolation"]="Izolacja rdzenia",
+            ["textinputhost"]="TextInputHost", ["vbs"]="VBS (zabezpieczenia oparte na wirtualizacji)", ["hvci"]="HVCI (integralność pamięci)",
             ["firewall"]="Zapora", ["lua"]="UAC / LUA", ["vulnerable-driver-blocklist"]="Lista blokowanych podatnych sterowników", ["nx-mode"]="Tryb No-Execute (NX)",
             ["xbox"]="Usługi Xbox", ["fivem-safe-services"]="Bezpieczne usługi FiveM/Minecraft", ["windows-update-drivers"]="Sterowniki Windows Update", ["start-menu"]="Menu Start",
             ["use-default-tile"]="Użycie domyślnego kafelka", ["fix-intel-panel"]="Naprawa panelu Intel",

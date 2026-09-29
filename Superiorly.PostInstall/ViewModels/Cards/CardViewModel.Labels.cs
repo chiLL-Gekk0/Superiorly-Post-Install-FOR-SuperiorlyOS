@@ -112,7 +112,7 @@ public partial class CardViewModel : ObservableObject {
         lang = TranslationService.Normalize(lang);
         Title = TranslationService.GetActionTitle(_action.Id, lang);
         Description = TranslationService.GetActionDescription(_action.Id, lang);
-        InfoText = string.IsNullOrWhiteSpace(_action.Info) ? "" : TranslationService.GetActionInfo(_action.Id, lang);
+        InfoText = TranslationService.HasActionInfo(_action.Id) ? TranslationService.GetActionInfo(_action.Id, lang) : "";
         ApplyCardLabels(lang);
         foreach (var option in Options) option.RefreshLanguage(lang);
         System.Windows.Data.CollectionViewSource.GetDefaultView(Items)?.Refresh();

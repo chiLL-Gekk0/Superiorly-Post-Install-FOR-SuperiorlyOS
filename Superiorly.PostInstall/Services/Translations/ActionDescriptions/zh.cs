@@ -104,7 +104,6 @@ public static partial class TranslationService
             ["textinputhost"]="通过 IFEO 调试器启用/禁用 TextInputHost（建议重启）。",
             ["vbs"]="启用/禁用基于虚拟化的安全（需要重启）。",
             ["hvci"]="启用/禁用 HVCI/内存完整性（需要重启）。",
-            ["core-isolation"]="启用/禁用内核隔离/内存完整性（需要重启）。",
             ["firewall"]="启用/禁用 Windows Defender 防火墙和基础筛选引擎（需要重启）。",
             ["lua"]="启用/禁用受限用户帐户控制（需要重启）。",
             ["vulnerable-driver-blocklist"]="启用/禁用 Windows 易受攻击驱动程序阻止列表（需要重启）。",

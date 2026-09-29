@@ -104,7 +104,6 @@ public static partial class TranslationService
             ["textinputhost"]="Activar o desactivar TextInputHost con el depurador IFEO (se recomienda reiniciar).",
             ["vbs"]="Activar o desactivar la seguridad basada en virtualización (requiere reinicio).",
             ["hvci"]="Activar o desactivar HVCI e integridad de memoria (requiere reinicio).",
-            ["core-isolation"]="Activar o desactivar el aislamiento del núcleo y la integridad de memoria (requiere reinicio).",
             ["firewall"]="Activar o desactivar el firewall de Windows Defender y el motor de filtrado base (requiere reinicio).",
             ["lua"]="Activar o desactivar el control limitado de cuentas de usuario (requiere reinicio).",
             ["vulnerable-driver-blocklist"]="Activar o desactivar la lista de bloqueo de controladores vulnerables (requiere reinicio).",

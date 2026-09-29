@@ -7,6 +7,14 @@ public static partial class TranslationService
     public static string Normalize(string? lang) =>
         string.IsNullOrEmpty(lang) ? "en" : Supported.Contains(lang) ? lang : "en";
 
+    // ponytail: "en" is the canonical key set (matches Normalize default); no English prose is hardcoded at call sites
+    public static bool HasActionInfo(string id) =>
+        ActionInfo.TryGetValue("en", out var d) && d.ContainsKey(id);
+
+    private static string Get(Dictionary<string, Dictionary<string, string>> composite, string id, string lang) =>
+        composite.TryGetValue(Normalize(lang), out var d) && d.TryGetValue(id, out var v) ? v
+        : composite.TryGetValue("en", out var e) && e.TryGetValue(id, out var w) ? w : id;
+
     static TranslationService()
     {
         UiExtra = new()

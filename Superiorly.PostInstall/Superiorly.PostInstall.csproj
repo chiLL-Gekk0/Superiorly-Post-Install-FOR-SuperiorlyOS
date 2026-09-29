@@ -42,10 +42,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="..\data\actions.json" LogicalName="Superiorly.PostInstall.data.actions.json" Condition="'$(Configuration)'!='Release'" />
-    <EmbeddedResource Include="..\data\tooltips.json" LogicalName="Superiorly.PostInstall.data.tooltips.json" />
-    <Content Include="..\data\actions.json" CopyToOutputDirectory="PreserveNewest" Link="data\actions.json" />
-    <Content Include="..\data\tooltips.json" CopyToOutputDirectory="PreserveNewest" Link="data\tooltips.json" />
+    <EmbeddedResource Include="data\actions.json" LogicalName="Superiorly.PostInstall.data.actions.json" Condition="'$(Configuration)'!='Release'" />
+    <EmbeddedResource Include="data\tooltips.json" LogicalName="Superiorly.PostInstall.data.tooltips.json" />
+    <Content Include="data\actions.json" CopyToOutputDirectory="PreserveNewest" Link="data\actions.json" />
+    <Content Include="data\tooltips.json" CopyToOutputDirectory="PreserveNewest" Link="data\tooltips.json" />
     <Content Include="Assets\Bundle\NSudo_8.2_All_Components.zip" Link="Tools\NSudo_8.2_All_Components.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudo_8.2_All_Components.zip')" />
     <Content Include="Assets\Bundle\NSudoLG.exe" Link="Tools\NSudoLG.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudoLG.exe')" />
     <Content Include="Assets\Bundle\PerformanceMeasurementTool_Danske101.zip" Link="Tools\PerformanceMeasurementTool_Danske101.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\PerformanceMeasurementTool_Danske101.zip')" />

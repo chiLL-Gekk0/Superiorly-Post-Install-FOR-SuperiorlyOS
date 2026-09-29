@@ -31,7 +31,7 @@ public static partial class TranslationService
             ["force-flip-true-immediate"]="Gerçek Anında Modu Zorlayın", ["group-memory-io"]="Bellek ve G/Ç", ["disablepagingexecutive"]="DisablePagingExecutive", ["disablepagecombining"]="DisablePageCombining",
             ["queued-present-limit"]="Kuyruklu Sunum Sınırı", ["win32priorityseparation"]="Win32PrioritySeparation", ["powerplan-manager"]="Güç Planları", ["wifi"]="Wi-Fi",
             ["bluetooth"]="Bluetooth", ["hop-limit"]="HopLimit (etkin nokta)", ["printer"]="Yazıcılar", ["task-manager"]="Task Manager - Process Explorer",
-            ["textinputhost"]="TextInputHost", ["vbs"]="VBS (sanallaştırma tabanlı güvenlik)", ["hvci"]="HVCI (bellek bütünlüğü)", ["core-isolation"]="Çekirdek Yalıtımı",
+            ["textinputhost"]="TextInputHost", ["vbs"]="VBS (sanallaştırma tabanlı güvenlik)", ["hvci"]="HVCI (bellek bütünlüğü)",
             ["firewall"]="Güvenlik Duvarı", ["lua"]="UAC / LUA", ["vulnerable-driver-blocklist"]="Savunmasız Sürücü Engelleme Listesi", ["nx-mode"]="No-Execute (NX) Modu",
             ["xbox"]="Xbox Hizmetleri", ["fivem-safe-services"]="FiveM/Minecraft Güvenli Hizmetleri", ["windows-update-drivers"]="Windows Update Sürücüleri", ["start-menu"]="Başlat Menüsü",
             ["use-default-tile"]="Varsayılan Kutucuğu Kullanın", ["fix-intel-panel"]="Intel Denetim Masasını Onarın",

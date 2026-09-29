@@ -104,7 +104,6 @@ public static partial class TranslationService
             ["textinputhost"]="Activez et désactivez TextInputHost via IFEO Debugger (redémarrage recommandé).",
             ["vbs"]="Activez et désactivez Virtualization Based Security (redémarrage requis).",
             ["hvci"]="Activez et désactivez HVCI et Memory Integrity (redémarrage requis).",
-            ["core-isolation"]="Activez et désactivez Core Isolation et Memory Integrity (redémarrage requis).",
             ["firewall"]="Activez et désactivez Windows Defender Firewall et Base Filtering Engine (redémarrage requis).",
             ["lua"]="Activez et désactivez Limited User Account Control (redémarrage requis).",
             ["vulnerable-driver-blocklist"]="Activez et désactivez Windows Vulnerable Driver Blocklist (redémarrage requis).",

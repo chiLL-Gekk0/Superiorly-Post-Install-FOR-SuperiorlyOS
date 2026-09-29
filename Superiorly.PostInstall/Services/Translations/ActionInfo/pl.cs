@@ -59,7 +59,6 @@ public static partial class TranslationService
             ["win32priorityseparation"]="Strategia kwantu CPU przez PriorityControl. Domyślnie 2 (krótki/zmienny/boost 3:1). 0x26=boost 2:1. 0x18=długi/stały/bez boost (styl serwera).",
             ["vbs"]="Izoluje krytyczne procesy OS od jądra przy użyciu wirtualizacji sprzętowej. Włącza KDP i Credential Guard. Narzut: 1-5% przy obciążeniach I/O. Wyłącz tylko dla zgodności Hyper-V innych firm.",
             ["hvci"]="Uruchamia kontrole integralności kodu jądra w hipernadzorcy VBS, blokując niepodpisane/podatne sterowniki. Blokuje ataki BYOVD. Wpływ: 2-5% na I/O sterowników. Wyłącz tylko przy BSOD lub konfliktach z anti-cheat.",
-            ["core-isolation"]="Łączy integralność pamięci (HVCI) z Credential Guard, aby chronić sekrety LSA. Zapobiega kradzieży poświadczeń. Narzut: ~2-5% I/O + 100 MB RAM. Wyłącz tylko przy konfliktach z anti-cheat.",
             ["firewall"]="Stanowa inspekcja pakietów i filtrowanie na poziomie aplikacji. BFE wymagane dla IPsec, WFP i VPN. Narzut: <0,1% CPU. Wyłączenie naraża SMB, RDP na ruch boczny. Zawsze pozostaw włączone.",
             ["lua"]="Oddziela standardowe i podwyższone konteksty tokenów dla najmniejszych uprawnień. Wyłączenie pozwala każdemu procesowi pisać do katalogów systemowych. Pozostaw włączone.",
             ["vulnerable-driver-blocklist"]="Blokuje przy starcie znane wykorzystywane sterowniki jądra przez HVCI + CI. Przeciw atakom BYOVD. Zerowy koszt w runtime. Zawsze włącz, chyba że wymagany sterownik legacy.",

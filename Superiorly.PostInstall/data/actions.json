@@ -6,22 +6,16 @@
     "sections": [
         {
             "id": "home",
-            "title": "Home",
-            "description": "Welcome to your toolbox",
             "actions": [],
             "Icon": ""
         },
         {
             "id": "browsers",
-            "title": "Browsers",
-            "description": "Browser related utilities and fixes",
             "actions": [
                 {
                     "id": "chrome",
                     "logo": "/Assets/Logos/chrome.png",
                     "icon": "",
-                    "title": "Google Chrome",
-                    "description": "Fastest Chromium in benchmarks. Google telemetry.",
                     "options": [
                         {
                             "label": "Run",
@@ -43,8 +37,6 @@
                     "id": "firefox",
                     "logo": "/Assets/Logos/firefox.png",
                     "icon": "",
-                    "title": "Mozilla Firefox",
-                    "description": "Gecko with native vertical tabs and sidebar.",
                     "options": [
                         {
                             "label": "Run",
@@ -66,8 +58,6 @@
                     "id": "librewolf",
                     "logo": "/Assets/Logos/librewolf.png",
                     "icon": "",
-                    "title": "LibreWolf",
-                    "description": "Zero telemetry, uBlock preinstalled, hardened.",
                     "options": [
                         {
                             "label": "Run",
@@ -92,8 +82,6 @@
                     "id": "brave",
                     "logo": "/Assets/Logos/brave.png",
                     "icon": "",
-                    "title": "Brave",
-                    "description": "Fast Chromium with built-in ad blocking.",
                     "options": [
                         {
                             "label": "Run",
@@ -115,8 +103,6 @@
                     "id": "thorium",
                     "logo": "/Assets/Logos/thorium.png",
                     "icon": "",
-                    "title": "Thorium AVX2",
-                    "description": "AVX2-optimized Chromium, lowest RAM use.",
                     "options": [
                         {
                             "label": "Run",
@@ -138,8 +124,6 @@
                     "id": "edge",
                     "logo": "/Assets/Logos/edge.png",
                     "icon": "",
-                    "title": "Microsoft Edge",
-                    "description": "Top benchmark scorer, Chromium-based.",
                     "options": [
                         {
                             "label": "Run",
@@ -161,8 +145,6 @@
                     "id": "vivaldi",
                     "logo": "/Assets/Logos/vivaldi.png",
                     "icon": "",
-                    "title": "Vivaldi",
-                    "description": "Deeply customizable, minimal connections.",
                     "options": [
                         {
                             "label": "Run",
@@ -184,8 +166,6 @@
                     "id": "opera",
                     "logo": "/Assets/Logos/opera.png",
                     "icon": "",
-                    "title": "Opera",
-                    "description": "Fast, built-in VPN. Owned by Kunlun Tech (China, 2016). Data-heavy, closed source — privacy concern despite marketing.",
                     "options": [
                         {
                             "label": "Run",
@@ -207,8 +187,6 @@
                     "id": "operagx",
                     "logo": "/Assets/Logos/operagx.png",
                     "icon": "",
-                    "title": "Opera GX",
-                    "description": "Gaming Chromium by Opera (Kunlun Tech, China). Heavy telemetry, closed prop, data collection risk — marketed as safe but many consider it unsafe.",
                     "options": [
                         {
                             "label": "Run",
@@ -230,8 +208,6 @@
                     "id": "comet",
                     "logo": "/Assets/Logos/comet.png",
                     "icon": "",
-                    "title": "Perplexity Comet",
-                    "description": "Perplexity AI-first browser with assistant. Sends prompts to cloud, not offline privacy.",
                     "options": [
                         {
                             "label": "Run",
@@ -251,8 +227,6 @@
                 },
                 {
                     "id": "floorp",
-                    "title": "Floorp",
-                    "description": "Japanese Firefox fork, vertical tabs, gestures.",
                     "icon": "",
                     "logo": "/Assets/Logos/floorp.png",
                     "options": [
@@ -274,8 +248,6 @@
                 },
                 {
                     "id": "waterfox",
-                    "title": "Waterfox",
-                    "description": "Independent since 2023, no telemetry by default.",
                     "icon": "",
                     "logo": "/Assets/Logos/waterfox.png",
                     "options": [
@@ -297,8 +269,6 @@
                 },
                 {
                     "id": "ungoogled",
-                    "title": "Ungoogled Chromium",
-                    "description": "Chromium stripped of Google services (3 connections).",
                     "icon": "",
                     "logo": "/Assets/Logos/ungoogled.png",
                     "options": [
@@ -320,8 +290,6 @@
                 },
                 {
                     "id": "zen",
-                    "title": "Zen Browser",
-                    "description": "Arc-inspired Firefox with workspaces and mods.",
                     "icon": "",
                     "logo": "/Assets/Logos/zen.png",
                     "options": [
@@ -343,8 +311,6 @@
                 },
                 {
                     "id": "arc",
-                    "title": "Arc",
-                    "description": "Chromium with vertical tabs. Requires login, Segment/Sentry telemetry, no opt-out. Dev ended 2025, fixes only.",
                     "icon": "",
                     "logo": "/Assets/Logos/arc.png",
                     "options": [
@@ -366,8 +332,6 @@
                 },
                 {
                     "id": "duckduckgo",
-                    "title": "DuckDuckGo",
-                    "description": "Tracker blocking and encrypted by default.",
                     "icon": "",
                     "logo": "/Assets/Logos/duckduckgo.png",
                     "options": [
@@ -389,8 +353,6 @@
                 },
                 {
                     "id": "mullvad",
-                    "title": "Mullvad Browser",
-                    "description": "Hardened Firefox (Tor partnership). No telemetry, fingerprint resistance — most private (with LibreWolf).",
                     "icon": "",
                     "logo": "/Assets/Logos/mullvad.png",
                     "tab": "privacy",
@@ -412,8 +374,6 @@
                 },
                 {
                     "id": "pale-moon",
-                    "title": "Pale Moon",
-                    "description": "Goanna engine fork (old Gecko). Legacy extensions, low telemetry but outdated web compat.",
                     "icon": "",
                     "logo": "/Assets/Logos/pale-moon.png",
                     "tab": "forks",
@@ -435,8 +395,6 @@
                 },
                 {
                     "id": "yandex",
-                    "title": "Yandex Browser",
-                    "description": "Chromium (Yandex, Russia). Fast, Turbo mode, but heavy Yandex telemetry — privacy risk for many.",
                     "icon": "",
                     "logo": "/Assets/Logos/yandex.png",
                     "tab": "mainstream",
@@ -458,8 +416,6 @@
                 },
                 {
                     "id": "epic-browser",
-                    "title": "Epic Privacy Browser",
-                    "description": "Chromium privacy (US). Blocks trackers, no history, but closed source — trust-based, not audited like Brave.",
                     "icon": "",
                     "logo": "/Assets/Logos/epic-browser.png",
                     "tab": "privacy",
@@ -481,8 +437,6 @@
                 },
                 {
                     "id": "cachy-browser",
-                    "title": "Cachy Browser",
-                    "description": "Chromium optimized (CachyOS). AVX2, LTO, minimal patches — speed-focused, like Thorium but Arch lineage.",
                     "icon": "",
                     "logo": "/Assets/Logos/cachy-browser.png",
                     "tab": "forks",
@@ -504,8 +458,6 @@
                 },
                 {
                     "id": "kagi-orion",
-                    "title": "Kagi Orion",
-                    "description": "WebKit (Kagi, US). Zero telemetry, macOS/iOS first — Windows port early. Privacy-first, not Chromium.",
                     "icon": "",
                     "logo": "/Assets/Logos/kagi-orion.png",
                     "tab": "ai",
@@ -527,8 +479,6 @@
                 },
                 {
                     "id": "tor-browser",
-                    "title": "Tor Browser",
-                    "description": "Onion routing through 3 volunteer relays. The anonymity gold standard — slower, but unmatchable.",
                     "icon": "",
                     "logo": "/Assets/Logos/tor-browser.png",
                     "tab": "privacy",
@@ -550,8 +500,6 @@
                 },
                 {
                     "id": "chromium",
-                    "title": "Chromium",
-                    "description": "Vanilla open-source Chrome base. No Google sync, no auto-update on Windows builds.",
                     "icon": "",
                     "logo": "/Assets/Logos/chromium.png",
                     "tab": "mainstream",
@@ -573,8 +521,6 @@
                 },
                 {
                     "id": "avast-secure",
-                    "title": "Avast Secure Browser",
-                    "description": "Chromium by Avast with Bank Mode and built-in VPN. Convenient, but mind its data past.",
                     "icon": "",
                     "logo": "/Assets/Logos/avast-secure.png",
                     "tab": "mainstream",
@@ -596,8 +542,6 @@
                 },
                 {
                     "id": "whale",
-                    "title": "Naver Whale",
-                    "description": "Chromium by Naver (Korea). Sidebar apps, quick translate and mouse gestures.",
                     "icon": "",
                     "logo": "/Assets/Logos/whale.png",
                     "tab": "mainstream",
@@ -619,8 +563,6 @@
                 },
                 {
                     "id": "falkon",
-                    "title": "Falkon",
-                    "description": "KDE QtWebEngine browser. Featherweight and integrated with the Linux desktop.",
                     "icon": "",
                     "logo": "/Assets/Logos/falkon.png",
                     "tab": "forks",
@@ -642,8 +584,6 @@
                 },
                 {
                     "id": "dia",
-                    "title": "Dia",
-                    "description": "The Browser Company AI browser (Arc successor). Chat-native browsing, Windows beta.",
                     "icon": "",
                     "logo": "/Assets/Logos/dia.png",
                     "tab": "ai",
@@ -691,13 +631,9 @@
         },
         {
             "id": "tools",
-            "title": "Tools",
-            "description": "Downloads and runs portable utilities",
             "actions": [
                 {
                     "id": "group-system-tools",
-                    "title": "System Tools",
-                    "description": "Admin privileges, hardware diagnostics and display utilities.",
                     "type": "group-header",
                     "tab": "software",
                     "icon": ""
@@ -705,8 +641,6 @@
                 {
                     "id": "process-explorer",
                     "icon": "",
-                    "title": "Process Explorer",
-                    "description": "Installs and launches Sysinternals Process Explorer.",
                     "options": [
                         {
                             "label": "Run",
@@ -724,14 +658,11 @@
                     "launch": [
                         "powershell -NoProfile -Command reg add \"HKCU\\Software\\Sysinternals\" /v EulaAccepted /t REG_DWORD /d 1 /f|Out-Null; reg add \"HKCU\\Software\\Sysinternals\\Process Explorer\" /v EulaAccepted /t REG_DWORD /d 1 /f|Out-Null; $app=Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -ErrorAction SilentlyContinue | Where-Object { $_.DisplayName -like '*Process Explorer*' } | Select-Object -First 1; $exe=if($app -and $app.DisplayIcon){($app.DisplayIcon -split ',')[0]}; if($exe -and (Test-Path $exe)){Start-Process $exe -ArgumentList '/accepteula'; exit 0}else{$f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\" -Recurse -Filter 'procexp*.exe' -ErrorAction SilentlyContinue|Select-Object -First 1; if($f){Start-Process $f.FullName -ArgumentList '/accepteula'; exit 0}else{exit 1}}"
                     ],
-                    "type": "download",
-                    "info": "Advanced task manager showing real-time handle/DLL usage, process trees, GPU memory, and code signing verification. Resolves thread stack symbols and shows per-process I/O. Read-only diagnostic tool."
+                    "type": "download"
                 },
                 {
                     "id": "nsudo",
                     "icon": "",
-                    "title": "NSudo",
-                    "description": "Installs and launches NSudo (advanced privilege runner).",
                     "options": [
                         {
                             "label": "Run",
@@ -749,14 +680,11 @@
                     "launch": [
                         "powershell -NoProfile -Command $exe=Get-ChildItem \"$env:TEMP\\Superiorly\\Tools\\nsudo\",\"$env:LOCALAPPDATA\\Superiorly\\Tools\\nsudo\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object{$_.FullName -like '*x64*'}|Select -First 1; if(-not $exe){$exe=Get-ChildItem \"$env:TEMP\\Superiorly\\Tools\\nsudo\",\"$env:LOCALAPPDATA\\Superiorly\\Tools\\nsudo\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1}; if($exe){Start-Process $exe.FullName; exit 0}else{exit 1}"
                     ],
-                    "type": "download",
-                    "info": "Runs processes as TrustedInstaller, SYSTEM, or with full privileges. Essential for modifying protected files or taking ownership of locked resources. Warning: bypasses all security checks — use only for legitimate system administration. Upstream archived in 2022 (v8.2 final); successor NanaRun/MinSudo still in preview."
+                    "type": "download"
                 },
                 {
                     "id": "driverview",
                     "icon": "",
-                    "title": "DriverView",
-                    "description": "Installs and launches DriverView (loaded drivers list).",
                     "options": [
                         {
                             "label": "Run",
@@ -773,14 +701,11 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\driverview\",\"$env:TEMP\\driverview\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
-                    "type": "download",
-                    "info": "Lists all kernel-mode drivers with version, type, and memory usage. Identifies unsigned or outdated drivers that may cause BSODs. Useful for diagnosing driver conflicts."
+                    "type": "download"
                 },
                 {
                     "id": "cru",
                     "icon": "",
-                    "title": "Custom Resolution Utility (CRU)",
-                    "description": "Modify display EDID overrides, restart display driver, or reset all CRU changes.",
                     "options": [
                         {
                             "label": "Open CRU",
@@ -812,13 +737,10 @@
                     "launch": [
                         "powershell -NoProfile -Command $app=Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Custom Resolution*' } | Select -First 1; $exe=if($app -and $app.DisplayIcon){($app.DisplayIcon -split ',')[0]}; if($exe -and (Test-Path $exe)){Start-Process $exe; exit 0}else{$f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",\"$env:LOCALAPPDATA\\Superiorly\\Tools\\cru\",\"$env:TEMP\\Superiorly\\Tools\\cru\" -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
                     ],
-                    "type": "download",
-                    "info": "Adds custom resolutions, refresh rates, and timing parameters via EDID registry overrides. Restart driver to apply without reboot. Warning: incorrect values may cause no signal — press F8 within 15s to recover."
+                    "type": "download"
                 },
                 {
                     "id": "group-maintenance",
-                    "title": "Maintenance",
-                    "description": "Update control and clean uninstall helpers.",
                     "type": "group-header",
                     "tab": "software",
                     "icon": ""
@@ -826,8 +748,6 @@
                 {
                     "id": "windows-update-manager",
                     "icon": "",
-                    "title": "Windows Update Manager",
-                    "description": "Installs and launches Windows Update Manager.",
                     "options": [
                         {
                             "label": "Run",
@@ -845,14 +765,11 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\wumgr\",\"$env:TEMP\\wumgr\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ try{ choco install wumgr -y --force|Out-Null; $f2=Get-ChildItem \"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f2){Start-Process $f2.FullName; exit 0}}catch{}; exit 1}"
                     ],
-                    "type": "download",
-                    "info": "Granular control over Windows Updates: hide/show individual updates, defer quality updates, manage driver updates, and pause all updates. Maintained Darkaxt fork v1.2.2 (upstream abandoned 2019), SHA256-verified download."
+                    "type": "download"
                 },
                 {
                     "id": "geek-uninstaller",
                     "icon": "",
-                    "title": "Geek Uninstaller",
-                    "description": "Installs and launches Geek Uninstaller (portable uninstaller).",
                     "options": [
                         {
                             "label": "Run",
@@ -870,13 +787,10 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\geek\",\"$env:TEMP\\geek\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ try{ choco install geekuninstaller -y --force|Out-Null; $f2=Get-ChildItem \"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f2){Start-Process $f2.FullName; exit 0}}catch{}; exit 1}"
                     ],
-                    "type": "download",
-                    "info": "Portable forced uninstaller for stubborn programs, Windows Store apps, and browser extensions. Scans registry and file system for leftover entries after uninstall. No installation required."
+                    "type": "download"
                 },
                 {
                     "id": "group-benchmarks-peripherals",
-                    "title": "Benchmarks & Peripherals",
-                    "description": "Polling, sleep, GPU and mouse measurement tools.",
                     "type": "group-header",
                     "tab": "software",
                     "icon": ""
@@ -884,8 +798,6 @@
                 {
                     "id": "mousetester",
                     "icon": "",
-                    "title": "MouseTester",
-                    "description": "Downloads and launches MouseTester to analyze polling rate and input stability.",
                     "options": [
                         {
                             "label": "Run",
@@ -902,14 +814,11 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\mt\",\"$env:TEMP\\mt\" -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
-                    "type": "download",
-                    "info": "Analyzes mouse polling rate consistency, input stability, and sensor performance. Records raw movement data and plots velocity, jitter, and angle snapping. Dual-device mode measures input lag between two mice."
+                    "type": "download"
                 },
                 {
                     "id": "measuresleep",
                     "icon": "",
-                    "title": "MeasureSleep",
-                    "description": "Downloads and launches MeasureSleep to benchmark sleep/wake behavior.",
                     "options": [
                         {
                             "label": "Run",
@@ -925,14 +834,11 @@
                     "launch": [
                         "$exe=$env:TEMP+'\\ms\\MeasureSleep.exe'; if(Test-Path $exe){Start-Process $exe}"
                     ],
-                    "type": "download",
-                    "info": "Benchmarks Windows Sleep() precision by measuring actual vs requested intervals. Identifies timer resolution issues causing micro-stutter and input lag. Pairs with SetTimerResolution to verify improvements."
+                    "type": "download"
                 },
                 {
                     "id": "ocat",
                     "icon": "",
-                    "title": "OCAT",
-                    "description": "Downloads and launches OCAT (frame capture and analysis).",
                     "options": [
                         {
                             "label": "Run",
@@ -951,14 +857,11 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"${env:ProgramFiles(x86)}\\OCAT\",\"$env:ProgramFiles\\OCAT\" -Recurse -Filter 'OCAT.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; $exe=$env:TEMP+'\\ocat\\OCAT_v1.6.3.exe'; if(Test-Path $exe){Start-Process $exe}"
                     ],
-                    "type": "download",
-                    "info": "FPS overlay and frame time capture for D3D11, D3D12, and Vulkan. Uses Intel PresentMon for accurate timing. Records frame time traces with hotkey. Works with any GPU vendor. Installed silently via winget."
+                    "type": "download"
                 },
                 {
                     "id": "onboard-memory-manager",
                     "icon": "",
-                    "title": "OnboardMemoryManager",
-                    "description": "Downloads and launches Onboard Memory Manager (supported devices only).",
                     "options": [
                         {
                             "label": "Run",
@@ -976,14 +879,11 @@
                     "launch": [
                         "powershell -NoProfile -Command $app=Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Onboard Memory Manager*' } | Select -First 1; $exe=if($app -and $app.DisplayIcon){($app.DisplayIcon -split ',')[0]}; if($exe -and (Test-Path $exe)){Start-Process $exe; exit 0}else{$f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\" -Recurse -Filter 'OnboardMemoryManager.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
                     ],
-                    "type": "download",
-                    "info": "Configures DPI, button assignments, and lighting on Logitech G mouse onboard memory. Eliminates need for G HUB running in background. Supports Pro X Superlight, G Pro, G502, G305 and other G-series."
+                    "type": "download"
                 },
                 {
                     "id": "performance-measurement",
                     "icon": "",
-                    "title": "PerformanceMeasurementTool",
-                    "description": "Downloads and launches Performance Measurement Tool.",
                     "options": [
                         {
                             "label": "Run",
@@ -1000,13 +900,10 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$env:TEMP\\Superiorly\\Tools\\pmt\",\"$env:LOCALAPPDATA\\Superiorly\\Tools\\pmt\" -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1; if($f -and (Test-Path (Join-Path $f.DirectoryName 'PresentMon\\PresentMon-1.7.0-x64.exe'))){Start-Process $f.FullName -WorkingDirectory $f.DirectoryName; exit 0}else{exit 1}"
                     ],
-                    "type": "download",
-                    "info": "PresentMon-based frame capture GUI (Danske v1.0.1): process list, capture hotkey, capture delay/time, output folder and Analyze view. Bundles PresentMon 1.7.0. Mirror copy SHA256-verified."
+                    "type": "download"
                 },
                 {
                     "id": "msstore-downloader",
-                    "title": "Microsoft Store Downloader",
-                    "description": "Download and install your apps with a few clicks.",
                     "tab": "store-downloader",
                     "icon": "",
                     "type": "search",
@@ -1029,8 +926,6 @@
                 },
                 {
                     "id": "autoruns",
-                    "title": "Autoruns",
-                    "description": "Advanced startup inspection tool that shows all auto-starting programs, services, drivers, scheduled tasks, and registry entries, allowing you to disable or remove unwanted startup items.",
                     "tab": "utilities",
                     "icon": "",
                     "options": [
@@ -1041,7 +936,6 @@
                             ]
                         }
                     ],
-                    "info": "Shows all auto-starting programs, services, drivers, and scheduled tasks. Safe to disable known unwanted entries. Use Hide Microsoft Entries to focus on third-party. Risk: disabling Winlogon/services can prevent boot.",
                     "check": [
                         "powershell -NoProfile -Command \"if (Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -ErrorAction SilentlyContinue | Where-Object { $_.DisplayName -like '*Autoruns*' }) { exit 0 } else { exit 1 }\"",
                         "file:%LOCALAPPDATA%\\Microsoft\\WinGet\\Packages\\Microsoft.Sysinternals.Autoruns*\\**\\Autoruns64.exe",
@@ -1054,8 +948,6 @@
                 },
                 {
                     "id": "devicecleanup",
-                    "title": "DeviceCleanup",
-                    "description": "Utility that removes non-present and stale device entries from the system, helping clean up old hardware records and prevent driver-related conflicts.",
                     "tab": "utilities",
                     "icon": "",
                     "options": [
@@ -1066,7 +958,6 @@
                             ]
                         }
                     ],
-                    "info": "Removes registry entries for disconnected hardware. Safe for absent devices only. Similar to Microsoft DevNodeClean. Risk: minimal — only affects disconnected hardware.",
                     "check": [
                         "file:%LOCALAPPDATA%\\Superiorly\\Tools\\dc\\**\\DeviceCleanup.exe",
                         "file:%TEMP%\\dc\\**\\DeviceCleanup.exe"
@@ -1078,8 +969,6 @@
                 },
                 {
                     "id": "gointerruptpolicy",
-                    "title": "GoInterruptPolicy",
-                    "description": "Tool used to view and modify Windows interrupt policies and affinities, allowing finer control over how hardware interrupts are distributed across CPU cores.",
                     "tab": "utilities",
                     "icon": "",
                     "options": [
@@ -1090,7 +979,6 @@
                             ]
                         }
                     ],
-                    "info": "Sets CPU affinity and priority policies for processes. Useful for pinning game engines to specific cores. Risk: incorrect affinity can reduce performance.",
                     "check": [
                         "file:%LOCALAPPDATA%\\Superiorly\\Tools\\gip\\GoInterruptPolicy.exe",
                         "file:%TEMP%\\gip\\GoInterruptPolicy.exe",
@@ -1103,8 +991,6 @@
                 },
                 {
                     "id": "serviwin",
-                    "title": "Serviwin",
-                    "description": "Downloads and launches ServiWin (services and drivers manager).",
                     "tab": "utilities",
                     "icon": "",
                     "options": [
@@ -1122,13 +1008,10 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\serviwin\",\"$env:TEMP\\serviwin\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
-                    "type": "download",
-                    "info": "Lists Windows services and drivers with status. Safe to stop/disable known unnecessary services. Risk: disabling critical services (RPC, DCOM) breaks system."
+                    "type": "download"
                 },
                 {
                     "id": "usbtreeview",
-                    "title": "UsbTreeView",
-                    "description": "Detailed USB topology viewer that displays all connected USB devices, hubs, controllers, power states, and descriptors for low-level USB analysis.",
                     "tab": "utilities",
                     "icon": "",
                     "options": [
@@ -1139,7 +1022,6 @@
                             ]
                         }
                     ],
-                    "info": "Shows USB device tree with power state and bandwidth. Useful for debugging USB issues. Read-only.",
                     "check": [
                         "file:%LOCALAPPDATA%\\Superiorly\\Tools\\utv\\**\\UsbTreeView.exe",
                         "file:%TEMP%\\utv\\**\\UsbTreeView.exe"
@@ -1151,8 +1033,6 @@
                 },
                 {
                     "id": "ddu",
-                    "title": "DDU",
-                    "description": "Display Driver Uninstaller. Completely removes GPU drivers (NVIDIA, AMD, Intel) including residual files and registry entries.",
                     "tab": "utilities",
                     "icon": "",
                     "options": [
@@ -1169,13 +1049,10 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$env:TEMP\\Superiorly\\Tools\\ddu\",\"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DDU.exe' -EA 0|Select -First 1; if(-not $f){$f=Get-ChildItem \"$env:TEMP\\Superiorly\\Tools\\ddu\",\"$env:LOCALAPPDATA\\Superiorly\\Tools\\ddu\" -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1}; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
-                    "type": "download",
-                    "info": "Removes all GPU driver remnants (files, registry, folders) that standard uninstallers leave behind. Use when switching GPU brands or fixing corrupted drivers. Run in Safe Mode for best results."
+                    "type": "download"
                 },
                 {
                     "id": "filterkeysetter",
-                    "title": "FilterKeysSetter",
-                    "description": "Configures Windows FilterKeys keyboard accessibility settings (bounce keys, repeat rates).",
                     "tab": "utilities",
                     "icon": "",
                     "options": [
@@ -1192,13 +1069,10 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$env:TEMP\\Superiorly\\Tools\\fks\" -Recurse -Filter 'FilterKeysSetter.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
-                    "type": "download",
-                    "info": "Adjusts Windows FilterKeys values beyond Control Panel limits: repeat delay, repeat rate, acceptance delay, and bounce time. Affects text editors and apps using high-level keyboard input. Modern games using DirectInput or Raw Input are unaffected."
+                    "type": "download"
                 },
                 {
                     "id": "throttlestop",
-                    "title": "ThrottleStop",
-                    "description": "CPU undervolting and throttling control. Counteracts thermal/power throttling on laptops.",
                     "tab": "utilities",
                     "icon": "",
                     "options": [
@@ -1215,51 +1089,40 @@
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\" -Recurse -Filter 'ThrottleStop.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
-                    "type": "download",
-                    "info": "Undervolts CPU via FIVR, controls turbo boost (PL1/PL2), toggles BD PROCHOT, and manages Speed Shift/EPP. Reduces temperatures and prevents thermal throttling. Requires admin."
+                    "type": "download"
                 }
             ],
 
             "tabs": [
                 {
-                    "id": "software",
-                    "title": "Software"
+                    "id": "software"
                 },
                 {
-                    "id": "utilities",
-                    "title": "Utilities"
+                    "id": "utilities"
                 },
                 {
-                    "id": "store-downloader",
-                    "title": "Microsoft store downloader"
+                    "id": "store-downloader"
                 }
             ],
             "Icon": ""
         },
         {
             "id": "tweaking",
-            "title": "Tweaking",
-            "description": "Driver, GPU and system tweaks.",
             "tabs": [
                 {
-                    "id": "amd",
-                    "title": "AMD"
+                    "id": "amd"
                 },
                 {
-                    "id": "nvidia",
-                    "title": "NVIDIA"
+                    "id": "nvidia"
                 },
                 {
-                    "id": "registry",
-                    "title": "Registry Tweaks"
+                    "id": "registry"
                 },
                 {
-                    "id": "win32",
-                    "title": "Win32PrioritySeparation"
+                    "id": "win32"
                 },
                 {
-                    "id": "powerplans",
-                    "title": "Power Plans"
+                    "id": "powerplans"
                 },
                 {
                     "id": "debloat"
@@ -1268,8 +1131,6 @@
             "actions": [
                 {
                     "id": "radeonsoftwareslimmer",
-                    "title": "RadeonSoftwareSlimmer",
-                    "description": "Utility that removes unnecessary components and features from AMD Radeon Software to reduce background services, improve responsiveness, and lower system overhead.",
                     "tab": "amd",
                     "icon": "",
                     "options": [
@@ -1280,7 +1141,6 @@
                             ]
                         }
                     ],
-                    "info": "Removes unnecessary AMD Radeon Software components (telemetry, background processes, bloatware). Reduces RAM by 200-400MB. Safe for all AMD GPUs — only removes software layer, not driver functionality.",
                     "check": [
                         "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe'; if((Test-Path $p) -or (Test-Path \"$env:LOCALAPPDATA\\Superiorly\\Tools\\rss\\RadeonSoftwareSlimmer.exe\") -or (Test-Path \"$env:TEMP\\rss\\RadeonSoftwareSlimmer.exe\")){exit 0}else{exit 1}",
                         "file:%LOCALAPPDATA%\\Superiorly\\Tools\\rss\\**\\RadeonSoftwareSlimmer.exe",
@@ -1293,8 +1153,6 @@
                 },
                 {
                     "id": "moreclocktool",
-                    "title": "MoreClockTool",
-                    "description": "Advanced GPU clock and voltage configuration tool that allows fine-grained control over frequency states for testing, tuning, and performance analysis.",
                     "tab": "amd",
                     "icon": "",
                     "options": [
@@ -1305,7 +1163,6 @@
                             ]
                         }
                     ],
-                    "info": "Fine-grained control over AMD GPU clock frequencies, voltage curves, and power states. Essential for Polaris, Vega, and RDNA1 GPUs. Warning: incorrect voltage can cause GPU instability — test with benchmarks after changes. RDNA4 requires the Apr-2025+ build (v1.1.11_2+) — older builds misread clocks.",
                     "check": [
                         "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\MoreClockTool.exe'; if((Test-Path $p) -or (Test-Path \"$env:TEMP\\Superiorly\\Tools\\mct\\MoreClockTool.exe\") -or (Test-Path \"$env:LOCALAPPDATA\\Superiorly\\Tools\\mct\\MoreClockTool.exe\") -or (Test-Path \"$env:TEMP\\mct\\MoreClockTool.exe\")){exit 0}else{exit 1}",
                         "file:%TEMP%\\Superiorly\\Tools\\mct\\**\\MoreClockTool.exe",
@@ -1318,8 +1175,6 @@
                 },
                 {
                     "id": "morepowertool",
-                    "title": "MorePowerTool",
-                    "description": "Low-level power and limit configuration tool that modifies GPU power tables, enabling advanced tuning beyond standard driver restrictions.",
                     "tab": "amd",
                     "icon": "",
                     "options": [
@@ -1330,7 +1185,6 @@
                             ]
                         }
                     ],
-                    "info": "Modifies AMD GPU power tables to override power limits, fan curves, and thermal throttling at driver level. Supports Polaris, Vega, RDNA1/2/3. Warning: can permanently damage hardware — always backup original PPTable first.",
                     "check": [
                         "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\MorePowerTool.exe'; if((Test-Path $p) -or (Test-Path \"$env:TEMP\\Superiorly\\Tools\\mpt\\MorePowerTool.exe\") -or (Test-Path \"$env:LOCALAPPDATA\\Superiorly\\Tools\\mpt\\MorePowerTool.exe\") -or (Test-Path \"$env:TEMP\\mpt\\MorePowerTool.exe\")){exit 0}else{exit 1}",
                         "file:%LOCALAPPDATA%\\Superiorly\\Tools\\mpt\\**\\MorePowerTool.exe",
@@ -1343,8 +1197,6 @@
                 },
                 {
                     "id": "radeonmod",
-                    "title": "RadeonMod",
-                    "description": "Modification tool that allows editing and applying custom Radeon driver settings, registry flags, and hidden driver parameters.",
                     "tab": "amd",
                     "icon": "",
                     "options": [
@@ -1355,7 +1207,6 @@
                             ]
                         }
                     ],
-                    "info": "Edits hidden AMD driver registry values: Flip Queue Size, shader cache, ULPS, triple buffering, tessellation. Supports Radeon HD 5000 through RX 500 series. Legacy tool — for RDNA2+ use AMD Software. Always backup registry first.",
                     "check": [
                         "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonMod.exe'; if((Test-Path $p) -or (Test-Path \"$env:TEMP\\Superiorly\\Tools\\rm\\RadeonMod.exe\") -or (Test-Path \"$env:LOCALAPPDATA\\Superiorly\\Tools\\rm\\RadeonMod.exe\")){exit 0}else{exit 1}",
                         "file:%TEMP%\\Superiorly\\Tools\\rm\\**\\RadeonMod.exe"
@@ -1367,8 +1218,6 @@
                 },
                 {
                     "id": "nvcleanstall",
-                    "title": "NVCleanstall",
-                    "description": "Advanced installer that strips away NVIDIA telemetry and bloatware. Tailors your driver package to include only the essentials for a lighter, faster, and more private system.",
                     "tab": "nvidia",
                     "icon": "",
                     "options": [
@@ -1379,7 +1228,6 @@
                             ]
                         }
                     ],
-                    "info": "Strips NVIDIA drivers to essentials — removes telemetry, GeForce Experience, HDMI audio. Reduces disk by 500MB+ and eliminates background services. Installs only core display driver and PhysX.",
                     "check": [
                         "powershell -NoProfile -Command \"if (Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*NVCleanstall*' }) { exit 0 } else { exit 1 }\"",
                         "file:%ProgramFiles%\\**\\NVCleanstall.exe",
@@ -1392,8 +1240,6 @@
                 },
                 {
                     "id": "nvidia-inspector",
-                    "title": "NVIDIA Profile Inspector",
-                    "description": "Low-level NVIDIA GPU monitoring and control tool that provides real-time information about clocks, voltages, power states, and driver behavior, with limited tuning capabilities.",
                     "tab": "nvidia",
                     "icon": "",
                     "options": [
@@ -1404,7 +1250,6 @@
                             ]
                         }
                     ],
-                    "info": "Real-time GPU monitoring: clock speeds, voltages, temperatures, fan speeds, power draw. Reads sensors at hardware level. Useful for verifying overclock stability and monitoring thermal throttling.",
                     "check": [
                         "powershell -NoProfile -Command \"if (Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Nvidia Inspector*' -or $_.DisplayName -like '*nvidiaProfileInspector*' }) { exit 0 } else { exit 1 }\"",
                         "file:%ProgramFiles%\\**\\nvidiaProfileInspector.exe",
@@ -1419,17 +1264,12 @@
                 },
                 {
                     "id": "apply-nip",
-                    "title": "Apply NIP",
-                    "description": "Imports the selected .nip profile silently using NvidiaProfileInspector.",
                     "tab": "nvidia",
                     "icon": "",
-                    "options": [],
-                    "info": "Pre-configured driver profile overrides for specific games. Optimizes AA, AF, texture quality, and power settings per title. Profiles are version-specific to NVIDIA driver releases — test stability after applying."
+                    "options": []
                 },
                 {
                     "id": "force-pstate0",
-                    "title": "Force PState0",
-                    "description": "Forces NVIDIA GPUs to remain in the highest performance power state. Can reduce clock and latency fluctuations at the cost of higher power usage and temperatures.",
                     "tab": "nvidia",
                     "icon": "",
                     "options": [
@@ -1448,21 +1288,16 @@
                     ],
                     "check": [
                         "powershell -NoProfile -Command \"if (Get-ChildItem 'HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e968-e325-11ce-bfc1-08002be10318}' | Where-Object { (Get-ItemProperty $_.PsPath -Name DriverDesc -ErrorAction SilentlyContinue).DriverDesc -match 'NVIDIA' } | Get-ItemProperty -Name DisableDynamicPstate -ErrorAction SilentlyContinue | Where-Object { $_.DisableDynamicPstate -eq 1 }) { exit 0 } else { exit 1 }\""
-                    ],
-                    "info": "Locks NVIDIA GPU to maximum performance state (P0), preventing clock scaling that causes frame time inconsistency. Warning: increases idle power 20-40W and temperatures. Disable when not gaming."
+                    ]
                 },
                 {
                     "id": "group-cpu-scheduling",
-                    "title": "CPU & Scheduling",
-                    "description": "Thread scheduling, MMCSS behavior, CPU priority and idle states.",
                     "type": "group-header",
                     "tab": "registry",
                     "icon": ""
                 },
                 {
                     "id": "lazymodetimeout",
-                    "title": "LazyModeTimeout",
-                    "description": "This value will modify the MMCSS cycle suspension (reboot required).",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1514,13 +1349,10 @@
                                 "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v LazyModeTimeout /t REG_DWORD /d 7000000 /f"
                             ]
                         }
-                    ],
-                    "info": "MMCSS idle detection lazy cycle timeout. Default: 1,000,000 (100ms). Lower = faster wake-up but more CPU wake-ups. Hidden undocumented setting."
+                    ]
                 },
                 {
                     "id": "systemresponsiveness",
-                    "title": "SystemResponsiveness",
-                    "description": "Determines the percentage of resources allocated to low priority tasks by the CPU (reboot required).",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1548,13 +1380,10 @@
                                 "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v SystemResponsiveness /t REG_DWORD /d 10 /f"
                             ]
                         }
-                    ],
-                    "info": "MMCSS reserve for background tasks (0-100, default=20). Values 0-9 clamped to 20. 10-100 rounded down to nearest 10. 100 disables MMCSS."
+                    ]
                 },
                 {
                     "id": "receive-buffers",
-                    "title": "Receive Buffers",
-                    "description": "Determines the amount of memory allocated to store data that is waiting to be received over the network (reboot required).",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1588,13 +1417,10 @@
                                 "powershell -NoProfile -Command Get-NetAdapter -ErrorAction SilentlyContinue | ForEach-Object { $p='HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e972-e325-11ce-bfc1-08002be10318}\\' + $_.DeviceID.PadLeft(4,'0'); Set-ItemProperty -Path $p -Name '*ReceiveBuffers' -Value '2048' -ErrorAction SilentlyContinue }"
                             ]
                         }
-                    ],
-                    "info": "Network adapter receive buffer size. Higher may improve throughput. Risk: uses more memory."
+                    ]
                 },
                 {
                     "id": "transmit-buffers",
-                    "title": "Transmit Buffers",
-                    "description": "Determines the amount of memory that holds data before it's physically sent over a network (reboot required).",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1628,13 +1454,10 @@
                                 "powershell -NoProfile -Command Get-NetAdapter -ErrorAction SilentlyContinue | ForEach-Object { $p='HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Class\\{4d36e972-e325-11ce-bfc1-08002be10318}\\' + $_.DeviceID.PadLeft(4,'0'); Set-ItemProperty -Path $p -Name '*TransmitBuffers' -Value '1024' -ErrorAction SilentlyContinue }"
                             ]
                         }
-                    ],
-                    "info": "Network adapter transmit buffer size. Higher may improve throughput. Risk: uses more memory."
+                    ]
                 },
                 {
                     "id": "csrss-priority",
-                    "title": "CSRS Priority",
-                    "description": "Changes Client/Server Runtime Subsystem Priority.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1668,13 +1491,10 @@
                                 "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\csrss.exe\\PerfOptions\" /v CpuPriorityClass /t REG_DWORD /d 5 /f"
                             ]
                         }
-                    ],
-                    "info": "Client/Server Runtime priority. Modifying can affect responsiveness. Risk: incorrect values may cause UI lag."
+                    ]
                 },
                 {
                     "id": "iolatencycap",
-                    "title": "IoLatencyCap",
-                    "description": "Controls how StorPort handles I/O requests that have not been completed within a specified period of time (reboot required).",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1720,13 +1540,10 @@
                                 "reg add HKLM\\SYSTEM\\CurrentControlSet\\Services\\stornvme\\Parameters /v IoLatencyCap /t REG_DWORD /d 80 /f"
                             ]
                         }
-                    ],
-                    "info": "I/O latency cap in ms. Lower = more responsive I/O. Stock default is absent (= 0 = off). Risk: may cause I/O errors if too low."
+                    ]
                 },
                 {
                     "id": "iopagelocklimit",
-                    "title": "IOPageLockLimit",
-                    "description": "Specifies how many input/output handles that the computer can specify in memory as reserved to handle basic operations. (reboot required).",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1784,21 +1601,16 @@
                                 "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v IoPageLockLimit /t REG_DWORD /d 157286400 /f"
                             ]
                         }
-                    ],
-                    "info": "I/O page lock limit in bytes. Controls memory locked for I/O. Risk: incorrect values may cause instability."
+                    ]
                 },
                 {
                     "id": "group-network",
-                    "title": "Network",
-                    "description": "TCP behavior, network buffer sizing and latency optimization.",
                     "type": "group-header",
                     "tab": "registry",
                     "icon": ""
                 },
                 {
                     "id": "nagle-algorithm",
-                    "title": "Nagle Algorithm",
-                    "description": "Changes TCP ack/delay behavior (TcpAckFrequency/TCPNoDelay). Useful for latency-sensitive apps; can increase packets/CPU.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1817,13 +1629,10 @@
                     ],
                     "check": [
                         "powershell -NoProfile -Command if((Get-ItemProperty -Path 'HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\*' -Name TcpAckFrequency -ErrorAction SilentlyContinue | Where-Object TcpAckFrequency -eq 1).Count -gt 0){exit 0}else{exit 1}"
-                    ],
-                    "info": "Nagle algorithm batches small TCP packets. Disabling reduces latency for real-time apps. Risk: may increase network overhead."
+                    ]
                 },
                 {
                     "id": "nolazymode",
-                    "title": "NoLazyMode",
-                    "description": "Disables 'Lazy Mode' behavior for MMCSS scheduling (NoLazyMode).",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1842,13 +1651,10 @@
                     ],
                     "check": [
                         "reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v NoLazyMode | find \"0x1\""
-                    ],
-                    "info": "Disables MMCSS idle detection lazy mode. Threads stay at boosted priority. May increase CPU power usage. Hidden undocumented setting."
+                    ]
                 },
                 {
                     "id": "tsc-sync-policy",
-                    "title": "TSC Sync Policy",
-                    "description": "Controls how the system synchronizes the Time Stamp Counter across CPU cores. Affects timing stability and consistency on some platforms.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1873,21 +1679,16 @@
                     ],
                     "check": [
                         "bcdedit /enum {current} | findstr /i \"tscsyncpolicy\""
-                    ],
-                    "info": "TSC synchronization policy across cores. Risk: may affect timing-sensitive applications."
+                    ]
                 },
                 {
                     "id": "group-timer-interrupts",
-                    "title": "Timer & Interrupts",
-                    "description": "Timer resolution, interrupt affinity and DPC handling.",
                     "type": "group-header",
                     "tab": "registry",
                     "icon": ""
                 },
                 {
                     "id": "useplatformtick",
-                    "title": "useplatformtick",
-                    "description": "Forces or disables the use of a platform timer instead of the default high-resolution TSC. Can affect timer accuracy, latency, and power behavior.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1906,21 +1707,16 @@
                     ],
                     "check": [
                         "bcdedit /enum {current} | find \"useplatformtick\" | find \"Yes\""
-                    ],
-                    "info": "Forces platform tick instead of HPET. Can reduce timer latency. Risk: some hardware may not support it."
+                    ]
                 },
                 {
                     "id": "group-gpu-display",
-                    "title": "GPU & Display",
-                    "description": "Display composition, flip model and frame presentation.",
                     "type": "group-header",
                     "tab": "registry",
                     "icon": ""
                 },
                 {
                     "id": "disable-mpo",
-                    "title": "Disable Multi-Plane Overlay (MPO)",
-                    "description": "Disables Multi-Plane Overlay usage in the graphics stack. Can improve stability and reduce flickering or stutter on some systems at the cost of higher GPU usage.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1939,13 +1735,10 @@
                     ],
                     "check": [
                         "reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Dwm\" /v OverlayTestMode | find \"0x5\""
-                    ],
-                    "info": "Disables Multi-Plane Overlay. Can fix stuttering in some games. Risk: may increase GPU usage in windowed mode."
+                    ]
                 },
                 {
                     "id": "disable-interrupt-steering",
-                    "title": "Disable Interrupt Steering",
-                    "description": "Disables dynamic redistribution of hardware interrupts across CPU cores. Can improve latency consistency on some systems but may reduce load balancing efficiency.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1964,21 +1757,16 @@
                     ],
                     "check": [
                         "reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v DummyInterruptSteering 2>nul | find \"0x1\""
-                    ],
-                    "info": "Disables interrupt steering. Interrupts stay on first core. Risk: may increase first core latency."
+                    ]
                 },
                 {
                     "id": "group-power",
-                    "title": "Power",
-                    "description": "CPU power throttling and performance state management.",
                     "type": "group-header",
                     "tab": "registry",
                     "icon": ""
                 },
                 {
                     "id": "disable-power-throttling",
-                    "title": "Disable Power Throttling",
-                    "description": "Disables background power throttling for processes. Prevents the system from lowering CPU priority or frequency for background workloads.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -1997,13 +1785,10 @@
                     ],
                     "check": [
                         "reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\\PowerThrottling\" /v PowerThrottlingOff | find \"0x1\""
-                    ],
-                    "info": "Disables Windows power throttling. Ensures consistent CPU clock. Risk: increased power consumption on laptops."
+                    ]
                 },
                 {
                     "id": "threaded-dpc",
-                    "title": "Threaded DPC",
-                    "description": "Enables threaded processing for Deferred Procedure Calls (DPCs). Can improve system responsiveness under load but may increase scheduling overhead on some systems.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -2022,13 +1807,10 @@
                     ],
                     "check": [
                         "reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Kernel\" /v ThreadDpcEnable | find \"0x1\""
-                    ],
-                    "info": "Enables threaded DPC processing. Can reduce DPC latency spikes. Risk: minimal on modern hardware."
+                    ]
                 },
                 {
                     "id": "cpu-idle",
-                    "title": "CPU Idle (Power Plan)",
-                    "description": "Disables CPU idle states defined by the active power plan. Can reduce wake-up latency at the cost of higher power consumption and heat.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -2051,13 +1833,10 @@
                     ],
                     "check": [
                         "powercfg /query scheme_current sub_processor 5d76a2ca-e8c0-402f-a133-2158492d58ad | find \"0x00000001\""
-                    ],
-                    "info": "Controls CPU idle state (C-states). Lower = deeper sleep (power saving). Higher = CPU ready (lower latency)."
+                    ]
                 },
                 {
                     "id": "force-direct-flip",
-                    "title": "Force Direct Flip",
-                    "description": "Forces the Direct Flip presentation when supported. Can reduce compositor involvement and presentation latency in fullscreen or borderless applications.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -2073,13 +1852,10 @@
                                 "powershell -NoProfile -Command Write-Host 'Automatic - no action'"
                             ]
                         }
-                    ],
-                    "info": "Forces Direct Flip for fullscreen. Bypasses DWM. Risk: may affect capture software."
+                    ]
                 },
                 {
                     "id": "force-independent-flip",
-                    "title": "Force Independent Flip",
-                    "description": "Forces Independent Flip presentation when possible. Allows applications to present directly to the display, bypassing parts of the compositor for lower latency when supported.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -2095,13 +1871,10 @@
                                 "powershell -NoProfile -Command Write-Host 'Automatic - no action'"
                             ]
                         }
-                    ],
-                    "info": "Forces independent flip for fullscreen. Reduces DWM overhead. Risk: multi-monitor issues."
+                    ]
                 },
                 {
                     "id": "force-flip-true-immediate",
-                    "title": "Force Flip True Immediate Mode",
-                    "description": "Forces immediate flip behavior without frame queuing when supported. Prioritizes lowest possible presentation latency over smoothness.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -2117,21 +1890,16 @@
                                 "powershell -NoProfile -Command Write-Host 'Automatic - no action'"
                             ]
                         }
-                    ],
-                    "info": "Forces immediate flip timing. Reduces frame latency. Risk: may cause tearing."
+                    ]
                 },
                 {
                     "id": "group-memory-io",
-                    "title": "Memory & I/O",
-                    "description": "RAM management, I/O latency, page behavior and driver memory.",
                     "type": "group-header",
                     "tab": "registry",
                     "icon": ""
                 },
                 {
                     "id": "disablepagingexecutive",
-                    "title": "DisablePagingExecutive",
-                    "description": "Forces the Windows kernel and drivers to remain in physical RAM and prevents them from being paged to disk.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -2150,13 +1918,10 @@
                     ],
                     "check": [
                         "reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v DisablePagingExecutive | find \"0x1\""
-                    ],
-                    "info": "Keeps kernel drivers in RAM. Reduces disk I/O. Risk: uses more RAM."
+                    ]
                 },
                 {
                     "id": "disablepagecombining",
-                    "title": "DisablePageCombining",
-                    "description": "Disables Windows memory page combining, preventing identical memory pages from being merged. This may improve memory isolation but slightly increase RAM usage.",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -2177,13 +1942,10 @@
                     ],
                     "check": [
                         "reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v DisablePageCombining | find \"0x1\""
-                    ],
-                    "info": "Disables page combining (memory deduplication). Risk: marginally increases memory usage."
+                    ]
                 },
                 {
                     "id": "queued-present-limit",
-                    "title": "Queued Present Limit",
-                    "description": "Controls how many frames can be queued before presentation. Lower values reduce latency but may increase stutter; default behavior uses adaptive heuristics. (BitBlt) [No official DWM registry - community]",
                     "tab": "registry",
                     "icon": "",
                     "options": [
@@ -2214,13 +1976,10 @@
                     ],
                     "check": [
                         "reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Dwm\" /v QueuedPresentLimit 2>nul | find \"0x\""
-                    ],
-                    "info": "Controls queued frames for DWM. Lower = less input lag but potentially lower FPS."
+                    ]
                 },
                 {
                     "id": "win32priorityseparation",
-                    "title": "Win32PrioritySeparation",
-                    "description": "Controls foreground vs background quantum and priority boost. See HKLM\\SYSTEM\\CurrentControlSet\\Control\\PriorityControl.",
                     "tab": "win32",
                     "icon": "",
                     "options": [
@@ -2242,13 +2001,10 @@
                                 "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\PriorityControl\" /v Win32PrioritySeparation /t REG_DWORD /d 24 /f"
                             ]
                         }
-                    ],
-                    "info": "CPU quantum strategy. Default=2 (short/variable/3:1 boost). 0x26=2:1 boost. 0x18=long/fixed/no boost (server-style)."
+                    ]
                 },
                 {
                     "id": "powerplan-manager",
-                    "title": "Power Plans",
-                    "description": "View, apply, delete, and import power schemes",
                     "tab": "powerplans",
                     "icon": "",
                     "options": [
@@ -2269,8 +2025,6 @@
                 },
 {
                     "id": "brave-debloat",
-                    "title": "Brave Debloat",
-                    "description": "Turns off extra features and telemetry.",
                     "icon": "",
                     "logo": "/Assets/Logos/brave.png",
                     "tab": "debloat",
@@ -2312,13 +2066,10 @@
                     ],
                     "check": [
                         "Reg.exe query \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\BraveSoftware\\Brave\" /v BraveRewardsDisabled | findstr \"0x1\""
-                    ],
-                    "info": "Turns off extra Brave features and telemetry. Restart Brave to apply; shows as managed by your organization."
+                    ]
                 },
 {
                     "id": "edge-debloat",
-                    "title": "Edge Debloat",
-                    "description": "Turns off shopping, sidebar extras and telemetry.",
                     "icon": "",
                     "logo": "/Assets/Logos/edge.png",
                     "tab": "debloat",
@@ -2364,36 +2115,26 @@
                     ],
                     "check": [
                         "Reg.exe query \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Edge\" /v PersonalizationReportingEnabled | findstr \"0x0\""
-                    ],
-                    "info": "Turns off shopping, sidebar extras and telemetry. Restart Edge to apply; shows as managed by your organization."
+                    ]
                 },
 {
                     "id": "chrome-debloat",
                     "tab": "debloat", "logo": "/Assets/Logos/chrome.png",
-                    "title": "Chrome debloat",
-                    "description": "Telemetry, suggestions and background noise off via 12 Chrome policies.",
                     "icon": "",
-                    "info": "Sets the live Chrome policies (metrics, feedback, domain reliability, prediction, suggestions, background mode, GenAI). Applies on next launch; shows as managed. Fully reversible.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"MetricsReportingEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"UserFeedbackAllowed\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"DomainReliabilityAllowed\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"UrlKeyedAnonymizedDataCollectionEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"SafeBrowsingExtendedReportingEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"AlternateErrorPagesEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"BackgroundModeEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"ChromeSuggestionsSettings\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"SearchContentSharingSettings\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"NetworkPredictionOptions\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"SearchSuggestEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"GenAiDefaultSettings\" /t REG_DWORD /d \"2\" /f"]}, {"label": "disable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"MetricsReportingEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"UserFeedbackAllowed\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"DomainReliabilityAllowed\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"UrlKeyedAnonymizedDataCollectionEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"SafeBrowsingExtendedReportingEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"AlternateErrorPagesEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"BackgroundModeEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"ChromeSuggestionsSettings\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"SearchContentSharingSettings\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"NetworkPredictionOptions\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"SearchSuggestEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v \"GenAiDefaultSettings\" /f ; exit 0"]}],
                     "check": ["reg query \"HKLM\\SOFTWARE\\Policies\\Google\\Chrome\" /v MetricsReportingEnabled | findstr \"0x0\""]
                     },
 {
                     "id": "firefox-debloat",
                     "tab": "debloat", "logo": "/Assets/Logos/firefox.png",
-                    "title": "Firefox debloat",
-                    "description": "Firefox telemetry, suggestions and crash-report auto-send off via policy.",
                     "icon": "",
-                    "info": "Enterprise policies (telemetry, studies, default-browser agent, suggestions, FirefoxSuggest, crash auto-send) plus disabling the Default Browser Agent task by name pattern (its hash varies). Applies on next launch; reversible. Updates are never touched.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"DisableTelemetry\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"DisableFirefoxStudies\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"DisableDefaultBrowserAgent\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"NetworkPrediction\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"SearchSuggestEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v \"SponsoredTopSites\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\CrashReportsSubmit\" /v \"ForceAutoSubmit\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxSuggest\" /v \"WebSuggestions\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxSuggest\" /v \"SponsoredSuggestions\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxSuggest\" /v \"Locked\" /t REG_DWORD /d \"1\" /f", "powershell -NoProfile -Command \"Get-ScheduledTask -ErrorAction SilentlyContinue | Where-Object { $_.TaskName -like '*Default Browser Agent*' } | Disable-ScheduledTask -ErrorAction SilentlyContinue; exit 0\""]}, {"label": "disable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"DisableTelemetry\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"DisableFirefoxStudies\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"DisableDefaultBrowserAgent\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"NetworkPrediction\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v \"SearchSuggestEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v \"SponsoredTopSites\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\CrashReportsSubmit\" /v \"ForceAutoSubmit\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxSuggest\" /v \"WebSuggestions\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxSuggest\" /v \"SponsoredSuggestions\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxSuggest\" /v \"Locked\" /f ; exit 0", "powershell -NoProfile -Command \"Get-ScheduledTask -ErrorAction SilentlyContinue | Where-Object { $_.TaskName -like '*Default Browser Agent*' } | Enable-ScheduledTask -ErrorAction SilentlyContinue; exit 0\""]}],
                     "check": ["reg query \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableTelemetry | findstr \"0x1\""]
                     },
 {
                     "id": "office-debloat",
                     "tab": "debloat", "logo": "/Assets/Logos/office.png",
-                    "title": "Office debloat",
-                    "description": "Office telemetry agents, OSM uploads, logging and CEIP switches.",
                     "icon": "",
-                    "info": "Disables the four Office telemetry agent tasks plus the documented OSM, feedback, privacy and FirstRun switches (HKCU). Office must be closed. Applies to the current user; reversible.",
                     "options": [{"label": "enable", "commands": ["schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentLogOn2016\" /disable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentLogOn\" /disable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentFallBack2016\" /disable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentFallBack\" /disable ; exit 0", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\" /v \"EnableLogging\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\" /v \"EnableUpload\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\15.0\\OSM\" /v \"EnableLogging\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\15.0\\OSM\" /v \"EnableUpload\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"accesssolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"olksolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"onenotesolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"pptsolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"projectsolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"publishersolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"visiosolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"wdsolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"xlsolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"agave\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"appaddins\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"comaddins\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"documentfiles\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"templatefiles\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\Common\\ClientTelemetry\" /v \"SendTelemetry\" /t REG_DWORD /d \"3\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\" /v \"qmenable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\" /v \"sendcustomerdata\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Privacy\" /v \"usercontentdisabled\" /t REG_DWORD /d \"2\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Privacy\" /v \"downloadcontentdisabled\" /t REG_DWORD /d \"2\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Feedback\" /v \"includescreenshot\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\ptwatson\" /v \"PTWOptIn\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Graphics\" /v \"DisableAnimations\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\General\" /v \"disableboottoofficestart\" /t REG_DWORD /d \"1\" /f"]}, {"label": "disable", "commands": ["schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentLogOn2016\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentLogOn\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentFallBack2016\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentFallBack\" /enable ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\Common\\ClientTelemetry\" /v \"SendTelemetry\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\" /v \"qmenable\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\" /v \"sendcustomerdata\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Privacy\" /v \"usercontentdisabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Privacy\" /v \"downloadcontentdisabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Feedback\" /v \"includescreenshot\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\ptwatson\" /v \"PTWOptIn\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Graphics\" /v \"DisableAnimations\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\General\" /v \"disableboottoofficestart\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /va /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /va /f ; exit 0"]}],
                     "check": ["reg query \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\" /v EnableUpload | findstr \"0x0\""]
                     }
@@ -2402,13 +2143,9 @@
         },
         {
             "id": "troubleshooting",
-            "title": "Troubleshooting",
-            "description": "Quick toggles and OS fixes.",
             "actions": [
                 {
                     "id": "wifi",
-                    "title": "Wi-Fi",
-                    "description": "Enable/Disable Wi-Fi services and drivers (takes effect immediately).",
                     "icon": "",
                     "options": [
                         {
@@ -2443,8 +2180,6 @@
                 },
                 {
                     "id": "bluetooth",
-                    "title": "Bluetooth",
-                    "description": "Enable/Disable Bluetooth services and drivers (reboot required).",
                     "icon": "",
                     "options": [
                         {
@@ -2495,8 +2230,6 @@
                 },
                 {
                     "id": "hop-limit",
-                    "title": "HopLimit (Hotspot)",
-                    "description": "Select hop limit preset for bypass/repeater/default.",
                     "icon": "",
                     "options": [
                         {
@@ -2528,8 +2261,6 @@
                 },
                 {
                     "id": "printer",
-                    "title": "Printers",
-                    "description": "Enable/Disable printer services + printing features (reboot required).",
                     "icon": "",
                     "options": [
                         {
@@ -2562,8 +2293,6 @@
                 },
                 {
                     "id": "task-manager",
-                    "title": "Task Manager to Process Explorer",
-                    "description": "Redirect Task Manager to Process Explorer using IFEO Debugger.",
                     "icon": "",
                     "options": [
                         {
@@ -2586,8 +2315,6 @@
                 },
                 {
                     "id": "textinputhost",
-                    "title": "TextInputHost",
-                    "description": "Enable/Disable TextInputHost via IFEO Debugger (reboot recommended).",
                     "icon": "",
                     "options": [
                         {
@@ -2615,47 +2342,33 @@
                 {
                     "id": "ink-workspace",
                     "tab": "devices",
-                    "title": "Windows Ink workspace",
-                    "description": "Ink workspace, suggested apps and touch inking.",
                     "icon": "",
-                    "info": "Machine policies plus per-user touch switch. No reboot needed.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowWindowsInkWorkspace\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowSuggestedAppsInWindowsInkWorkspace\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableInkingWithTouch\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowWindowsInkWorkspace\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowSuggestedAppsInWindowsInkWorkspace\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableInkingWithTouch\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v AllowWindowsInkWorkspace | findstr \"0x0\""]
                     },
                 {
                     "id": "spelling-typing",
                     "tab": "devices",
-                    "title": "Spelling and typing",
-                    "description": "Autocorrection, spellcheck, prediction and typing insights.",
                     "icon": "",
-                    "info": "Per-user touch-keyboard keys (community-documented); delete restores defaults. Immediate effect.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableAutocorrection\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableSpellchecking\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableDoubleTapSpace\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnablePredictionSpaceInsertion\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableTextPrediction\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Input\\Settings\" /v \"InsightsEnabled\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableAutocorrection\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableSpellchecking\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Input\\Settings\" /v \"InsightsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableDoubleTapSpace\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnablePredictionSpaceInsertion\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableTextPrediction\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v EnableAutocorrection | findstr \"0x0\""]
                     },
                 {
                     "id": "cloud-clipboard",
                     "tab": "devices",
-                    "title": "Cloud clipboard",
-                    "description": "Clipboard history and cross-device sync.",
                     "icon": "",
-                    "info": "Local copy-paste keeps working; only history and cloud sync stop.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowClipboardHistory\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowCrossDeviceClipboard\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowClipboardHistory\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowCrossDeviceClipboard\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v AllowClipboardHistory | findstr \"0x0\""]
                     },
                 {
                     "id": "cast-to-device",
                     "tab": "devices",
-                    "title": "Cast to device",
-                    "description": "Cast to Device context-menu entry.",
                     "icon": "",
-                    "info": "Toggles a shell-extension block entry. Takes effect immediately.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked\" /v \"{7AD84985-87B4-4a16-BE58-8B72A5B390F7}\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked\" /v \"{7AD84985-87B4-4a16-BE58-8B72A5B390F7}\" /t REG_SZ /d \"Play to Menu\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked\" /v {7AD84985-87B4-4a16-BE58-8B72A5B390F7} | findstr \"Play\""]
                     },
                 {
                     "id": "vbs",
-                    "title": "VBS (Virtualization-Based Security)",
-                    "description": "Enable/Disable Virtualization Based Security (reboot required).",
                     "icon": "",
                     "options": [
                         {
@@ -2676,13 +2389,10 @@
                     "tab": "security",
                     "check": [
                         "reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\DeviceGuard\" /v EnableVirtualizationBasedSecurity | findstr \"0x1\""
-                    ],
-                    "info": "Uses hardware virtualization to isolate critical OS processes from the kernel. Enables KDP and Credential Guard. Overhead: 1-5% on I/O-heavy workloads. Disable only for Hyper-V third-party compatibility."
+                    ]
                 },
                 {
                     "id": "hvci",
-                    "title": "HVCI (Memory Integrity)",
-                    "description": "Enable/Disable HVCI / Memory Integrity (Hypervisor Enforced Code Integrity) (reboot required).",
                     "icon": "",
                     "options": [
                         {
@@ -2709,13 +2419,10 @@
                     "tab": "security",
                     "check": [
                         "reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\DeviceGuard\\Scenarios\\HypervisorEnforcedCodeIntegrity\" /v Enabled | findstr \"0x1\""
-                    ],
-                    "info": "Runs kernel code integrity checks inside VBS hypervisor, blocking unsigned/vulnerable drivers. Blocks BYOVD attacks. Impact: 2-5% on driver-heavy I/O. Disable only if experiencing BSODs or anti-cheat conflicts."
+                    ]
                 },
                 {
                     "id": "firewall",
-                    "title": "Firewall",
-                    "description": "Enable/Disable Windows Defender Firewall and Base Filtering Engine (reboot required).",
                     "icon": "",
                     "options": [
                         {
@@ -2736,13 +2443,10 @@
                     "check": [
                         "Reg.exe query \"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\mpssvc\" /v Start | findstr \"0x2\""
                     ],
-                    "tab": "security",
-                    "info": "Stateful packet inspection and application-level filtering. BFE required for IPsec, WFP, and VPN. Overhead: <0.1% CPU. Disabling exposes SMB, RDP to lateral movement. Always keep enabled."
+                    "tab": "security"
                 },
                 {
                     "id": "lua",
-                    "title": "UAC / LUA",
-                    "description": "Enable/Disable Limited User Account Control (reboot required).",
                     "icon": "",
                     "options": [
                         {
@@ -2763,13 +2467,10 @@
                     "tab": "security",
                     "check": [
                         "Reg.exe query \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v EnableLUA | findstr \"0x1\""
-                    ],
-                    "info": "Separates standard and elevated token contexts for least-privilege enforcement. Disabling allows any process to write to system directories — primary malware vector. Keep enabled."
+                    ]
                 },
                 {
                     "id": "vulnerable-driver-blocklist",
-                    "title": "Vulnerable Driver BlockList",
-                    "description": "Enable/Disable Windows Vulnerable Driver Blocklist (reboot required).",
                     "icon": "",
                     "options": [
                         {
@@ -2788,13 +2489,10 @@
                     "tab": "security",
                     "check": [
                         "reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\CI\\Config\" /v VulnerableDriverBlocklistEnable | findstr \"0x1\""
-                    ],
-                    "info": "Blocks known-exploited kernel drivers at boot via HVCI + CI. Targets BYOVD attacks. Zero runtime cost — checked only at driver load time. Always enable unless a legacy driver is required."
+                    ]
                 },
                 {
                     "id": "nx-mode",
-                    "title": "No-Execute (NX) Mode",
-                    "description": "Change NX policy (reboot required).",
                     "icon": "",
                     "options": [
                         {
@@ -2825,13 +2523,10 @@
                     "tab": "security",
                     "check": [
                         "bcdedit /enum {current} | findstr /i \"nx OptIn\""
-                    ],
-                    "info": "Controls hardware Data Execution Prevention (DEP). OptIn (default): system processes only. OptOut: all processes. AlwaysOn: most secure but may break legacy apps. Negligible CPU overhead."
+                    ]
                 },
                 {
                     "id": "xbox",
-                    "title": "Xbox Services",
-                    "description": "Enable/Disable Xbox Game DVR and related services.",
                     "icon": "",
                     "options": [
                         {
@@ -2866,8 +2561,6 @@
                 },
                 {
                     "id": "fivem-safe-services",
-                    "title": "FiveM/Minecraft Safe Services",
-                    "description": "Switch between Safe preset and Superiorly default (reboot required).",
                     "icon": "",
                     "options": [
                         {
@@ -2895,36 +2588,26 @@
                 {
                     "id": "gamebar",
                     "tab": "gaming",
-                    "title": "Game Bar and DVR",
-                    "description": "Game Bar capture, audio/cursor capture and GameDVR policy.",
                     "icon": "",
-                    "info": "Disabling frees background-recording overhead. Per-user plus one machine policy.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"1\" /f", "reg delete \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v AppCaptureEnabled | findstr \"0x1\""]
                     },
                 {
                     "id": "gamemode",
                     "tab": "gaming",
-                    "title": "Game Mode",
-                    "description": "Auto Game Mode, GPU scheduling mode and fullscreen optimizations.",
                     "icon": "",
-                    "info": "HwSchMode 2 requests hardware scheduling (WDDM 2.7+); forcing it on old GPUs can cause TDR/BSOD. Reboot recommended.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"2\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"2\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\GameBar\" /v AllowAutoGameMode | findstr \"0x1\""]
                     },
 
                 {
                     "id": "group-sys-services",
-                    "title": "Services & Performance",
-                    "description": "Background services, drivers and indexing.",
                     "type": "group-header",
                     "tab": "system",
                     "icon": ""
                 },
 {
                     "id": "windows-update-drivers",
-                    "title": "Windows Update Drivers",
-                    "description": "Enable/Disable driver delivery via Windows Update (reboot recommended).",
                     "icon": "",
                     "options": [
                         {
@@ -2950,67 +2633,47 @@
 {
                     "id": "error-reporting",
                     "tab": "system",
-                    "title": "Error reporting",
-                    "description": "Windows Error Reporting and the WerSvc service.",
                     "icon": "",
-                    "info": "Stops WerSvc (factory Manual) and wercplsupport. Crash reports stop reaching Microsoft. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting\" /v \"DoReport\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /f ; exit 0", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wercplsupport\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WerSvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting\" /v \"DoReport\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WerSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wercplsupport\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WerSvc\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "compat-assistant",
                     "tab": "system",
-                    "title": "Compatibility assistant",
-                    "description": "Program Compatibility Assistant service (default Automatic).",
                     "icon": "",
-                    "info": "Stops background compatibility checks. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\PcaSvc\" /v \"Start\" /t REG_DWORD /d \"2\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\PcaSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\PcaSvc\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "superfetch",
                     "tab": "system",
-                    "title": "Superfetch",
-                    "description": "SysMain prefetch service (default Automatic).",
                     "icon": "",
-                    "info": "On SSDs Windows adapts automatically; disabling may slow app launches. Only off if SysMain misbehaves. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SysMain\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnableSuperfetch\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d \"1\" /f", "reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"SfTracingState\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SysMain\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnableSuperfetch\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"SfTracingState\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SysMain\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "insider-service",
                     "tab": "system",
-                    "title": "Insider service",
-                    "description": "Windows Insider service (default Manual).",
                     "icon": "",
-                    "info": "Only needed on Insider preview builds. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wisvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wisvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wisvc\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "sensor-services",
                     "tab": "system",
-                    "title": "Sensor services",
-                    "description": "Ambient-light and sensor services (factory Manual).",
                     "icon": "",
-                    "info": "Enable restores on-demand Manual. Disabling breaks auto-brightness and rotation on tablets. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensrSvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensorService\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensrSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensorService\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensorService\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "search-index",
                     "tab": "system",
-                    "title": "Search index",
-                    "description": "Windows Search indexing service (default Automatic, delayed).",
                     "icon": "",
-                    "info": "Disabling slows file search but saves disk/CPU churn, and breaks Start/Outlook search while off. Re-enable restores delayed start. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v \"DelayedAutostart\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "fix-intel-panel",
-                    "title": "Fix Intel Control Panel",
-                    "description": "Restarts the COM system event services the Intel graphics panel depends on.",
                     "icon": "",
                     "options": [
                         {
@@ -3028,8 +2691,6 @@
                 },
                 {
                     "id": "group-sys-network",
-                    "title": "Network & Sharing",
-                    "description": "Protocols, throttling and network sharing.",
                     "type": "group-header",
                     "tab": "system",
                     "icon": ""
@@ -3037,65 +2698,46 @@
 {
                     "id": "network-throttling",
                     "tab": "system",
-                    "title": "Network throttling",
-                    "description": "Packet ceiling for background traffic during audio/video playback (default 10).",
                     "icon": "",
-                    "info": "Only engages while an MMCSS task runs. Disable also zeroes the QoS reservation. Helps high-throughput transfers, not ping.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Psched\" /v \"NonBestEffortLimit\" /t REG_DWORD /d \"80\" /f", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /t REG_DWORD /d \"0xffffffff\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Psched\" /v \"NonBestEffortLimit\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v NetworkThrottlingIndex | findstr \"0xffffffff\""]
                     },
 {
                     "id": "smb1",
                     "tab": "system",
-                    "title": "SMBv1 protocol",
-                    "description": "Legacy SMBv1 network protocol.",
                     "icon": "",
-                    "info": "Deprecated and unsafe (WannaCry). Keep disabled unless ancient NAS shares need it. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB1\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB1\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v SMB1 | findstr \"0x0\""]
                     },
 {
                     "id": "smb2",
                     "tab": "system",
-                    "title": "SMBv2 protocol",
-                    "description": "Modern SMBv2/v3 network protocol.",
                     "icon": "",
-                    "info": "WARNING: disabling breaks modern file sharing, printers and domain access. Only for isolated legacy testing. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB2\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB2\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v SMB2 | findstr \"0x0\""]
                     },
 {
                     "id": "homegroup",
                     "tab": "system",
-                    "title": "HomeGroup",
-                    "description": "Legacy HomeGroup services.",
                     "icon": "",
-                    "info": "HomeGroup was removed after Windows 10 1803; safe to disable. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupListener\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupProvider\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\HomeGroup\" /v \"DisableHomeGroup\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\HomeGroup\" /v \"DisableHomeGroup\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupListener\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupProvider\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupListener\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "media-sharing",
                     "tab": "system",
-                    "title": "Media sharing",
-                    "description": "WMP network sharing service (factory Manual).",
                     "icon": "",
-                    "info": "Only needed for DLNA streaming. Enable restores on-demand Manual. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WMPNetworkSvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WMPNetworkSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WMPNetworkSvc\" /v Start | findstr \"0x3\""]
                     },
                 {
                     "id": "group-sys-shell",
-                    "title": "Explorer, Start & Taskbar",
-                    "description": "Start menu, taskbar and File Explorer behavior.",
                     "type": "group-header",
                     "tab": "system",
                     "icon": ""
                 },
 {
                     "id": "start-menu",
-                    "title": "Start Menu",
-                    "description": "Enable/Disable Start Menu experience host via IFEO Debugger.",
                     "icon": "",
                     "options": [
                         {
@@ -3118,8 +2760,6 @@
                 },
 {
                     "id": "use-default-tile",
-                    "title": "Use Default Tile",
-                    "description": "Forces the classic/default Start layout tiles behavior on some Windows builds. Disabling allows to change profile picture.",
                     "icon": "",
                     "options": [
                         {
@@ -3143,77 +2783,54 @@
 {
                     "id": "show-tray-icons",
                     "tab": "system",
-                    "title": "Show tray icons",
-                    "description": "Show all notification-area icons instead of hiding them in the overflow.",
                     "icon": "",
-                    "info": "Per-user Explorer setting. Ignored on Windows 11 22H2+, where per-icon state moved to NotifyIconSettings. Takes effect after Explorer restart.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"EnableAutoTray\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"EnableAutoTray\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v EnableAutoTray | findstr \"0x0\""]
                     },
 {
                     "id": "menus-delay",
                     "tab": "system",
-                    "title": "Menus delay",
-                    "description": "Menu-open and hover delay: 400 ms by default, 0 is instant.",
                     "icon": "",
-                    "info": "Per-user string values. Takes effect immediately.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Control Panel\\Desktop\" /v \"MenuShowDelay\" /t REG_SZ /d \"400\" /f", "reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseHoverTime\" /t REG_SZ /d \"400\" /f"]},{"label": "disable", "commands": ["reg add \"HKCU\\Control Panel\\Desktop\" /v \"MenuShowDelay\" /t REG_SZ /d \"0\" /f", "reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseHoverTime\" /t REG_SZ /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Control Panel\\Desktop\" /v MenuShowDelay | findstr \"400\""]
                     },
 {
                     "id": "sticky-keys",
                     "tab": "system",
-                    "title": "Sticky keys",
-                    "description": "StickyKeys, ToggleKeys and Keyboard Response shortcuts.",
                     "icon": "",
-                    "info": "Per-user and default-user hives. Ends the Shift x5 prompts. No reboot needed.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"510\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"126\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"62\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"510\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"126\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"62\" /f"]},{"label": "disable", "commands": ["reg add \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"122\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"58\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"122\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"58\" /f"]}],
                     "check": ["reg query \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v Flags | findstr \"510\""]
                     },
 {
                     "id": "compact-mode",
                     "tab": "system",
-                    "title": "Compact mode",
-                    "description": "Compact spacing in File Explorer (roomy is default).",
                     "icon": "",
-                    "info": "Per-user. Takes effect when Explorer windows reopen.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"UseCompactMode\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"UseCompactMode\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["!reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v UseCompactMode | findstr \"0x1\""]
                     },
 {
                     "id": "quickaccess-history",
                     "tab": "system",
-                    "title": "Quick access history",
-                    "description": "Recent files, frequent folders and sync-provider notifications.",
                     "icon": "",
-                    "info": "Disabling clears the privacy trail but removes handy shortcuts. Per-user.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\OperationStatusManager\" /v \"EnthusiastMode\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"ShowSyncProviderNotifications\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowFrequent\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowRecent\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\OperationStatusManager\" /v \"EnthusiastMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"ShowSyncProviderNotifications\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowFrequent\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowRecent\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v ShowFrequent | findstr \"0x1\""]
                     },
 {
                     "id": "widgets-board",
                     "tab": "system",
-                    "title": "Widgets board",
-                    "description": "Widgets board button on the taskbar.",
                     "icon": "",
-                    "info": "Per-user. Recent Windows 11 builds may re-show it; the machine-wide policy lives in News and interests. Immediate effect.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"TaskbarDa\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"TaskbarDa\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v TaskbarDa | findstr \"0x0\""]
                     },
 {
                     "id": "news-interests",
                     "tab": "system",
-                    "title": "News and interests",
-                    "description": "News feed (Win10) and Widgets machine policy (Win11).",
                     "icon": "",
-                    "info": "EnableFeeds is a legacy Win10 key, harmless on Win11. No reboot needed.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Dsh\" /v \"AllowNewsAndInterests\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Feeds\" /v \"EnableFeeds\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\default\\NewsAndInterests\\AllowNewsAndInterests\" /v \"value\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Dsh\" /v \"AllowNewsAndInterests\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Feeds\" /v \"EnableFeeds\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\default\\NewsAndInterests\\AllowNewsAndInterests\" /v \"value\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Dsh\" /v AllowNewsAndInterests | findstr \"0x0\""]
                     },
                 {
                     "id": "group-sys-recovery",
-                    "title": "Files, Recovery & Power",
-                    "description": "Filesystem, backups and sleep behavior.",
                     "type": "group-header",
                     "tab": "system",
                     "icon": ""
@@ -3221,57 +2838,40 @@
 {
                     "id": "ntfs-timestamp",
                     "tab": "system",
-                    "title": "NTFS timestamp",
-                    "description": "Last-access timestamp updates on NTFS volumes.",
                     "icon": "",
-                    "info": "Disabling saves marginal SSD writes. No state indicator (check unsupported). Immediate effect.",
                     "options": [{"label": "enable", "commands": ["fsutil behavior set disablelastaccess 2"]},{"label": "disable", "commands": ["fsutil behavior set disablelastaccess 1"]}],
                     "check": []
                     },
 {
                     "id": "system-restore",
                     "tab": "system",
-                    "title": "System restore",
-                    "description": "System Restore and Volume Shadow Copy.",
                     "icon": "",
-                    "info": "WARNING: disabling deletes existing shadow copies irreversibly. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableSR\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableConfig\" /f ; exit 0"]},{"label": "disable", "commands": ["vssadmin delete shadows /for=c: /all /quiet", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableSR\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableConfig\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\VSS\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "regbackup",
                     "tab": "system",
-                    "title": "Periodic registry backup",
-                    "description": "Automatic backup of the system registry to RegBack.",
                     "icon": "",
-                    "info": "Windows 10 1803+ skips the backup when off. No reboot needed.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Configuration Manager\" /v \"EnablePeriodicBackup\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Configuration Manager\" /v \"EnablePeriodicBackup\" /f ; exit 0"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Configuration Manager\" /v EnablePeriodicBackup | findstr \"0x1\""]
                     },
 {
                     "id": "long-paths",
                     "tab": "system",
-                    "title": "Long paths",
-                    "description": "Win32 paths over 260 characters.",
                     "icon": "",
-                    "info": "Apps must declare longPathAware support to benefit. Safe to enable. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" /v \"LongPathsEnabled\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" /v \"LongPathsEnabled\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" /v LongPathsEnabled | findstr \"0x1\""]
                     },
 {
                     "id": "modern-standby",
                     "tab": "system",
-                    "title": "Modern standby",
-                    "description": "Modern Standby (S0) versus classic S3 sleep.",
                     "icon": "",
-                    "info": "Disable forces S3. Run powercfg /a first: on S0-only hardware sleep may vanish. Microsoft supports switching only via reinstall. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v \"PlatformAoAcOverride\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v \"PlatformAoAcOverride\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v PlatformAoAcOverride | findstr \"0x0\""]
                     },
                 {
                     "id": "group-sys-privacy",
-                    "title": "Telemetry & Suggestions",
-                    "description": "Data collection and suggested content.",
                     "type": "group-header",
                     "tab": "system",
                     "icon": ""
@@ -3279,40 +2879,28 @@
 {
                     "id": "telemetry-services",
                     "tab": "system",
-                    "title": "Telemetry services",
-                    "description": "Diagnostics tracking services and app-compat data collection.",
                     "icon": "",
-                    "info": "Stops DiagTrack, diagnosticshub, dmwappushservice and WdiServiceHost. Feedback tools go quiet. Reboot required.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\diagnosticshub.standardcollector.service\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\dmwappushservice\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WdiSystemHost\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WdiServiceHost\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableEngine\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"SbEnable\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"AITEnable\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableInventory\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisablePCA\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableUAR\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"PublishUserActivities\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SQMClient\\Windows\" /v \"CEIPEnable\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Device Metadata\" /v \"PreventDeviceMetadataFromNetwork\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowAutoConnectToWiFiSenseHotspots\" /v \"value\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowWiFiHotSpotReporting\" /v \"value\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\diagnosticshub.standardcollector.service\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\dmwappushservice\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WdiServiceHost\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowAutoConnectToWiFiSenseHotspots\" /v value /t REG_DWORD /d 0 /f", "reg add \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowWiFiHotSpotReporting\" /v value /t REG_DWORD /d 0 /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableEngine\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"SbEnable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"AITEnable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableInventory\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisablePCA\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableUAR\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"PublishUserActivities\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SQMClient\\Windows\" /v \"CEIPEnable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Device Metadata\" /v \"PreventDeviceMetadataFromNetwork\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\WMI\\AutoLogger\\SQMLogger\" /v \"Start\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\current\\device\\System\" /v \"AllowExperimentation\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "store-updates",
                     "tab": "system",
-                    "title": "Store suggested apps",
-                    "description": "Silent install of suggested Store apps and consumer features.",
                     "icon": "",
-                    "info": "Stops Candy Crush-style auto-installs on new profiles. The Store itself keeps working. No reboot needed.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableSoftLanding\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableWindowsConsumerFeatures\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"OemPreInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsStore\" /v \"AutoDownload\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableSoftLanding\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableWindowsConsumerFeatures\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"OemPreInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsStore\" /v \"AutoDownload\" /t REG_DWORD /d \"2\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v DisableWindowsConsumerFeatures | findstr \"0x1\""]
                     },
                 {
                     "id": "cortana",
                     "tab": "telemetry",
-                    "title": "Cortana and web search",
-                    "description": "Cortana, Bing web results and cloud search in Windows Search.",
                     "icon": "",
-                    "info": "AllowCortana is a no-op on Windows 11 (Cortana removed 2023); the web-search keys still work there. Local file search keeps working.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\SearchSettings\" /v \"IsDeviceSearchHistoryEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCortana\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"DisableWebSearch\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWeb\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWebOverMeteredConnections\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"HistoryViewEnabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"DeviceHistoryEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"AllowSearchToUseLocation\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCloudSearch\" /f ; exit 0", "reg delete \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\SearchSettings\" /v \"IsDeviceSearchHistoryEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCortana\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"DisableWebSearch\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWeb\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWebOverMeteredConnections\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"HistoryViewEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"DeviceHistoryEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"AllowSearchToUseLocation\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCloudSearch\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Search\" /v BingSearchEnabled | findstr \"0x0\""]
                     },
                 {
                     "id": "startmenu-ads",
                     "tab": "telemetry",
-                    "title": "Start menu ads",
-                    "description": "Suggested apps, tips and sponsored content in Start.",
                     "icon": "",
-                    "info": "Per-user ContentDeliveryManager switches. Takes effect immediately.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\\Windows.SystemToast.Suggested\" /v \"Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Mobility\" /v \"OptedIn\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-88000326Enabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserProfileEngagement\" /v \"ScoobeSystemSettingEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"ContentDeliveryAllowed\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEverEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-314559Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338387Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338389Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SystemPaneSuggestionsEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338393Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353694Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353696Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-310093Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338388Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContentEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SoftLandingEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"FeatureManagementEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"AllowOnlineTips\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Mobility\" /v \"OptedIn\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\\Windows.SystemToast.Suggested\" /v \"Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-88000326Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserProfileEngagement\" /v \"ScoobeSystemSettingEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"ContentDeliveryAllowed\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEverEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-314559Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338387Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338389Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SystemPaneSuggestionsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338393Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353694Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353696Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-310093Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338388Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContentEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SoftLandingEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"FeatureManagementEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"AllowOnlineTips\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["!reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v ContentDeliveryAllowed | findstr \"0x0\""]
                     },
@@ -3323,73 +2911,56 @@
                 {
                     "id": "vs-telemetry",
                     "tab": "telemetry",
-                    "title": "Visual Studio telemetry",
-                    "description": "Visual Studio telemetry, feedback prompts and SQM opt-in.",
                     "icon": "",
-                    "info": "Documented SQM opt-outs plus the legacy TurnOffSwitch (internal, kept for older versions). VSCommon covers 2015-2022 in the 64-bit view. The collector service is left alone.",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\VisualStudio\\Telemetry\" /v \"TurnOffSwitch\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Feedback\" /v \"DisableFeedbackDialog\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\SQM\" /v \"OptIn\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\14.0\\SQM\" /v OptIn /f /reg:64 ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\15.0\\SQM\" /v OptIn /f /reg:64 ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\16.0\\SQM\" /v OptIn /f /reg:64 ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\17.0\\SQM\" /v OptIn /f /reg:64 ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\VisualStudio\\Telemetry\" /v \"TurnOffSwitch\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Feedback\" /v \"DisableFeedbackDialog\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\SQM\" /v \"OptIn\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\14.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\15.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\16.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\17.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\SQM\" /v OptIn | findstr \"0x0\""]
                     },
                 {
                     "id": "vscode",
                     "tab": "telemetry",
-                    "title": "VS Code",
-                    "description": "VS Code telemetry, feedback and auto-updates off via user policy.",
                     "icon": "",
                     "logo": "/Assets/Logos/vscode.png",
-                    "info": "Writes HKCU\\Software\\Policies\\Microsoft\\VSCode: TelemetryLevel off, EnableFeedback 0, UpdateMode manual, DictationLLMCleanup 0. Applies on next restart. Reversible.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Software\\Policies\\Microsoft\\VSCode\" /v \"TelemetryLevel\" /t REG_SZ /d \"off\" /f", "reg add \"HKCU\\Software\\Policies\\Microsoft\\VSCode\" /v \"EnableFeedback\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Policies\\Microsoft\\VSCode\" /v \"UpdateMode\" /t REG_SZ /d \"manual\" /f", "reg add \"HKCU\\Software\\Policies\\Microsoft\\VSCode\" /v \"DictationLLMCleanup\" /t REG_DWORD /d \"0\" /f"]}, {"label": "disable", "commands": ["reg delete \"HKCU\\Software\\Policies\\Microsoft\\VSCode\" /v \"TelemetryLevel\" /f ; exit 0", "reg delete \"HKCU\\Software\\Policies\\Microsoft\\VSCode\" /v \"EnableFeedback\" /f ; exit 0", "reg delete \"HKCU\\Software\\Policies\\Microsoft\\VSCode\" /v \"UpdateMode\" /f ; exit 0", "reg delete \"HKCU\\Software\\Policies\\Microsoft\\VSCode\" /v \"DictationLLMCleanup\" /f ; exit 0"]}],
                     "check": ["reg query \"HKCU\\Software\\Policies\\Microsoft\\VSCode\" /v TelemetryLevel | findstr \"off\""]
                     },
                 {
                     "id": "telemetry-tasks",
                     "tab": "telemetry",
-                    "title": "Telemetry tasks",
-                    "description": "Customer-experience, app-compat and feedback scheduled tasks.",
                     "icon": "",
-                    "info": "Disables CEIP, Compatibility Appraiser, Disk Diagnostics and feedback tasks. Time-sync, SmartScreen, Store-update and File History tasks are deliberately untouched. No state indicator (check unsupported).",
                     "options": [{"label": "enable", "commands": ["schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\BthSQM\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\KernelCeipTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\StartupAppTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\AitAgent\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Power Efficiency Diagnostics\\AnalyzeSystem\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyRefresh\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyUpload\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Autochk\\Proxy\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Maintenance\\WinSAT\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\CloudExperienceHost\\CreateObjectTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskFootprint\\Diagnostics\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\PI\\Sqm-Tasks\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\NetTrace\\GatherNetworkInfo\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\HelloFace\\FODCleanupTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClientOnScenarioDownload\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\PcaPatchDbTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Device Information\\Device\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Device Information\\Device User\" /enable ; exit 0"]},{"label": "disable", "commands": ["schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\BthSQM\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\BthSQM\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\KernelCeipTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\KernelCeipTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\StartupAppTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\StartupAppTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\AitAgent\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\AitAgent\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Power Efficiency Diagnostics\\AnalyzeSystem\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Power Efficiency Diagnostics\\AnalyzeSystem\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyRefresh\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyRefresh\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyUpload\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyUpload\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Autochk\\Proxy\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Autochk\\Proxy\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Maintenance\\WinSAT\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Maintenance\\WinSAT\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\CloudExperienceHost\\CreateObjectTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\CloudExperienceHost\\CreateObjectTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\DiskFootprint\\Diagnostics\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskFootprint\\Diagnostics\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\PI\\Sqm-Tasks\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\PI\\Sqm-Tasks\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\NetTrace\\GatherNetworkInfo\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\NetTrace\\GatherNetworkInfo\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\HelloFace\\FODCleanupTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\HelloFace\\FODCleanupTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient\" /disable ; exit 0"]}],
                     "check": []
                                     },
                 {
                     "id": "nvidia-telemetry",
                     "tab": "telemetry",
-                    "title": "NVIDIA telemetry",
-                    "description": "NVIDIA telemetry container and report tasks off.",
                     "icon": "",
                     "logo": "/Assets/Logos/nvidia.png",
-                    "info": "Sets NvTelemetryContainer Start=4 (inert even though the service stays registered) and disables the seven root NvTm* report tasks. Inert without an NVIDIA driver; NvContainer/NvDisplay untouched. Reversible.",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\NvTelemetryContainer\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "schtasks /change /tn \"\\NvTmMon_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /disable ; exit 0", "schtasks /change /tn \"\\NvTmRep_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /disable ; exit 0", "schtasks /change /tn \"\\NvTmRepOnLogon_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /disable ; exit 0", "schtasks /change /tn \"\\NvTmRep_CrashReport1_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /disable ; exit 0", "schtasks /change /tn \"\\NvTmRep_CrashReport2_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /disable ; exit 0", "schtasks /change /tn \"\\NvTmRep_CrashReport3_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /disable ; exit 0", "schtasks /change /tn \"\\NvTmRep_CrashReport4_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /disable ; exit 0"]}, {"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\NvTelemetryContainer\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "schtasks /change /tn \"\\NvTmMon_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /enable ; exit 0", "schtasks /change /tn \"\\NvTmRep_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /enable ; exit 0", "schtasks /change /tn \"\\NvTmRepOnLogon_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /enable ; exit 0", "schtasks /change /tn \"\\NvTmRep_CrashReport1_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /enable ; exit 0", "schtasks /change /tn \"\\NvTmRep_CrashReport2_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /enable ; exit 0", "schtasks /change /tn \"\\NvTmRep_CrashReport3_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /enable ; exit 0", "schtasks /change /tn \"\\NvTmRep_CrashReport4_{B2FE1952-0186-46C3-BAEC-A80AA35AC5B8}\" /enable ; exit 0"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\NvTelemetryContainer\" /v Start | findstr \"0x4\""]
                                     }
             ],
             "tabs": [
                 {
-                    "id": "connectivity",
-                    "title": "Connectivity"
+                    "id": "connectivity"
                 },
                 {
-                    "id": "devices",
-                    "title": "Devices"
+                    "id": "devices"
                 },
                 {
-                    "id": "security",
-                    "title": "Security"
+                    "id": "security"
                 },
                 {
-                    "id": "gaming",
-                    "title": "Gaming"
+                    "id": "gaming"
                 },
                 {
-                    "id": "system",
-                    "title": "System"
+                    "id": "system"
                 },
                 {
-                    "id": "telemetry",
-                    "title": "Telemetry"
+                    "id": "telemetry"
                 }
             ],
             "Icon": ""
         }
     ]
 }
+

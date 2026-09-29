@@ -31,7 +31,7 @@ public static partial class TranslationService
             ["force-flip-true-immediate"]="Forcer le mode immédiat réel", ["group-memory-io"]="Mémoire et E/S", ["disablepagingexecutive"]="DisablePagingExecutive", ["disablepagecombining"]="DisablePageCombining",
             ["queued-present-limit"]="Limite de présentation en file", ["win32priorityseparation"]="Win32PrioritySeparation", ["powerplan-manager"]="Plans d’alimentation", ["wifi"]="Wi-Fi",
             ["bluetooth"]="Bluetooth", ["hop-limit"]="HopLimit (point d’accès)", ["printer"]="Imprimantes", ["task-manager"]="Task Manager vers Process Explorer",
-            ["textinputhost"]="TextInputHost", ["vbs"]="VBS (sécurité basée sur la virtualisation)", ["hvci"]="HVCI (intégrité de la mémoire)", ["core-isolation"]="Isolation du noyau",
+            ["textinputhost"]="TextInputHost", ["vbs"]="VBS (sécurité basée sur la virtualisation)", ["hvci"]="HVCI (intégrité de la mémoire)",
             ["firewall"]="Pare-feu", ["lua"]="UAC / LUA", ["vulnerable-driver-blocklist"]="Liste de blocage des pilotes vulnérables", ["nx-mode"]="Mode No-Execute (NX)",
             ["xbox"]="Services Xbox", ["fivem-safe-services"]="Services sécurisés FiveM/Minecraft", ["windows-update-drivers"]="Pilotes Windows Update", ["start-menu"]="Menu Démarrer",
             ["use-default-tile"]="Utiliser la tuile par défaut", ["fix-intel-panel"]="Réparer le panneau Intel",

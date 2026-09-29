@@ -52,5 +52,5 @@ public sealed class CatalogDefinition
 {
     public string Name { get; set; } = "Superiorly Post-Install";
     public List<SectionDefinition> Sections { get; set; } = new();
-    public Dictionary<string, BrowserTip> Tooltips { get; set; } = new();
+    public Dictionary<string, int> Tooltips { get; set; } = new();
 }

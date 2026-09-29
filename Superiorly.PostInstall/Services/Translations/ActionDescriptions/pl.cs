@@ -104,7 +104,6 @@ public static partial class TranslationService
             ["textinputhost"]="Włączenie i wyłączenie TextInputHost przez IFEO Debugger (zalecany restart).",
             ["vbs"]="Włączenie i wyłączenie Virtualization Based Security (wymagany restart).",
             ["hvci"]="Włączenie i wyłączenie HVCI i Memory Integrity (wymagany restart).",
-            ["core-isolation"]="Włączenie i wyłączenie Core Isolation i Memory Integrity (wymagany restart).",
             ["firewall"]="Włączenie i wyłączenie Windows Defender Firewall i Base Filtering Engine (wymagany restart).",
             ["lua"]="Włączenie i wyłączenie Limited User Account Control (wymagany restart).",
             ["vulnerable-driver-blocklist"]="Włączenie i wyłączenie Windows Vulnerable Driver Blocklist (wymagany restart).",

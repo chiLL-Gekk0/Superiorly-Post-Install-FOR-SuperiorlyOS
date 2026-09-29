@@ -104,7 +104,6 @@ public static partial class TranslationService
             ["textinputhost"]="TextInputHost per IFEO-Debugger aktivieren/deaktivieren (Neustart empfohlen).",
             ["vbs"]="Virtualisierungsbasierte Sicherheit aktivieren/deaktivieren (Neustart erforderlich).",
             ["hvci"]="HVCI/Speicherintegrität aktivieren/deaktivieren (Neustart erforderlich).",
-            ["core-isolation"]="Kernisolierung/Speicherintegrität aktivieren/deaktivieren (Neustart erforderlich).",
             ["firewall"]="Windows-Defender-Firewall und Basisfiltermodul aktivieren/deaktivieren (Neustart erforderlich).",
             ["lua"]="Eingeschränkte Benutzerkontensteuerung aktivieren/deaktivieren (Neustart erforderlich).",
             ["vulnerable-driver-blocklist"]="Sperrliste für anfällige Treiber aktivieren/deaktivieren (Neustart erforderlich).",

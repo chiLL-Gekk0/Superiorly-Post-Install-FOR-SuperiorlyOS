@@ -31,7 +31,7 @@ public static partial class TranslationService
             ["force-flip-true-immediate"]="실제 즉시 모드 강제", ["group-memory-io"]="메모리 및 I/O", ["disablepagingexecutive"]="DisablePagingExecutive", ["disablepagecombining"]="DisablePageCombining",
             ["queued-present-limit"]="대기열 표시 제한", ["win32priorityseparation"]="Win32PrioritySeparation", ["powerplan-manager"]="전원 계획", ["wifi"]="Wi-Fi",
             ["bluetooth"]="Bluetooth", ["hop-limit"]="HopLimit (핫스팟)", ["printer"]="프린터", ["task-manager"]="Task Manager에서 Process Explorer로",
-            ["textinputhost"]="TextInputHost", ["vbs"]="VBS (가상화 기반 보안)", ["hvci"]="HVCI (메모리 무결성)", ["core-isolation"]="코어 격리",
+            ["textinputhost"]="TextInputHost", ["vbs"]="VBS (가상화 기반 보안)", ["hvci"]="HVCI (메모리 무결성)",
             ["firewall"]="방화벽", ["lua"]="UAC / LUA", ["vulnerable-driver-blocklist"]="취약한 드라이버 차단 목록", ["nx-mode"]="No-Execute (NX) 모드",
             ["xbox"]="Xbox 서비스", ["fivem-safe-services"]="FiveM/Minecraft 안전 서비스", ["windows-update-drivers"]="Windows Update 드라이버", ["start-menu"]="시작 메뉴",
             ["use-default-tile"]="기본 타일 사용", ["fix-intel-panel"]="Intel 제어판 수정",

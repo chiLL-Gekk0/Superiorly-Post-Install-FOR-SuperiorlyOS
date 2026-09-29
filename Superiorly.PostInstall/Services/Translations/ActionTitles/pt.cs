@@ -46,7 +46,7 @@ public static partial class TranslationService
             ["hop-limit"]="HopLimit (hotspot)", ["printer"]="Impressoras",
             ["task-manager"]="Gerenciador de tarefas para Process Explorer", ["textinputhost"]="TextInputHost",
             ["vbs"]="VBS (segurança baseada em virtualização)", ["hvci"]="HVCI (integridade da memória)",
-            ["core-isolation"]="Isolamento do núcleo", ["firewall"]="Firewall", ["lua"]="UAC / LUA",
+ ["firewall"]="Firewall", ["lua"]="UAC / LUA",
             ["vulnerable-driver-blocklist"]="Lista de bloqueio de drivers vulneráveis", ["nx-mode"]="Modo No-Execute (NX)",
             ["xbox"]="Serviços Xbox", ["fivem-safe-services"]="Serviços seguros FiveM/Minecraft",
             ["windows-update-drivers"]="Drivers do Windows Update", ["start-menu"]="Menu Iniciar",

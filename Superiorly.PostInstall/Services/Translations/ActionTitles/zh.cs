@@ -46,7 +46,7 @@ public static partial class TranslationService
             ["hop-limit"]="HopLimit (热点)", ["printer"]="打印机",
             ["task-manager"]="任务管理器转 Process Explorer", ["textinputhost"]="TextInputHost",
             ["vbs"]="VBS (基于虚拟化的安全)", ["hvci"]="HVCI (内存完整性)",
-            ["core-isolation"]="内核隔离", ["firewall"]="防火墙", ["lua"]="UAC / LUA",
+ ["firewall"]="防火墙", ["lua"]="UAC / LUA",
             ["vulnerable-driver-blocklist"]="易受攻击驱动程序阻止列表", ["nx-mode"]="No-Execute (NX) 模式",
             ["xbox"]="Xbox 服务", ["fivem-safe-services"]="FiveM/Minecraft 安全服务",
             ["windows-update-drivers"]="Windows 更新驱动程序", ["start-menu"]="开始菜单",

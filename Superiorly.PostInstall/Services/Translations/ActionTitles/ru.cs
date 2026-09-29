@@ -46,7 +46,7 @@ public static partial class TranslationService
             ["hop-limit"]="HopLimit (точка доступа)", ["printer"]="Принтеры",
             ["task-manager"]="Диспетчер задач в Process Explorer", ["textinputhost"]="TextInputHost",
             ["vbs"]="VBS (безопасность на основе виртуализации)", ["hvci"]="HVCI (целостность памяти)",
-            ["core-isolation"]="Изоляция ядра", ["firewall"]="Брандмауэр", ["lua"]="UAC / LUA",
+ ["firewall"]="Брандмауэр", ["lua"]="UAC / LUA",
             ["vulnerable-driver-blocklist"]="Список блокировки уязвимых драйверов", ["nx-mode"]="Режим No-Execute (NX)",
             ["xbox"]="Службы Xbox", ["fivem-safe-services"]="Безопасные службы FiveM/Minecraft",
             ["windows-update-drivers"]="Драйверы через Центр обновления", ["start-menu"]="Меню «Пуск»",

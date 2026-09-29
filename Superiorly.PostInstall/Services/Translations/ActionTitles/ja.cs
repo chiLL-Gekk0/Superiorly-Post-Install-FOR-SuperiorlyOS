@@ -46,7 +46,7 @@ public static partial class TranslationService
             ["hop-limit"]="HopLimit (ホットスポット)", ["printer"]="プリンター",
             ["task-manager"]="タスクマネージャーを Process Explorer に", ["textinputhost"]="TextInputHost",
             ["vbs"]="VBS (仮想化ベースのセキュリティ)", ["hvci"]="HVCI (メモリ整合性)",
-            ["core-isolation"]="コア分離", ["firewall"]="ファイアウォール", ["lua"]="UAC / LUA",
+ ["firewall"]="ファイアウォール", ["lua"]="UAC / LUA",
             ["vulnerable-driver-blocklist"]="脆弱なドライバーのブロックリスト", ["nx-mode"]="No-Execute (NX) モード",
             ["xbox"]="Xbox サービス", ["fivem-safe-services"]="FiveM/Minecraft セーフサービス",
             ["windows-update-drivers"]="Windows Update ドライバー", ["start-menu"]="スタートメニュー",

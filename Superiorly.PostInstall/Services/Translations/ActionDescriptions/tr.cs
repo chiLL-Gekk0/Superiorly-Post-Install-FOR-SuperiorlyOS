@@ -104,7 +104,6 @@ public static partial class TranslationService
             ["textinputhost"]="TextInputHost IFEO Debugger ile etkinleştirin ve devre dışı bırakın (yeniden başlatma önerilir).",
             ["vbs"]="Virtualization Based Security etkinleştirin ve devre dışı bırakın (yeniden başlatma gerekli).",
             ["hvci"]="HVCI ve Memory Integrity etkinleştirin ve devre dışı bırakın (yeniden başlatma gerekli).",
-            ["core-isolation"]="Core Isolation ve Memory Integrity etkinleştirin ve devre dışı bırakın (yeniden başlatma gerekli).",
             ["firewall"]="Windows Defender Firewall ve Base Filtering Engine etkinleştirin ve devre dışı bırakın (yeniden başlatma gerekli).",
             ["lua"]="Limited User Account Control etkinleştirin ve devre dışı bırakın (yeniden başlatma gerekli).",
             ["vulnerable-driver-blocklist"]="Windows Vulnerable Driver Blocklist etkinleştirin ve devre dışı bırakın (yeniden başlatma gerekli).",

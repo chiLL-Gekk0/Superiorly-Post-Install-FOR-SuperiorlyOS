@@ -18,7 +18,7 @@ public partial class CardViewModel : ObservableObject {
         _action = action;
         Title = TranslationService.GetActionTitle(action.Id, owner.SelectedLanguage.Code);
         Description = TranslationService.GetActionDescription(action.Id, owner.SelectedLanguage.Code);
-        InfoText = string.IsNullOrWhiteSpace(action.Info) ? "" : TranslationService.GetActionInfo(action.Id, owner.SelectedLanguage.Code);
+        InfoText = TranslationService.HasActionInfo(action.Id) ? TranslationService.GetActionInfo(action.Id, owner.SelectedLanguage.Code) : "";
         ApplyCardLabels(owner.SelectedLanguage.Code);
         Icon = action.Icon;
         Logo = action.Logo;

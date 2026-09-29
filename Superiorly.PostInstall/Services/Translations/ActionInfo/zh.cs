@@ -59,7 +59,6 @@ public static partial class TranslationService
             ["win32priorityseparation"]="CPU quantum 策略。默认值=2（短/可变/3:1 加速）。0x26=2:1 加速。0x18=长/固定/无加速（服务器风格）。",
             ["vbs"]="使用硬件虚拟化将关键 OS 进程与内核隔离。启用 KDP 和 Credential Guard。开销：I/O 密集型负载下 1-5%。仅在与第三方 Hyper-V 兼容时禁用。",
             ["hvci"]="在 VBS hypervisor 内运行内核代码完整性检查，阻止未签名/易受攻击的驱动。阻止 BYOVD 攻击。影响：驱动密集型 I/O 下 2-5%。仅在遇到蓝屏或反作弊冲突时禁用。",
-            ["core-isolation"]="将内存完整性 (HVCI) 与 Credential Guard 结合以保护 LSA 机密。防止凭据盗窃。开销：约 2-5% I/O + 100MB 内存。仅在反作弊冲突时禁用。",
             ["firewall"]="状态数据包检测和应用层过滤。BFE 是 IPsec、WFP 和 VPN 所必需的。开销：<0.1% CPU。禁用会使 SMB、RDP 面临横向移动风险。请始终保持启用。",
             ["lua"]="分离标准与提升令牌上下文以执行最小权限。禁用后任何进程都可写入系统目录。请保持启用。",
             ["vulnerable-driver-blocklist"]="在启动时通过 HVCI + CI 阻止已知被利用的内核驱动。针对 BYOVD 攻击。零运行时开销。请始终启用，除非需要旧版驱动。",

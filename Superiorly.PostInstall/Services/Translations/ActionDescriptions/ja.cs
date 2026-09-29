@@ -104,7 +104,6 @@ public static partial class TranslationService
             ["textinputhost"]="IFEO デバッガで TextInputHost を有効化/無効化します（再起動を推奨）。",
             ["vbs"]="仮想化ベースのセキュリティを有効化/無効化します（再起動が必要）。",
             ["hvci"]="HVCI/メモリ整合性を有効化/無効化します（再起動が必要）。",
-            ["core-isolation"]="コア分離/メモリ整合性を有効化/無効化します（再起動が必要）。",
             ["firewall"]="Windows Defender ファイアウォールと基本フィルタリングエンジンを有効化/無効化します（再起動が必要）。",
             ["lua"]="制限付きユーザーアカウント制御を有効化/無効化します（再起動が必要）。",
             ["vulnerable-driver-blocklist"]="脆弱なドライバーのブロックリストを有効化/無効化します（再起動が必要）。",

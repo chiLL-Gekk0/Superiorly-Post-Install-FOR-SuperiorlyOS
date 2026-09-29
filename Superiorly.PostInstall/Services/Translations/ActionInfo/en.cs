@@ -59,7 +59,6 @@ public static partial class TranslationService
             ["win32priorityseparation"]="CPU quantum strategy. Default=2 (short/variable/3:1 boost). 0x26=2:1 boost. 0x18=long/fixed/no boost (server-style).",
             ["vbs"]="Uses hardware virtualization to isolate critical OS processes from the kernel. Enables KDP and Credential Guard. Overhead: 1-5% on I/O-heavy workloads. Disable only for Hyper-V third-party compatibility.",
             ["hvci"]="Runs kernel code integrity checks inside VBS hypervisor, blocking unsigned/vulnerable drivers. Blocks BYOVD attacks. Impact: 2-5% on driver-heavy I/O. Disable only if experiencing BSODs or anti-cheat conflicts.",
-            ["core-isolation"]="Combines Memory Integrity (HVCI) with Credential Guard to protect LSA secrets. Prevents credential theft. Overhead: ~2-5% I/O + 100MB RAM. Disable only for anti-cheat conflicts.",
             ["firewall"]="Stateful packet inspection and application-level filtering. BFE required for IPsec, WFP, and VPN. Overhead: <0.1% CPU. Disabling exposes SMB, RDP to lateral movement. Always keep enabled.",
             ["lua"]="Separates standard and elevated token contexts for least-privilege enforcement. Disabling allows any process to write to system directories. Keep enabled.",
             ["vulnerable-driver-blocklist"]="Blocks known-exploited kernel drivers at boot via HVCI + CI. Targets BYOVD attacks. Zero runtime cost. Always enable unless a legacy driver is required.",
