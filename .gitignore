@@ -18,7 +18,7 @@ graft/
 launchSettings.json
 TestResults/
 installer/out/
-Superiorly.PostInstall-Setup-*.exe
+/Superiorly.PostInstall-Setup-*.exe
 node_modules/
 *.bak
 *.orig
