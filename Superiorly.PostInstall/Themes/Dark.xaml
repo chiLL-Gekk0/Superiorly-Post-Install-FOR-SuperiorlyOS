@@ -4,9 +4,9 @@
     <Color x:Key="C_Bg">#000000</Color>
     <SolidColorBrush x:Key="B_Bg" Color="{StaticResource C_Bg}" />
     <SolidColorBrush x:Key="B_WindowBorder" Color="#232329" />
-    <SolidColorBrush x:Key="B_Surface" Color="#17171C" />
-    <SolidColorBrush x:Key="B_Card" Color="#17171C" />
-    <SolidColorBrush x:Key="B_CardHover" Color="#1F1F26" />
+    <SolidColorBrush x:Key="B_Surface" Color="#23232E" />
+    <SolidColorBrush x:Key="B_Card" Color="#1E1E26" />
+    <SolidColorBrush x:Key="B_CardHover" Color="#2A2A36" />
     <SolidColorBrush x:Key="B_CardBorder" Color="#33333B" />
     <SolidColorBrush x:Key="B_TextPrimary" Color="#F5F0E8" />
     <SolidColorBrush x:Key="B_TextSecondary" Color="#B5B5BD" />
@@ -21,9 +21,9 @@
     <SolidColorBrush x:Key="B_TitlebarHover" Color="#1E1E24" />
     <SolidColorBrush x:Key="B_SwitchOff" Color="#3A3A42" />
     <SolidColorBrush x:Key="B_Success" Color="#C1004E" />
-    <SolidColorBrush x:Key="B_Sidebar" Color="#0A0A0C"/>
+    <SolidColorBrush x:Key="B_Sidebar" Color="#101014"/>
     <SolidColorBrush x:Key="B_SidebarText" Color="#F2F2F4"/>
-    <SolidColorBrush x:Key="B_HomeBand" Color="#0A0A0C"/>
+    <SolidColorBrush x:Key="B_HomeBand" Color="#101014"/>
     <SolidColorBrush x:Key="B_HomeBandText" Color="#F2F2F4"/>
     <SolidColorBrush x:Key="B_OnAccent" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="B_Overlay" Color="#80000000"/>

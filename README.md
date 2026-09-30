@@ -6,7 +6,8 @@ from a plaintext JSON catalog (`Data/actions.json`) you can read and audit.
 
 ## Build
 
-Requires .NET 8 SDK and Inno Setup 6 (for the installer only).
+Requires .NET 8 SDK to build. End users just run the installer
+(Inno Setup is only needed to build it).
 
 ```powershell
 dotnet build Superiorly.PostInstall/Superiorly.PostInstall.csproj   # fast check

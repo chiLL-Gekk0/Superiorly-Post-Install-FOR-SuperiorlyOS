@@ -667,7 +667,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\nsudo'; $exe=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object{$_.FullName -like '*x64*'}|Select -First 1; if(-not $exe){$exe=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1}; if(-not $exe){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $z=$d+'\\dl.zip'; $ok=$false; try{ (New-Object Net.WebClient).DownloadFile('https://github.com/M2TeamArchived/NSudo/releases/download/8.2/NSudo_8.2_All_Components.zip',$z); if((Get-FileHash $z -Algorithm SHA256).Hash -eq '346E38030CC9EEEF48223804BA27631DB96691D68BFC5D1728140D468F555204'){$ok=$true} else{Remove-Item $z -Force -EA 0} }catch{}; if(-not $ok){ try{ $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\NSudo_8.2_All_Components.zip'; if((Test-Path $lz)-and((Get-FileHash $lz -Algorithm SHA256).Hash -eq '346E38030CC9EEEF48223804BA27631DB96691D68BFC5D1728140D468F555204')){ Copy-Item $lz $z -Force; $ok=$true } else{ (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Tools/NSudo_8.2_All_Components.zip',$z); if((Get-FileHash $z -Algorithm SHA256).Hash -eq '346E38030CC9EEEF48223804BA27631DB96691D68BFC5D1728140D468F555204'){$ok=$true} else{Remove-Item $z -Force -EA 0} } }catch{} }; if($ok){ Expand-Archive -Path $z -DestinationPath $d -Force; Get-ChildItem $d -Recurse -EA 0|Unblock-File -EA 0; Remove-Item $z -Force -EA 0 }; if(-not $ok){ try{ choco install nsudo -y --no-progress 2>$null }catch{} }; $exe=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object{$_.FullName -like '*x64*'}|Select -First 1; if(-not $exe){$exe=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1} }; if($exe){Start-Process $exe.FullName; exit 0} else{ try{ choco install nsudo -y --force|Out-Null; $exe2=Get-ChildItem \"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1; if($exe2){Start-Process $exe2.FullName; exit 0}}catch{}; exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\nsudo'; $exe=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object{$_.FullName -like '*x64*'}|Select -First 1; if(-not $exe){$exe=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1}; if(-not $exe){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $z=$d+'\\dl.zip'; $ok=$false; if(-not $ok){ try{ $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\NSudo_8.2_All_Components.zip'; if((Test-Path $lz)-and((Get-FileHash $lz -Algorithm SHA256).Hash -eq '346E38030CC9EEEF48223804BA27631DB96691D68BFC5D1728140D468F555204')){ Copy-Item $lz $z -Force; $ok=$true } else{ $ok=$false } }catch{} }; if($ok){ Expand-Archive -Path $z -DestinationPath $d -Force; Get-ChildItem $d -Recurse -EA 0|Unblock-File -EA 0; Remove-Item $z -Force -EA 0 }; $exe=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object{$_.FullName -like '*x64*'}|Select -First 1; if(-not $exe){$exe=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1} }; if($exe){Start-Process $exe.FullName; exit 0} else{ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('NSudoLG.exe not found locally. Place NSudo files in TEMP Superiorly Tools nsudo, then retry.','NSudo',0,64); exit 1 }"
                             ]
                         }
                     ],
@@ -689,7 +689,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\driverview'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'DriverView.exe' -EA 0)){ try{ (New-Object Net.WebClient).DownloadFile('https://www.nirsoft.net/utils/driverview-x64.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }catch{ try{ choco install driverview -y --no-progress 2>$null }catch{} } }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\driverview'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'DriverView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DriverView.exe not found locally. Place it in LocalAppData Superiorly Tools driverview, then retry.','DriverView',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
                             ]
                         }
                     ],
@@ -710,19 +710,19 @@
                         {
                             "label": "Open CRU",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command winget install --id ToastyX.CustomResolutionUtility -e --silent --accept-package-agreements --accept-source-agreements; if($LASTEXITCODE -ne 0){ $d=$env:TEMP+'\\Superiorly\\Tools\\cru'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $z=$d+'\\cru.zip'; (New-Object Net.WebClient).DownloadFile('https://www.monitortests.com/download/cru/cru-1.5.3.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0; $f=Get-ChildItem $d -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0} else{ choco install cru -y --no-progress 2>$null }}; exit 0"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\cru'; $f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('CRU.exe not found locally. Place it in WinGet Packages, ProgramFiles or TEMP Superiorly Tools cru, then retry.','CRU'',0,64); exit 1; exit 0"
                             ]
                         },
                         {
                             "label": "Restart Display Driver",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'restart64.exe' -EA 0|Select -First 1; if(-not $r){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $z=$d+'\\cru.zip'; (New-Object Net.WebClient).DownloadFile('https://www.monitortests.com/download/cru/cru-1.5.3.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0; $r=Get-ChildItem $d -Recurse -Filter 'restart64.exe' -EA 0|Select -First 1 }; if(-not $r){$r=Get-ChildItem $d -Recurse -Filter 'restart.exe' -EA 0|Select -First 1}; if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU restart tool not found (restart64.exe / restart.exe).'; exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'restart64.exe' -EA 0|Select -First 1;  if(-not $r){$r=Get-ChildItem $d -Recurse -Filter 'restart.exe' -EA 0|Select -First 1}; if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU restart tool not found (restart64.exe / restart.exe).'; exit 1}"
                             ]
                         },
                         {
                             "label": "Reset All",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'reset-all.exe' -EA 0|Select -First 1; if(-not $r){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $z=$d+'\\cru.zip'; (New-Object Net.WebClient).DownloadFile('https://www.monitortests.com/download/cru/cru-1.5.3.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0; $r=Get-ChildItem $d -Recurse -Filter 'reset-all.exe' -EA 0|Select -First 1 }; if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU reset tool not found (reset-all.exe).'; exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'reset-all.exe' -EA 0|Select -First 1;  if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU reset tool not found (reset-all.exe).'; exit 1}"
                             ]
                         }
                     ],
@@ -752,7 +752,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\wumgr'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'WuMgr.exe' -EA 0)){ try{ (New-Object Net.WebClient).DownloadFile('https://github.com/Darkaxt/wumgr/releases/download/v1.2.2/WuMgr_v1.2.2.zip',$z); if((Get-FileHash $z -Algorithm SHA256).Hash -ne 'ADDD871D7805F721D46171BA37580B3519B950527B63FE0918D60F8BFD53D09C'){Remove-Item $z -Force -EA 0; exit 1}; Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }catch{ try{ choco install wumgr -y --no-progress 2>$null }catch{} } }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\wumgr'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'WuMgr.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('WuMgr.exe not found locally. Place it in LocalAppData Superiorly Tools wumgr, then retry.','WuMgr',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
                             ]
                         }
                     ],
@@ -763,7 +763,7 @@
                         "file:%ProgramData%\\chocolatey\\lib\\wumgr\\**\\WuMgr.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\wumgr\",\"$env:TEMP\\wumgr\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ try{ choco install wumgr -y --force|Out-Null; $f2=Get-ChildItem \"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f2){Start-Process $f2.FullName; exit 0}}catch{}; exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\wumgr\",\"$env:TEMP\\wumgr\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -774,7 +774,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\geek'; $z=$d+'\\geek.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'geek.exe' -EA 0)){ try{ (New-Object Net.WebClient).DownloadFile('https://geekuninstaller.com/geek.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }catch{ choco install geekuninstaller -y --no-progress 2>$null } }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\geek'; $z=$d+'\\geek.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'geek.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('geek.exe not found locally. Place it in LocalAppData Superiorly Tools geek, then retry.','GeekUninstaller',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ exit 1 }"
                             ]
                         }
                     ],
@@ -785,7 +785,7 @@
                         "file:%ProgramData%\\chocolatey\\lib\\geekuninstaller\\**\\geek.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\geek\",\"$env:TEMP\\geek\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ try{ choco install geekuninstaller -y --force|Out-Null; $f2=Get-ChildItem \"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f2){Start-Process $f2.FullName; exit 0}}catch{}; exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\geek\",\"$env:TEMP\\geek\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -802,7 +802,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\mt'; $z=$d+'\\Release_v1.4.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0)){ (New-Object Net.WebClient).DownloadFile('https://github.com/microe1/MouseTester/releases/download/MouseTester_v1.4/Release_v1.4.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\mt'; $z=$d+'\\Release_v1.4.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MouseTester.exe not found locally. Place it in LocalAppData Superiorly Tools mt, then retry.','MouseTester',0,64); exit 1 }; $f=Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1"
                             ]
                         }
                     ],
@@ -823,7 +823,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "$d=$env:TEMP+'\\ms'; $exe=$d+'\\MeasureSleep.exe'; if(-not(Test-Path $exe)){New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; (New-Object Net.WebClient).DownloadFile('https://github.com/valleyofdoom/TimerResolution/releases/download/MeasureSleep-v1.0.0/MeasureSleep.exe',$exe)}; Start-Process $exe"
+                                "$d=$env:TEMP+'\\ms'; $exe=$d+'\\MeasureSleep.exe'; if(-not(Test-Path $exe)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MeasureSleep.exe not found locally. Place it in TEMP ms, then retry.','MeasureSleep',0,64); exit 1 }; Start-Process $exe"
                             ]
                         }
                     ],
@@ -843,7 +843,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "winget install --id AMD.OCAT -e --silent --accept-package-agreements --accept-source-agreements; if($LASTEXITCODE -ne 0 -and $LASTEXITCODE -ne 3010 -and $LASTEXITCODE -ne 1641){ $d=$env:TEMP+'\\ocat'; $exe=$d+'\\OCAT_v1.6.3.exe'; if(-not(Test-Path $exe)){New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; (New-Object Net.WebClient).DownloadFile('https://github.com/GPUOpen-Tools/OCAT/releases/download/v1.6.3/OCAT_v1.6.3.exe',$exe)}; Start-Process $exe }; exit 0"
+                                "$d=$env:TEMP+'\\ocat'; $exe=$d+'\\OCAT_v1.6.3.exe'; if(-not(Test-Path $exe)){ $f=Get-ChildItem \"${env:ProgramFiles(x86)}\\OCAT\",\"${env:ProgramFiles}\\OCAT\" -Recurse -Filter 'OCAT.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('OCAT.exe not found locally. Place it in ProgramFiles OCAT or TEMP ocat, then retry.','OCAT',0,64); exit 1 }; Start-Process $exe; exit 0"
                             ]
                         }
                     ],
@@ -888,7 +888,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\pmt'; $z=$d+'\\pmt.zip'; $pmtOk=(Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0) -and (Test-Path ($d+'\\PresentMon\\PresentMon-1.7.0-x64.exe')); if(-not $pmtOk){ Remove-Item $d -Recurse -Force -EA 0; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{ $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\PerformanceMeasurementTool_Danske101.zip'; if((Test-Path $lz)-and((Get-FileHash $lz -Algorithm SHA256).Hash -eq '4CDF39EFE1DDF26FCBF192C538CE00A24500860AA3B0FD355B6F38880A18B7EE')){ Copy-Item $lz $z -Force } else{ (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Tools/PerformanceMeasurementTool_Danske101.zip',$z) }; if((Get-FileHash $z -Algorithm SHA256).Hash -ne '4CDF39EFE1DDF26FCBF192C538CE00A24500860AA3B0FD355B6F38880A18B7EE'){Remove-Item $z -Force -EA 0; exit 1}; Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0; if(-not(Test-Path ($d+'\\PresentMon\\PresentMon-1.7.0-x64.exe'))){exit 1} }catch{ exit 1 } }; exit 0"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\pmt'; $z=$d+'\\pmt.zip'; $pmtOk=(Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0) -and (Test-Path ($d+'\\PresentMon\\PresentMon-1.7.0-x64.exe')); if(-not $pmtOk){ Remove-Item $d -Recurse -Force -EA 0; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{ $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\PerformanceMeasurementTool_Danske101.zip'; if((Test-Path $lz)-and((Get-FileHash $lz -Algorithm SHA256).Hash -eq '4CDF39EFE1DDF26FCBF192C538CE00A24500860AA3B0FD355B6F38880A18B7EE')){ Copy-Item $lz $z -Force }; if((Get-FileHash $z -Algorithm SHA256).Hash -ne '4CDF39EFE1DDF26FCBF192C538CE00A24500860AA3B0FD355B6F38880A18B7EE'){Remove-Item $z -Force -EA 0; exit 1}; Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0; if(-not(Test-Path ($d+'\\PresentMon\\PresentMon-1.7.0-x64.exe'))){exit 1} }catch{ exit 1 } }; exit 0"
                             ]
                         }
                     ],
@@ -954,7 +954,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\dc'; $z=$d+'\\DeviceCleanup_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'DeviceCleanup.exe' -EA 0)){ (New-Object Net.WebClient).DownloadFile('https://www.uwe-sieber.de/files/DeviceCleanup_x64.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\dc'; $z=$d+'\\DeviceCleanup_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'DeviceCleanup.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DeviceCleanup.exe not found locally. Place it in LocalAppData Superiorly Tools dc, then retry.','DeviceCleanup'',0,64); exit 1 }"
                             ]
                         }
                     ],
@@ -975,7 +975,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\gip'; $e=$d+'\\GoInterruptPolicy.exe'; if(-not(Test-Path $e)){New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{ (New-Object Net.WebClient).DownloadFile('https://github.com/spddl/GoInterruptPolicy/releases/latest/download/GoInterruptPolicy.exe',$e)}catch{ try{ choco install gointerruptpolicy -y --no-progress 2>$null }catch{} }}; if(Test-Path $e){Start-Process $e; exit 0} else{ $c=Get-ChildItem \"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'GoInterruptPolicy.exe' -EA 0|Select -First 1; if($c){Start-Process $c.FullName; exit 0}else{exit 1}}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\gip'; $e=$d+'\\GoInterruptPolicy.exe'; if(-not(Test-Path $e)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('GoInterruptPolicy.exe not found locally. Place it in LocalAppData Superiorly Tools gip, then retry.','GoInterruptPolicy'',0,64); exit 1 }; if(Test-Path $e){Start-Process $e; exit 0}else{exit 1}"
                             ]
                         }
                     ],
@@ -997,7 +997,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\serviwin'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'ServiWin.exe' -EA 0)){ try{ (New-Object Net.WebClient).DownloadFile('https://www.nirsoft.net/utils/serviwin-x64.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }catch{ try{ (New-Object Net.WebClient).DownloadFile('https://www.nirsoft.net/utils/serviwin.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }catch{ choco install serviwin -y --no-progress 2>$null } } }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\serviwin'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'ServiWin.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('ServiWin.exe not found locally. Place it in LocalAppData Superiorly Tools serviwin, then retry.','ServiWin'',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
                             ]
                         }
                     ],
@@ -1018,7 +1018,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\utv'; $z=$d+'\\UsbTreeView_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'UsbTreeView.exe' -EA 0)){ (New-Object Net.WebClient).DownloadFile('https://www.uwe-sieber.de/files/UsbTreeView_x64.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\utv'; $z=$d+'\\UsbTreeView_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'UsbTreeView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('UsbTreeView.exe not found locally. Place it in LocalAppData Superiorly Tools utv, then retry.','UsbTreeView'',0,64); exit 1 }"
                             ]
                         }
                     ],
@@ -1039,7 +1039,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\ddu'; $z=$d+'\\ddu_setup.exe'; if(-not(Test-Path $d)){New-Item -ItemType Directory -Force -Path $d|Out-Null}; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{(New-Object Net.WebClient).DownloadFile('https://www.wagnardsoft.com/DDU/Setup/DDU%20v18.1.5.7_setup.exe',$z); Start-Process $z -ArgumentList '/S' -Wait; Remove-Item $z -Force -EA 0; exit 0}catch{ try{ choco install ddu -y --no-progress 2>$null; $c=Get-ChildItem \"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DDU.exe' -EA 0|Select -First 1; if($c){Start-Process $c.FullName; exit 0} }catch{}; exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\ddu'; $z=$d+'\\ddu_setup.exe'; if(-not(Test-Path $d)){New-Item -ItemType Directory -Force -Path $d|Out-Null}; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\DDU_v18.1.5.3_Portable.zip'; if(Test-Path $lz){ Copy-Item $lz $z -Force; Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0; $x=Get-ChildItem $d -Recurse -Filter 'DDU.exe' -EA 0|Select -First 1; if($x){Start-Process $x.FullName; exit 0} }; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DDU not found locally. Place DDU files in TEMP Superiorly Tools ddu, then retry.','DDU',0,64); exit 1"
                             ]
                         }
                     ],
@@ -1059,7 +1059,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\fks'; $e=$d+'\\FilterKeysSetter.exe'; if(-not(Get-ChildItem $d -Recurse -Filter 'FilterKeysSetter.exe' -EA 0)){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{ $z=$d+'\\fks.zip'; (New-Object Net.WebClient).DownloadFile('https://filterkeyssetter.com/wp-content/uploads/FilterKeysSetter_1.0.2.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0; $x=Get-ChildItem $d -Recurse -Filter 'FilterKeysSetter.exe' -EA 0|Select -First 1; if((-not $x)-or((Get-FileHash $x.FullName -Algorithm SHA256).Hash -ne '08594A3E6DDF07D21F1F8392574ECEF0C80E2D8B18CFEA9F791EAF5977DF0CCB')){Remove-Item $d -Recurse -Force -EA 0; exit 1} }catch{ exit 1 } }; $f=Get-ChildItem $d -Recurse -Filter 'FilterKeysSetter.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=$env:TEMP+'\\Superiorly\\Tools\\fks'; $e=$d+'\\FilterKeysSetter.exe'; if(-not(Get-ChildItem $d -Recurse -Filter 'FilterKeysSetter.exe' -EA 0)){ $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\FilterKeysSetter.exe'; if(Test-Path $lz){ New-Item -ItemType Directory -Force -Path $d|Out-Null; Copy-Item $lz $d -Force; }; try{ $x=Get-ChildItem $d -Recurse -Filter 'FilterKeysSetter.exe' -EA 0|Select -First 1; if((-not $x)-or((Get-FileHash $x.FullName -Algorithm SHA256).Hash -ne '08594A3E6DDF07D21F1F8392574ECEF0C80E2D8B18CFEA9F791EAF5977DF0CCB')){Remove-Item $d -Recurse -Force -EA 0; exit 1} }catch{ exit 1 } }; $f=Get-ChildItem $d -Recurse -Filter 'FilterKeysSetter.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                             ]
                         }
                     ],
@@ -1137,7 +1137,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe'; if(Test-Path $p){Start-Process $p; exit 0}; $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\rss'; $z=$d+'\\rss.zip'; if(-not(Get-ChildItem $d -Recurse -Filter 'RadeonSoftwareSlimmer.exe' -EA 0)){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{ (New-Object Net.WebClient).DownloadFile('https://github.com/GSDragoon/RadeonSoftwareSlimmer/releases/download/1.12.0/RadeonSoftwareSlimmer_1.12.0_net48.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }catch{ exit 1 } }; $f=Get-ChildItem $d -Recurse -Filter 'RadeonSoftwareSlimmer.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe'; if(Test-Path $p){Start-Process $p; exit 0}; $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\rss'; $z=$d+'\\rss.zip'; if(-not(Get-ChildItem  -Recurse -Filter 'RadeonSoftwareSlimmer.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('RadeonSoftwareSlimmer.exe not found locally. Place it in LocalAppData Superiorly Tools rss, then retry.','RadeonSoftwareSlimmer'',0,64); exit 1 }; $f=Get-ChildItem $d -Recurse -Filter 'RadeonSoftwareSlimmer.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                             ]
                         }
                     ],
@@ -1246,7 +1246,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command winget install --id Orbmu2k.nvidiaProfileInspector -e --silent --accept-package-agreements --accept-source-agreements; if($LASTEXITCODE -ne 0){ $d=$env:LOCALAPPDATA+'\\Superiorly\\Tools\\npi'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $z=$d+'\\npi.zip'; try{ (New-Object Net.WebClient).DownloadFile('https://github.com/Orbmu2k/nvidiaProfileInspector/releases/latest/download/nvidiaProfileInspector.zip',$z); Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0 }catch{} }; $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\npi\",\"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\" -Recurse -Filter 'nvidiaProfileInspector.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName -Verb Open; exit 0}; try{ choco install nvidia-profile-inspector -y --no-progress --force 2>$null; $c=Get-ChildItem \"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'nvidiaProfileInspector.exe' -EA 0|Select -First 1; if($c){Start-Process $c.FullName; exit 0}}catch{}; exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $f=Get-ChildItem \"$env:LOCALAPPDATA\\Superiorly\\Tools\\npi\",\"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\" -Recurse -Filter 'nvidiaProfileInspector.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName -Verb Open; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('nvidiaProfileInspector.exe not found locally. Place it in LocalAppData Superiorly Tools npi, then retry.','NvidiaProfileInspector'',0,64); exit 1"
                             ]
                         }
                     ],
@@ -2527,7 +2527,7 @@
                 },
                 {
                     "id": "mitigations-off",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2547,7 +2547,7 @@
                 },
                 {
                     "id": "disable-pca",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2569,7 +2569,7 @@
                 },
                 {
                     "id": "spectre-meltdown-off",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [

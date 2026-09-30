@@ -50,6 +50,12 @@
     <Content Include="Assets\Bundle\NSudo_8.2_All_Components.zip" Link="Tools\NSudo_8.2_All_Components.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudo_8.2_All_Components.zip')" />
     <Content Include="Assets\Bundle\NSudoLG.exe" Link="Tools\NSudoLG.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudoLG.exe')" />
     <Content Include="Assets\Bundle\PerformanceMeasurementTool_Danske101.zip" Link="Tools\PerformanceMeasurementTool_Danske101.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\PerformanceMeasurementTool_Danske101.zip')" />
+    <Content Include="Assets\Bundle\NIP\*.nip" Link="Nvidia Profiles\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NIP')" />
+    <Content Include="Assets\Bundle\DDU_v18.1.5.3_Portable.zip" Link="Tools\DDU_v18.1.5.3_Portable.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\DDU_v18.1.5.3_Portable.zip')" />
+    <Content Include="Assets\Bundle\FilterKeysSetter.exe" Link="Tools\FilterKeysSetter.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\FilterKeysSetter.exe')" />
+    <Content Include="Assets\Bundle\MoreClockTool.exe" Link="AMD Tweaks\MoreClockTool.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\MoreClockTool.exe')" />
+    <Content Include="Assets\Bundle\MorePowerTool.exe" Link="AMD Tweaks\MorePowerTool.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\MorePowerTool.exe')" />
+    <EmbeddedResource Include="Assets\Bundle\nvidiaProfileInspector.exe" LogicalName="Superiorly.PostInstall.tools.npi.exe" Condition="Exists('Assets\Bundle\nvidiaProfileInspector.exe')" />
     <Resource Include="Assets\Logos\*.png" />
     <Resource Include="Assets\guest.png" />
     <Resource Include="Assets\Fonts\ClimateCrisis-1979.otf" />

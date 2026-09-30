@@ -19,13 +19,8 @@ launchSettings.json
 TestResults/
 installer/out/
 /Superiorly.PostInstall-Setup-*.exe
-node_modules/
-*.bak
-*.orig
-*.pubxml
-PublishProfiles/
-tools/R2-credentials.txt
-
-# Dev-only local bundle (optional Content when present; never committed)
 Superiorly.PostInstall/Assets/Bundle/
+node_modules/
+RELEASES.md
+THIRD-PARTY-NOTICES.md
 

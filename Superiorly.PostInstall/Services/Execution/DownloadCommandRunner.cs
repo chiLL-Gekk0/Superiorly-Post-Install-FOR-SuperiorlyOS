@@ -117,6 +117,7 @@ public sealed class DownloadCommandRunner : IDownloadCommandRunner
     {
         var m = DownloadRx.Match(script);
         if (!m.Success) return (false, script, null);
+        if (script.Contains("[AppContext]::BaseDirectory", System.StringComparison.OrdinalIgnoreCase)) return (false, script, null);
         try
         {
             using var resp = await Http.GetAsync(m.Groups["url"].Value, HttpCompletionOption.ResponseHeadersRead, ct);

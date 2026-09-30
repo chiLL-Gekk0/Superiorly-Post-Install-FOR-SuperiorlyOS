@@ -243,8 +243,8 @@
                                                 <TextBlock Grid.Row="1" Text="{Binding HomeDiscordDesc}" FontSize="12" Foreground="{DynamicResource B_HomeBandText}" TextAlignment="Center" Margin="0,0,0,0"/>
                                                 <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,12,0,0">
                                                     <Border Width="44" Background="Transparent"/>
-                                                    <Button Content="{Binding HomeJoinLabel}" MinWidth="120" Height="36" Background="{DynamicResource B_Accent}" BorderBrush="{DynamicResource B_Accent}" Foreground="{DynamicResource B_OnAccent}" Style="{StaticResource HomeLinkButton}" Command="{Binding OpenLinkCommand}" CommandParameter="https://discord.gg/Tt7BY7GgH"/>
-                                                    <Button Margin="8,0,0,0" VerticalAlignment="Center" Style="{StaticResource HomeIconButton}" Command="{Binding CopyLinkCommand}" CommandParameter="https://discord.gg/Tt7BY7GgH" ToolTip="{Binding HomeCopyLinkLabel}">
+                                                    <Button Content="{Binding HomeJoinLabel}" MinWidth="120" Height="36" Background="{DynamicResource B_Accent}" BorderBrush="{DynamicResource B_Accent}" Foreground="{DynamicResource B_OnAccent}" Style="{StaticResource HomeLinkButton}"/>
+                                                    <Button Margin="8,0,0,0" VerticalAlignment="Center" Style="{StaticResource HomeIconButton}" ToolTip="{Binding HomeCopyLinkLabel}">
                                                         <TextBlock Text="&#xE8C8;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="14"/>
                                                     </Button>
                                                 </StackPanel>
@@ -258,7 +258,6 @@
                                                         <Image.Source><BitmapImage UriSource="/Assets/Logos/instagram.png" DecodePixelWidth="300" CacheOption="OnLoad" CreateOptions="IgnoreColorProfile"/></Image.Source>
                                                     </Image>
                                                 </Border>
-                                                <TextBlock Grid.Row="1" Text="{Binding HomeInstagramDesc}" FontSize="12" Foreground="{DynamicResource B_HomeBandText}" TextAlignment="Center" Margin="0,0,0,0"/>
                                                 <Button Grid.Row="2" Content="{Binding HomeFollowLabel}" Margin="0,12,0,0" HorizontalAlignment="Center" MinWidth="120" Height="36" Background="{DynamicResource B_Accent}" BorderBrush="{DynamicResource B_Accent}" Foreground="{DynamicResource B_OnAccent}" Style="{StaticResource HomeLinkButton}" Command="{Binding OpenLinkCommand}" CommandParameter="https://www.instagram.com/sebastianportella/"/>
                                             </Grid>
                                         </Border>
@@ -272,7 +271,7 @@
                                                     </Image>
                                                 </Border>
                                                 <TextBlock Grid.Row="1" Text="{Binding HomeGithubDesc}" FontSize="12" Foreground="{DynamicResource B_HomeBandText}" TextAlignment="Center" Margin="0,0,0,0"/>
-                                                <Button Grid.Row="2" Content="{Binding HomeFollowLabel}" Margin="0,12,0,0" HorizontalAlignment="Center" MinWidth="120" Height="36" Background="{DynamicResource B_Accent}" BorderBrush="{DynamicResource B_Accent}" Foreground="{DynamicResource B_OnAccent}" Style="{StaticResource HomeLinkButton}" Command="{Binding OpenLinkCommand}" CommandParameter="https://github.com/sebasprtl"/>
+                                                <Button Grid.Row="2" Content="{Binding HomeFollowLabel}" Margin="0,12,0,0" HorizontalAlignment="Center" MinWidth="120" Height="36" Background="{DynamicResource B_Accent}" BorderBrush="{DynamicResource B_Accent}" Foreground="{DynamicResource B_OnAccent}" Style="{StaticResource HomeLinkButton}" Command="{Binding OpenLinkCommand}" CommandParameter="https://github.com/chiLL-Gekk0"/>
                                             </Grid>
                                         </Border>
                                     </Grid>

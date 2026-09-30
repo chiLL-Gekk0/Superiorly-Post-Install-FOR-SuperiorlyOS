@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!-- soft neutrals, no pure white; crimson kept for contrast -->
-    <Color x:Key="C_Bg">#ECECF0</Color>
+    <Color x:Key="C_Bg">#DCDCE4</Color>
     <SolidColorBrush x:Key="B_Bg" Color="{StaticResource C_Bg}" />
     <SolidColorBrush x:Key="B_WindowBorder" Color="#D0D0D8" />
     <SolidColorBrush x:Key="B_Surface" Color="#E9E9EF" />
@@ -19,12 +19,12 @@
     <SolidColorBrush x:Key="B_UpdateHover" Color="#0959A8" />
     <SolidColorBrush x:Key="B_UpdateSoft" Color="#1A0B6BCB" />
     <SolidColorBrush x:Key="B_UpdateText" Color="#0B6BCB" />
-    <SolidColorBrush x:Key="B_TitlebarHover" Color="#DEDEE6" />
+    <SolidColorBrush x:Key="B_TitlebarHover" Color="#C6C6D2" />
     <SolidColorBrush x:Key="B_SwitchOff" Color="#B9B9C4" />
     <SolidColorBrush x:Key="B_Success" Color="#C1004E" />
-    <SolidColorBrush x:Key="B_Sidebar" Color="#E3E3EA"/>
+    <SolidColorBrush x:Key="B_Sidebar" Color="#CFD0DB"/>
     <SolidColorBrush x:Key="B_SidebarText" Color="#17171C"/>
-    <SolidColorBrush x:Key="B_HomeBand" Color="#E3E3EA"/>
+    <SolidColorBrush x:Key="B_HomeBand" Color="#CFD0DB"/>
     <SolidColorBrush x:Key="B_HomeBandText" Color="#17171C"/>
     <SolidColorBrush x:Key="B_OnAccent" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="B_Overlay" Color="#80000000"/>

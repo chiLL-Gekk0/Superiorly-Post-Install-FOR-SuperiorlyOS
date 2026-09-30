@@ -9,24 +9,39 @@ namespace Superiorly.PostInstall.ViewModels;
 
 public partial class CardViewModel : ObservableObject {
 
-    // experimental nips from public mirror, sha256 verified, cached locally
-    private static readonly (string Name, string Url, string Sha)[] MirrorNips =
+    // bundled nips, sha256 verified against local copies only; no downloads
+    private static readonly (string Name, string Sha)[] MirrorNips =
     {
-        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip", "AD79219730A3364C2DE37824E16FA5766F88A3FDDFEE148BCACED2D89814D329"),
-        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip", "897B733242FB9160C6224B8D6B036D3CC27F37A3F1B90367A42EB5119F312274"),
-        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH%2BRTCORE-V2.nip", "B48F3DB395E0E6758D9B4487360CD7FC65862443E07695B67824A587B3C31BD2"),
-        ("EXPERIMENTAL-AGGRESSIVE-TEST.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/EXPERIMENTAL-AGGRESSIVE-TEST.nip", "AA149815190F3B0E17B4B899AC6C1D90C7BB51CA03424B4E07BECCBC337A4A07"),
-        ("Global-Test-Experimental.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/Global-Test-Experimental.nip", "1E1147EF1A36FA231F67BC098981E8A659066E02BC1EA496E1627B851D65CE02"),
-        ("Latency-Test-Experimental.nip", "https://raw.githubusercontent.com/chiLL-Gekk0/Superiorly-PostInstall-Assets/main/Nvidia%20Profiles/Latency-Test-Experimental.nip", "B0580C050C689D62E21897F953980FA874D5EFAE4ABC8F6433D3F48C7E9B1BFF"),
+        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip", "AD79219730A3364C2DE37824E16FA5766F88A3FDDFEE148BCACED2D89814D329"),
+        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip", "897B733242FB9160C6224B8D6B036D3CC27F37A3F1B90367A42EB5119F312274"),
+        ("EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip", "B48F3DB395E0E6758D9B4487360CD7FC65862443E07695B67824A587B3C31BD2"),
+        ("EXPERIMENTAL-AGGRESSIVE-TEST.nip", "AA149815190F3B0E17B4B899AC6C1D90C7BB51CA03424B4E07BECCBC337A4A07"),
+        ("Global-Test-Experimental.nip", "1E1147EF1A36FA231F67BC098981E8A659066E02BC1EA496E1627B851D65CE02"),
+        ("Latency-Test-Experimental.nip", "B0580C050C689D62E21897F953980FA874D5EFAE4ABC8F6433D3F48C7E9B1BFF"),
     };
 
-    private static readonly System.Net.Http.HttpClient NipHttp = CreateNipHttp();
     private static int _nipFetchState;
-    private static System.Net.Http.HttpClient CreateNipHttp()
+    private static string? _npiExe;
+
+    private static string? EnsureNpiExe()
     {
-        var h = new System.Net.Http.HttpClient { Timeout = TimeSpan.FromMinutes(2) };
-        h.DefaultRequestHeaders.UserAgent.ParseAdd("Superiorly.PostInstall");
-        return h;
+        try
+        {
+            if (_npiExe != null && File.Exists(_npiExe)) return _npiExe;
+            var dir = Path.Combine(Path.GetTempPath(), "Superiorly", "npi");
+            Directory.CreateDirectory(dir);
+            var exe = Path.Combine(dir, "nvidiaProfileInspector.exe");
+            if (!File.Exists(exe))
+            {
+                using var s = typeof(CardViewModel).Assembly.GetManifestResourceStream("Superiorly.PostInstall.tools.npi.exe");
+                if (s == null) return null;
+                using var fs = File.Create(exe);
+                s.CopyTo(fs);
+            }
+            _npiExe = exe;
+            return exe;
+        }
+        catch { return null; }
     }
 
     private async Task EnsureNipsAsync()
@@ -36,28 +51,18 @@ public partial class CardViewModel : ObservableObject {
         {
             var nipDir = Path.Combine(AppContext.BaseDirectory, "Nvidia Profiles");
             try { Directory.CreateDirectory(nipDir); } catch { return; }
-            using var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromMinutes(2));
             foreach (var n in MirrorNips)
             {
                 var dest = Path.Combine(nipDir, n.Name);
-                if (File.Exists(dest)) continue;
+                if (!File.Exists(dest)) continue;
                 try
                 {
-                    using var cts2 = System.Threading.CancellationTokenSource.CreateLinkedTokenSource(cts.Token);
-                    cts2.CancelAfter(TimeSpan.FromSeconds(30));
-                    using var res = await NipHttp.GetAsync(n.Url, System.Net.Http.HttpCompletionOption.ResponseHeadersRead, cts2.Token).ConfigureAwait(false);
-                    res.EnsureSuccessStatusCode();
-                    var tmp = dest + ".part";
-                    using (var net = await res.Content.ReadAsStreamAsync(cts2.Token).ConfigureAwait(false))
-                    using (var fs = File.Create(tmp)) { await net.CopyToAsync(fs, cts2.Token).ConfigureAwait(false); }
-                    using (var sha = System.Security.Cryptography.SHA256.Create())
-                    using (var fh = File.OpenRead(tmp))
-                    {
-                        if (!Convert.ToHexString(sha.ComputeHash(fh)).Equals(n.Sha, StringComparison.OrdinalIgnoreCase)) { try { File.Delete(tmp); } catch { } continue; }
-                    }
-                    File.Move(tmp, dest, true);
+                    using var sha = System.Security.Cryptography.SHA256.Create();
+                    using var fh = File.OpenRead(dest);
+                    if (!Convert.ToHexString(sha.ComputeHash(fh)).Equals(n.Sha, StringComparison.OrdinalIgnoreCase))
+                    { try { File.Delete(dest); } catch { } }
                 }
-                catch { try { File.Delete(dest + ".part"); } catch { } }
+                catch { }
             }
             var d = System.Windows.Application.Current?.Dispatcher;
             if (d != null) await d.InvokeAsync(LoadNipProfiles);
@@ -74,7 +79,7 @@ public partial class CardViewModel : ObservableObject {
         System.Array.Sort(nipFiles, System.StringComparer.OrdinalIgnoreCase);
         if (nipFiles.Length == 0)
         {
-            Options.Add(new OptionViewModel(this, new ActionOption { Label = "Downloading profiles...", Commands = new List<string>() }));
+            Options.Add(new OptionViewModel(this, new ActionOption { Label = TranslationService.GetUi("no_profiles_found", Lang), Commands = new List<string>() }));
             SelectedOption = null;
             OnPropertyChanged(nameof(IsCombo));
             OnPropertyChanged(nameof(IsPresetCombo));
@@ -86,17 +91,20 @@ public partial class CardViewModel : ObservableObject {
         {
             var name = Path.GetFileNameWithoutExtension(file);
             var nipDest = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Superiorly", "npi", Path.GetFileName(file));
-            var cmd = $"powershell -NoProfile -ExecutionPolicy Bypass -Command " +
-                $"$d=[IO.Path]::GetDirectoryName('{nipDest}'); " +
-                $"New-Item -ItemType Directory -Force -Path $d|Out-Null; " +
-                $"Copy-Item '{file}' '{nipDest}' -Force; " +
-                $"$npi=Get-ChildItem $env:TEMP -Recurse -Filter 'nvidiaProfileInspector.exe' -ErrorAction SilentlyContinue|Select-Object -First 1; " +
-                $"if(-not $npi){{ $nd=$env:TEMP+'\\npiu'; if(-not(Test-Path $nd+'\\nvidiaProfileInspector.exe')){{ " +
-                $"[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; " +
-                $"(New-Object Net.WebClient).DownloadFile('https://github.com/Orbmu2k/nvidiaProfileInspector/releases/latest/download/nvidiaProfileInspector.zip',$d+'\\npi.zip'); " +
-                $"Expand-Archive -Path ($d+'\\npi.zip') -DestinationPath $nd -Force }}; " +
-                $"$npi=Get-ChildItem $nd -Recurse -Filter 'nvidiaProfileInspector.exe'|Select-Object -First 1 }}; " +
-                $"& $npi.FullName -silentImport '{nipDest}'";
+            var npi = EnsureNpiExe();
+            string cmd;
+            if (npi != null)
+            {
+                cmd = $"powershell -NoProfile -ExecutionPolicy Bypass -Command " +
+                    $"$d=[IO.Path]::GetDirectoryName('{nipDest}'); " +
+                    $"New-Item -ItemType Directory -Force -Path $d|Out-Null; " +
+                    $"Copy-Item '{file}' '{nipDest}' -Force; " +
+                    $"& '{npi}' -silentImport '{nipDest}'";
+            }
+            else
+            {
+                cmd = "powershell -NoProfile -ExecutionPolicy Bypass -Command Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('nvidiaProfileInspector is missing and offline mode cannot download it.','Apply NIP',0,64); exit 1";
+            }
 
             var opt = new ActionOption { Label = name, Commands = new List<string> { cmd } };
             Options.Add(new OptionViewModel(this, opt));
@@ -149,14 +157,7 @@ public partial class CardViewModel : ObservableObject {
 
         if (Options.Count == 0)
         {
-            var dlCmd = "powershell -NoProfile -ExecutionPolicy Bypass -Command " +
-                "$d='" + cruDir + "'; " +
-                "New-Item -ItemType Directory -Force -Path $d|Out-Null; " +
-                "[Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; " +
-                "(New-Object Net.WebClient).DownloadFile('https://www.monitortests.com/download/cru/cru-1.5.3.zip',$d+'\\cru.zip'); " +
-                "Expand-Archive -Path ($d+'\\cru.zip') -DestinationPath $d -Force; " +
-                "$exe=Get-ChildItem $d -Recurse -Filter 'CRU.exe'|Select-Object -First 1; " +
-                "if($exe){Start-Process $exe.FullName}";
+            var dlCmd = "powershell -NoProfile -ExecutionPolicy Bypass -Command Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('CRU not found locally. Place CRU.exe, restart64.exe and reset-all.exe in a CRU folder, then retry.','CRU',0,64); exit 1";
             Options.Add(new OptionViewModel(this, new ActionOption { Label = "Download CRU", Commands = new List<string> { dlCmd } }));
         }
 
