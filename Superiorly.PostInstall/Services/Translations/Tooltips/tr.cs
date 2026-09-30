@@ -20,7 +20,7 @@ public static partial class TranslationService
             ["whale"]="Koreli dev Naver'in malı; Güney Kore veri yasasına tabi; yan panel hizmetleri (çeviri, alışveriş) Naver'e bağlanır.",
             ["kagi-orion"]="Kapalı kaynak; Windows sürümü genç ve ham. Kagi'nin ücretli arama modeli işin kendisi: gözetim değil, ürün olarak gizlilik.",
             ["pale-moon"]="Eski Goanna motoru yılların Chromium/Firefox güvenlik önlemlerinden yoksun; site bozulmaları sık; tek bakıcılı proje.",
-            ["vivaldi"]="Ortaklıklı yer imleri içerir ve varsayılan aramadan para kazanır; Chromium çekirdeği açık olsa da arayüz kapalı. Ara. 2024: gelir için ortak motorlarda reklam ilişkilendirme betiklerini gizlice etkinleştirdi. Norveç şirketi, profilleme yok.",
+            ["vivaldi"]="Ortaklıklı yer imleri içerir ve varsayılan aramadan (Google) para kazanır; Chromium çekirdeği açık olsa da arayüz kapalı. Ara. 2024: gelir için ortak motorlarda reklam ilişkilendirme betiklerini gizlice etkinleştirdi. Norveç şirketi, profilleme yok.",
             ["tor-browser"]="Hem sansür aşma hem darknet pazarları için kullanılır; çıkış düğümleri HTTPS dışı trafiği görebilir; bazı hükümetler ve siteler tarafından engellenir veya işaretlenir.",
             ["zen"]="Küçük ekipli genç proje; bağımsız güvenlik denetimi yok. Hızlı sürümler gerilemelere yol açabilir.",
             ["edge"]="Telemetri kapalıyken bile benzersiz cihaz kimlikleri gönderir; agresif Bing kenar çubuğu reklamları, sponsorlu öneriler ve ısrarlı geri dönüş istemleri.",

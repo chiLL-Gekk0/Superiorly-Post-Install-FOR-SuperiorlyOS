@@ -92,7 +92,7 @@ public static partial class TranslationService
             ["force-flip-true-immediate"]="Natychmiastowy flip bez kolejki klatek. Najniższe opóźnienie zamiast płynności.",
             ["group-memory-io"]="Zarządzanie RAM, zachowanie stron i limit kolejki prezentacji.",
             ["disablepagingexecutive"]="Trzymanie jądra Windows i sterowników w fizycznej RAM.",
-            ["disablepagecombining"]="Wyłączenie łączenia stron. Lepsza izolacja, nieco większe użycie RAM.",
+            ["disablepagecombining"]="Wyłączenie łączenia stron systemu Windows. Lepsza izolacja, nieco większe użycie RAM.",
             ["queued-present-limit"]="Liczba klatek w kolejce przed prezentacją. Ustawienie społeczności, brak oficjalnego rejestru DWM.",
             ["win32priorityseparation"]="Kwant pierwszego i drugiego planu i boost priorytetu. Patrz PriorityControl.",
             ["powerplan-manager"]="Podgląd, stosowanie, usuwanie i import schematów zasilania.",

@@ -20,7 +20,7 @@ public static partial class TranslationService
             ["whale"]="Détenu par le géant coréen Naver ; soumis au droit sud-coréen des données ; les services latéraux (traduction, achats) contactent Naver.",
             ["kagi-orion"]="Code fermé ; la version Windows est jeune et perfectible. Le modèle payant de Kagi est l'activité : la confidentialité comme produit, pas la surveillance.",
             ["pale-moon"]="Son ancien moteur Goanna manque des années d'atténuations Chromium/Firefox ; sites cassés fréquents ; projet d'un seul mainteneur.",
-            ["vivaldi"]="Livre des favoris affiliés et monétise la recherche par défaut ; interface fermée bien que le cœur Chromium soit ouvert. Déc. 2024 : scripts d'attribution pub activés discrètement sur des moteurs partenaires pour revenu. Société norvégienne, sans profilage.",
+            ["vivaldi"]="Livre des favoris affiliés et monétise la recherche par défaut ; interface fermée bien que le cœur Chromium soit ouvert. Déc. 2024 : scripts d'attribution pub activés discrètement sur des moteurs partenaires (Google) pour revenu. Société norvégienne, sans profilage.",
             ["tor-browser"]="Sert au contournement de la censure comme aux marchés du darknet ; les nœuds de sortie voient le trafic non HTTPS ; bloqué ou signalé par certains gouvernements et sites.",
             ["zen"]="Jeune projet à petite équipe ; sans audit de sécurité indépendant. Des versions rapides peuvent apporter des régressions.",
             ["edge"]="Envoie des identifiants uniques même avec la télémétrie coupée ; pubs Bing agressives dans la barre latérale, suggestions sponsorisées et relances persistantes.",

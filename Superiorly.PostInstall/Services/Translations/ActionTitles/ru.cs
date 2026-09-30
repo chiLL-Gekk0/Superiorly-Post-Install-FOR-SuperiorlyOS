@@ -27,7 +27,7 @@ public static partial class TranslationService
             ["radeonsoftwareslimmer"]="RadeonSoftwareSlimmer", ["moreclocktool"]="MoreClockTool",
             ["morepowertool"]="MorePowerTool", ["radeonmod"]="RadeonMod",
             ["nvcleanstall"]="NVCleanstall", ["nvidia-inspector"]="NVIDIA Profile Inspector", ["apply-nip"]="Применить NIP",
-            ["force-pstate0"]="Принудительный PState0", ["group-cpu-scheduling"]="ЦП и планирование",
+            ["force-pstate0"]="Принудительный PState0", ["group-cpu-scheduling"]="CPU и планирование",
             ["lazymodetimeout"]="LazyModeTimeout", ["systemresponsiveness"]="SystemResponsiveness",
             ["receive-buffers"]="Буферы приёма", ["transmit-buffers"]="Буферы передачи",
             ["csrss-priority"]="Приоритет CSRS", ["iolatencycap"]="IoLatencyCap", ["iopagelocklimit"]="IOPageLockLimit",
@@ -37,7 +37,7 @@ public static partial class TranslationService
             ["disable-mpo"]="Отключить многоплоскостное наложение (MPO)", ["disable-interrupt-steering"]="Отключить перенаправление прерываний",
             ["group-power"]="Питание", ["disable-power-throttling"]="Отключить троттлинг питания",
             ["group-system-tools"]="Системные инструменты", ["group-maintenance"]="Обслуживание", ["group-benchmarks-peripherals"]="Бенчмарки и периферия",
-            ["threaded-dpc"]="Потоковый DPC", ["cpu-idle"]="Простой ЦП (схема питания)",
+            ["threaded-dpc"]="Потоковый DPC", ["cpu-idle"]="Простой CPU (схема питания)",
             ["force-direct-flip"]="Принудительный прямой флип", ["force-independent-flip"]="Принудительный независимый флип",
             ["force-flip-true-immediate"]="Принудительный истинный немедленный режим", ["group-memory-io"]="Память и ввод-вывод",
             ["disablepagingexecutive"]="DisablePagingExecutive", ["disablepagecombining"]="DisablePageCombining",
@@ -49,7 +49,7 @@ public static partial class TranslationService
  ["firewall"]="Брандмауэр", ["lua"]="UAC / LUA",
             ["vulnerable-driver-blocklist"]="Список блокировки уязвимых драйверов", ["nx-mode"]="Режим No-Execute (NX)",
             ["xbox"]="Службы Xbox", ["fivem-safe-services"]="Безопасные службы FiveM/Minecraft",
-            ["windows-update-drivers"]="Драйверы через Центр обновления", ["start-menu"]="Меню «Пуск»",
+            ["windows-update-drivers"]="Драйверы через Windows Update", ["start-menu"]="Меню «Пуск»",
             ["use-default-tile"]="Использовать плитку по умолчанию",             ["fix-intel-panel"]="Исправить панель Intel",
         
     };

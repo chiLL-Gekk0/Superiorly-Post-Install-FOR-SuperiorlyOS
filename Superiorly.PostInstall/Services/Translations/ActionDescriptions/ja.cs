@@ -11,7 +11,7 @@ public static partial class TranslationService
             ["firefox"]="ネイティブの垂直タブとサイドバーを備えた Gecko。",
             ["librewolf"]="テレメトリなし、uBlock プリインストール、強化済み。",
             ["brave"]="広告ブロック内蔵の高速 Chromium。",
-            ["thorium"]="AVX2 最適化の Chromium、メモリ使用量最小。",
+            ["thorium"]="AVX2 最適化の Chromium、RAM使用量最小。",
             ["edge"]="ベンチマーク最高得点、Chromium ベース。",
             ["vivaldi"]="深くカスタマイズ可能、接続は最小限。",
             ["opera"]="高速、VPN 内蔵。Kunlun Tech（中国、2016年）傘下。データ収集が多くクローズドソース。",

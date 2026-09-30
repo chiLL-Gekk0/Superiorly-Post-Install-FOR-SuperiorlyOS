@@ -48,7 +48,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_ko = new()
     {
- ["mainstream"]="일상적인 브라우저입니다.", ["privacy"]="개인정보 보호 및 익명성을 위한 브라우저입니다.", ["forks"]="Chromium 및 Firefox 기반 커뮤니티 빌드입니다.", ["utilities"]="시스템 및 하드웨어 진단 도구입니다.", ["amd"]="드라이버, 클록, 전압 및 레지스트리용 AMD GPU 도구입니다.", ["nvidia"]="클린 설치, 프로필 및 P-States용 NVIDIA 도구입니다.", ["connectivity"]="Wi-Fi, Bluetooth 및 핫스팟 홉 제한 설정입니다.", ["devices"]="프린터, 작업 관리자 및 텍스트 입력 수정 사항입니다.", ["security"]="코어 격리, 방화벽, UAC, 드라이버 차단 목록 및 메모리 보호입니다.", ["gaming"]="Xbox 서비스 및 Opera GX입니다.", ["ai"]="Chromium, WebKit 및 AI 우선 브라우징입니다.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Windows Update 드라이버, 시작 메뉴 및 Intel 패널 수정 사항입니다." , ["telemetry"]=""
+ ["mainstream"]="일상적인 브라우저입니다.", ["privacy"]="개인정보 보호 및 익명성을 위한 브라우저입니다.", ["forks"]="Chromium 및 Firefox 기반 커뮤니티 빌드입니다.", ["utilities"]="시스템 및 하드웨어 진단 도구입니다.", ["amd"]="드라이버, 클록, 전압 및 레지스트리용 AMD GPU 도구입니다.", ["nvidia"]="클린 설치, 프로필 및 P-States용 NVIDIA 도구입니다.", ["connectivity"]="Wi-Fi, Bluetooth 및 핫스팟 홉 제한 설정입니다.", ["devices"]="프린터, 작업 관리자 및 텍스트 입력 수정 사항입니다.", ["security"]="코어 격리, 방화벽, UAC, 드라이버 차단 목록 및 메모리 보호입니다.", ["gaming"]="Xbox 서비스 및 Opera GX입니다.", ["ai"]="Chromium, WebKit 및 AI 우선 브라우징입니다.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Windows Update 드라이버, 시작 메뉴 및 Intel 패널 수정 사항입니다." , ["telemetry"]="텔레메리, 제안, 광고 및 공급업체 데이터 수집 스위치."
     };
     private static readonly Dictionary<string, string> SectionTabDescs_ko = new()
     {

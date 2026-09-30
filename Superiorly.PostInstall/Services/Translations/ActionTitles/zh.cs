@@ -42,7 +42,7 @@ public static partial class TranslationService
             ["force-flip-true-immediate"]="强制翻转真即时模式", ["group-memory-io"]="内存与 I/O",
             ["disablepagingexecutive"]="DisablePagingExecutive", ["disablepagecombining"]="DisablePageCombining",
             ["queued-present-limit"]="排队呈现限制", ["win32priorityseparation"]="Win32PrioritySeparation",
-            ["powerplan-manager"]="电源计划", ["wifi"]="Wi-Fi", ["bluetooth"]="蓝牙",
+            ["powerplan-manager"]="电源计划", ["wifi"]="Wi-Fi", ["bluetooth"]="Bluetooth",
             ["hop-limit"]="HopLimit (热点)", ["printer"]="打印机",
             ["task-manager"]="任务管理器转 Process Explorer", ["textinputhost"]="TextInputHost",
             ["vbs"]="VBS (基于虚拟化的安全)", ["hvci"]="HVCI (内存完整性)",

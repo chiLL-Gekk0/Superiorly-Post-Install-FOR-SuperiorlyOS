@@ -20,7 +20,7 @@ public static partial class TranslationService
             ["whale"]="한국 인터넷 대기업 Naver 소유이며 한국 데이터법의 적용을 받습니다. 사이드바 서비스(번역, 쇼핑)는 Naver에 연결됩니다.",
             ["kagi-orion"]="Closed source이며 Windows 버전은 아직 초기 단계로 불안정합니다. Kagi의 유료 검색 모델이 사업이며 감시가 아닌 상품으로서의 개인정보 보호입니다.",
             ["pale-moon"]="오래된 Goanna 엔진은 수년간의 Chromium/Firefox 보안 완화를 갖추지 못해 사이트 깨짐이 잦으며 1인 유지 관리자 프로젝트입니다.",
-            ["vivaldi"]="제휴 북마크를 포함하고 기본 검색으로 수익을 얻으며 Chromium 코어는 공개되었지만 UI는 closed-source입니다. 2024년 12월에는 수익을 위해 제휴 검색 엔진에 광고 attribution 스크립트를 몰래 활성화했습니다. 노르웨이 회사이며 프로파일링은 없습니다.",
+            ["vivaldi"]="제휴 북마크를 포함하고 기본 검색(Google)으로 수익을 얻으며 Chromium 코어는 공개되었지만 UI는 closed-source입니다. 2024년 12월에는 수익을 위해 제휴 검색 엔진에 광고 attribution 스크립트를 몰래 활성화했습니다. 노르웨이 회사이며 프로파일링은 없습니다.",
             ["tor-browser"]="검열 우회와 darknet 시장 모두에 사용되며 exit node는 비-HTTPS 트래픽을 볼 수 있고 일부 정부와 사이트에서 차단하거나 표시합니다.",
             ["zen"]="소규모 팀의 젊은 프로젝트이며 독립 보안 감사는 아직 없습니다. 빠른 릴리스로 회귀 오류가 생길 수 있습니다.",
             ["edge"]="텔레메트리를 꺼도 고유 장치 ID를 전송하며 적극적인 Bing 사이드바 광고, 스폰서 제안, 지속적인 복귀 유도가 있습니다.",
