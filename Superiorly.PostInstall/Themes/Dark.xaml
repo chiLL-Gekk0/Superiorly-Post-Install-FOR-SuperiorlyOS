@@ -23,7 +23,7 @@
     <SolidColorBrush x:Key="B_Success" Color="#C1004E" />
     <SolidColorBrush x:Key="B_Sidebar" Color="#0A0A0C"/>
     <SolidColorBrush x:Key="B_SidebarText" Color="#F2F2F4"/>
-    <SolidColorBrush x:Key="B_HomeBand" Color="#131318"/>
+    <SolidColorBrush x:Key="B_HomeBand" Color="#0A0A0C"/>
     <SolidColorBrush x:Key="B_HomeBandText" Color="#F2F2F4"/>
     <SolidColorBrush x:Key="B_OnAccent" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="B_Overlay" Color="#80000000"/>

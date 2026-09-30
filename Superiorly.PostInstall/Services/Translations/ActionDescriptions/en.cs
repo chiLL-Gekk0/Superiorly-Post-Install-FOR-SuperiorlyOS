@@ -115,5 +115,8 @@ public static partial class TranslationService
             ["use-default-tile"]="Classic Start tile behavior on some Windows builds. Off allows changing the profile picture.",
             ["fix-intel-panel"]="Restarts the COM system event services the Intel graphics panel depends on.",
         
+            ["mitigations-off"]="Disables system DEP, SEHOP, CFG and 20+ mitigations. High risk, test use only.",
+            ["disable-pca"]="Toggles Program Compatibility Assistant prompts.",
+            ["spectre-meltdown-off"]="Toggles kernel Spectre/Meltdown mitigations (reboot required).",
     };
 }

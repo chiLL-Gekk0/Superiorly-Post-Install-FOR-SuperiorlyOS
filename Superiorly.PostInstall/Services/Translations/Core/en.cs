@@ -67,6 +67,7 @@ public static partial class TranslationService
 ["state_on"]="On", ["state_off"]="Off", 
             ["confirm_delete"]="Confirm delete",
             ["confirm_enable"]="Apply this change?",
+            ["confirm_disable"]="Turn this protection off?",
             ["delete_plans"]="Delete {0} power plan(s)?",
             ["cant_delete_active"]="Cannot delete the active power plan. Switch to another plan first.",
             ["import_plan"]="Import Power Plan", ["export_plan"]="Export Power Plan",

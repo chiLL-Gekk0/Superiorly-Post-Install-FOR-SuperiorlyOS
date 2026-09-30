@@ -213,7 +213,6 @@
                                 </DataTemplate>
                     <DataTemplate x:Key="NotificationsTemplate">
                         <Border Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1" CornerRadius="{DynamicResource R_M}" Padding="12,10" Margin="0,0,0,8" Opacity="1">
-                        <Border.Effect><DropShadowEffect BlurRadius="8" ShadowDepth="2" Opacity="0.25" RenderingBias="Performance"/></Border.Effect>
                             <Border.RenderTransform>
                                 <TranslateTransform X="0"/>
                             </Border.RenderTransform>

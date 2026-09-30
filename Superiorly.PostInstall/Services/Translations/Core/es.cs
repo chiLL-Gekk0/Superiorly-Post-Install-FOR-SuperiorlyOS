@@ -55,6 +55,7 @@ public static partial class TranslationService
 ["state_on"]="Activado", ["state_off"]="Desactivado", 
             ["confirm_delete"]="Confirmar eliminación",
             ["confirm_enable"]="¿Aplicar este cambio?",
+            ["confirm_disable"]="¿Desactivar esta protección?",
             ["delete_plans"]="¿Eliminar {0} planes de energía?",
             ["cant_delete_active"]="No se puede eliminar el plan de energía activo. Cambia primero a otro plan.",
             ["import_plan"]="Importar plan de energía", ["export_plan"]="Exportar plan de energía",

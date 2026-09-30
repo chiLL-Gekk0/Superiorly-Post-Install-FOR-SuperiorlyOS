@@ -14,22 +14,6 @@ namespace Superiorly.PostInstall.Views;
 
 public partial class MainWindow : Window
 {
-    private ScrollBar? CardsBar() => CardsScroll.Template.FindName("PART_VerticalScrollBar", CardsScroll) as ScrollBar;
-
-    private void HookCardsBar()
-    {
-        if (CardsBar() is not ScrollBar bar) return;
-        bar.MouseEnter += (_, _) => { _scrollbarIdle.Stop(); FadeCardsBar(1, 200, true); _scrollbarIdle.Start(); };
-        bar.MouseLeave += (_, _) => { _scrollbarIdle.Stop(); _scrollbarIdle.Start(); };
-    }
-
-    private void FadeCardsBar(double to, int ms, bool hitTest)
-    {
-        if (CardsBar() is not ScrollBar bar) return;
-        bar.IsHitTestVisible = hitTest;
-        bar.BeginAnimation(UIElement.OpacityProperty, new DoubleAnimation(to, TimeSpan.FromMilliseconds(ms)));
-    }
-
     private void OnDismissingNotification(Models.NotificationItem item)
     {
         // exit animation in code, xaml enter actions never fire here
@@ -77,7 +61,6 @@ public partial class MainWindow : Window
     private System.Windows.Point _autoAnchor;
     private double _autoVelocity;
     private readonly DispatcherTimer _autoScrollTimer = new() { Interval = TimeSpan.FromMilliseconds(30) };
-    private readonly DispatcherTimer _scrollbarIdle = new() { Interval = TimeSpan.FromSeconds(1) };
     private const double AutoScrollDeadZone = 15;
     private const double AutoScrollFactor = 0.12;
 

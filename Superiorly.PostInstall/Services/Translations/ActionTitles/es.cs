@@ -52,5 +52,8 @@ public static partial class TranslationService
             ["windows-update-drivers"]="Controladores de Windows Update", ["start-menu"]="Menú Inicio",
             ["use-default-tile"]="Usar mosaico predeterminado",             ["fix-intel-panel"]="Reparar panel de Intel",
         
+            ["mitigations-off"]="Mitigaciones anti-exploit",
+            ["disable-pca"]="Asistente de compatibilidad (PCA)",
+            ["spectre-meltdown-off"]="Mitigaciones Spectre/Meltdown",
     };
 }

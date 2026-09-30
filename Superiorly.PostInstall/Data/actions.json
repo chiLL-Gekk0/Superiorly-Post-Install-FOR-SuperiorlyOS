@@ -2526,6 +2526,72 @@
                     ]
                 },
                 {
+                    "id": "mitigations-off",
+                    "icon": "",
+                    "options": [
+                        {
+                            "commands": [
+                                "powershell -NoProfile -Command \"Set-ProcessMitigation -System -Reset\""
+                            ],
+                            "label": "enable"
+                        },
+                        {
+                            "commands": [
+                                "powershell -NoProfile -Command \"Set-ProcessMitigation -System -Disable DEP,SEHOP,ForceRelocateImages,BottomUp,HighEntropy,StrictHandle,DisableWin32kSystemCalls,DisableFsctlSystemCalls,DisableExtensionPoints,BlockDynamicCode,CFG,StrictCFG,MicrosoftSignedOnly,AllowStoreSignedBinaries,EnforceModuleDependencySigning,DisableNonSystemFonts,BlockRemoteImageLoads,BlockLowLabelImageLoads,PreferSystem32,TerminateOnError,UserShadowStack,UserShadowStackStrictMode\""
+                            ],
+                            "label": "disable"
+                        }
+                    ],
+                    "tab": "security",
+                    "check": []
+                },
+                {
+                    "id": "disable-pca",
+                    "icon": "",
+                    "options": [
+                        {
+                            "commands": [
+                                "Reg.exe delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisablePCA\" /f"
+                            ],
+                            "label": "enable"
+                        },
+                        {
+                            "commands": [
+                                "Reg.exe add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisablePCA\" /t REG_DWORD /d \"1\" /f"
+                            ],
+                            "label": "disable"
+                        }
+                    ],
+                    "tab": "security",
+                    "check": [
+                        "!Reg.exe query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v DisablePCA | findstr \"0x1\""
+                    ]
+                },
+                {
+                    "id": "spectre-meltdown-off",
+                    "icon": "",
+                    "options": [
+                        {
+                            "commands": [
+                                "Reg.exe add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"FeatureSettingsOverride\" /t REG_DWORD /d \"0\" /f",
+                                "Reg.exe add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"FeatureSettingsOverrideMask\" /t REG_DWORD /d \"3\" /f"
+                            ],
+                            "label": "enable"
+                        },
+                        {
+                            "commands": [
+                                "Reg.exe add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"FeatureSettingsOverride\" /t REG_DWORD /d \"3\" /f",
+                                "Reg.exe add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"FeatureSettingsOverrideMask\" /t REG_DWORD /d \"3\" /f"
+                            ],
+                            "label": "disable"
+                        }
+                    ],
+                    "tab": "security",
+                    "check": [
+                        "!Reg.exe query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v FeatureSettingsOverride | findstr \"0x3\""
+                    ]
+                },
+                {
                     "id": "xbox",
                     "icon": "",
                     "options": [

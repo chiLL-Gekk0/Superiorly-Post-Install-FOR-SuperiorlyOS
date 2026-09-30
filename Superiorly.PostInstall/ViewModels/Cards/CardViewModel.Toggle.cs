@@ -19,6 +19,12 @@ public partial class CardViewModel : ObservableObject {
             IsOn = false;
             return;
         }
+        if (!wantOn && ConfirmDisableIds.Contains(_action.Id) &&
+            !await _owner.ShowConfirmAsync(TranslationService.GetUi("confirm_disable", Lang), Title))
+        {
+            IsOn = true;
+            return;
+        }
         var target = wantOn ? _enableOption : _disableOption;
         await RunAsync(target!);
         await RefreshStateAsync();

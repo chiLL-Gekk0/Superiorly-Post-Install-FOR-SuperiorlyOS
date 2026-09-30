@@ -15,8 +15,8 @@ public sealed class JsonCatalogProvider : ICatalogProvider
     public CatalogDefinition Load()
     {
         var baseDir = AppContext.BaseDirectory;
-        var actionsPath = Path.Combine(baseDir, "data", "actions.json");
-        var tipsPath = Path.Combine(baseDir, "data", "tooltips.json");
+        var actionsPath = Path.Combine(baseDir, "Data", "actions.json");
+        var tipsPath = Path.Combine(baseDir, "Data", "tooltips.json");
 
         CatalogDefinition catalog;
         if (File.Exists(actionsPath))

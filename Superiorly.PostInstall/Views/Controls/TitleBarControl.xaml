@@ -3,7 +3,7 @@
                 <StackPanel DockPanel.Dock="Left" Orientation="Horizontal" Margin="18,0,0,0">
                     <TextBlock Text="{Binding AppTitle}" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Opacity="0.95"/>
                     <Border Width="1" Height="14" Background="{DynamicResource B_CardBorder}" Margin="10,0,0,0" VerticalAlignment="Center" Opacity="0.6"/>
-                    <TextBlock Text="POST INSTALL" VerticalAlignment="Center" FontSize="9" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Margin="8,0,0,0" Opacity="0.7"/>
+                    <TextBlock Text="Superior performance, Superior Design" VerticalAlignment="Center" FontSize="9" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Margin="8,0,0,0" Opacity="0.7"/>
                 </StackPanel>
                 <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" shell:WindowChrome.IsHitTestVisibleInChrome="True">
                     <Button Style="{DynamicResource CaptionButton}" FontSize="18" Command="{Binding ToggleThemeCommand}" ToolTip="{Binding ThemeToggleTip}" Content="{Binding ThemeToggleGlyph}"/>

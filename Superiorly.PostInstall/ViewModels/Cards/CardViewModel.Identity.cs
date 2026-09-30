@@ -18,6 +18,7 @@ public partial class CardViewModel : ObservableObject {
     public bool IsPresetCombo => IsCombo && !IsDownloadCard;
     private static readonly System.Collections.Generic.HashSet<string> DestructiveIds = new() { "smb2", "system-restore", "modern-standby" };
     private static readonly System.Collections.Generic.HashSet<string> ConfirmIds = new() { "brave-debloat", "edge-debloat", "chrome-debloat", "firefox-debloat", "office-debloat", "nvidia-telemetry" };
+    private static readonly System.Collections.Generic.HashSet<string> ConfirmDisableIds = new() { "mitigations-off" };
     public bool IsDestructive => DestructiveIds.Contains(_action.Id);
     public bool IsSearchCard => _action.Type == "search";
     public string ActionId => _action.Id;

@@ -115,5 +115,8 @@ public static partial class TranslationService
             ["use-default-tile"]="Mosaicos clásicos en algunas versiones de Windows. Desactivado permite cambiar la foto de perfil.",
             ["fix-intel-panel"]="Reinicia los servicios de eventos COM del panel de gráficos Intel.",
         
+            ["mitigations-off"]="Desactiva DEP, SEHOP, CFG y más de 20 mitigaciones del sistema. Riesgo alto, solo pruebas.",
+            ["disable-pca"]="Activa o apaga los avisos del Program Compatibility Assistant.",
+            ["spectre-meltdown-off"]="Activa o apaga las mitigaciones de kernel Spectre/Meltdown (requiere reinicio).",
     };
 }

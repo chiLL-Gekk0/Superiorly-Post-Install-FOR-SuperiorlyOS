@@ -1,7 +1,6 @@
 # Third-party notices
 
-Downloaded on demand from the public mirror
-`github.com/chiLL-Gekk0/Superiorly-PostInstall-Assets` (SHA256-checked),
+Extra tools download on demand from their official vendors (SHA256-checked),
 unless noted otherwise. A dev machine may drop verified copies under
 `Superiorly.PostInstall/Assets/Bundle/` (untracked, optional) for offline
 builds; the app prefers them after SHA check.

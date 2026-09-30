@@ -104,5 +104,8 @@ public static partial class TranslationService
             ["vscode"]="Writes HKCU\\Software\\Policies\\Microsoft\\VSCode: TelemetryLevel off, EnableFeedback 0, UpdateMode manual, DictationLLMCleanup 0. Applies on next restart. Reversible.",
             ["vs-telemetry"]="Documented SQM opt-outs plus the legacy TurnOffSwitch (internal, kept for older versions). VSCommon covers 2015-2022 in the 64-bit view. The collector service is left alone.",
         
+            ["mitigations-off"]="Turns off Windows system-wide anti-exploit mitigations via Set-ProcessMitigation -System. Enable restores defaults. Marginal gain (0-2% CPU) for full exposure.",
+            ["disable-pca"]="PCA shows this program might not have installed correctly. DisablePCA=1 silences it. Cosmetic, no performance effect.",
+            ["spectre-meltdown-off"]="FeatureSettingsOverride=3 disables them, 0 restores (mask 3). Reboot required. 1-3% gain on modern CPUs, more on old Intel.",
     };
 }

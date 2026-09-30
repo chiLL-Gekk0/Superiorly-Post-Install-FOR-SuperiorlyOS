@@ -53,10 +53,6 @@ public partial class MainWindow : Window
             if (_suppressScrollSave) return;
             try { _scrollMemory[ScrollKey()] = CardsScroll.VerticalOffset; } catch { }
         };
-        // scrollbar visible only while scrolling, fade out after 1s idle
-        _scrollbarIdle.Tick += (_, _) => { _scrollbarIdle.Stop(); var b = CardsBar(); if (b != null && b.IsMouseOver) { _scrollbarIdle.Start(); return; } FadeCardsBar(0, 350, false); };
-        CardsScroll.ScrollChanged += (_, e) => { if (e.VerticalChange != 0) { FadeCardsBar(1, 200, true); _scrollbarIdle.Stop(); _scrollbarIdle.Start(); } };
-        CardsScroll.Loaded += (_, _) => HookCardsBar();
         if (DataContext is MainViewModel vm)
         {
             vm.PropertyChanged += (_, e) =>

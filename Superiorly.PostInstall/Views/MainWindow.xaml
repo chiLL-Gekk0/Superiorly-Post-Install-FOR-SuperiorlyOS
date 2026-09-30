@@ -138,8 +138,8 @@
                                                                         ContentTemplate="{TemplateBinding ContentTemplate}"
                                                                         Content="{TemplateBinding Content}"/>
                                                 <ScrollBar x:Name="PART_VerticalScrollBar" Orientation="Vertical"
-                                                           HorizontalAlignment="Right" Width="4" Margin="0,4,1,4"
-                                                           Opacity="0" IsHitTestVisible="False"
+                                                           HorizontalAlignment="Right" Width="6" Margin="0,4,1,4"
+                                                           Opacity="1" IsHitTestVisible="True"
                                                            Value="{TemplateBinding VerticalOffset}"
                                                            Maximum="{TemplateBinding ScrollableHeight}"
                                                            ViewportSize="{TemplateBinding ViewportHeight}"
