@@ -64,7 +64,7 @@
                                                 <Border x:Name="bg" Background="Transparent" BorderThickness="0" CornerRadius="{DynamicResource R_S}" Padding="{TemplateBinding Padding}">
                                                     <ContentPresenter/>
                                                 </Border>
-                                                <Border x:Name="accentBar" Width="3" HorizontalAlignment="Left" CornerRadius="0" Background="{DynamicResource B_TextPrimary}" VerticalAlignment="Stretch" Margin="0,4,0,4" Opacity="0" Visibility="Collapsed" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
+                                                <Border x:Name="accentBar" Width="5" HorizontalAlignment="Left" CornerRadius="{DynamicResource R_S}" Background="{DynamicResource B_TextPrimary}" VerticalAlignment="Stretch" Margin="0,3,0,3" Opacity="0" Visibility="Collapsed" SnapsToDevicePixels="True" UseLayoutRounding="True"/>
                                             </Grid>
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="IsMouseOver" Value="True">

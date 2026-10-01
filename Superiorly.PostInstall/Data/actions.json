@@ -1039,12 +1039,13 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\ddu'; $z=$d+'\\ddu_setup.exe'; if(-not(Test-Path $d)){New-Item -ItemType Directory -Force -Path $d|Out-Null}; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\DDU_v18.1.5.3_Portable.zip'; if(Test-Path $lz){ Copy-Item $lz $z -Force; Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0; $x=Get-ChildItem $d -Recurse -Filter 'DDU.exe' -EA 0|Select -First 1; if($x){Start-Process $x.FullName; exit 0} }; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DDU not found locally. Place DDU files in TEMP Superiorly Tools ddu, then retry.','DDU',0,64); exit 1"
+                                "winget install --id Wagnardsoft.DisplayDriverUninstaller -e -h --silent --accept-package-agreements --accept-source-agreements"
                             ]
                         }
                     ],
                     "check": [
-                        "powershell -NoProfile -Command \"if (Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Display Driver Uninstaller*' }) { exit 0 } else { exit 1 }\""
+                        "powershell -NoProfile -Command \"if (Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Display Driver Uninstaller*' }) { exit 0 } else { exit 1 }\"",
+                        "file:%SPIBINDIR%\\Tools\\ddu\\**\\Display Driver Uninstaller.exe"
                     ],
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\ddu')\",\"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DDU.exe' -EA 0|Select -First 1; if(-not $f){$f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\ddu')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\ddu')\" -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1}; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
@@ -1126,6 +1127,9 @@
                 },
                 {
                     "id": "debloat"
+                },
+                {
+                    "id": "gaming"
                 }
             ],
             "actions": [
@@ -2137,6 +2141,80 @@
                     "icon": "",
                     "options": [{"label": "enable", "commands": ["schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentLogOn2016\" /disable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentLogOn\" /disable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentFallBack2016\" /disable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentFallBack\" /disable ; exit 0", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\" /v \"EnableLogging\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\" /v \"EnableUpload\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\15.0\\OSM\" /v \"EnableLogging\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\15.0\\OSM\" /v \"EnableUpload\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"accesssolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"olksolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"onenotesolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"pptsolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"projectsolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"publishersolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"visiosolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"wdsolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /v \"xlsolution\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"agave\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"appaddins\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"comaddins\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"documentfiles\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /v \"templatefiles\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\Common\\ClientTelemetry\" /v \"SendTelemetry\" /t REG_DWORD /d \"3\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\" /v \"qmenable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\" /v \"sendcustomerdata\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Privacy\" /v \"usercontentdisabled\" /t REG_DWORD /d \"2\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Privacy\" /v \"downloadcontentdisabled\" /t REG_DWORD /d \"2\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Feedback\" /v \"includescreenshot\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\ptwatson\" /v \"PTWOptIn\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Graphics\" /v \"DisableAnimations\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\General\" /v \"disableboottoofficestart\" /t REG_DWORD /d \"1\" /f"]}, {"label": "disable", "commands": ["schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentLogOn2016\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentLogOn\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentFallBack2016\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Office\\OfficeTelemetryAgentFallBack\" /enable ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\Common\\ClientTelemetry\" /v \"SendTelemetry\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\" /v \"qmenable\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\" /v \"sendcustomerdata\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Privacy\" /v \"usercontentdisabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Privacy\" /v \"downloadcontentdisabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Feedback\" /v \"includescreenshot\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\ptwatson\" /v \"PTWOptIn\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\Graphics\" /v \"DisableAnimations\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Office\\16.0\\Common\\General\" /v \"disableboottoofficestart\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedapplications\" /va /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\\preventedsolutiontypes\" /va /f ; exit 0"]}],
                     "check": ["reg query \"HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\16.0\\OSM\" /v EnableUpload | findstr \"0x0\""]
+                    },
+                {
+                    "id": "xbox",
+                    "icon": "",
+                    "options": [
+                        {
+                            "commands": [
+                                "reg add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d 1 /f",
+                                "reg add \"HKEY_CURRENT_USER\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d 1 /f",
+                                "sc.exe config XblAuthManager start= auto",
+                                "sc.exe config XblGameSave start= auto",
+                                "sc.exe config XblNetworkManager start= auto",
+                                "sc.exe config XboxGipSvc start= auto",
+                                "sc.exe config XboxNetApiSvc start= auto"
+                            ],
+                            "label": "enable"
+                        },
+                        {
+                            "commands": [
+                                "reg add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d 0 /f",
+                                "reg add \"HKEY_CURRENT_USER\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d 0 /f",
+                                "sc.exe config XblAuthManager start= disabled",
+                                "sc.exe config XblGameSave start= disabled",
+                                "sc.exe config XblNetworkManager start= disabled",
+                                "sc.exe config XboxGipSvc start= disabled",
+                                "sc.exe config XboxNetApiSvc start= disabled"
+                            ],
+                            "label": "disable"
+                        }
+                    ],
+                    "check": [
+                        "reg query \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v AppCaptureEnabled | findstr \"0x1\""
+                    ],
+                    "tab": "gaming"
+                },
+                {
+                    "id": "fivem-safe-services",
+                    "icon": "",
+                    "options": [
+                        {
+                            "commands": [
+                                "sc.exe config DiagTrack start= disabled",
+                                "sc.exe config SysMain start= disabled",
+                                "sc.exe stop DiagTrack",
+                                "sc.exe stop SysMain"
+                            ],
+                            "label": "Safe FiveM/Minecraft Services"
+                        },
+                        {
+                            "commands": [
+                                "sc.exe config DiagTrack start= auto",
+                                "sc.exe config SysMain start= auto"
+                            ],
+                            "label": "Superiorly Default"
+                        }
+                    ],
+                    "tab": "gaming",
+                    "check": [
+                        "reg query \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v Start | findstr \"0x4\""
+                    ]
+                },
+                {
+                    "id": "gamebar",
+                    "tab": "gaming",
+                    "icon": "",
+                    "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"1\" /f", "reg delete \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /t REG_DWORD /d \"0\" /f"]}],
+                    "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v AppCaptureEnabled | findstr \"0x1\""]
+                    },
+                {
+                    "id": "gamemode",
+                    "tab": "gaming",
+                    "icon": "",
+                    "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"2\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"2\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"0\" /f"]}],
+                    "check": ["reg query \"HKCU\\Software\\Microsoft\\GameBar\" /v AllowAutoGameMode | findstr \"0x1\""]
                     }
             ],
             "Icon": ""
@@ -2591,80 +2669,6 @@
                         "!Reg.exe query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v FeatureSettingsOverride | findstr \"0x3\""
                     ]
                 },
-                {
-                    "id": "xbox",
-                    "icon": "",
-                    "options": [
-                        {
-                            "commands": [
-                                "reg add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d 1 /f",
-                                "reg add \"HKEY_CURRENT_USER\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d 1 /f",
-                                "sc.exe config XblAuthManager start= auto",
-                                "sc.exe config XblGameSave start= auto",
-                                "sc.exe config XblNetworkManager start= auto",
-                                "sc.exe config XboxGipSvc start= auto",
-                                "sc.exe config XboxNetApiSvc start= auto"
-                            ],
-                            "label": "enable"
-                        },
-                        {
-                            "commands": [
-                                "reg add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d 0 /f",
-                                "reg add \"HKEY_CURRENT_USER\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d 0 /f",
-                                "sc.exe config XblAuthManager start= disabled",
-                                "sc.exe config XblGameSave start= disabled",
-                                "sc.exe config XblNetworkManager start= disabled",
-                                "sc.exe config XboxGipSvc start= disabled",
-                                "sc.exe config XboxNetApiSvc start= disabled"
-                            ],
-                            "label": "disable"
-                        }
-                    ],
-                    "check": [
-                        "reg query \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v AppCaptureEnabled | findstr \"0x1\""
-                    ],
-                    "tab": "gaming"
-                },
-                {
-                    "id": "fivem-safe-services",
-                    "icon": "",
-                    "options": [
-                        {
-                            "commands": [
-                                "sc.exe config DiagTrack start= disabled",
-                                "sc.exe config SysMain start= disabled",
-                                "sc.exe stop DiagTrack",
-                                "sc.exe stop SysMain"
-                            ],
-                            "label": "Safe FiveM/Minecraft Services"
-                        },
-                        {
-                            "commands": [
-                                "sc.exe config DiagTrack start= auto",
-                                "sc.exe config SysMain start= auto"
-                            ],
-                            "label": "Superiorly Default"
-                        }
-                    ],
-                    "tab": "gaming",
-                    "check": [
-                        "reg query \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v Start | findstr \"0x4\""
-                    ]
-                },
-                {
-                    "id": "gamebar",
-                    "tab": "gaming",
-                    "icon": "",
-                    "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"1\" /f", "reg delete \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /t REG_DWORD /d \"0\" /f"]}],
-                    "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v AppCaptureEnabled | findstr \"0x1\""]
-                    },
-                {
-                    "id": "gamemode",
-                    "tab": "gaming",
-                    "icon": "",
-                    "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"2\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"2\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"0\" /f"]}],
-                    "check": ["reg query \"HKCU\\Software\\Microsoft\\GameBar\" /v AllowAutoGameMode | findstr \"0x1\""]
-                    },
 
                 {
                     "id": "group-sys-services",
@@ -3015,9 +3019,6 @@
                 },
                 {
                     "id": "security"
-                },
-                {
-                    "id": "gaming"
                 },
                 {
                     "id": "system"

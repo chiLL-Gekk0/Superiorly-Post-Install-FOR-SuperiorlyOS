@@ -19,8 +19,6 @@ launchSettings.json
 TestResults/
 installer/out/
 /Superiorly.PostInstall-Setup-*.exe
-Superiorly.PostInstall/Assets/Bundle/
 node_modules/
 RELEASES.md
-THIRD-PARTY-NOTICES.md
 

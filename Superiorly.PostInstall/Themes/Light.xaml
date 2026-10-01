@@ -17,8 +17,8 @@
     <SolidColorBrush x:Key="B_AccentSubtle" Color="#F9E2EC" />
     <SolidColorBrush x:Key="B_Update" Color="#0B6BCB" />
     <SolidColorBrush x:Key="B_UpdateHover" Color="#0959A8" />
-    <SolidColorBrush x:Key="B_UpdateSoft" Color="#1A0B6BCB" />
-    <SolidColorBrush x:Key="B_UpdateText" Color="#0B6BCB" />
+    <SolidColorBrush x:Key="B_UpdateSoft" Color="#0B6BCB" />
+    <SolidColorBrush x:Key="B_UpdateText" Color="#FFFFFF" />
     <SolidColorBrush x:Key="B_TitlebarHover" Color="#C6C6D2" />
     <SolidColorBrush x:Key="B_SwitchOff" Color="#B9B9C4" />
     <SolidColorBrush x:Key="B_Success" Color="#C1004E" />

@@ -19,7 +19,6 @@
                                 <Setter Property="Width" Value="Auto"/>
                                 <Setter Property="Background" Value="{DynamicResource B_UpdateSoft}"/>
                                 <Setter Property="Foreground" Value="{DynamicResource B_UpdateText}"/>
-                                <Setter Property="Foreground" Value="{DynamicResource B_UpdateText}"/>
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="Button">

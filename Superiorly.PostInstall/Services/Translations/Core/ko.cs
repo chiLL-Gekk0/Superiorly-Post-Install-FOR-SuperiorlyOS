@@ -52,7 +52,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabDescs_ko = new()
     {
- ["browsers|gaming"]="CPU, RAM 및 네트워크 제한기가 내장된 Opera GX입니다.", ["troubleshooting|gaming"]="Xbox 서비스 및 안전한 FiveM/Minecraft 서비스입니다." 
+ ["browsers|gaming"]="CPU, RAM 및 네트워크 제한기가 내장된 Opera GX입니다.", ["tweaking|gaming"]="Xbox 서비스 및 안전한 FiveM/Minecraft 서비스입니다." 
     };
     private static readonly Dictionary<string, string> TabBannerTitles_ko = new()
     {
@@ -60,7 +60,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ko = new()
     {
- ["browsers|gaming"]="게이밍 브라우저", ["troubleshooting|gaming"]="게임 서비스" 
+ ["browsers|gaming"]="게이밍 브라우저", ["tweaking|gaming"]="게임 서비스" 
     };
     private static readonly Dictionary<string, string> UiExtra_ko = new()
     {

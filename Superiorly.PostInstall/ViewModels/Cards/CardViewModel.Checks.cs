@@ -52,26 +52,31 @@ public partial class CardViewModel : ObservableObject {
         return true;
     }
 
+    // probe roots that are too broad to walk; anything narrower (tool folders, package dirs) is safe and cheap
+    private static readonly string[] ScanBlockedRoots =
+    {
+        Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
+        Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86),
+        Environment.GetFolderPath(Environment.SpecialFolder.Windows),
+        Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData),
+    };
+
     private static bool TryFastCheckInner(IReadOnlyList<string> checks, out bool result)
     {
         result = false;
+        var handled = false;
         try
         {
             foreach (var c in checks)
             {
                 if (c.StartsWith("file:", StringComparison.OrdinalIgnoreCase))
                 {
+                    handled = true;
                     var pattern = ExpandOsPaths(c[5..].Trim());
                     if (pattern.IndexOf('*') < 0)
                     {
-                        result = File.Exists(pattern);
-                        return true;
-                    }
-                    var lower = pattern.ToLowerInvariant();
-                    if (lower.Contains(@"\program files") || lower.Contains(@"\programdata") || lower.Contains(@"\windows\"))
-                    {
-                        result = false;
-                        return true;
+                        if (File.Exists(pattern)) { result = true; break; }
+                        continue;
                     }
                     try
                     {
@@ -81,17 +86,21 @@ public partial class CardViewModel : ObservableObject {
                         var rootPart = pattern.Contains("**", StringComparison.Ordinal)
                             ? pattern[..pattern.IndexOf("**", StringComparison.Ordinal)].TrimEnd('\\', '/')
                             : Path.GetDirectoryName(pattern[..pattern.IndexOf('*')]) ?? "";
-                        rootPart = ExpandOsPaths(rootPart);
-                        if (string.IsNullOrEmpty(rootPart) || !Directory.Exists(rootPart)) { result = false; return true; }
-                        result = Directory.EnumerateFiles(rootPart, fileName, SearchOption.TopDirectoryOnly).Any();
-                        if (!result && Directory.EnumerateDirectories(rootPart).Any())
-                            result = Directory.EnumerateFiles(rootPart, fileName, SearchOption.AllDirectories).Any();
+                        rootPart = ExpandOsPaths(rootPart).TrimEnd('\\', '/');
+                        if (string.IsNullOrEmpty(rootPart) || !Directory.Exists(rootPart)) continue;
+                        foreach (var blocked in ScanBlockedRoots)
+                            if (rootPart.Equals(blocked.TrimEnd('\\', '/'), StringComparison.OrdinalIgnoreCase)) { rootPart = ""; break; }
+                        if (string.IsNullOrEmpty(rootPart)) continue;
+                        if (Directory.EnumerateFiles(rootPart, fileName, SearchOption.TopDirectoryOnly).Any()) { result = true; break; }
+                        if (Directory.EnumerateDirectories(rootPart).Any()
+                            && Directory.EnumerateFiles(rootPart, fileName, SearchOption.AllDirectories).Any()) { result = true; break; }
                     }
-                    catch { result = false; }
-                    return true;
+                    catch { }
+                    continue;
                 }
                 if (c.IndexOf("reg", StringComparison.OrdinalIgnoreCase) >= 0 && c.IndexOf("query", StringComparison.OrdinalIgnoreCase) >= 0 && c.Contains("/v", StringComparison.OrdinalIgnoreCase))
                 {
+                    handled = true;
                     var m = System.Text.RegularExpressions.Regex.Match(c, @"reg(?:\.exe)?\s+query\s+""([^""]+)""\s+/v\s+(\S+)", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                     if (m.Success)
                     {
@@ -108,31 +117,33 @@ public partial class CardViewModel : ObservableObject {
                                  : expanded.StartsWith("HKEY_CLASSES_ROOT", StringComparison.OrdinalIgnoreCase) ? Microsoft.Win32.Registry.ClassesRoot
                                  : expanded.StartsWith("HKEY_USERS", StringComparison.OrdinalIgnoreCase) ? Microsoft.Win32.Registry.Users
                                  : expanded.StartsWith("HKEY_CURRENT_CONFIG", StringComparison.OrdinalIgnoreCase) ? Microsoft.Win32.Registry.CurrentConfig : null;
-                        if (hive == null) { result = false; return true; }
+                        if (hive == null) continue;
                         var path = expanded.Replace("HKEY_LOCAL_MACHINE\\", "", StringComparison.OrdinalIgnoreCase).Replace("HKEY_CURRENT_USER\\", "", StringComparison.OrdinalIgnoreCase).Replace("HKEY_CLASSES_ROOT\\", "", StringComparison.OrdinalIgnoreCase).Replace("HKEY_USERS\\", "", StringComparison.OrdinalIgnoreCase).Replace("HKEY_CURRENT_CONFIG\\", "", StringComparison.OrdinalIgnoreCase);
-                        var fullLower = expanded.ToLowerInvariant();
                         using var key = OpenOsView(hive, path);
-                        if (key == null) { result = false; return true; }
+                        if (key == null) continue;
                         var v = key.GetValue(valName);
-                        if (v == null) { result = false; return true; }
+                        if (v == null) continue;
+                        var text = v.ToString() ?? "";
+                        var hex = string.Format("0x{0:X}", v);
                         var expectedMatch = System.Text.RegularExpressions.Regex.Match(c, @"findstr\s+""([^""]+)""", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                         if (expectedMatch.Success)
                         {
                             var needle = expectedMatch.Groups[1].Value;
-                            result = v.ToString()?.Contains(needle, StringComparison.OrdinalIgnoreCase) == true
-                                  || string.Format("0x{0:X}", v).Contains(needle, StringComparison.OrdinalIgnoreCase);
-                            return true;
+                            if (text.Contains(needle, StringComparison.OrdinalIgnoreCase) || hex.Contains(needle, StringComparison.OrdinalIgnoreCase)) { result = true; break; }
+                            continue;
                         }
                         var find = System.Text.RegularExpressions.Regex.Match(c, @"find\s+""([^""]+)""", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                         if (find.Success)
                         {
-                            result = v.ToString()?.Contains(find.Groups[1].Value, StringComparison.OrdinalIgnoreCase) == true;
-                            return true;
+                            if (text.Contains(find.Groups[1].Value, StringComparison.OrdinalIgnoreCase)) { result = true; break; }
+                            continue;
                         }
                     }
                 }
                 if (c.Contains("Get-ItemProperty", StringComparison.OrdinalIgnoreCase) && c.Contains("DisplayName", StringComparison.OrdinalIgnoreCase) && c.Contains("-like", StringComparison.OrdinalIgnoreCase))
                 {
+                    handled = true;
+
                     var m = System.Text.RegularExpressions.Regex.Match(c, @"DisplayName\s+-like\s+'\*?([^*']+)\*?'", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                     if (!m.Success) m = System.Text.RegularExpressions.Regex.Match(c, @"DisplayName\s+-like\s+""\*?([^*\""]+)\*?""", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                     if (m.Success)
@@ -171,14 +182,14 @@ public partial class CardViewModel : ObservableObject {
                                         _uninstallCacheExpiry = DateTime.UtcNow.AddMinutes(5);
                                     }
                                 }
-                                result = names.Any(n => n.Contains(needle, StringComparison.OrdinalIgnoreCase));
-                                return true;
+                                if (names.Any(n => n.Contains(needle, StringComparison.OrdinalIgnoreCase))) { result = true; break; }
                             } catch { }
                         }
                     }
                 }
                 if (c.Contains("Test-Path", StringComparison.OrdinalIgnoreCase))
                 {
+                    handled = true;
                     try
                     {
                         if (c.Contains("AMD Tweaks", StringComparison.OrdinalIgnoreCase))
@@ -201,8 +212,8 @@ public partial class CardViewModel : ObservableObject {
                                     if (File.Exists(p2) || Directory.Exists(p2)) { amdFound = true; break; }
                                 }
                             }
-                            result = amdFound;
-                            return true;
+                            if (amdFound) { result = true; break; }
+                            continue;
                         }
                         var mcol = System.Text.RegularExpressions.Regex.Matches(c, @"Test-Path\s+""([^""]+)""", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                         if (mcol.Count > 0)
@@ -211,16 +222,18 @@ public partial class CardViewModel : ObservableObject {
                             {
                                 var p = ExpandOsPaths(mm.Groups[1].Value);
                                 p = p.Replace("$env:LOCALAPPDATA", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)).Replace("$env:TEMP", Path.GetTempPath().TrimEnd('\\', '/')).Replace("$env:ProgramFiles", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)).Replace("$env:ProgramFiles(x86)", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86));
-                                if (File.Exists(p) || Directory.Exists(p)) { result = true; return true; }
+                                if (File.Exists(p) || Directory.Exists(p)) { result = true; break; }
                             }
-                            result = false; return true;
+                            if (result) break;
+                            continue;
                         }
-                        result = false; return true;
+                        continue;
                     }
-                    catch { result = false; return true; }
+                    catch { continue; }
                 }
                 if (c.StartsWith("powercfg", StringComparison.OrdinalIgnoreCase))
                 {
+                    handled = true;
                     try
                     {
                         var pipe = c.IndexOf('|');
@@ -235,19 +248,19 @@ public partial class CardViewModel : ObservableObject {
                             CreateNoWindow = true
                         };
                         using var proc = System.Diagnostics.Process.Start(psi);
-                        if (proc == null) { result = false; return true; }
+                        if (proc == null) continue;
                         var output = proc.StandardOutput.ReadToEnd();
                         proc.WaitForExit(8000);
-                        result = needle.Length == 0 || output.Contains(needle, StringComparison.OrdinalIgnoreCase);
-                        return true;
+                        if (needle.Length == 0 || output.Contains(needle, StringComparison.OrdinalIgnoreCase)) { result = true; break; }
+                        continue;
                     }
-                    catch { result = false; return true; }
+                    catch { continue; }
                 }
-                if (c.Contains("sc query", StringComparison.OrdinalIgnoreCase) || c.Contains("Get-Service", StringComparison.OrdinalIgnoreCase))
-                    return false;
             }
-        } catch { }
-        return false;
+        }
+        catch { }
+        // every probe was understood: the OR verdict stands
+        return handled;
     }
 
     private void TryDetectComboSelection()

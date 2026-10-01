@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_en = new()
     {
- ["mainstream"]="Mainstream", ["privacy"]="Privacy", ["forks"]="Forks & Custom", ["software"]="Software", ["store-downloader"]="Microsoft Store Downloader", ["utilities"]="Utilities", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry Tweaks", ["win32"]="Win32PrioritySeparation", ["powerplans"]="Power Plans", ["connectivity"]="Connectivity", ["devices"]="Devices", ["security"]="Security", ["gaming"]="Gaming", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Mainstream", ["privacy"]="Privacy", ["forks"]="Forks & Custom", ["software"]="Software", ["store-downloader"]="Microsoft Store Downloader", ["utilities"]="Utilities", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry", ["win32"]="Win32PrioritySeparation", ["powerplans"]="Power Plans", ["connectivity"]="Connectivity", ["devices"]="Devices", ["security"]="Security", ["gaming"]="Gaming", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> Notifications_en = new()
     {
@@ -52,7 +52,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabDescs_en = new()
     {
- ["browsers|gaming"]="Opera GX With Built-In CPU, RAM And Network Limiters.", ["troubleshooting|gaming"]="Xbox Services And FiveM/Minecraft Safe Services." 
+ ["browsers|gaming"]="Opera GX With Built-In CPU, RAM And Network Limiters.", ["tweaking|gaming"]="Xbox Services And FiveM/Minecraft Safe Services." 
     };
     private static readonly Dictionary<string, string> TabBannerTitles_en = new()
     {
@@ -60,7 +60,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_en = new()
     {
- ["browsers|gaming"]="Gaming Browser", ["troubleshooting|gaming"]="Game Services" , ["troubleshooting|telemetry"]="Telemetry Fixes"
+ ["browsers|gaming"]="Gaming Browser", ["tweaking|gaming"]="Game Services" , ["troubleshooting|telemetry"]="Telemetry Fixes"
     };
     private static readonly Dictionary<string, string> UiExtra_en = new()
     {

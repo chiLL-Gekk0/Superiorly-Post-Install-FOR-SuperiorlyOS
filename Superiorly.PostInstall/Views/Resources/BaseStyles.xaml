@@ -36,6 +36,9 @@
             <Setter Property="Foreground" Value="{DynamicResource B_TextPrimary}"/>
             <Setter Property="FontSize" Value="11"/>
             <Setter Property="Padding" Value="8,6"/>
+            <!-- default is Placement=Mouse, which pins the tip to the pointer; anchor it under its control -->
+            <Setter Property="Placement" Value="Bottom"/>
+            <Setter Property="VerticalOffset" Value="6"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToolTip">

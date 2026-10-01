@@ -47,31 +47,25 @@
     <EmbeddedResource Include="Data\tooltips.json" LogicalName="Superiorly.PostInstall.data.tooltips.json" />
     <Content Include="Data\actions.json" CopyToOutputDirectory="PreserveNewest" Link="Data\actions.json" />
     <Content Include="Data\tooltips.json" CopyToOutputDirectory="PreserveNewest" Link="Data\tooltips.json" />
-    <Content Include="Assets\Bundle\NSudo_8.2_All_Components.zip" Link="Tools\NSudo_8.2_All_Components.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudo_8.2_All_Components.zip')" />
-    <Content Include="Assets\Bundle\NSudoLG.exe" Link="Tools\NSudoLG.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudoLG.exe')" />
-    <Content Include="Assets\Bundle\PerformanceMeasurementTool_Danske101.zip" Link="Tools\PerformanceMeasurementTool_Danske101.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\PerformanceMeasurementTool_Danske101.zip')" />
-    <EmbeddedResource Include="Assets\Nips\EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" />
-    <EmbeddedResource Include="Assets\Nips\EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" />
-    <EmbeddedResource Include="Assets\Nips\EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" />
-    <EmbeddedResource Include="Assets\Nips\EXPERIMENTAL-AGGRESSIVE-TEST.nip" LogicalName="EXPERIMENTAL-AGGRESSIVE-TEST.nip" />
-    <EmbeddedResource Include="Assets\Nips\Global-Test-Experimental.nip" LogicalName="Global-Test-Experimental.nip" />
-    <EmbeddedResource Include="Assets\Nips\Latency-Test-Experimental.nip" LogicalName="Latency-Test-Experimental.nip" />
-    <EmbeddedResource Include="Assets\Nips\KernelOS Performance v2.nip" LogicalName="KernelOS Performance v2.nip" />
-    <EmbeddedResource Include="Assets\Nips\KernelOS Performance v2.1.nip" LogicalName="KernelOS Performance v2.1.nip" />
-    <EmbeddedResource Include="Assets\Nips\KernelOS Performance v3.nip" LogicalName="KernelOS Performance v3.nip" />
-    <Content Include="Assets\Bundle\DDU_v18.1.5.3_Portable.zip" Link="Tools\DDU_v18.1.5.3_Portable.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\DDU_v18.1.5.3_Portable.zip')" />
-    <Content Include="Assets\Bundle\FilterKeysSetter.exe" Link="Tools\FilterKeysSetter.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\FilterKeysSetter.exe')" />
-    <Content Include="Assets\Bundle\MoreClockTool.exe" Link="AMD Tweaks\MoreClockTool.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\MoreClockTool.exe')" />
-    <Content Include="Assets\Bundle\MorePowerTool.exe" Link="AMD Tweaks\MorePowerTool.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\MorePowerTool.exe')" />
-    <EmbeddedResource Include="Assets\Bundle\nvidiaProfileInspector.exe" LogicalName="Superiorly.PostInstall.tools.npi.exe" Condition="Exists('Assets\Bundle\nvidiaProfileInspector.exe')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-AGGRESSIVE-TEST.nip" LogicalName="EXPERIMENTAL-AGGRESSIVE-TEST.nip" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\Global-Test-Experimental.nip" LogicalName="Global-Test-Experimental.nip" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\Latency-Test-Experimental.nip" LogicalName="Latency-Test-Experimental.nip" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v2.nip" LogicalName="KernelOS Performance v2.nip" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v2.1.nip" LogicalName="KernelOS Performance v2.1.nip" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v3.nip" LogicalName="KernelOS Performance v3.nip" />
+    <!-- Assets\Bundle mirrors the publish layout so file: probes (%SPIBINDIR%) resolve after install;
+         NIP/ is excluded because those profiles ship as embedded resources, not as loose files -->
+    <Content Include="Assets\Bundle\**\*" Exclude="Assets\Bundle\NIP\**\*">
+      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Assets\Logos\*.png" />
     <Resource Include="Assets\guest.png" />
     <Resource Include="Assets\Fonts\ClimateCrisis-1979.otf" />
   </ItemGroup>
-
-  <Target Name="CopyAmdTools" AfterTargets="Build">
-    <Copy SourceFiles="$(ProjectDir)Assets\Bundle\RadeonMod.exe" DestinationFolder="$(OutputPath)AMD Tweaks" SkipUnchangedFiles="true" Condition="Exists('$(ProjectDir)Assets\Bundle\RadeonMod.exe')" />
-  </Target>
 
   <!-- calver from utc date; hhmm fits win32 version fields and update parsing -->
   <Target Name="CalVerVersion" BeforeTargets="BeforeBuild">

@@ -52,7 +52,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabDescs_fr = new()
     {
- ["browsers|gaming"]="Opera GX avec limiteurs CPU, RAM et réseau intégrés.", ["troubleshooting|gaming"]="Services Xbox et services sécurisés FiveM/Minecraft." 
+ ["browsers|gaming"]="Opera GX avec limiteurs CPU, RAM et réseau intégrés.", ["tweaking|gaming"]="Services Xbox et services sécurisés FiveM/Minecraft." 
     };
     private static readonly Dictionary<string, string> TabBannerTitles_fr = new()
     {
@@ -60,7 +60,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_fr = new()
     {
- ["browsers|gaming"]="Navigateur de jeu", ["troubleshooting|gaming"]="Services de jeu" 
+ ["browsers|gaming"]="Navigateur de jeu", ["tweaking|gaming"]="Services de jeu" 
     };
     private static readonly Dictionary<string, string> UiExtra_fr = new()
     {

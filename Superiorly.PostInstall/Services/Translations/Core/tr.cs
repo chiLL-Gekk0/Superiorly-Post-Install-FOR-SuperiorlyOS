@@ -52,7 +52,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabDescs_tr = new()
     {
- ["browsers|gaming"]="Yerleşik CPU, RAM ve ağ sınırlayıcılara sahip Opera GX.", ["troubleshooting|gaming"]="Xbox hizmetleri ve güvenli FiveM/Minecraft hizmetleri." 
+ ["browsers|gaming"]="Yerleşik CPU, RAM ve ağ sınırlayıcılara sahip Opera GX.", ["tweaking|gaming"]="Xbox hizmetleri ve güvenli FiveM/Minecraft hizmetleri." 
     };
     private static readonly Dictionary<string, string> TabBannerTitles_tr = new()
     {
@@ -60,7 +60,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_tr = new()
     {
- ["browsers|gaming"]="Oyun Tarayıcısı", ["troubleshooting|gaming"]="Oyun Hizmetleri" 
+ ["browsers|gaming"]="Oyun Tarayıcısı", ["tweaking|gaming"]="Oyun Hizmetleri" 
     };
     private static readonly Dictionary<string, string> UiExtra_tr = new()
     {
