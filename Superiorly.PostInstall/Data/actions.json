@@ -7,7 +7,7 @@
         {
             "id": "home",
             "actions": [],
-            "Icon": ""
+            "Icon": "î "
         },
         {
             "id": "browsers",
@@ -610,7 +610,7 @@
                 
                 
             ],
-            "Icon": "",
+            "Icon": "î´",
             "tabs": [
                 {
                     "id": "mainstream"
@@ -640,7 +640,7 @@
                 },
                 {
                     "id": "process-explorer",
-                    "icon": "",
+                    "icon": "î¤",
                     "options": [
                         {
                             "label": "Run",
@@ -662,12 +662,12 @@
                 },
                 {
                     "id": "nsudo",
-                    "icon": "",
+                    "icon": "î¨˜",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\nsudo'; $exe=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object{$_.FullName -like '*x64*'}|Select -First 1; if(-not $exe){$exe=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1}; if(-not $exe){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; $z=$d+'\\dl.zip'; $ok=$false; if(-not $ok){ try{ $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\NSudo_8.2_All_Components.zip'; if((Test-Path $lz)-and((Get-FileHash $lz -Algorithm SHA256).Hash -eq '346E38030CC9EEEF48223804BA27631DB96691D68BFC5D1728140D468F555204')){ Copy-Item $lz $z -Force; $ok=$true } else{ $ok=$false } }catch{} }; if($ok){ Expand-Archive -Path $z -DestinationPath $d -Force; Get-ChildItem $d -Recurse -EA 0|Unblock-File -EA 0; Remove-Item $z -Force -EA 0 }; $exe=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object{$_.FullName -like '*x64*'}|Select -First 1; if(-not $exe){$exe=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1} }; if($exe){Start-Process $exe.FullName; exit 0} else{ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('NSudoLG.exe not found locally. Place NSudo files in TEMP Superiorly Tools nsudo, then retry.','NSudo',0,64); exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                             ]
                         }
                     ],
@@ -675,21 +675,21 @@
                     "check": [
                         "file:%SPIBINDIR%\\Tools\\nsudo\\**\\NSudoLG.exe",
                         "file:%SPIBINDIR%\\Tools\\nsudo\\**\\NSudoLG.exe",
-                        "file:%ProgramData%\\chocolatey\\lib\\nsudo\\**\\NSudoLG.exe"
+                        "file:%SPIBINDIR%\\Tools\\nsudo\\**\\NSudoLG.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $exe=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\nsudo')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\nsudo')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object{$_.FullName -like '*x64*'}|Select -First 1; if(-not $exe){$exe=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\nsudo')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\nsudo')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1}; if($exe){Start-Process $exe.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "driverview",
-                    "icon": "",
+                    "icon": "î¨·",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\driverview'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'DriverView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DriverView.exe not found locally. Place it in the app Tools folder, then retry.','DriverView',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\driverview'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'DriverView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DriverView.exe not found locally. Place it in the app Tools folder, then retry.','DriverView',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
                             ]
                         }
                     ],
@@ -699,30 +699,30 @@
                         "file:%SPIBINDIR%\\Tools\\driverview\\**\\DriverView.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\driverview')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\driverview')\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\driverview')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\driverview')\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "cru",
-                    "icon": "",
+                    "icon": "îŸ´",
                     "options": [
                         {
                             "label": "Open CRU",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\cru'; $f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('CRU.exe not found locally. Place it in WinGet Packages, ProgramFiles or TEMP Superiorly Tools cru, then retry.','CRU'',0,64); exit 1; exit 0"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\cru'; $f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('CRU.exe not found locally. Place it in WinGet Packages, ProgramFiles or TEMP Superiorly Tools cru, then retry.','CRU'',0,64); exit 1; exit 0"
                             ]
                         },
                         {
                             "label": "Restart Display Driver",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'restart64.exe' -EA 0|Select -First 1;  if(-not $r){$r=Get-ChildItem $d -Recurse -Filter 'restart.exe' -EA 0|Select -First 1}; if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU restart tool not found (restart64.exe / restart.exe).'; exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'restart64.exe' -EA 0|Select -First 1;  if(-not $r){$r=Get-ChildItem $d -Recurse -Filter 'restart.exe' -EA 0|Select -First 1}; if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU restart tool not found (restart64.exe / restart.exe).'; exit 1}"
                             ]
                         },
                         {
                             "label": "Reset All",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'reset-all.exe' -EA 0|Select -First 1;  if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU reset tool not found (reset-all.exe).'; exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'reset-all.exe' -EA 0|Select -First 1;  if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU reset tool not found (reset-all.exe).'; exit 1}"
                             ]
                         }
                     ],
@@ -735,7 +735,7 @@
                         "file:%SPIBINDIR%\\Tools\\cru\\**\\CRU.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $app=Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Custom Resolution*' } | Select -First 1; $exe=if($app -and $app.DisplayIcon){($app.DisplayIcon -split ',')[0]}; if($exe -and (Test-Path $exe)){Start-Process $exe; exit 0}else{$f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\cru')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\cru')\" -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
+                        "powershell -NoProfile -Command $app=Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Custom Resolution*' } | Select -First 1; $exe=if($app -and $app.DisplayIcon){($app.DisplayIcon -split ',')[0]}; if($exe -and (Test-Path $exe)){Start-Process $exe; exit 0}else{$f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\cru')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\cru')\" -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
                     ],
                     "type": "download"
                 },
@@ -747,12 +747,12 @@
                 },
                 {
                     "id": "windows-update-manager",
-                    "icon": "",
+                    "icon": "î·",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\wumgr'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'WuMgr.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('WuMgr.exe not found locally. Place it in the app Tools folder, then retry.','WuMgr',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\wumgr'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'WuMgr.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('WuMgr.exe not found locally. Place it in the app Tools folder, then retry.','WuMgr',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
                             ]
                         }
                     ],
@@ -763,18 +763,18 @@
                         "file:%ProgramData%\\chocolatey\\lib\\wumgr\\**\\WuMgr.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\wumgr')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\wumgr')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\wumgr')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\wumgr')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "geek-uninstaller",
-                    "icon": "",
+                    "icon": "î",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\geek'; $z=$d+'\\geek.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'geek.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('geek.exe not found locally. Place it in the app Tools folder, then retry.','GeekUninstaller',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\geek'; $z=$d+'\\geek.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'geek.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('geek.exe not found locally. Place it in the app Tools folder, then retry.','GeekUninstaller',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ exit 1 }"
                             ]
                         }
                     ],
@@ -785,7 +785,7 @@
                         "file:%ProgramData%\\chocolatey\\lib\\geekuninstaller\\**\\geek.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\geek')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\geek')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\geek')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\geek')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -797,12 +797,12 @@
                 },
                 {
                     "id": "mousetester",
-                    "icon": "",
+                    "icon": "î§’",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\mt'; $z=$d+'\\Release_v1.4.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MouseTester.exe not found locally. Place it in the app Tools folder, then retry.','MouseTester',0,64); exit 1 }; $f=Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\mt'; $z=$d+'\\Release_v1.4.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MouseTester.exe not found locally. Place it in the app Tools folder, then retry.','MouseTester',0,64); exit 1 }; $f=Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1"
                             ]
                         }
                     ],
@@ -812,18 +812,18 @@
                         "file:%SPIBINDIR%\\Tools\\mt\\**\\MouseTester.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\mt')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\mt')\" -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\mt')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\mt')\" -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "measuresleep",
-                    "icon": "",
+                    "icon": "î²’",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "$d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\ms'; $exe=$d+'\\MeasureSleep.exe'; if(-not(Test-Path $exe)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MeasureSleep.exe not found locally. Place it in the app Tools folder, then retry.','MeasureSleep',0,64); exit 1 }; Start-Process $exe"
+                                "$d=Join-Path ($env:SPIBINDIR) 'Tools\\ms'; $exe=$d+'\\MeasureSleep.exe'; if(-not(Test-Path $exe)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MeasureSleep.exe not found locally. Place it in the app Tools folder, then retry.','MeasureSleep',0,64); exit 1 }; Start-Process $exe"
                             ]
                         }
                     ],
@@ -838,12 +838,12 @@
                 },
                 {
                     "id": "ocat",
-                    "icon": "",
+                    "icon": "î £",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "$d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\ocat'; $exe=$d+'\\OCAT_v1.6.3.exe'; if(-not(Test-Path $exe)){ $f=Get-ChildItem \"${env:ProgramFiles(x86)}\\OCAT\",\"${env:ProgramFiles}\\OCAT\" -Recurse -Filter 'OCAT.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('OCAT.exe not found locally. Place it in the app Tools folder, then retry.','OCAT',0,64); exit 1 }; Start-Process $exe; exit 0"
+                                "$d=Join-Path ($env:SPIBINDIR) 'Tools\\ocat'; $exe=$d+'\\OCAT_v1.6.3.exe'; if(-not(Test-Path $exe)){ $f=Get-ChildItem \"${env:ProgramFiles(x86)}\\OCAT\",\"${env:ProgramFiles}\\OCAT\" -Recurse -Filter 'OCAT.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('OCAT.exe not found locally. Place it in the app Tools folder, then retry.','OCAT',0,64); exit 1 }; Start-Process $exe; exit 0"
                             ]
                         }
                     ],
@@ -861,7 +861,7 @@
                 },
                 {
                     "id": "onboard-memory-manager",
-                    "icon": "",
+                    "icon": "î¤®",
                     "options": [
                         {
                             "label": "Run",
@@ -883,12 +883,12 @@
                 },
                 {
                     "id": "performance-measurement",
-                    "icon": "",
+                    "icon": "î±Š",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\pmt'; $z=$d+'\\pmt.zip'; $pmtOk=(Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0) -and (Test-Path ($d+'\\PresentMon\\PresentMon-1.7.0-x64.exe')); if(-not $pmtOk){ Remove-Item $d -Recurse -Force -EA 0; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{ $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\PerformanceMeasurementTool_Danske101.zip'; if((Test-Path $lz)-and((Get-FileHash $lz -Algorithm SHA256).Hash -eq '4CDF39EFE1DDF26FCBF192C538CE00A24500860AA3B0FD355B6F38880A18B7EE')){ Copy-Item $lz $z -Force }; if((Get-FileHash $z -Algorithm SHA256).Hash -ne '4CDF39EFE1DDF26FCBF192C538CE00A24500860AA3B0FD355B6F38880A18B7EE'){Remove-Item $z -Force -EA 0; exit 1}; Expand-Archive -Path $z -DestinationPath $d -Force; Remove-Item $z -Force -EA 0; if(-not(Test-Path ($d+'\\PresentMon\\PresentMon-1.7.0-x64.exe'))){exit 1} }catch{ exit 1 } }; exit 0"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                             ]
                         }
                     ],
@@ -898,14 +898,14 @@
                         "file:%SPIBINDIR%\\Tools\\pmt\\**\\Performance Measurement Tool.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\pmt')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\pmt')\" -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1; if($f -and (Test-Path (Join-Path $f.DirectoryName 'PresentMon\\PresentMon-1.7.0-x64.exe'))){Start-Process $f.FullName -WorkingDirectory $f.DirectoryName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "msstore-downloader",
                     "tab": "store-downloader",
-                    "icon": "",
+                    "icon": "îœ™",
                     "type": "search",
                     "options": [
                         {
@@ -927,7 +927,7 @@
                 {
                     "id": "autoruns",
                     "tab": "utilities",
-                    "icon": "",
+                    "icon": "îœ",
                     "options": [
                         {
                             "label": "Run",
@@ -949,12 +949,12 @@
                 {
                     "id": "devicecleanup",
                     "tab": "utilities",
-                    "icon": "",
+                    "icon": "îª™",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\dc'; $z=$d+'\\DeviceCleanup_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'DeviceCleanup.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DeviceCleanup.exe not found locally. Place it in the app Tools folder, then retry.','DeviceCleanup'',0,64); exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\dc'; $z=$d+'\\DeviceCleanup_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'DeviceCleanup.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DeviceCleanup.exe not found locally. Place it in the app Tools folder, then retry.','DeviceCleanup'',0,64); exit 1 }"
                             ]
                         }
                     ],
@@ -963,19 +963,19 @@
                         "file:%SPIBINDIR%\\Tools\\dc\\**\\DeviceCleanup.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\dc')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\dc')\" -Recurse -Filter 'DeviceCleanup.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\dc')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\dc')\" -Recurse -Filter 'DeviceCleanup.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "gointerruptpolicy",
                     "tab": "utilities",
-                    "icon": "",
+                    "icon": "î¥",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\gip'; $e=$d+'\\GoInterruptPolicy.exe'; if(-not(Test-Path $e)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('GoInterruptPolicy.exe not found locally. Place it in the app Tools folder, then retry.','GoInterruptPolicy'',0,64); exit 1 }; if(Test-Path $e){Start-Process $e; exit 0}else{exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\gip'; $e=$d+'\\GoInterruptPolicy.exe'; if(-not(Test-Path $e)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('GoInterruptPolicy.exe not found locally. Place it in the app Tools folder, then retry.','GoInterruptPolicy'',0,64); exit 1 }; if(Test-Path $e){Start-Process $e; exit 0}else{exit 1}"
                             ]
                         }
                     ],
@@ -992,12 +992,12 @@
                 {
                     "id": "serviwin",
                     "tab": "utilities",
-                    "icon": "",
+                    "icon": "îœ“",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\serviwin'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'ServiWin.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('ServiWin.exe not found locally. Place it in the app Tools folder, then retry.','ServiWin'',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\serviwin'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'ServiWin.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('ServiWin.exe not found locally. Place it in the app Tools folder, then retry.','ServiWin'',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
                             ]
                         }
                     ],
@@ -1006,19 +1006,19 @@
                         "file:%SPIBINDIR%\\Tools\\serviwin\\**\\ServiWin.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\serviwin')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\serviwin')\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\serviwin')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\serviwin')\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "usbtreeview",
                     "tab": "utilities",
-                    "icon": "",
+                    "icon": "î¢Ž",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\utv'; $z=$d+'\\UsbTreeView_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'UsbTreeView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('UsbTreeView.exe not found locally. Place it in the app Tools folder, then retry.','UsbTreeView'',0,64); exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\utv'; $z=$d+'\\UsbTreeView_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'UsbTreeView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('UsbTreeView.exe not found locally. Place it in the app Tools folder, then retry.','UsbTreeView'',0,64); exit 1 }"
                             ]
                         }
                     ],
@@ -1027,55 +1027,55 @@
                         "file:%SPIBINDIR%\\Tools\\utv\\**\\UsbTreeView.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\utv')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\utv')\" -Recurse -Filter 'UsbTreeView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\utv')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\utv')\" -Recurse -Filter 'UsbTreeView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "ddu",
                     "tab": "utilities",
-                    "icon": "",
+                    "icon": "îœ",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "winget install --id Wagnardsoft.DisplayDriverUninstaller -e -h --silent --accept-package-agreements --accept-source-agreements"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "powershell -NoProfile -Command \"if (Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Display Driver Uninstaller*' }) { exit 0 } else { exit 1 }\"",
+                        "file:%SPIBINDIR%\\Tools\\ddu\\**\\Display Driver Uninstaller.exe",
                         "file:%SPIBINDIR%\\Tools\\ddu\\**\\Display Driver Uninstaller.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\ddu')\",\"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DDU.exe' -EA 0|Select -First 1; if(-not $f){$f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\ddu')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\ddu')\" -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1}; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "filterkeysetter",
                     "tab": "utilities",
-                    "icon": "",
+                    "icon": "î¥",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\fks'; $e=$d+'\\FilterKeysSetter.exe'; if(-not(Get-ChildItem $d -Recurse -Filter 'FilterKeysSetter.exe' -EA 0)){ $lz=Join-Path ([AppContext]::BaseDirectory) 'Tools\\FilterKeysSetter.exe'; if(Test-Path $lz){ New-Item -ItemType Directory -Force -Path $d|Out-Null; Copy-Item $lz $d -Force; }; try{ $x=Get-ChildItem $d -Recurse -Filter 'FilterKeysSetter.exe' -EA 0|Select -First 1; if((-not $x)-or((Get-FileHash $x.FullName -Algorithm SHA256).Hash -ne '08594A3E6DDF07D21F1F8392574ECEF0C80E2D8B18CFEA9F791EAF5977DF0CCB')){Remove-Item $d -Recurse -Force -EA 0; exit 1} }catch{ exit 1 } }; $f=Get-ChildItem $d -Recurse -Filter 'FilterKeysSetter.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\fks\\**\\FilterKeysSetter.exe"
+                        "file:%SPIBINDIR%\\FilterKeysSetter.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\fks')\" -Recurse -Filter 'FilterKeysSetter.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "throttlestop",
                     "tab": "utilities",
-                    "icon": "",
+                    "icon": "î¥¤",
                     "options": [
                         {
                             "label": "Run",
@@ -1105,7 +1105,7 @@
                     "id": "store-downloader"
                 }
             ],
-            "Icon": ""
+            "Icon": "îž¬"
         },
         {
             "id": "tweaking",
@@ -1136,94 +1136,94 @@
                 {
                     "id": "radeonsoftwareslimmer",
                     "tab": "amd",
-                    "icon": "",
+                    "icon": "îœ",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe'; if(Test-Path $p){Start-Process $p; exit 0}; $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\rss'; $z=$d+'\\rss.zip'; if(-not(Get-ChildItem  -Recurse -Filter 'RadeonSoftwareSlimmer.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('RadeonSoftwareSlimmer.exe not found locally. Place it in the app Tools folder, then retry.','RadeonSoftwareSlimmer'',0,64); exit 1 }; $f=Get-ChildItem $d -Recurse -Filter 'RadeonSoftwareSlimmer.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe'; if((Test-Path $p) -or (Test-Path \"$env:LOCALAPPDATA\\Superiorly\\Tools\\rss\\RadeonSoftwareSlimmer.exe\") -or (Test-Path \"$env:TEMP\\rss\\RadeonSoftwareSlimmer.exe\")){exit 0}else{exit 1}",
-                        "file:%SPIBINDIR%\\Tools\\rss\\**\\RadeonSoftwareSlimmer.exe",
-                        "file:%SPIBINDIR%\\Tools\\rss\\**\\RadeonSoftwareSlimmer.exe"
+                        "file:%SPIBINDIR%\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe",
+                        "file:%SPIBINDIR%\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe",
+                        "file:%SPIBINDIR%\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe'; if(Test-Path $p){Start-Process $p; exit 0}else{$f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\rss')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\rss')\" -Recurse -Filter 'RadeonSoftwareSlimmer.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "moreclocktool",
                     "tab": "amd",
-                    "icon": "",
+                    "icon": "ï†‚",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\MoreClockTool.exe'; $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' }; if(Test-Path $p){ if(-not $hasAmd){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48); exit 0 }; Start-Process $p; exit 0 }; $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\mct'; $z=$d+'\\mct.zip'; if(-not(Get-ChildItem $d -Recurse -Filter 'MoreClockTool.exe' -EA 0)){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MoreClockTool.exe not found. Download it from igorslab.de and place it in the AMD Tweaks folder next to the app, then retry.','MoreClockTool',0,64); Start-Process 'https://www.igorslab.de/en/download-area-new-version-of-morepowertool-mpt-and-final-release-of-redbioseditor-rbe/'; exit 1 }catch{ exit 1 } }; $f=Get-ChildItem $d -Recurse -Filter 'MoreClockTool.exe' -EA 0|Select -First 1; if($f){ if(-not $hasAmd){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48); exit 0 }; Start-Process $f.FullName; exit 0 }else{exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:SPIBINDIR 'MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\MoreClockTool.exe'; if((Test-Path $p) -or (Test-Path \"$env:TEMP\\Superiorly\\Tools\\mct\\MoreClockTool.exe\") -or (Test-Path \"$env:LOCALAPPDATA\\Superiorly\\Tools\\mct\\MoreClockTool.exe\") -or (Test-Path \"$env:TEMP\\mct\\MoreClockTool.exe\")){exit 0}else{exit 1}",
-                        "file:%SPIBINDIR%\\Tools\\mct\\**\\MoreClockTool.exe",
-                        "file:%SPIBINDIR%\\Tools\\mct\\**\\MoreClockTool.exe"
+                        "file:%SPIBINDIR%\\MoreClockTool.exe",
+                        "file:%SPIBINDIR%\\MoreClockTool.exe",
+                        "file:%SPIBINDIR%\\MoreClockTool.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\MoreClockTool.exe'; $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' }; if(Test-Path $p){ if(-not $hasAmd){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48); exit 0 }; Start-Process $p; exit 0 }else{$f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\mct')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\mct')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\mct')\" -Recurse -Filter 'MoreClockTool.exe' -EA 0|Select -First 1; if($f){ if(-not $hasAmd){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48); exit 0 }; Start-Process $f.FullName; exit 0 }else{exit 1}}"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:SPIBINDIR 'MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "morepowertool",
                     "tab": "amd",
-                    "icon": "",
+                    "icon": "îŸ¨",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\MorePowerTool.exe'; if(Test-Path $p){Start-Process $p; exit 0}; $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\mpt'; $exe=$d+'\\MorePowerTool_Setup.exe'; if(-not(Get-ChildItem $d -Recurse -Filter 'MorePowerTool.exe' -EA 0)){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MorePowerTool.exe not found. Download it from igorslab.de and place it in the AMD Tweaks folder next to the app, then retry.','MorePowerTool',0,64); Start-Process 'https://www.igorslab.de/en/download-area-new-version-of-morepowertool-mpt-and-final-release-of-redbioseditor-rbe/'; exit 1 }catch{ exit 1 }; }; $f=Get-ChildItem $d,\"$env:ProgramFiles\\MorePowerTool\",\"$env:ProgramFiles(x86)\\MorePowerTool\" -Recurse -Filter 'MorePowerTool.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ $g=Get-ChildItem $d -Recurse -Filter 'MorePowerTool.exe' -EA 0|Select -First 1; if($g){Start-Process $g.FullName; exit 0}else{exit 1}}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\MorePowerTool.exe'; if((Test-Path $p) -or (Test-Path \"$env:TEMP\\Superiorly\\Tools\\mpt\\MorePowerTool.exe\") -or (Test-Path \"$env:LOCALAPPDATA\\Superiorly\\Tools\\mpt\\MorePowerTool.exe\") -or (Test-Path \"$env:TEMP\\mpt\\MorePowerTool.exe\")){exit 0}else{exit 1}",
-                        "file:%SPIBINDIR%\\Tools\\mpt\\**\\MorePowerTool.exe",
-                        "file:%ProgramFiles%\\MorePowerTool\\**\\MorePowerTool.exe"
+                        "file:%SPIBINDIR%\\MorePowerTool.exe",
+                        "file:%SPIBINDIR%\\MorePowerTool.exe",
+                        "file:%SPIBINDIR%\\MorePowerTool.exe"
                     ],
                     "type": "download",
                     "launch": [
-                        "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\MorePowerTool.exe'; if(Test-Path $p){Start-Process $p; exit 0}else{$f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\mpt')\",\"$env:ProgramFiles\\MorePowerTool\",\"$env:ProgramFiles(x86)\\MorePowerTool\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\mpt')\" -Recurse -Filter 'MorePowerTool.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ]
                 },
                 {
                     "id": "radeonmod",
                     "tab": "amd",
-                    "icon": "",
+                    "icon": "î±",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-"powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonMod.exe'; if(Test-Path $p){Start-Process $p; exit 0}; $d=Join-Path ([AppContext]::BaseDirectory) 'Tools\\rm'; $e=$d+'\\RadeonMod.exe'; if(-not(Test-Path $e)){ New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; try{ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('RadeonMod.exe not found. Download it from Guru3D and place it in the AMD Tweaks folder next to the app, then retry.','RadeonMod',0,64); Start-Process 'https://www.guru3d.com/download/amd-registry-editor-download/'; exit 1 }catch{ exit 1 } }; Start-Process $e; exit 0"
+"powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonMod.exe'; if((Test-Path $p) -or (Test-Path \"$env:TEMP\\Superiorly\\Tools\\rm\\RadeonMod.exe\") -or (Test-Path \"$env:LOCALAPPDATA\\Superiorly\\Tools\\rm\\RadeonMod.exe\")){exit 0}else{exit 1}",
-                        "file:%SPIBINDIR%\\Tools\\rm\\**\\RadeonMod.exe"
+                        "file:%SPIBINDIR%\\RadeonMod.exe",
+                        "file:%SPIBINDIR%\\RadeonMod.exe"
                     ],
                     "type": "download",
                     "launch": [
-                        "powershell -NoProfile -Command $p=Join-Path ([AppContext]::BaseDirectory) 'AMD Tweaks\\RadeonMod.exe'; if(Test-Path $p){Start-Process $p; exit 0}else{$f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\rm')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\rm')\" -Recurse -Filter 'RadeonMod.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ]
                 },
                 {
                     "id": "nvcleanstall",
                     "tab": "nvidia",
-                    "icon": "",
+                    "icon": "î µ",
                     "options": [
                         {
                             "label": "Run",
@@ -1245,37 +1245,37 @@
                 {
                     "id": "nvidia-inspector",
                     "tab": "nvidia",
-                    "icon": "",
+                    "icon": "î±º",
                     "options": [
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $f=Get-ChildItem \"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\npi')\",\"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\" -Recurse -Filter 'nvidiaProfileInspector.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName -Verb Open; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('nvidiaProfileInspector.exe not found locally. Place it in the app Tools folder, then retry.','NvidiaProfileInspector'',0,64); exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "powershell -NoProfile -Command \"if (Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Nvidia Inspector*' -or $_.DisplayName -like '*nvidiaProfileInspector*' }) { exit 0 } else { exit 1 }\"",
-                        "file:%ProgramFiles%\\**\\nvidiaProfileInspector.exe",
-                        "file:%SPIBINDIR%\\Tools\\npi\\**\\nvidiaProfileInspector.exe",
-                        "file:%SPIBINDIR%\\Tools\\npi\\**\\nvidiaProfileInspector.exe",
-                        "file:%ProgramData%\\chocolatey\\lib\\nvidia-inspector\\**\\nvidiaProfileInspector.exe"
+                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe",
+                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe",
+                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe",
+                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe",
+                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $app=Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Nvidia Inspector*' } | Select -First 1; $exe=if($app -and $app.DisplayIcon){($app.DisplayIcon -split ',')[0]}; if($exe -and (Test-Path $exe)){Start-Process $exe; exit 0}else{$f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\npi')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\npi')\",\"$(Join-Path ([AppContext]::BaseDirectory) 'Tools\\npiu')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'nvidiaProfileInspector.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
                 {
                     "id": "apply-nip",
                     "tab": "nvidia",
-                    "icon": "",
+                    "icon": "îŽ",
                     "options": []
                 },
                 {
                     "id": "force-pstate0",
                     "tab": "nvidia",
-                    "icon": "",
+                    "icon": "î±‰",
                     "options": [
                         {
                             "label": "enable",
@@ -1303,7 +1303,7 @@
                 {
                     "id": "lazymodetimeout",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "îµ",
                     "options": [
                         {
                             "label": "Default",
@@ -1358,7 +1358,7 @@
                 {
                     "id": "systemresponsiveness",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î§©",
                     "options": [
                         {
                             "label": "Default",
@@ -1389,7 +1389,7 @@
                 {
                     "id": "receive-buffers",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î¶£",
                     "options": [
                         {
                             "label": "Default",
@@ -1426,7 +1426,7 @@
                 {
                     "id": "transmit-buffers",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î¥©",
                     "options": [
                         {
                             "label": "Default",
@@ -1463,7 +1463,7 @@
                 {
                     "id": "csrss-priority",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î§³",
                     "options": [
                         {
                             "label": "RealTime",
@@ -1500,7 +1500,7 @@
                 {
                     "id": "iolatencycap",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î¥ž",
                     "options": [
                         {
                             "label": "Default",
@@ -1549,7 +1549,7 @@
                 {
                     "id": "iopagelocklimit",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î§™",
                     "options": [
                         {
                             "label": "Default",
@@ -1616,7 +1616,7 @@
                 {
                     "id": "nagle-algorithm",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î´",
                     "options": [
                         {
                             "label": "enable",
@@ -1638,7 +1638,7 @@
                 {
                     "id": "nolazymode",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î¡",
                     "options": [
                         {
                             "label": "enable",
@@ -1660,7 +1660,7 @@
                 {
                     "id": "tsc-sync-policy",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î¥Ÿ",
                     "options": [
                         {
                             "label": "Default",
@@ -1694,7 +1694,7 @@
                 {
                     "id": "useplatformtick",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î£‘",
                     "options": [
                         {
                             "label": "Default",
@@ -1722,7 +1722,7 @@
                 {
                     "id": "disable-mpo",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "îŸ»",
                     "options": [
                         {
                             "label": "enable",
@@ -1744,7 +1744,7 @@
                 {
                     "id": "disable-interrupt-steering",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î§µ",
                     "options": [
                         {
                             "label": "enable",
@@ -1772,7 +1772,7 @@
                 {
                     "id": "disable-power-throttling",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î¹£",
                     "options": [
                         {
                             "label": "enable",
@@ -1794,7 +1794,7 @@
                 {
                     "id": "threaded-dpc",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î²",
                     "options": [
                         {
                             "label": "enable",
@@ -1816,7 +1816,7 @@
                 {
                     "id": "cpu-idle",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î°",
                     "options": [
                         {
                             "label": "enable",
@@ -1842,7 +1842,7 @@
                 {
                     "id": "force-direct-flip",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "îŸ¹",
                     "options": [
                         {
                             "label": "enable",
@@ -1861,7 +1861,7 @@
                 {
                     "id": "force-independent-flip",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "îŸº",
                     "options": [
                         {
                             "label": "enable",
@@ -1880,7 +1880,7 @@
                 {
                     "id": "force-flip-true-immediate",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î±·",
                     "options": [
                         {
                             "label": "enable",
@@ -1905,7 +1905,7 @@
                 {
                     "id": "disablepagingexecutive",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î¥¥",
                     "options": [
                         {
                             "label": "enable",
@@ -1927,7 +1927,7 @@
                 {
                     "id": "disablepagecombining",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "îž¸",
                     "options": [
                         {
                             "label": "enable",
@@ -1951,7 +1951,7 @@
                 {
                     "id": "queued-present-limit",
                     "tab": "registry",
-                    "icon": "",
+                    "icon": "î£½",
                     "options": [
                         {
                             "label": "Default",
@@ -1985,7 +1985,7 @@
                 {
                     "id": "win32priorityseparation",
                     "tab": "win32",
-                    "icon": "",
+                    "icon": "î£",
                     "options": [
                         {
                             "label": "Default",
@@ -2010,7 +2010,7 @@
                 {
                     "id": "powerplan-manager",
                     "tab": "powerplans",
-                    "icon": "",
+                    "icon": "îŸƒ",
                     "options": [
                         {
                             "label": "Activate",
@@ -2144,7 +2144,7 @@
                     },
                 {
                     "id": "xbox",
-                    "icon": "",
+                    "icon": "îŸ¼",
                     "options": [
                         {
                             "commands": [
@@ -2178,7 +2178,7 @@
                 },
                 {
                     "id": "fivem-safe-services",
-                    "icon": "",
+                    "icon": "î©",
                     "options": [
                         {
                             "commands": [
@@ -2205,26 +2205,26 @@
                 {
                     "id": "gamebar",
                     "tab": "gaming",
-                    "icon": "",
+                    "icon": "îœ”",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"1\" /f", "reg delete \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v AppCaptureEnabled | findstr \"0x1\""]
                     },
                 {
                     "id": "gamemode",
                     "tab": "gaming",
-                    "icon": "",
+                    "icon": "î€",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"2\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"2\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\GameBar\" /v AllowAutoGameMode | findstr \"0x1\""]
                     }
             ],
-            "Icon": ""
+            "Icon": "îœ"
         },
         {
             "id": "troubleshooting",
             "actions": [
                 {
                     "id": "wifi",
-                    "icon": "",
+                    "icon": "îœ",
                     "options": [
                         {
                             "commands": [
@@ -2258,7 +2258,7 @@
                 },
                 {
                     "id": "bluetooth",
-                    "icon": "",
+                    "icon": "îœ‚",
                     "options": [
                         {
                             "commands": [
@@ -2308,7 +2308,7 @@
                 },
                 {
                     "id": "hop-limit",
-                    "icon": "",
+                    "icon": "îœ„",
                     "options": [
                         {
                             "commands": [
@@ -2339,7 +2339,7 @@
                 },
                 {
                     "id": "printer",
-                    "icon": "",
+                    "icon": "î‰",
                     "options": [
                         {
                             "commands": [
@@ -2371,7 +2371,7 @@
                 },
                 {
                     "id": "task-manager",
-                    "icon": "",
+                    "icon": "î§•",
                     "options": [
                         {
                             "commands": [
@@ -2393,7 +2393,7 @@
                 },
                 {
                     "id": "textinputhost",
-                    "icon": "",
+                    "icon": "îœœ",
                     "options": [
                         {
                             "commands": [
@@ -2420,34 +2420,34 @@
                 {
                     "id": "ink-workspace",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "î·†",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowWindowsInkWorkspace\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowSuggestedAppsInWindowsInkWorkspace\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableInkingWithTouch\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowWindowsInkWorkspace\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowSuggestedAppsInWindowsInkWorkspace\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableInkingWithTouch\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v AllowWindowsInkWorkspace | findstr \"0x0\""]
                     },
                 {
                     "id": "spelling-typing",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "î£’",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableAutocorrection\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableSpellchecking\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableDoubleTapSpace\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnablePredictionSpaceInsertion\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableTextPrediction\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Input\\Settings\" /v \"InsightsEnabled\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableAutocorrection\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableSpellchecking\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Input\\Settings\" /v \"InsightsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableDoubleTapSpace\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnablePredictionSpaceInsertion\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableTextPrediction\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v EnableAutocorrection | findstr \"0x0\""]
                     },
                 {
                     "id": "cloud-clipboard",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "ïƒ£",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowClipboardHistory\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowCrossDeviceClipboard\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowClipboardHistory\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowCrossDeviceClipboard\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v AllowClipboardHistory | findstr \"0x0\""]
                     },
                 {
                     "id": "cast-to-device",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "îœƒ",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked\" /v \"{7AD84985-87B4-4a16-BE58-8B72A5B390F7}\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked\" /v \"{7AD84985-87B4-4a16-BE58-8B72A5B390F7}\" /t REG_SZ /d \"Play to Menu\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked\" /v {7AD84985-87B4-4a16-BE58-8B72A5B390F7} | findstr \"Play\""]
                     },
                 {
                     "id": "vbs",
-                    "icon": "",
+                    "icon": "î ½",
                     "options": [
                         {
                             "commands": [
@@ -2471,7 +2471,7 @@
                 },
                 {
                     "id": "hvci",
-                    "icon": "",
+                    "icon": "îŸ¯",
                     "options": [
                         {
                             "commands": [
@@ -2501,7 +2501,7 @@
                 },
                 {
                     "id": "firewall",
-                    "icon": "",
+                    "icon": "îœ®",
                     "options": [
                         {
                             "commands": [
@@ -2525,7 +2525,7 @@
                 },
                 {
                     "id": "lua",
-                    "icon": "",
+                    "icon": "î»",
                     "options": [
                         {
                             "commands": [
@@ -2549,7 +2549,7 @@
                 },
                 {
                     "id": "vulnerable-driver-blocklist",
-                    "icon": "",
+                    "icon": "îœ°",
                     "options": [
                         {
                             "commands": [
@@ -2571,7 +2571,7 @@
                 },
                 {
                     "id": "nx-mode",
-                    "icon": "",
+                    "icon": "îž…",
                     "options": [
                         {
                             "commands": [
@@ -2605,7 +2605,7 @@
                 },
                 {
                     "id": "mitigations-off",
-                    "icon": "",
+                    "icon": "î¨˜",
                     "options": [
                         {
                             "commands": [
@@ -2625,7 +2625,7 @@
                 },
                 {
                     "id": "disable-pca",
-                    "icon": "",
+                    "icon": "îœ“",
                     "options": [
                         {
                             "commands": [
@@ -2647,7 +2647,7 @@
                 },
                 {
                     "id": "spectre-meltdown-off",
-                    "icon": "",
+                    "icon": "î¥",
                     "options": [
                         {
                             "commands": [
@@ -2678,7 +2678,7 @@
                 },
 {
                     "id": "windows-update-drivers",
-                    "icon": "",
+                    "icon": "îœ¬",
                     "options": [
                         {
                             "commands": [
@@ -2703,48 +2703,48 @@
 {
                     "id": "error-reporting",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îžƒ",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting\" /v \"DoReport\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /f ; exit 0", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wercplsupport\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WerSvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting\" /v \"DoReport\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WerSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wercplsupport\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WerSvc\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "compat-assistant",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îž¬",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\PcaSvc\" /v \"Start\" /t REG_DWORD /d \"2\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\PcaSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\PcaSvc\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "superfetch",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îŸƒ",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SysMain\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnableSuperfetch\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d \"1\" /f", "reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"SfTracingState\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SysMain\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnableSuperfetch\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"SfTracingState\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SysMain\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "insider-service",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î£¿",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wisvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wisvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wisvc\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "sensor-services",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î¥—",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensrSvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensorService\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensrSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensorService\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensorService\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "search-index",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îœ¡",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v \"DelayedAutostart\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "fix-intel-panel",
-                    "icon": "",
+                    "icon": "îŸ·",
                     "options": [
                         {
                             "commands": [
@@ -2768,35 +2768,35 @@
 {
                     "id": "network-throttling",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îž‘",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Psched\" /v \"NonBestEffortLimit\" /t REG_DWORD /d \"80\" /f", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /t REG_DWORD /d \"0xffffffff\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Psched\" /v \"NonBestEffortLimit\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v NetworkThrottlingIndex | findstr \"0xffffffff\""]
                     },
 {
                     "id": "smb1",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î ¹",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB1\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB1\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v SMB1 | findstr \"0x0\""]
                     },
 {
                     "id": "smb2",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "ï†“",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB2\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB2\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v SMB2 | findstr \"0x0\""]
                     },
 {
                     "id": "homegroup",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î°¦",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupListener\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupProvider\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\HomeGroup\" /v \"DisableHomeGroup\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\HomeGroup\" /v \"DisableHomeGroup\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupListener\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupProvider\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupListener\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "media-sharing",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î¤¾",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WMPNetworkSvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WMPNetworkSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WMPNetworkSvc\" /v Start | findstr \"0x3\""]
                     },
@@ -2808,7 +2808,7 @@
                 },
 {
                     "id": "start-menu",
-                    "icon": "",
+                    "icon": "îœ",
                     "options": [
                         {
                             "commands": [
@@ -2830,7 +2830,7 @@
                 },
 {
                     "id": "use-default-tile",
-                    "icon": "",
+                    "icon": "î¢©",
                     "options": [
                         {
                             "commands": [
@@ -2853,49 +2853,49 @@
 {
                     "id": "show-tray-icons",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î¤œ",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"EnableAutoTray\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"EnableAutoTray\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v EnableAutoTray | findstr \"0x0\""]
                     },
 {
                     "id": "menus-delay",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î¤–",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Control Panel\\Desktop\" /v \"MenuShowDelay\" /t REG_SZ /d \"400\" /f", "reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseHoverTime\" /t REG_SZ /d \"400\" /f"]},{"label": "disable", "commands": ["reg add \"HKCU\\Control Panel\\Desktop\" /v \"MenuShowDelay\" /t REG_SZ /d \"0\" /f", "reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseHoverTime\" /t REG_SZ /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Control Panel\\Desktop\" /v MenuShowDelay | findstr \"400\""]
                     },
 {
                     "id": "sticky-keys",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î¶",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"510\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"126\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"62\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"510\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"126\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"62\" /f"]},{"label": "disable", "commands": ["reg add \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"122\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"58\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"122\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"58\" /f"]}],
                     "check": ["reg query \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v Flags | findstr \"510\""]
                     },
 {
                     "id": "compact-mode",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î£½",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"UseCompactMode\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"UseCompactMode\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["!reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v UseCompactMode | findstr \"0x1\""]
                     },
 {
                     "id": "quickaccess-history",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î £",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\OperationStatusManager\" /v \"EnthusiastMode\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"ShowSyncProviderNotifications\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowFrequent\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowRecent\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\OperationStatusManager\" /v \"EnthusiastMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"ShowSyncProviderNotifications\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowFrequent\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowRecent\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v ShowFrequent | findstr \"0x1\""]
                     },
 {
                     "id": "widgets-board",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î´",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"TaskbarDa\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"TaskbarDa\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v TaskbarDa | findstr \"0x0\""]
                     },
 {
                     "id": "news-interests",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îž‰",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Dsh\" /v \"AllowNewsAndInterests\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Feeds\" /v \"EnableFeeds\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\default\\NewsAndInterests\\AllowNewsAndInterests\" /v \"value\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Dsh\" /v \"AllowNewsAndInterests\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Feeds\" /v \"EnableFeeds\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\default\\NewsAndInterests\\AllowNewsAndInterests\" /v \"value\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Dsh\" /v AllowNewsAndInterests | findstr \"0x0\""]
                     },
@@ -2908,35 +2908,35 @@
 {
                     "id": "ntfs-timestamp",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î œ",
                     "options": [{"label": "enable", "commands": ["fsutil behavior set disablelastaccess 2"]},{"label": "disable", "commands": ["fsutil behavior set disablelastaccess 1"]}],
                     "check": []
                     },
 {
                     "id": "system-restore",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îž§",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableSR\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableConfig\" /f ; exit 0"]},{"label": "disable", "commands": ["vssadmin delete shadows /for=c: /all /quiet", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableSR\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableConfig\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\VSS\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "regbackup",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îž’",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Configuration Manager\" /v \"EnablePeriodicBackup\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Configuration Manager\" /v \"EnablePeriodicBackup\" /f ; exit 0"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Configuration Manager\" /v EnablePeriodicBackup | findstr \"0x1\""]
                     },
 {
                     "id": "long-paths",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î ¸",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" /v \"LongPathsEnabled\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" /v \"LongPathsEnabled\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" /v LongPathsEnabled | findstr \"0x1\""]
                     },
 {
                     "id": "modern-standby",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îœˆ",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v \"PlatformAoAcOverride\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v \"PlatformAoAcOverride\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v PlatformAoAcOverride | findstr \"0x0\""]
                     },
@@ -2949,28 +2949,28 @@
 {
                     "id": "telemetry-services",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "î§¹",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\diagnosticshub.standardcollector.service\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\dmwappushservice\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WdiSystemHost\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WdiServiceHost\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableEngine\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"SbEnable\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"AITEnable\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableInventory\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisablePCA\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableUAR\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"PublishUserActivities\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SQMClient\\Windows\" /v \"CEIPEnable\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Device Metadata\" /v \"PreventDeviceMetadataFromNetwork\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowAutoConnectToWiFiSenseHotspots\" /v \"value\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowWiFiHotSpotReporting\" /v \"value\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\diagnosticshub.standardcollector.service\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\dmwappushservice\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WdiServiceHost\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowAutoConnectToWiFiSenseHotspots\" /v value /t REG_DWORD /d 0 /f", "reg add \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowWiFiHotSpotReporting\" /v value /t REG_DWORD /d 0 /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableEngine\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"SbEnable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"AITEnable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableInventory\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisablePCA\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableUAR\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"PublishUserActivities\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SQMClient\\Windows\" /v \"CEIPEnable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Device Metadata\" /v \"PreventDeviceMetadataFromNetwork\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\WMI\\AutoLogger\\SQMLogger\" /v \"Start\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\current\\device\\System\" /v \"AllowExperimentation\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "store-updates",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "îœ¸",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableSoftLanding\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableWindowsConsumerFeatures\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"OemPreInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsStore\" /v \"AutoDownload\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableSoftLanding\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableWindowsConsumerFeatures\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"OemPreInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsStore\" /v \"AutoDownload\" /t REG_DWORD /d \"2\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v DisableWindowsConsumerFeatures | findstr \"0x1\""]
                     },
                 {
                     "id": "cortana",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "îœ ",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\SearchSettings\" /v \"IsDeviceSearchHistoryEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCortana\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"DisableWebSearch\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWeb\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWebOverMeteredConnections\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"HistoryViewEnabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"DeviceHistoryEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"AllowSearchToUseLocation\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCloudSearch\" /f ; exit 0", "reg delete \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\SearchSettings\" /v \"IsDeviceSearchHistoryEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCortana\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"DisableWebSearch\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWeb\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWebOverMeteredConnections\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"HistoryViewEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"DeviceHistoryEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"AllowSearchToUseLocation\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCloudSearch\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Search\" /v BingSearchEnabled | findstr \"0x0\""]
                     },
                 {
                     "id": "startmenu-ads",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "îœ‘",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\\Windows.SystemToast.Suggested\" /v \"Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Mobility\" /v \"OptedIn\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-88000326Enabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserProfileEngagement\" /v \"ScoobeSystemSettingEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"ContentDeliveryAllowed\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEverEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-314559Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338387Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338389Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SystemPaneSuggestionsEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338393Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353694Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353696Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-310093Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338388Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContentEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SoftLandingEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"FeatureManagementEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"AllowOnlineTips\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Mobility\" /v \"OptedIn\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\\Windows.SystemToast.Suggested\" /v \"Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-88000326Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserProfileEngagement\" /v \"ScoobeSystemSettingEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"ContentDeliveryAllowed\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEverEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-314559Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338387Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338389Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SystemPaneSuggestionsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338393Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353694Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353696Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-310093Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338388Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContentEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SoftLandingEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"FeatureManagementEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"AllowOnlineTips\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["!reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v ContentDeliveryAllowed | findstr \"0x0\""]
                     },
@@ -2981,7 +2981,7 @@
                 {
                     "id": "vs-telemetry",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "î¥ƒ",
                     "logo": "/Assets/Logos/visual-studio.png",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\VisualStudio\\Telemetry\" /v \"TurnOffSwitch\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Feedback\" /v \"DisableFeedbackDialog\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\SQM\" /v \"OptIn\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\14.0\\SQM\" /v OptIn /f /reg:64 ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\15.0\\SQM\" /v OptIn /f /reg:64 ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\16.0\\SQM\" /v OptIn /f /reg:64 ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\17.0\\SQM\" /v OptIn /f /reg:64 ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\VisualStudio\\Telemetry\" /v \"TurnOffSwitch\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Feedback\" /v \"DisableFeedbackDialog\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\SQM\" /v \"OptIn\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\14.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\15.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\16.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\17.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\SQM\" /v OptIn | findstr \"0x0\""]
@@ -2997,7 +2997,7 @@
                 {
                     "id": "telemetry-tasks",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "î£±",
                     "options": [{"label": "enable", "commands": ["schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\BthSQM\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\KernelCeipTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\StartupAppTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\AitAgent\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Power Efficiency Diagnostics\\AnalyzeSystem\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyRefresh\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyUpload\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Autochk\\Proxy\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Maintenance\\WinSAT\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\CloudExperienceHost\\CreateObjectTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskFootprint\\Diagnostics\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\PI\\Sqm-Tasks\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\NetTrace\\GatherNetworkInfo\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\HelloFace\\FODCleanupTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClientOnScenarioDownload\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\PcaPatchDbTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Device Information\\Device\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Device Information\\Device User\" /enable ; exit 0"]},{"label": "disable", "commands": ["schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\BthSQM\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\BthSQM\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\KernelCeipTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\KernelCeipTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\StartupAppTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\StartupAppTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\AitAgent\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\AitAgent\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Power Efficiency Diagnostics\\AnalyzeSystem\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Power Efficiency Diagnostics\\AnalyzeSystem\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyRefresh\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyRefresh\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyUpload\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyUpload\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Autochk\\Proxy\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Autochk\\Proxy\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Maintenance\\WinSAT\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Maintenance\\WinSAT\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\CloudExperienceHost\\CreateObjectTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\CloudExperienceHost\\CreateObjectTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\DiskFootprint\\Diagnostics\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskFootprint\\Diagnostics\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\PI\\Sqm-Tasks\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\PI\\Sqm-Tasks\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\NetTrace\\GatherNetworkInfo\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\NetTrace\\GatherNetworkInfo\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\HelloFace\\FODCleanupTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\HelloFace\\FODCleanupTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient\" /disable ; exit 0"]}],
                     "check": []
                                     },
@@ -3027,7 +3027,7 @@
                     "id": "telemetry"
                 }
             ],
-            "Icon": ""
+            "Icon": "îžº"
         }
     ]
 }
