@@ -24,7 +24,7 @@ public static partial class TranslationService
             ["settings"]="Settings", ["language"]="Language", ["theme"]="Theme", ["dark"]="Dark", ["light"]="Light", ["auto"]="Auto", ["default_theme"]="Default Theme",
             ["style"]="Style", ["win10_style"]="Windows 10 style", ["win11_style"]="Windows 11 style", ["close"]="Close",
             ["search_placeholder"]="Search by name, URL, or ID.", ["store_no_results"]="No results found. Try another search.", ["search"]="Search", ["install"]="Install",
-            ["run"]="Run", ["download"]="Download", ["apply"]="Apply",
+            ["run"]="Run", ["download"]="Download", ["open"]="Open", ["apply"]="Apply",
             ["check_updates"]="Check for updates", ["update"]="Update", ["disclaimer"]="Modifications are your sole responsibility.",
             ["quantum_title"]="Quantum Map", ["quantum_subtitle"]="All valid Win32PrioritySeparation values. Click a row to apply it.",
             ["open_quantum"]="Open Quantum Map", ["current_win32"]="Current Win32PrioritySeparation",

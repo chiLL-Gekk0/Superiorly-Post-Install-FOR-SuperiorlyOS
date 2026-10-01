@@ -24,7 +24,7 @@ public static partial class TranslationService
             ["settings"]="Настройки", ["language"]="Язык", ["theme"]="Тема", ["dark"]="Тёмная", ["light"]="Светлая", ["auto"]="Авто", ["default_theme"]="Тема по умолчанию",
             ["style"]="Стиль", ["win10_style"]="Стиль Windows 10", ["win11_style"]="Стиль Windows 11", ["close"]="Закрыть",
             ["search_placeholder"]="Поиск по имени, URL или ID.", ["store_no_results"]="Ничего не найдено. Попробуйте другой запрос.", ["search"]="Найти", ["install"]="Установить",
-            ["run"]="Запустить", ["download"]="Скачать", ["apply"]="Применить",
+            ["run"]="Запустить", ["download"]="Скачать", ["open"]="Открыть", ["apply"]="Применить",
             ["check_updates"]="Проверить обновления", ["update"]="Update", ["disclaimer"]="Изменения выполняются под вашу ответственность.",
             ["quantum_title"]="Карта Quantum", ["quantum_subtitle"]="Все допустимые значения Win32PrioritySeparation. Нажмите на строку, чтобы применить.",
             ["open_quantum"]="Открыть карту Quantum", ["current_win32"]="Текущий Win32PrioritySeparation",

@@ -36,6 +36,7 @@ public partial class CardViewModel : ObservableObject {
 
     public bool HasTip => _action.Tip != null;
     public bool IsDownloadCard => _actionType == "download";
+    public bool IsProgramCard => IsDownloadCard && !HasToggle && !IsCombo;
     public bool HasInfo => !string.IsNullOrEmpty(InfoText) || _action.Tip != null;
     [ObservableProperty]
     private string _infoText = "";

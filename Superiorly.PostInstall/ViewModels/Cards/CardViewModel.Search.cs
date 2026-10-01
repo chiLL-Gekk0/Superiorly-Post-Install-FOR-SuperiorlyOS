@@ -61,7 +61,7 @@ public partial class CardViewModel : ObservableObject {
     private bool _isChecking;
 
     public bool IsInstalled => IsOn && _actionType == "download";
-    public string ActionButtonLabel => IsChecking ? "..." : IsBusy ? string.Format(TranslationService.GetUi(IsOn ? "starting" : "downloading", Lang), Title) : IsCombo ? TranslationService.GetUi("apply", Lang) : (_checks.Count > 0 ? (IsOn ? TranslationService.GetUi("apply", Lang) : TranslationService.GetUi("download", Lang)) : IsDownloadCard ? (IsInstalled ? TranslationService.GetUi("apply", Lang) : TranslationService.GetUi("download", Lang)) : (Options.Count > 0 ? Options[0].Label : TranslationService.GetUi("apply", Lang)));
+    public string ActionButtonLabel => IsChecking ? "..." : IsBusy ? string.Format(TranslationService.GetUi(IsOn ? "starting" : "downloading", Lang), Title) : IsProgramCard && IsInstalled ? TranslationService.GetUi("open", Lang) : IsCombo ? TranslationService.GetUi("apply", Lang) : (_checks.Count > 0 ? (IsOn ? TranslationService.GetUi("apply", Lang) : TranslationService.GetUi("download", Lang)) : IsDownloadCard ? (IsInstalled ? TranslationService.GetUi("apply", Lang) : TranslationService.GetUi("download", Lang)) : (Options.Count > 0 ? Options[0].Label : TranslationService.GetUi("apply", Lang)));
 
     partial void OnIsOnChanged(bool value) { OnPropertyChanged(nameof(IsInstalled)); OnPropertyChanged(nameof(ActionButtonLabel)); }
     partial void OnIsCheckingChanged(bool value) { OnPropertyChanged(nameof(ActionButtonLabel)); }

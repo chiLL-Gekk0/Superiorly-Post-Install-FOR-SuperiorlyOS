@@ -24,7 +24,7 @@ public static partial class TranslationService
             ["settings"]="Ayarlar", ["language"]="Dil", ["theme"]="Tema", ["dark"]="Koyu", ["light"]="Açık", ["auto"]="Otomatik", ["default_theme"]="Varsayılan Tema",
             ["style"]="Stil", ["win10_style"]="Windows 10 stili", ["win11_style"]="Windows 11 stili", ["close"]="Kapat",
             ["search_placeholder"]="Ad, URL veya kimliğe göre arayın.", ["store_no_results"]="Sonuç bulunamadı. Başka bir arama deneyin.", ["search"]="Ara", ["install"]="Yükle",
-            ["run"]="Çalıştır", ["download"]="İndir", ["apply"]="Uygula",
+            ["run"]="Çalıştır", ["download"]="İndir", ["open"]="Aç", ["apply"]="Uygula",
             ["check_updates"]="Güncelleştirmeleri denetle", ["update"]="Update", ["disclaimer"]="Değişiklikler tamamen sizin sorumluluğunuzdadır.",
             ["quantum_title"]="Quantum Haritası", ["quantum_subtitle"]="Tüm geçerli Win32PrioritySeparation değerleri. Uygulamak için bir satıra tıklayın.",
             ["open_quantum"]="Quantum Haritasını Aç", ["current_win32"]="Geçerli Win32PrioritySeparation",

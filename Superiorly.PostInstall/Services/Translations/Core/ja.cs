@@ -24,7 +24,7 @@ public static partial class TranslationService
             ["settings"]="設定", ["language"]="言語", ["theme"]="テーマ", ["dark"]="ダーク", ["light"]="ライト", ["auto"]="自動", ["default_theme"]="デフォルトテーマ",
             ["style"]="スタイル", ["win10_style"]="Windows 10 スタイル", ["win11_style"]="Windows 11 スタイル", ["close"]="閉じる",
             ["search_placeholder"]="名前、URL、または ID で検索します。", ["store_no_results"]="結果が見つかりません。別の検索をお試しください。", ["search"]="検索", ["install"]="インストール",
-            ["run"]="実行", ["download"]="ダウンロード", ["apply"]="適用",
+            ["run"]="実行", ["download"]="ダウンロード", ["open"]="開く", ["apply"]="適用",
             ["check_updates"]="更新を確認します", ["update"]="Update", ["disclaimer"]="変更はお客様の責任において行ってください。",
             ["quantum_title"]="Quantum マップ", ["quantum_subtitle"]="有効な Win32PrioritySeparation の値一覧です。行をクリックして適用します。",
             ["open_quantum"]="Quantum マップを開きます", ["current_win32"]="現在の Win32PrioritySeparation",

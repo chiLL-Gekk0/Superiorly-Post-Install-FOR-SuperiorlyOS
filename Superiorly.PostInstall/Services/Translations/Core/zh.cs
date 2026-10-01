@@ -24,7 +24,7 @@ public static partial class TranslationService
             ["settings"]="设置", ["language"]="语言", ["theme"]="主题", ["dark"]="深色", ["light"]="浅色", ["auto"]="自动", ["default_theme"]="默认主题",
             ["style"]="样式", ["win10_style"]="Windows 10 样式", ["win11_style"]="Windows 11 样式", ["close"]="关闭",
             ["search_placeholder"]="按名称、URL 或 ID 搜索。", ["store_no_results"]="未找到结果。请尝试其他搜索。", ["search"]="搜索", ["install"]="安装",
-            ["run"]="运行", ["download"]="下载", ["apply"]="应用",
+            ["run"]="运行", ["download"]="下载", ["open"]="打开", ["apply"]="应用",
             ["check_updates"]="检查更新", ["update"]="Update", ["disclaimer"]="修改由您自行负责。",
             ["quantum_title"]="Quantum 映射", ["quantum_subtitle"]="所有有效的 Win32PrioritySeparation 值。单击一行即可应用。",
             ["open_quantum"]="打开 Quantum 映射", ["current_win32"]="当前 Win32PrioritySeparation",

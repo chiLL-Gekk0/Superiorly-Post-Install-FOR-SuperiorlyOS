@@ -9,7 +9,8 @@
                                                 <Grid Grid.Row="0" Margin="0,0,0,6">
                                                     <Grid.ColumnDefinitions>
                                                         <ColumnDefinition Width="*"/>
-                                                        <ColumnDefinition Width="Auto"/>
+                                                        <ColumnDefinition Width="12"/>
+                                                        <ColumnDefinition Width="*"/>
                                                     </Grid.ColumnDefinitions>
                                                     <StackPanel Grid.Column="0" Margin="0,0,0,6">
                                                     <TextBlock Text="{Binding Title}" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}"/>
@@ -47,9 +48,9 @@
                                                         </Button>
                                     </WrapPanel>
                                                 </StackPanel>
-                                                    <Border Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,0,0" MinWidth="322"
+                                                    <Border Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0"
                                                             Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1"
-                                                            CornerRadius="{DynamicResource R_S}" Padding="10,8"
+                                                            CornerRadius="{DynamicResource R_S}" Padding="8"
                                                             Visibility="{Binding IsPowerPlanCard, Converter={StaticResource BoolToVis}}">
                                                         <StackPanel>
                                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">

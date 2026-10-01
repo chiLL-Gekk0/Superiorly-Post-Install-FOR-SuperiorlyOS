@@ -24,7 +24,7 @@ public static partial class TranslationService
             ["settings"]="설정", ["language"]="언어", ["theme"]="테마", ["dark"]="다크", ["light"]="라이트", ["auto"]="자동", ["default_theme"]="기본 테마",
             ["style"]="스타일", ["win10_style"]="Windows 10 스타일", ["win11_style"]="Windows 11 스타일", ["close"]="닫기",
             ["search_placeholder"]="이름, URL 또는 ID로 검색합니다.", ["store_no_results"]="결과가 없습니다. 다른 검색을 시도하십시오.", ["search"]="검색", ["install"]="설치",
-            ["run"]="실행", ["download"]="다운로드", ["apply"]="적용",
+            ["run"]="실행", ["download"]="다운로드", ["open"]="열기", ["apply"]="적용",
             ["check_updates"]="업데이트 확인", ["update"]="Update", ["disclaimer"]="수정 사항에 대한 책임은 사용자에게 있습니다.",
             ["quantum_title"]="Quantum 맵", ["quantum_subtitle"]="유효한 모든 Win32PrioritySeparation 값입니다. 행을 클릭하여 적용하십시오.",
             ["open_quantum"]="Quantum 맵 열기", ["current_win32"]="현재 Win32PrioritySeparation",

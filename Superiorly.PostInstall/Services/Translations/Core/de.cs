@@ -24,7 +24,7 @@ public static partial class TranslationService
             ["settings"]="Einstellungen", ["language"]="Sprache", ["theme"]="Design", ["dark"]="Dunkel", ["light"]="Hell", ["auto"]="Automatisch", ["default_theme"]="Standard-Design",
             ["style"]="Stil", ["win10_style"]="Windows-10-Stil", ["win11_style"]="Windows-11-Stil", ["close"]="Schließen",
             ["search_placeholder"]="Nach Name, URL oder ID suchen.", ["store_no_results"]="Keine Ergebnisse. Versuchen Sie eine andere Suche.", ["search"]="Suchen", ["install"]="Installieren",
-            ["run"]="Ausführen", ["download"]="Herunterladen", ["apply"]="Anwenden",
+            ["run"]="Ausführen", ["download"]="Herunterladen", ["open"]="Öffnen", ["apply"]="Anwenden",
             ["check_updates"]="Nach Updates suchen", ["update"]="Update", ["disclaimer"]="Änderungen erfolgen in Ihrer alleinigen Verantwortung.",
             ["quantum_title"]="Quantum-Karte", ["quantum_subtitle"]="Alle gültigen Win32PrioritySeparation-Werte. Klicken Sie auf eine Zeile, um sie anzuwenden.",
             ["open_quantum"]="Quantum-Karte öffnen", ["current_win32"]="Aktuelle Win32PrioritySeparation",
