@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_en = new()
     {
- ["mainstream"]="Mainstream", ["privacy"]="Privacy", ["forks"]="Forks & Custom", ["software"]="Software", ["store-downloader"]="Microsoft store downloader", ["utilities"]="Utilities", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry Tweaks", ["win32"]="Win32PrioritySeparation", ["powerplans"]="Power Plans", ["connectivity"]="Connectivity", ["devices"]="Devices", ["security"]="Security", ["gaming"]="Gaming", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Mainstream", ["privacy"]="Privacy", ["forks"]="Forks & Custom", ["software"]="Software", ["store-downloader"]="Microsoft Store Downloader", ["utilities"]="Utilities", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry Tweaks", ["win32"]="Win32PrioritySeparation", ["powerplans"]="Power Plans", ["connectivity"]="Connectivity", ["devices"]="Devices", ["security"]="Security", ["gaming"]="Gaming", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> Notifications_en = new()
     {

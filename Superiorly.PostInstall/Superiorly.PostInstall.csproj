@@ -50,7 +50,15 @@
     <Content Include="Assets\Bundle\NSudo_8.2_All_Components.zip" Link="Tools\NSudo_8.2_All_Components.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudo_8.2_All_Components.zip')" />
     <Content Include="Assets\Bundle\NSudoLG.exe" Link="Tools\NSudoLG.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NSudoLG.exe')" />
     <Content Include="Assets\Bundle\PerformanceMeasurementTool_Danske101.zip" Link="Tools\PerformanceMeasurementTool_Danske101.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\PerformanceMeasurementTool_Danske101.zip')" />
-    <Content Include="Assets\Bundle\NIP\*.nip" Link="Nvidia Profiles\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\NIP')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" Condition="Exists('Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" Condition="Exists('Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" Condition="Exists('Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-AGGRESSIVE-TEST.nip" LogicalName="EXPERIMENTAL-AGGRESSIVE-TEST.nip" Condition="Exists('Assets\Bundle\NIP\EXPERIMENTAL-AGGRESSIVE-TEST.nip')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\Global-Test-Experimental.nip" LogicalName="Global-Test-Experimental.nip" Condition="Exists('Assets\Bundle\NIP\Global-Test-Experimental.nip')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\Latency-Test-Experimental.nip" LogicalName="Latency-Test-Experimental.nip" Condition="Exists('Assets\Bundle\NIP\Latency-Test-Experimental.nip')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v2.nip" LogicalName="KernelOS Performance v2.nip" Condition="Exists('Assets\Bundle\NIP\KernelOS Performance v2.nip')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v2.1.nip" LogicalName="KernelOS Performance v2.1.nip" Condition="Exists('Assets\Bundle\NIP\KernelOS Performance v2.1.nip')" />
+    <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v3.nip" LogicalName="KernelOS Performance v3.nip" Condition="Exists('Assets\Bundle\NIP\KernelOS Performance v3.nip')" />
     <Content Include="Assets\Bundle\DDU_v18.1.5.3_Portable.zip" Link="Tools\DDU_v18.1.5.3_Portable.zip" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\DDU_v18.1.5.3_Portable.zip')" />
     <Content Include="Assets\Bundle\FilterKeysSetter.exe" Link="Tools\FilterKeysSetter.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\FilterKeysSetter.exe')" />
     <Content Include="Assets\Bundle\MoreClockTool.exe" Link="AMD Tweaks\MoreClockTool.exe" CopyToOutputDirectory="PreserveNewest" Condition="Exists('Assets\Bundle\MoreClockTool.exe')" />

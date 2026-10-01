@@ -42,6 +42,8 @@ public partial class App : Application
             return;
         }
         base.OnStartup(e);
+        // install dir for file: probes (%SPIBINDIR%), so checks see bundled tools
+        try { System.Environment.SetEnvironmentVariable("SPIBINDIR", AppContext.BaseDirectory); } catch { }
         try { StoreSearchService.Warmup(); } catch { }
         try { CardViewModel.WarmupPowerPlans(); } catch { }
         try

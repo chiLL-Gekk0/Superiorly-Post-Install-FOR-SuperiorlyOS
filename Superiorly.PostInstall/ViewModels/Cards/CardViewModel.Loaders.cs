@@ -9,7 +9,7 @@ namespace Superiorly.PostInstall.ViewModels;
 
 public partial class CardViewModel : ObservableObject {
 
-    // bundled nips, sha256 verified against local copies only; no downloads
+    // embedded nips, extracted on demand, sha256 verified where pinned; no downloads
     private static readonly (string Name, string Sha)[] MirrorNips =
     {
         ("EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip", "AD79219730A3364C2DE37824E16FA5766F88A3FDDFEE148BCACED2D89814D329"),
@@ -18,6 +18,9 @@ public partial class CardViewModel : ObservableObject {
         ("EXPERIMENTAL-AGGRESSIVE-TEST.nip", "AA149815190F3B0E17B4B899AC6C1D90C7BB51CA03424B4E07BECCBC337A4A07"),
         ("Global-Test-Experimental.nip", "1E1147EF1A36FA231F67BC098981E8A659066E02BC1EA496E1627B851D65CE02"),
         ("Latency-Test-Experimental.nip", "B0580C050C689D62E21897F953980FA874D5EFAE4ABC8F6433D3F48C7E9B1BFF"),
+        ("KernelOS Performance v2.nip", ""),
+        ("KernelOS Performance v2.1.nip", ""),
+        ("KernelOS Performance v3.nip", ""),
     };
 
     private static int _nipFetchState;
@@ -28,7 +31,7 @@ public partial class CardViewModel : ObservableObject {
         try
         {
             if (_npiExe != null && File.Exists(_npiExe)) return _npiExe;
-            var dir = Path.Combine(Path.GetTempPath(), "Superiorly", "npi");
+            var dir = Path.Combine(AppContext.BaseDirectory, "Tools", "npi");
             Directory.CreateDirectory(dir);
             var exe = Path.Combine(dir, "nvidiaProfileInspector.exe");
             if (!File.Exists(exe))
@@ -54,7 +57,18 @@ public partial class CardViewModel : ObservableObject {
             foreach (var n in MirrorNips)
             {
                 var dest = Path.Combine(nipDir, n.Name);
-                if (!File.Exists(dest)) continue;
+                if (!File.Exists(dest))
+                {
+                    try
+                    {
+                        using var s = typeof(CardViewModel).Assembly.GetManifestResourceStream(n.Name);
+                        if (s == null) continue;
+                        using var fs = File.Create(dest);
+                        s.CopyTo(fs);
+                    }
+                    catch { continue; }
+                }
+                if (string.IsNullOrEmpty(n.Sha)) continue;
                 try
                 {
                     using var sha = System.Security.Cryptography.SHA256.Create();
@@ -90,16 +104,12 @@ public partial class CardViewModel : ObservableObject {
         foreach (var file in nipFiles)
         {
             var name = Path.GetFileNameWithoutExtension(file);
-            var nipDest = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Superiorly", "npi", Path.GetFileName(file));
             var npi = EnsureNpiExe();
             string cmd;
             if (npi != null)
             {
                 cmd = $"powershell -NoProfile -ExecutionPolicy Bypass -Command " +
-                    $"$d=[IO.Path]::GetDirectoryName('{nipDest}'); " +
-                    $"New-Item -ItemType Directory -Force -Path $d|Out-Null; " +
-                    $"Copy-Item '{file}' '{nipDest}' -Force; " +
-                    $"& '{npi}' -silentImport '{nipDest}'";
+                    $"& '{npi}' -silentImport '{file}'";
             }
             else
             {
@@ -137,9 +147,8 @@ public partial class CardViewModel : ObservableObject {
 
     private void LoadCruTools()
     {
-        var cruDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Superiorly", "Tools", "cru");
-        var tempCru = Path.Combine(Path.GetTempPath(), "cru");
-        string? foundDir = Directory.Exists(cruDir) ? cruDir : Directory.Exists(tempCru) ? tempCru : null;
+        var cruDir = Path.Combine(AppContext.BaseDirectory, "Tools", "cru");
+        string? foundDir = Directory.Exists(cruDir) ? cruDir : null;
         string? cruExe = foundDir != null ? Directory.GetFiles(foundDir, "CRU.exe", SearchOption.AllDirectories).FirstOrDefault() : null;
         string? restartExe = foundDir != null ? Directory.GetFiles(foundDir, "restart64.exe", SearchOption.AllDirectories).FirstOrDefault() : null;
         string? resetExe = foundDir != null ? Directory.GetFiles(foundDir, "reset-all.exe", SearchOption.AllDirectories).FirstOrDefault() : null;
