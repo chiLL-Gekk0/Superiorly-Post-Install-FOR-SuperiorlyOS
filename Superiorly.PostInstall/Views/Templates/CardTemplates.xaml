@@ -71,7 +71,7 @@
                                                             Visibility="{Binding HasInfo, Converter={StaticResource BoolToVis}}"
                                                             MouseEnter="InfoIcon_MouseEnter" MouseLeave="InfoIcon_MouseLeave">
                                                         <Grid>
-                                                        <Popup x:Name="InfoPopup" Placement="Right" AllowsTransparency="True" HorizontalOffset="8" StaysOpen="True" PopupAnimation="Fade">
+                                                        <Popup x:Name="InfoPopup" Placement="Right" PlacementTarget="{Binding ElementName=InfoIconBorder}" AllowsTransparency="True" HorizontalOffset="8" StaysOpen="True" PopupAnimation="Fade">
                                                             <Border Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="0" Margin="4,0"
                                                                     MouseEnter="InfoPopupContent_MouseEnter" MouseLeave="InfoPopupContent_MouseLeave">
                                                                 <StackPanel MaxWidth="300" Margin="12">

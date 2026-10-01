@@ -8,8 +8,8 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
-                        <Border x:Name="track" Background="{DynamicResource B_SwitchOff}" CornerRadius="13" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1">
-                            <Border x:Name="thumb" Width="18" Height="18" Background="{DynamicResource B_SwitchThumb}" CornerRadius="9" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0">
+                        <Border x:Name="track" Background="{DynamicResource B_SwitchOff}" CornerRadius="{DynamicResource R_S}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1">
+                            <Border x:Name="thumb" Width="18" Height="18" Background="{DynamicResource B_SwitchThumb}" CornerRadius="{DynamicResource R_S}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0">
                                 <TextBlock x:Name="thumbIcon" Text="&#xE711;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource B_TextSecondary}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                 <Border.RenderTransform><TranslateTransform X="0"/></Border.RenderTransform>
                                 <Border.Effect><DropShadowEffect BlurRadius="4" ShadowDepth="1" Opacity="0.3"/></Border.Effect>

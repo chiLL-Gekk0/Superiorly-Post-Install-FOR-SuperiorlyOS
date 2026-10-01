@@ -51,8 +51,9 @@ public partial class CardTemplates : ResourceDictionary
         {
             _activeInfoPopup = fe.FindName("InfoPopup") as Popup;
             if (_activeInfoPopup == null) return;
-            FitPopupInWindow(fe);
+            _activeInfoPopup.PlacementTarget = fe;
             _activeInfoPopup.IsOpen = true;
+            FitPopupInWindow(fe);
             try
             {
                 // animate open explicitly; popupanimation alone renders instant on some systems
@@ -71,13 +72,15 @@ public partial class CardTemplates : ResourceDictionary
     {
         try
         {
-            // keep the popup inside the window: flip left when it would overflow right
+            // measure after open: pre-open DesiredSize is empty, post-open ActualWidth is real
             if (_activeInfoPopup?.Child is not FrameworkElement card) return;
             var win = Window.GetWindow(anchor);
             if (win == null) return;
+            card.UpdateLayout();
+            var w = card.ActualWidth;
+            if (w <= 0) return;
             var pos = anchor.TranslatePoint(new Point(0, 0), win);
-            card.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
-            if (pos.X + 8 + card.DesiredSize.Width > win.ActualWidth - 8)
+            if (pos.X + anchor.ActualWidth + 8 + w > win.ActualWidth - 8)
             {
                 _activeInfoPopup.Placement = PlacementMode.Left;
                 _activeInfoPopup.HorizontalOffset = -8;

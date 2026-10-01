@@ -120,7 +120,6 @@ public partial class CardViewModel : ObservableObject {
             if (!IsOn) ok = false;
         }
         if (ok && installDidLaunch) await RefreshStateAsync();
-        var notifyPath = ok && _launch.Count > 0 ? (string?)_launch[0] : null;
         if (ok)
         {
             if (!IsSearchCard)
@@ -134,14 +133,14 @@ public partial class CardViewModel : ObservableObject {
                     : (wasInstalled || isWebOnly)
                     ? Services.TranslationService.GetNotification("opened", _owner.SelectedLanguage.Code)
                     : Services.TranslationService.GetNotification("installed", _owner.SelectedLanguage.Code);
-                _owner.Notify($"{Title}: {action}", notifyPath, Title, char.ConvertFromUtf32(0xE896));
+                _owner.Notify($"{Title}: {action}", null, Title, char.ConvertFromUtf32(0xE896));
             }
         }
         else if (!IsSearchCard && !isToggle)
         {
             var key = IsPresetCombo ? "apply_failed" : wasInstalled ? "open_failed" : "failed";
             var failed = Services.TranslationService.GetNotification(key, _owner.SelectedLanguage.Code);
-                _owner.Notify($"{Title}: {failed}", notifyPath, Title, char.ConvertFromUtf32(0xE711));
+                _owner.Notify($"{Title}: {failed}", null, Title, char.ConvertFromUtf32(0xE711));
         }
         }
         finally
