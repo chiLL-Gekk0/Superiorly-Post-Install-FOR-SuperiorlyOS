@@ -60,7 +60,7 @@
                                                                     <ToggleButton Style="{DynamicResource SwitchToggle}" IsChecked="{Binding IsOn}" Command="{Binding ToggleCommand}" AutomationProperties.Name="{Binding Title}"/>
                                                                 </StackPanel>
                                                             </StackPanel>
-                                                            <TextBlock Text="{Binding CpuIdleCard.Description}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" TextWrapping="Wrap" MaxWidth="260" Margin="0,4,0,0"/>
+                                                            <TextBlock Text="{Binding CpuIdleCard.Description}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" TextWrapping="Wrap" Margin="0,4,0,0"/>
                                                         </StackPanel>
                                                     </Border>
                                                 </Grid>

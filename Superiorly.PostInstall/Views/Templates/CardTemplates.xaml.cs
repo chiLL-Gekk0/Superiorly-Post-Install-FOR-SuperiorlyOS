@@ -51,6 +51,7 @@ public partial class CardTemplates : ResourceDictionary
         {
             _activeInfoPopup = fe.FindName("InfoPopup") as Popup;
             if (_activeInfoPopup == null) return;
+            FitPopupInWindow(fe);
             _activeInfoPopup.IsOpen = true;
             try
             {
@@ -64,6 +65,30 @@ public partial class CardTemplates : ResourceDictionary
             }
             catch { }
         }
+    }
+
+    private void FitPopupInWindow(FrameworkElement anchor)
+    {
+        try
+        {
+            // keep the popup inside the window: flip left when it would overflow right
+            if (_activeInfoPopup?.Child is not FrameworkElement card) return;
+            var win = Window.GetWindow(anchor);
+            if (win == null) return;
+            var pos = anchor.TranslatePoint(new Point(0, 0), win);
+            card.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+            if (pos.X + 8 + card.DesiredSize.Width > win.ActualWidth - 8)
+            {
+                _activeInfoPopup.Placement = PlacementMode.Left;
+                _activeInfoPopup.HorizontalOffset = -8;
+            }
+            else
+            {
+                _activeInfoPopup.Placement = PlacementMode.Right;
+                _activeInfoPopup.HorizontalOffset = 8;
+            }
+        }
+        catch { }
     }
 
     private void InfoPopupCloseTick(object? sender, EventArgs e)

@@ -60,9 +60,10 @@ public partial class MainWindow : Window
     private bool _suppressScrollSave;
     private System.Windows.Point _autoAnchor;
     private double _autoVelocity;
-    private readonly DispatcherTimer _autoScrollTimer = new() { Interval = TimeSpan.FromMilliseconds(30) };
+    private readonly DispatcherTimer _autoScrollTimer = new() { Interval = TimeSpan.FromMilliseconds(15) };
     private const double AutoScrollDeadZone = 15;
-    private const double AutoScrollFactor = 0.12;
+    // px per 15ms tick; Chromium/Windows curve: tiny drags crawl, long drags fly
+    private static double AutoScrollSpeed(double pixels) => 0.000008 * Math.Pow(pixels, 2.2) * 15;
 
     private void StartAutoScroll(MouseButtonEventArgs e)
     {
@@ -81,7 +82,7 @@ public partial class MainWindow : Window
     {
         var delta = e.GetPosition(CardsSurface).Y - _autoAnchor.Y;
         _autoVelocity = Math.Abs(delta) <= AutoScrollDeadZone ? 0
-            : (delta - Math.Sign(delta) * AutoScrollDeadZone) * AutoScrollFactor;
+            : Math.Sign(delta) * AutoScrollSpeed(Math.Abs(delta) - AutoScrollDeadZone);
         CardsSurface.Cursor = _autoVelocity < 0 ? Cursors.ScrollN
             : _autoVelocity > 0 ? Cursors.ScrollS : Cursors.ScrollAll;
     }
