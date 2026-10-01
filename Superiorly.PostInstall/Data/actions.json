@@ -7,7 +7,7 @@
         {
             "id": "home",
             "actions": [],
-            "Icon": "î "
+            "Icon": ""
         },
         {
             "id": "browsers",
@@ -610,7 +610,7 @@
                 
                 
             ],
-            "Icon": "î´",
+            "Icon": "",
             "tabs": [
                 {
                     "id": "mainstream"
@@ -640,7 +640,7 @@
                 },
                 {
                     "id": "process-explorer",
-                    "icon": "î¤",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -662,7 +662,7 @@
                 },
                 {
                     "id": "nsudo",
-                    "icon": "î¨˜",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -684,7 +684,7 @@
                 },
                 {
                     "id": "driverview",
-                    "icon": "î¨·",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -705,7 +705,7 @@
                 },
                 {
                     "id": "cru",
-                    "icon": "îŸ´",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Open CRU",
@@ -747,7 +747,7 @@
                 },
                 {
                     "id": "windows-update-manager",
-                    "icon": "î·",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -769,7 +769,7 @@
                 },
                 {
                     "id": "geek-uninstaller",
-                    "icon": "î",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -797,7 +797,7 @@
                 },
                 {
                     "id": "mousetester",
-                    "icon": "î§’",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -818,7 +818,7 @@
                 },
                 {
                     "id": "measuresleep",
-                    "icon": "î²’",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -838,7 +838,7 @@
                 },
                 {
                     "id": "ocat",
-                    "icon": "î £",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -861,7 +861,7 @@
                 },
                 {
                     "id": "onboard-memory-manager",
-                    "icon": "î¤®",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -883,7 +883,7 @@
                 },
                 {
                     "id": "performance-measurement",
-                    "icon": "î±Š",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -905,7 +905,7 @@
                 {
                     "id": "msstore-downloader",
                     "tab": "store-downloader",
-                    "icon": "îœ™",
+                    "icon": "",
                     "type": "search",
                     "options": [
                         {
@@ -927,7 +927,7 @@
                 {
                     "id": "autoruns",
                     "tab": "utilities",
-                    "icon": "îœ",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -949,7 +949,7 @@
                 {
                     "id": "devicecleanup",
                     "tab": "utilities",
-                    "icon": "îª™",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -970,7 +970,7 @@
                 {
                     "id": "gointerruptpolicy",
                     "tab": "utilities",
-                    "icon": "î¥",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -992,7 +992,7 @@
                 {
                     "id": "serviwin",
                     "tab": "utilities",
-                    "icon": "îœ“",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1013,7 +1013,7 @@
                 {
                     "id": "usbtreeview",
                     "tab": "utilities",
-                    "icon": "î¢Ž",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1034,7 +1034,7 @@
                 {
                     "id": "ddu",
                     "tab": "utilities",
-                    "icon": "îœ",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1055,7 +1055,7 @@
                 {
                     "id": "filterkeysetter",
                     "tab": "utilities",
-                    "icon": "î¥",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1075,7 +1075,7 @@
                 {
                     "id": "throttlestop",
                     "tab": "utilities",
-                    "icon": "î¥¤",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1105,7 +1105,7 @@
                     "id": "store-downloader"
                 }
             ],
-            "Icon": "îž¬"
+            "Icon": ""
         },
         {
             "id": "tweaking",
@@ -1136,7 +1136,7 @@
                 {
                     "id": "radeonsoftwareslimmer",
                     "tab": "amd",
-                    "icon": "îœ",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1158,7 +1158,7 @@
                 {
                     "id": "moreclocktool",
                     "tab": "amd",
-                    "icon": "ï†‚",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1180,7 +1180,7 @@
                 {
                     "id": "morepowertool",
                     "tab": "amd",
-                    "icon": "îŸ¨",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1202,7 +1202,7 @@
                 {
                     "id": "radeonmod",
                     "tab": "amd",
-                    "icon": "î±",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1223,7 +1223,7 @@
                 {
                     "id": "nvcleanstall",
                     "tab": "nvidia",
-                    "icon": "î µ",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1245,7 +1245,7 @@
                 {
                     "id": "nvidia-inspector",
                     "tab": "nvidia",
-                    "icon": "î±º",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Run",
@@ -1269,13 +1269,13 @@
                 {
                     "id": "apply-nip",
                     "tab": "nvidia",
-                    "icon": "îŽ",
+                    "icon": "",
                     "options": []
                 },
                 {
                     "id": "force-pstate0",
                     "tab": "nvidia",
-                    "icon": "î±‰",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1303,7 +1303,7 @@
                 {
                     "id": "lazymodetimeout",
                     "tab": "registry",
-                    "icon": "îµ",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -1358,7 +1358,7 @@
                 {
                     "id": "systemresponsiveness",
                     "tab": "registry",
-                    "icon": "î§©",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -1389,7 +1389,7 @@
                 {
                     "id": "receive-buffers",
                     "tab": "registry",
-                    "icon": "î¶£",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -1426,7 +1426,7 @@
                 {
                     "id": "transmit-buffers",
                     "tab": "registry",
-                    "icon": "î¥©",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -1463,7 +1463,7 @@
                 {
                     "id": "csrss-priority",
                     "tab": "registry",
-                    "icon": "î§³",
+                    "icon": "",
                     "options": [
                         {
                             "label": "RealTime",
@@ -1500,7 +1500,7 @@
                 {
                     "id": "iolatencycap",
                     "tab": "registry",
-                    "icon": "î¥ž",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -1549,7 +1549,7 @@
                 {
                     "id": "iopagelocklimit",
                     "tab": "registry",
-                    "icon": "î§™",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -1616,7 +1616,7 @@
                 {
                     "id": "nagle-algorithm",
                     "tab": "registry",
-                    "icon": "î´",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1638,7 +1638,7 @@
                 {
                     "id": "nolazymode",
                     "tab": "registry",
-                    "icon": "î¡",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1660,7 +1660,7 @@
                 {
                     "id": "tsc-sync-policy",
                     "tab": "registry",
-                    "icon": "î¥Ÿ",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -1694,7 +1694,7 @@
                 {
                     "id": "useplatformtick",
                     "tab": "registry",
-                    "icon": "î£‘",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -1722,7 +1722,7 @@
                 {
                     "id": "disable-mpo",
                     "tab": "registry",
-                    "icon": "îŸ»",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1744,7 +1744,7 @@
                 {
                     "id": "disable-interrupt-steering",
                     "tab": "registry",
-                    "icon": "î§µ",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1772,7 +1772,7 @@
                 {
                     "id": "disable-power-throttling",
                     "tab": "registry",
-                    "icon": "î¹£",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1794,7 +1794,7 @@
                 {
                     "id": "threaded-dpc",
                     "tab": "registry",
-                    "icon": "î²",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1816,7 +1816,7 @@
                 {
                     "id": "cpu-idle",
                     "tab": "registry",
-                    "icon": "î°",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1842,7 +1842,7 @@
                 {
                     "id": "force-direct-flip",
                     "tab": "registry",
-                    "icon": "îŸ¹",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1861,7 +1861,7 @@
                 {
                     "id": "force-independent-flip",
                     "tab": "registry",
-                    "icon": "îŸº",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1880,7 +1880,7 @@
                 {
                     "id": "force-flip-true-immediate",
                     "tab": "registry",
-                    "icon": "î±·",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1905,7 +1905,7 @@
                 {
                     "id": "disablepagingexecutive",
                     "tab": "registry",
-                    "icon": "î¥¥",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1927,7 +1927,7 @@
                 {
                     "id": "disablepagecombining",
                     "tab": "registry",
-                    "icon": "îž¸",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -1951,7 +1951,7 @@
                 {
                     "id": "queued-present-limit",
                     "tab": "registry",
-                    "icon": "î£½",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -1985,7 +1985,7 @@
                 {
                     "id": "win32priorityseparation",
                     "tab": "win32",
-                    "icon": "î£",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Default",
@@ -2010,7 +2010,7 @@
                 {
                     "id": "powerplan-manager",
                     "tab": "powerplans",
-                    "icon": "îŸƒ",
+                    "icon": "",
                     "options": [
                         {
                             "label": "Activate",
@@ -2144,7 +2144,7 @@
                     },
                 {
                     "id": "xbox",
-                    "icon": "îŸ¼",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2178,7 +2178,7 @@
                 },
                 {
                     "id": "fivem-safe-services",
-                    "icon": "î©",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2205,26 +2205,26 @@
                 {
                     "id": "gamebar",
                     "tab": "gaming",
-                    "icon": "îœ”",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"1\" /f", "reg delete \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AppCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"AudioCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v \"CursorCaptureEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"UseNexusForGameBarEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"ShowStartupPanel\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\Software\\Policies\\Microsoft\\Windows\\GameDVR\" /v \"AllowGameDVR\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\GameDVR\" /v AppCaptureEnabled | findstr \"0x1\""]
                     },
                 {
                     "id": "gamemode",
                     "tab": "gaming",
-                    "icon": "î€",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"2\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"2\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers\" /v \"HwSchMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AllowAutoGameMode\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\GameBar\" /v \"AutoGameModeEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\System\\GameConfigStore\" /v \"GameDVR_FSEBehaviorMode\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\GameBar\" /v AllowAutoGameMode | findstr \"0x1\""]
                     }
             ],
-            "Icon": "îœ"
+            "Icon": ""
         },
         {
             "id": "troubleshooting",
             "actions": [
                 {
                     "id": "wifi",
-                    "icon": "îœ",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2258,7 +2258,7 @@
                 },
                 {
                     "id": "bluetooth",
-                    "icon": "îœ‚",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2308,7 +2308,7 @@
                 },
                 {
                     "id": "hop-limit",
-                    "icon": "îœ„",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2339,7 +2339,7 @@
                 },
                 {
                     "id": "printer",
-                    "icon": "î‰",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2371,7 +2371,7 @@
                 },
                 {
                     "id": "task-manager",
-                    "icon": "î§•",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2393,7 +2393,7 @@
                 },
                 {
                     "id": "textinputhost",
-                    "icon": "îœœ",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2420,34 +2420,34 @@
                 {
                     "id": "ink-workspace",
                     "tab": "devices",
-                    "icon": "î·†",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowWindowsInkWorkspace\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowSuggestedAppsInWindowsInkWorkspace\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableInkingWithTouch\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowWindowsInkWorkspace\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v \"AllowSuggestedAppsInWindowsInkWorkspace\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableInkingWithTouch\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsInkWorkspace\" /v AllowWindowsInkWorkspace | findstr \"0x0\""]
                     },
                 {
                     "id": "spelling-typing",
                     "tab": "devices",
-                    "icon": "î£’",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableAutocorrection\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableSpellchecking\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableDoubleTapSpace\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnablePredictionSpaceInsertion\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableTextPrediction\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Input\\Settings\" /v \"InsightsEnabled\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableAutocorrection\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableSpellchecking\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Input\\Settings\" /v \"InsightsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableDoubleTapSpace\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnablePredictionSpaceInsertion\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v \"EnableTextPrediction\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKCU\\SOFTWARE\\Microsoft\\TabletTip\\1.7\" /v EnableAutocorrection | findstr \"0x0\""]
                     },
                 {
                     "id": "cloud-clipboard",
                     "tab": "devices",
-                    "icon": "ïƒ£",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowClipboardHistory\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowCrossDeviceClipboard\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowClipboardHistory\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"AllowCrossDeviceClipboard\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\Software\\Microsoft\\Clipboard\" /v \"EnableClipboardHistory\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v AllowClipboardHistory | findstr \"0x0\""]
                     },
                 {
                     "id": "cast-to-device",
                     "tab": "devices",
-                    "icon": "îœƒ",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked\" /v \"{7AD84985-87B4-4a16-BE58-8B72A5B390F7}\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked\" /v \"{7AD84985-87B4-4a16-BE58-8B72A5B390F7}\" /t REG_SZ /d \"Play to Menu\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Shell Extensions\\Blocked\" /v {7AD84985-87B4-4a16-BE58-8B72A5B390F7} | findstr \"Play\""]
                     },
                 {
                     "id": "vbs",
-                    "icon": "î ½",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2471,7 +2471,7 @@
                 },
                 {
                     "id": "hvci",
-                    "icon": "îŸ¯",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2501,7 +2501,7 @@
                 },
                 {
                     "id": "firewall",
-                    "icon": "îœ®",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2525,7 +2525,7 @@
                 },
                 {
                     "id": "lua",
-                    "icon": "î»",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2549,7 +2549,7 @@
                 },
                 {
                     "id": "vulnerable-driver-blocklist",
-                    "icon": "îœ°",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2571,7 +2571,7 @@
                 },
                 {
                     "id": "nx-mode",
-                    "icon": "îž…",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2605,7 +2605,7 @@
                 },
                 {
                     "id": "mitigations-off",
-                    "icon": "î¨˜",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2625,7 +2625,7 @@
                 },
                 {
                     "id": "disable-pca",
-                    "icon": "îœ“",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2647,7 +2647,7 @@
                 },
                 {
                     "id": "spectre-meltdown-off",
-                    "icon": "î¥",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2678,7 +2678,7 @@
                 },
 {
                     "id": "windows-update-drivers",
-                    "icon": "îœ¬",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2703,48 +2703,48 @@
 {
                     "id": "error-reporting",
                     "tab": "system",
-                    "icon": "îžƒ",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting\" /v \"DoReport\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /f ; exit 0", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wercplsupport\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WerSvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\PCHealth\\ErrorReporting\" /v \"DoReport\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\Windows Error Reporting\" /v \"Disabled\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WerSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wercplsupport\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WerSvc\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "compat-assistant",
                     "tab": "system",
-                    "icon": "îž¬",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\PcaSvc\" /v \"Start\" /t REG_DWORD /d \"2\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\PcaSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\PcaSvc\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "superfetch",
                     "tab": "system",
-                    "icon": "îŸƒ",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SysMain\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnableSuperfetch\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d \"1\" /f", "reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"SfTracingState\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SysMain\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnableSuperfetch\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"SfTracingState\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SysMain\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "insider-service",
                     "tab": "system",
-                    "icon": "î£¿",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wisvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wisvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\wisvc\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "sensor-services",
                     "tab": "system",
-                    "icon": "î¥—",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensrSvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensorService\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensrSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensorService\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\SensorService\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "search-index",
                     "tab": "system",
-                    "icon": "îœ¡",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v \"DelayedAutostart\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WSearch\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "fix-intel-panel",
-                    "icon": "îŸ·",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2768,35 +2768,35 @@
 {
                     "id": "network-throttling",
                     "tab": "system",
-                    "icon": "îž‘",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Psched\" /v \"NonBestEffortLimit\" /t REG_DWORD /d \"80\" /f", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v \"NetworkThrottlingIndex\" /t REG_DWORD /d \"0xffffffff\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Psched\" /v \"NonBestEffortLimit\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile\" /v NetworkThrottlingIndex | findstr \"0xffffffff\""]
                     },
 {
                     "id": "smb1",
                     "tab": "system",
-                    "icon": "î ¹",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB1\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB1\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v SMB1 | findstr \"0x0\""]
                     },
 {
                     "id": "smb2",
                     "tab": "system",
-                    "icon": "ï†“",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB2\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v \"SMB2\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" /v SMB2 | findstr \"0x0\""]
                     },
 {
                     "id": "homegroup",
                     "tab": "system",
-                    "icon": "î°¦",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupListener\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupProvider\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\HomeGroup\" /v \"DisableHomeGroup\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\HomeGroup\" /v \"DisableHomeGroup\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupListener\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupProvider\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\HomeGroupListener\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "media-sharing",
                     "tab": "system",
-                    "icon": "î¤¾",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WMPNetworkSvc\" /v \"Start\" /t REG_DWORD /d \"3\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WMPNetworkSvc\" /v \"Start\" /t REG_DWORD /d \"4\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WMPNetworkSvc\" /v Start | findstr \"0x3\""]
                     },
@@ -2808,7 +2808,7 @@
                 },
 {
                     "id": "start-menu",
-                    "icon": "îœ",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2830,7 +2830,7 @@
                 },
 {
                     "id": "use-default-tile",
-                    "icon": "î¢©",
+                    "icon": "",
                     "options": [
                         {
                             "commands": [
@@ -2853,49 +2853,49 @@
 {
                     "id": "show-tray-icons",
                     "tab": "system",
-                    "icon": "î¤œ",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"EnableAutoTray\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"EnableAutoTray\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v EnableAutoTray | findstr \"0x0\""]
                     },
 {
                     "id": "menus-delay",
                     "tab": "system",
-                    "icon": "î¤–",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Control Panel\\Desktop\" /v \"MenuShowDelay\" /t REG_SZ /d \"400\" /f", "reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseHoverTime\" /t REG_SZ /d \"400\" /f"]},{"label": "disable", "commands": ["reg add \"HKCU\\Control Panel\\Desktop\" /v \"MenuShowDelay\" /t REG_SZ /d \"0\" /f", "reg add \"HKCU\\Control Panel\\Mouse\" /v \"MouseHoverTime\" /t REG_SZ /d \"0\" /f"]}],
                     "check": ["reg query \"HKCU\\Control Panel\\Desktop\" /v MenuShowDelay | findstr \"400\""]
                     },
 {
                     "id": "sticky-keys",
                     "tab": "system",
-                    "icon": "î¶",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"510\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"126\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"62\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"510\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"126\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"62\" /f"]},{"label": "disable", "commands": ["reg add \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"122\" /f", "reg add \"HKCU\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"58\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\StickyKeys\" /v \"Flags\" /t REG_SZ /d \"506\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\Keyboard Response\" /v \"Flags\" /t REG_SZ /d \"122\" /f", "reg add \"HKU\\.DEFAULT\\Control Panel\\Accessibility\\ToggleKeys\" /v \"Flags\" /t REG_SZ /d \"58\" /f"]}],
                     "check": ["reg query \"HKCU\\Control Panel\\Accessibility\\StickyKeys\" /v Flags | findstr \"510\""]
                     },
 {
                     "id": "compact-mode",
                     "tab": "system",
-                    "icon": "î£½",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"UseCompactMode\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"UseCompactMode\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["!reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v UseCompactMode | findstr \"0x1\""]
                     },
 {
                     "id": "quickaccess-history",
                     "tab": "system",
-                    "icon": "î £",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\OperationStatusManager\" /v \"EnthusiastMode\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"ShowSyncProviderNotifications\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowFrequent\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowRecent\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\OperationStatusManager\" /v \"EnthusiastMode\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"ShowSyncProviderNotifications\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowFrequent\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"ShowRecent\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"LaunchTo\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v ShowFrequent | findstr \"0x1\""]
                     },
 {
                     "id": "widgets-board",
                     "tab": "system",
-                    "icon": "î´",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"TaskbarDa\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v \"TaskbarDa\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v TaskbarDa | findstr \"0x0\""]
                     },
 {
                     "id": "news-interests",
                     "tab": "system",
-                    "icon": "îž‰",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Dsh\" /v \"AllowNewsAndInterests\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Feeds\" /v \"EnableFeeds\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\default\\NewsAndInterests\\AllowNewsAndInterests\" /v \"value\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Dsh\" /v \"AllowNewsAndInterests\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Feeds\" /v \"EnableFeeds\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\default\\NewsAndInterests\\AllowNewsAndInterests\" /v \"value\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Dsh\" /v AllowNewsAndInterests | findstr \"0x0\""]
                     },
@@ -2908,35 +2908,35 @@
 {
                     "id": "ntfs-timestamp",
                     "tab": "system",
-                    "icon": "î œ",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["fsutil behavior set disablelastaccess 2"]},{"label": "disable", "commands": ["fsutil behavior set disablelastaccess 1"]}],
                     "check": []
                     },
 {
                     "id": "system-restore",
                     "tab": "system",
-                    "icon": "îž§",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableSR\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableConfig\" /f ; exit 0"]},{"label": "disable", "commands": ["vssadmin delete shadows /for=c: /all /quiet", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableSR\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\SystemRestore\" /v \"DisableConfig\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\VSS\" /v Start | findstr \"0x3\""]
                     },
 {
                     "id": "regbackup",
                     "tab": "system",
-                    "icon": "îž’",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Configuration Manager\" /v \"EnablePeriodicBackup\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Configuration Manager\" /v \"EnablePeriodicBackup\" /f ; exit 0"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Configuration Manager\" /v EnablePeriodicBackup | findstr \"0x1\""]
                     },
 {
                     "id": "long-paths",
                     "tab": "system",
-                    "icon": "î ¸",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" /v \"LongPathsEnabled\" /t REG_DWORD /d \"1\" /f"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" /v \"LongPathsEnabled\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" /v LongPathsEnabled | findstr \"0x1\""]
                     },
 {
                     "id": "modern-standby",
                     "tab": "system",
-                    "icon": "îœˆ",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v \"PlatformAoAcOverride\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v \"PlatformAoAcOverride\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v PlatformAoAcOverride | findstr \"0x0\""]
                     },
@@ -2949,28 +2949,28 @@
 {
                     "id": "telemetry-services",
                     "tab": "system",
-                    "icon": "î§¹",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v \"Start\" /t REG_DWORD /d \"2\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\diagnosticshub.standardcollector.service\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\dmwappushservice\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WdiSystemHost\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WdiServiceHost\" /v \"Start\" /t REG_DWORD /d \"3\" /f", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableEngine\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"SbEnable\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"AITEnable\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableInventory\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisablePCA\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableUAR\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"PublishUserActivities\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SQMClient\\Windows\" /v \"CEIPEnable\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Device Metadata\" /v \"PreventDeviceMetadataFromNetwork\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowAutoConnectToWiFiSenseHotspots\" /v \"value\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowWiFiHotSpotReporting\" /v \"value\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\diagnosticshub.standardcollector.service\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\dmwappushservice\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WdiServiceHost\" /v \"Start\" /t REG_DWORD /d \"4\" /f", "reg add \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowAutoConnectToWiFiSenseHotspots\" /v value /t REG_DWORD /d 0 /f", "reg add \"HKLM\\Software\\Microsoft\\PolicyManager\\default\\WiFi\\AllowWiFiHotSpotReporting\" /v value /t REG_DWORD /d 0 /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableEngine\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"SbEnable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"AITEnable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableInventory\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisablePCA\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\AppCompat\" /v \"DisableUAR\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\System\" /v \"PublishUserActivities\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\SQMClient\\Windows\" /v \"CEIPEnable\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Device Metadata\" /v \"PreventDeviceMetadataFromNetwork\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\WMI\\AutoLogger\\SQMLogger\" /v \"Start\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\PolicyManager\\current\\device\\System\" /v \"AllowExperimentation\" /t REG_DWORD /d \"0\" /f"]}],
                     "check": ["reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\DiagTrack\" /v Start | findstr \"0x2\""]
                     },
 {
                     "id": "store-updates",
                     "tab": "system",
-                    "icon": "îœ¸",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableSoftLanding\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableWindowsConsumerFeatures\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"OemPreInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsStore\" /v \"AutoDownload\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableSoftLanding\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v \"DisableWindowsConsumerFeatures\" /t REG_DWORD /d \"1\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"OemPreInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\WindowsStore\" /v \"AutoDownload\" /t REG_DWORD /d \"2\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CloudContent\" /v DisableWindowsConsumerFeatures | findstr \"0x1\""]
                     },
                 {
                     "id": "cortana",
                     "tab": "telemetry",
-                    "icon": "îœ ",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\SearchSettings\" /v \"IsDeviceSearchHistoryEnabled\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCortana\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"DisableWebSearch\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWeb\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWebOverMeteredConnections\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"HistoryViewEnabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"DeviceHistoryEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"AllowSearchToUseLocation\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCloudSearch\" /f ; exit 0", "reg delete \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\SearchSettings\" /v \"IsDeviceSearchHistoryEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCortana\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"DisableWebSearch\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWeb\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"ConnectedSearchUseWebOverMeteredConnections\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"HistoryViewEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"DeviceHistoryEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"AllowSearchToUseLocation\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"BingSearchEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Search\" /v \"CortanaConsent\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search\" /v \"AllowCloudSearch\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\CurrentVersion\\Search\" /v BingSearchEnabled | findstr \"0x0\""]
                     },
                 {
                     "id": "startmenu-ads",
                     "tab": "telemetry",
-                    "icon": "îœ‘",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\\Windows.SystemToast.Suggested\" /v \"Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Mobility\" /v \"OptedIn\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-88000326Enabled\" /f ; exit 0", "reg delete \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserProfileEngagement\" /v \"ScoobeSystemSettingEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"ContentDeliveryAllowed\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEverEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-314559Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338387Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338389Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SystemPaneSuggestionsEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338393Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353694Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353696Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-310093Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338388Enabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContentEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SoftLandingEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"FeatureManagementEnabled\" /f ; exit 0", "reg delete \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0", "reg delete \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"AllowOnlineTips\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /f ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Mobility\" /v \"OptedIn\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Notifications\\Settings\\Windows.SystemToast.Suggested\" /v \"Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-88000326Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\UserProfileEngagement\" /v \"ScoobeSystemSettingEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"ContentDeliveryAllowed\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"PreInstalledAppsEverEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SilentInstalledAppsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-314559Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338387Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338389Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SystemPaneSuggestionsEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338393Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353694Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-353696Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-310093Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContent-338388Enabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SubscribedContentEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"SoftLandingEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v \"FeatureManagementEnabled\" /t REG_DWORD /d \"0\" /f", "reg add \"HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"AllowOnlineTips\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Explorer\" /v \"DisableSearchBoxSuggestions\" /t REG_DWORD /d \"1\" /f"]}],
                     "check": ["!reg query \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager\" /v ContentDeliveryAllowed | findstr \"0x0\""]
                     },
@@ -2981,7 +2981,7 @@
                 {
                     "id": "vs-telemetry",
                     "tab": "telemetry",
-                    "icon": "î¥ƒ",
+                    "icon": "",
                     "logo": "/Assets/Logos/visual-studio.png",
                     "options": [{"label": "enable", "commands": ["reg delete \"HKCU\\Software\\Microsoft\\VisualStudio\\Telemetry\" /v \"TurnOffSwitch\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Feedback\" /v \"DisableFeedbackDialog\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\SQM\" /v \"OptIn\" /f ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\14.0\\SQM\" /v OptIn /f /reg:64 ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\15.0\\SQM\" /v OptIn /f /reg:64 ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\16.0\\SQM\" /v OptIn /f /reg:64 ; exit 0", "reg delete \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\17.0\\SQM\" /v OptIn /f /reg:64 ; exit 0"]},{"label": "disable", "commands": ["reg add \"HKCU\\Software\\Microsoft\\VisualStudio\\Telemetry\" /v \"TurnOffSwitch\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\Feedback\" /v \"DisableFeedbackDialog\" /t REG_DWORD /d \"1\" /f", "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\SQM\" /v \"OptIn\" /t REG_DWORD /d \"0\" /f", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\14.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\15.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\16.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64", "reg add \"HKLM\\SOFTWARE\\Microsoft\\VSCommon\\17.0\\SQM\" /v OptIn /t REG_DWORD /d 0 /f /reg:64"]}],
                     "check": ["!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\VisualStudio\\SQM\" /v OptIn | findstr \"0x0\""]
@@ -2997,7 +2997,7 @@
                 {
                     "id": "telemetry-tasks",
                     "tab": "telemetry",
-                    "icon": "î£±",
+                    "icon": "",
                     "options": [{"label": "enable", "commands": ["schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\BthSQM\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\KernelCeipTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\StartupAppTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\AitAgent\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Power Efficiency Diagnostics\\AnalyzeSystem\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyRefresh\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyUpload\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Autochk\\Proxy\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Maintenance\\WinSAT\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\CloudExperienceHost\\CreateObjectTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskFootprint\\Diagnostics\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\PI\\Sqm-Tasks\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\NetTrace\\GatherNetworkInfo\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\HelloFace\\FODCleanupTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClientOnScenarioDownload\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\PcaPatchDbTask\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Device Information\\Device\" /enable ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Device Information\\Device User\" /enable ; exit 0"]},{"label": "disable", "commands": ["schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Consolidator\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\BthSQM\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\BthSQM\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\KernelCeipTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\KernelCeipTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\UsbCeip\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Customer Experience Improvement Program\\Uploader\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\Microsoft Compatibility Appraiser\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\ProgramDataUpdater\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\StartupAppTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\StartupAppTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Application Experience\\AitAgent\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Application Experience\\AitAgent\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticDataCollector\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskDiagnostic\\Microsoft-Windows-DiskDiagnosticResolver\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Power Efficiency Diagnostics\\AnalyzeSystem\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Power Efficiency Diagnostics\\AnalyzeSystem\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyMonitor\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyRefresh\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyRefresh\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyUpload\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Shell\\FamilySafetyUpload\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Autochk\\Proxy\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Autochk\\Proxy\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Maintenance\\WinSAT\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Maintenance\\WinSAT\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Windows Error Reporting\\QueueReporting\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\CloudExperienceHost\\CreateObjectTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\CloudExperienceHost\\CreateObjectTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\DiskFootprint\\Diagnostics\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\DiskFootprint\\Diagnostics\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\PI\\Sqm-Tasks\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\PI\\Sqm-Tasks\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\NetTrace\\GatherNetworkInfo\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\NetTrace\\GatherNetworkInfo\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\HelloFace\\FODCleanupTask\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\HelloFace\\FODCleanupTask\" /disable ; exit 0", "schtasks /end /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient\" ; exit 0", "schtasks /change /tn \"\\Microsoft\\Windows\\Feedback\\Siuf\\DmClient\" /disable ; exit 0"]}],
                     "check": []
                                     },
@@ -3027,7 +3027,7 @@
                     "id": "telemetry"
                 }
             ],
-            "Icon": "îžº"
+            "Icon": ""
         }
     ]
 }
