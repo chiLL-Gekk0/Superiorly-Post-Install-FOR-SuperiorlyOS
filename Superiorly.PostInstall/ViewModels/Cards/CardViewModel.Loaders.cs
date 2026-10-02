@@ -31,18 +31,20 @@ public partial class CardViewModel : ObservableObject {
         try
         {
             if (_npiExe != null && File.Exists(_npiExe)) return _npiExe;
-            var dir = Path.Combine(AppContext.BaseDirectory, "Tools", "npi");
-            Directory.CreateDirectory(dir);
-            var exe = Path.Combine(dir, "nvidiaProfileInspector.exe");
-            if (!File.Exists(exe))
+            // shipped in Tools\, the Tools\npi copy is only left over from older builds
+            foreach (var candidate in new[]
+                     {
+                         Path.Combine(AppContext.BaseDirectory, "Tools", "nvidiaProfileInspector.exe"),
+                         Path.Combine(AppContext.BaseDirectory, "Tools", "npi", "nvidiaProfileInspector.exe"),
+                     })
             {
-                using var s = typeof(CardViewModel).Assembly.GetManifestResourceStream("Superiorly.PostInstall.tools.npi.exe");
-                if (s == null) return null;
-                using var fs = File.Create(exe);
-                s.CopyTo(fs);
+                if (File.Exists(candidate))
+                {
+                    _npiExe = candidate;
+                    return candidate;
+                }
             }
-            _npiExe = exe;
-            return exe;
+            return null;
         }
         catch { return null; }
     }
@@ -128,15 +130,16 @@ public partial class CardViewModel : ObservableObject {
 
     private void LoadAmdTool()
     {
-        var amdDir = Path.Combine(AppContext.BaseDirectory, "AMD Tweaks");
-        if (!Directory.Exists(amdDir)) return;
+        // the loose AMD tools sit in Tools\, only Radeon Software Slimmer needs its own folder
+        var toolsDir = Path.Combine(AppContext.BaseDirectory, "Tools");
+        var amdDir = Path.Combine(toolsDir, "AMD Tweaks");
 
         var exeMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
         {
             ["radeonsoftwareslimmer"] = Path.Combine(amdDir, "RadeonSoftwareSlimmer", "RadeonSoftwareSlimmer.exe"),
-            ["moreclocktool"] = Path.Combine(amdDir, "MoreClockTool.exe"),
-            ["morepowertool"] = Path.Combine(amdDir, "MorePowerTool.exe"),
-            ["radeonmod"] = Path.Combine(amdDir, "RadeonMod.exe"),
+            ["moreclocktool"] = Path.Combine(toolsDir, "MoreClockTool.exe"),
+            ["morepowertool"] = Path.Combine(toolsDir, "MorePowerTool.exe"),
+            ["radeonmod"] = Path.Combine(toolsDir, "RadeonMod.exe"),
         };
 
         if (!exeMap.TryGetValue(_action.Id, out var exePath) || !File.Exists(exePath)) return;

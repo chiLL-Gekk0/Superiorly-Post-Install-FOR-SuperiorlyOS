@@ -11,24 +11,26 @@
     <SolidColorBrush x:Key="B_TextPrimary" Color="#F5F0E8" />
     <SolidColorBrush x:Key="B_TextSecondary" Color="#B5B5BD" />
     <SolidColorBrush x:Key="B_TextOnColor" Color="#FFFFFF"/>
-    <SolidColorBrush x:Key="B_Accent" Color="#C1004E" />
-    <SolidColorBrush x:Key="B_AccentHover" Color="#E1145F" />
-    <SolidColorBrush x:Key="B_AccentSubtle" Color="#2A0E1A" />
+    <SolidColorBrush x:Key="B_Accent" Color="#D91023" />
+    <SolidColorBrush x:Key="B_AccentHover" Color="#E02635" />
+    <SolidColorBrush x:Key="B_AccentSubtle" Color="#260A0A" />
+    <!-- badge text sits on B_AccentSubtle at 10px: needs its own ramp step to clear 4.5:1 -->
+    <SolidColorBrush x:Key="B_AccentText" Color="#E8394A" />
     <SolidColorBrush x:Key="B_Update" Color="#5AA9FF" />
     <SolidColorBrush x:Key="B_UpdateHover" Color="#1E5AA8" />
     <SolidColorBrush x:Key="B_UpdateSoft" Color="#335AA9FF" />
     <SolidColorBrush x:Key="B_UpdateText" Color="#FFFFFF" />
     <SolidColorBrush x:Key="B_TitlebarHover" Color="#1E1E24" />
     <SolidColorBrush x:Key="B_SwitchOff" Color="#3A3A42" />
-    <SolidColorBrush x:Key="B_Success" Color="#C1004E" />
+    <SolidColorBrush x:Key="B_Success" Color="#D91023" />
     <SolidColorBrush x:Key="B_Sidebar" Color="#101014"/>
     <SolidColorBrush x:Key="B_SidebarText" Color="#F2F2F4"/>
     <SolidColorBrush x:Key="B_HomeBand" Color="#101014"/>
     <SolidColorBrush x:Key="B_HomeBandText" Color="#F2F2F4"/>
     <SolidColorBrush x:Key="B_OnAccent" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="B_Overlay" Color="#80000000"/>
-    <SolidColorBrush x:Key="B_ActiveRow" Color="#1AC1004E"/>
-    <SolidColorBrush x:Key="B_SwitchTrack" Color="#33C1004E"/>
+    <SolidColorBrush x:Key="B_ActiveRow" Color="#1AD91023"/>
+    <SolidColorBrush x:Key="B_SwitchTrack" Color="#33D91023"/>
     <SolidColorBrush x:Key="B_SwitchThumb" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="B_LogoTile" Color="#FFFFFF"/>
     <SolidColorBrush x:Key="B_ScoreLow" Color="#F87171"/>

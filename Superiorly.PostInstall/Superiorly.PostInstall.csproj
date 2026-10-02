@@ -56,10 +56,10 @@
     <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v2.nip" LogicalName="KernelOS Performance v2.nip" />
     <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v2.1.nip" LogicalName="KernelOS Performance v2.1.nip" />
     <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v3.nip" LogicalName="KernelOS Performance v3.nip" />
-    <!-- Assets\Bundle is the app root: cards read %SPIBINDIR%\<file>.
-         NIP/ is excluded because those profiles ship as embedded resources instead. -->
+    <!-- Assets\Bundle is flat in the repo and installs into Tools\, the app's tool folder:
+         cards read %SPIBINDIR%\Tools\<file>. NIP/ is excluded, those ship as embedded resources. -->
     <Content Include="Assets\Bundle\**\*" Exclude="Assets\Bundle\NIP\**\*">
-      <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Link>Tools\%(RecursiveDir)%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Assets\Logos\*.png" />

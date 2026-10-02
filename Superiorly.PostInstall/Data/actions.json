@@ -667,18 +667,17 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                             ]
                         }
                     ],
                     "tab": "software",
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\nsudo\\**\\NSudoLG.exe",
-                        "file:%SPIBINDIR%\\Tools\\nsudo\\**\\NSudoLG.exe",
+                        "file:%SPIBINDIR%\\Tools\\NSudo_8.2_All_Components.zip",
                         "file:%SPIBINDIR%\\Tools\\nsudo\\**\\NSudoLG.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -888,17 +887,17 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                             ]
                         }
                     ],
                     "tab": "software",
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\pmt\\**\\Performance Measurement Tool.exe",
+                        "file:%SPIBINDIR%\\Tools\\PerformanceMeasurementTool_Danske101.zip",
                         "file:%SPIBINDIR%\\Tools\\pmt\\**\\Performance Measurement Tool.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1039,16 +1038,16 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\ddu\\**\\Display Driver Uninstaller.exe",
+                        "file:%SPIBINDIR%\\Tools\\DDU_v18.1.5.3_Portable.zip",
                         "file:%SPIBINDIR%\\Tools\\ddu\\**\\Display Driver Uninstaller.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1060,15 +1059,15 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\FilterKeysSetter.exe"
+                        "file:%SPIBINDIR%\\Tools\\FilterKeysSetter.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1141,17 +1140,15 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe",
-                        "file:%SPIBINDIR%\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe",
-                        "file:%SPIBINDIR%\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe"
+                        "file:%SPIBINDIR%\\Tools\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1163,17 +1160,15 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:SPIBINDIR 'MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:SPIBINDIR 'Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\MoreClockTool.exe",
-                        "file:%SPIBINDIR%\\MoreClockTool.exe",
-                        "file:%SPIBINDIR%\\MoreClockTool.exe"
+                        "file:%SPIBINDIR%\\Tools\\MoreClockTool.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:SPIBINDIR 'MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:SPIBINDIR 'Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1185,18 +1180,16 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\MorePowerTool.exe",
-                        "file:%SPIBINDIR%\\MorePowerTool.exe",
-                        "file:%SPIBINDIR%\\MorePowerTool.exe"
+                        "file:%SPIBINDIR%\\Tools\\MorePowerTool.exe"
                     ],
                     "type": "download",
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ]
                 },
                 {
@@ -1207,17 +1200,16 @@
                         {
                             "label": "Run",
                             "commands": [
-"powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+"powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\RadeonMod.exe",
-                        "file:%SPIBINDIR%\\RadeonMod.exe"
+                        "file:%SPIBINDIR%\\Tools\\RadeonMod.exe"
                     ],
                     "type": "download",
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ]
                 },
                 {
@@ -1250,19 +1242,15 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe",
-                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe",
-                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe",
-                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe",
-                        "file:%SPIBINDIR%\\nvidiaProfileInspector.exe"
+                        "file:%SPIBINDIR%\\Tools\\nvidiaProfileInspector.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
