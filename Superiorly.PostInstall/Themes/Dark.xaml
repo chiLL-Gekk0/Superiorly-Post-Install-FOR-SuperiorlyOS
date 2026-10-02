@@ -14,8 +14,6 @@
     <SolidColorBrush x:Key="B_Accent" Color="#D91023" />
     <SolidColorBrush x:Key="B_AccentHover" Color="#E02635" />
     <SolidColorBrush x:Key="B_AccentSubtle" Color="#260A0A" />
-    <!-- badge text sits on B_AccentSubtle at 10px: needs its own ramp step to clear 4.5:1 -->
-    <SolidColorBrush x:Key="B_AccentText" Color="#E8394A" />
     <SolidColorBrush x:Key="B_Update" Color="#5AA9FF" />
     <SolidColorBrush x:Key="B_UpdateHover" Color="#1E5AA8" />
     <SolidColorBrush x:Key="B_UpdateSoft" Color="#335AA9FF" />

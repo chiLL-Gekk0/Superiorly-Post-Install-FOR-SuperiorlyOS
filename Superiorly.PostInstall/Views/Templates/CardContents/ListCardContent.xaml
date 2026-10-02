@@ -71,13 +71,12 @@
                                                         <ColumnDefinition Width="12"/>
                                                         <ColumnDefinition Width="*"/>
                                                     </Grid.ColumnDefinitions>
-                                                    <Border Grid.Column="0" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}"
+                                                    <Border Grid.Column="0" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" VerticalAlignment="Top"
                                                             BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="8" MaxHeight="300">
                                                         <StackPanel>
                                                             <TextBlock Text="Microsoft" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Margin="4,0,0,6"/>
                                                             <ListBox ItemsSource="{Binding OfficialPlansView}" Background="Transparent" BorderThickness="0"
-                                                                     VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling"
-                                                                     VirtualizingPanel.ScrollUnit="Pixel" VirtualizingPanel.CacheLength="1,1"
+                                                                     VirtualizingPanel.IsVirtualizing="False"
                                                                      ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                                                                 <ListBox.ItemTemplate>
                                                                     <DataTemplate>
@@ -94,7 +93,7 @@
                                                                                     <TextBlock FontSize="12" Foreground="{DynamicResource B_TextPrimary}" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap">
                                                                                         <TextBlock.Text><PriorityBinding><Binding Path="DisplayName"/><Binding Path="Name"/></PriorityBinding></TextBlock.Text>
                                                                                     </TextBlock>
-                                                                                    <Border Grid.Column="1" Margin="6,0,0,0" VerticalAlignment="Center" Background="{DynamicResource B_AccentSubtle}" CornerRadius="{DynamicResource R_S}" Padding="6,1" Visibility="{Binding IsActive, Converter={StaticResource BoolToVis}}"><TextBlock FontSize="10" FontWeight="SemiBold" Foreground="{DynamicResource B_AccentText}" Text="{Binding DataContext.CurrentBadge, RelativeSource={RelativeSource AncestorType=Window}}"/></Border>
+                                                                                    
                                                                                 </Grid>
                                                                                 <TextBlock FontSize="10" Foreground="{DynamicResource B_TextSecondary}" Opacity="0.7" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" Text="{Binding Detail}"/>
                                                                             </StackPanel>
@@ -107,13 +106,12 @@
                                                             </ListBox>
                                                         </StackPanel>
                                                     </Border>
-                                                    <Border Grid.Column="2" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}"
+                                                    <Border Grid.Column="2" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" VerticalAlignment="Top"
                                                             BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="8" MaxHeight="300">
                                                         <StackPanel>
                                                             <TextBlock Text="Custom" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Margin="4,0,0,6"/>
                                                             <ListBox ItemsSource="{Binding CustomPlansView}" Background="Transparent" BorderThickness="0"
-                                                                     VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling"
-                                                                     VirtualizingPanel.ScrollUnit="Pixel" VirtualizingPanel.CacheLength="1,1"
+                                                                     VirtualizingPanel.IsVirtualizing="False"
                                                                      ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                                                                 <ListBox.ItemTemplate>
                                                                     <DataTemplate>
@@ -130,7 +128,7 @@
                                                                                     <TextBlock FontSize="12" Foreground="{DynamicResource B_TextPrimary}" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap">
                                                                                         <TextBlock.Text><PriorityBinding><Binding Path="DisplayName"/><Binding Path="Name"/></PriorityBinding></TextBlock.Text>
                                                                                     </TextBlock>
-                                                                                    <Border Grid.Column="1" Margin="6,0,0,0" VerticalAlignment="Center" Background="{DynamicResource B_AccentSubtle}" CornerRadius="{DynamicResource R_S}" Padding="6,1" Visibility="{Binding IsActive, Converter={StaticResource BoolToVis}}"><TextBlock FontSize="10" FontWeight="SemiBold" Foreground="{DynamicResource B_AccentText}" Text="{Binding DataContext.CurrentBadge, RelativeSource={RelativeSource AncestorType=Window}}"/></Border>
+                                                                                    
                                                                                 </Grid>
                                                                                 <TextBlock FontSize="10" Foreground="{DynamicResource B_TextSecondary}" Opacity="0.7" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" Text="{Binding Detail}"/>
                                                                             </StackPanel>

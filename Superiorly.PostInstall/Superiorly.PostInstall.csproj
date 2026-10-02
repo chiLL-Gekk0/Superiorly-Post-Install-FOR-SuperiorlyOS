@@ -56,12 +56,15 @@
     <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v2.nip" LogicalName="KernelOS Performance v2.nip" />
     <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v2.1.nip" LogicalName="KernelOS Performance v2.1.nip" />
     <EmbeddedResource Include="Assets\Bundle\NIP\KernelOS Performance v3.nip" LogicalName="KernelOS Performance v3.nip" />
-    <!-- Assets\Bundle is flat in the repo and installs into Tools\, the app's tool folder:
-         cards read %SPIBINDIR%\Tools\<file>. NIP/ is excluded, those ship as embedded resources. -->
-    <Content Include="Assets\Bundle\**\*" Exclude="Assets\Bundle\NIP\**\*">
-      <Link>Tools\%(RecursiveDir)%(Filename)%(Extension)</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <!-- Assets\Bundle travels inside the DLL as resources; nothing loose is installed.
+         tools/<file> for the flat tools, tools/AMD Tweaks/<path> so the slimmer's duplicate
+         satellite names keep their folders. NIP/ ships separately with a bare LogicalName. -->
+    <EmbeddedResource Include="Assets\Bundle\**\*" Exclude="Assets\Bundle\NIP\**\*;Assets\Bundle\AMD Tweaks\**\*">
+      <LogicalName>tools/%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Bundle\AMD Tweaks\**\*">
+      <LogicalName>tools/AMD Tweaks/%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
     <Resource Include="Assets\Logos\*.png" />
     <Resource Include="Assets\guest.png" />
     <Resource Include="Assets\Fonts\ClimateCrisis-1979.otf" />

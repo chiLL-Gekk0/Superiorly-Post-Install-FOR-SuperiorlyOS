@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
 using Superiorly.PostInstall.Services;
+using Superiorly.PostInstall.Services.Execution;
 using Superiorly.PostInstall.ViewModels;
 using Superiorly.PostInstall.Views;
 
@@ -42,8 +43,10 @@ public partial class App : Application
             return;
         }
         base.OnStartup(e);
-        // install dir for file: probes (%SPIBINDIR%), so checks see bundled tools
+        // install dir for file: probes (%SPIBINDIR%)
         try { System.Environment.SetEnvironmentVariable("SPIBINDIR", AppContext.BaseDirectory); } catch { }
+        // bundled tools live in the DLL; write them to per-user storage before any card checks
+        try { ToolAssets.Materialize(); } catch { }
         try { StoreSearchService.Warmup(); } catch { }
         try { CardViewModel.WarmupPowerPlans(); } catch { }
         try

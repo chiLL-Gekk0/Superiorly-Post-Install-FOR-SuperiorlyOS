@@ -32,7 +32,7 @@
                                                 <StackPanel Orientation="Horizontal">
                                                     <TextBlock Text="{Binding Hex}" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}"/>
                                                     <TextBlock Text="{Binding Dec}" FontSize="11" Margin="8,0,0,0" Foreground="{DynamicResource B_TextSecondary}" VerticalAlignment="Center"/>
-                                                    <Border Margin="6,1,0,0" VerticalAlignment="Center" Background="{DynamicResource B_AccentSubtle}" CornerRadius="{DynamicResource R_S}" Padding="6,1" Visibility="{Binding IsCurrent, Converter={StaticResource BoolToVis}}"><TextBlock FontSize="10" FontWeight="SemiBold" Foreground="{DynamicResource B_AccentText}" Text="{Binding DataContext.CurrentBadge, RelativeSource={RelativeSource AncestorType=Window}}"/></Border>
+                                                    
                                                 </StackPanel>
                                                 <TextBlock Text="{Binding Desc}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" Margin="0,1,0,0"/>
                                             </StackPanel>

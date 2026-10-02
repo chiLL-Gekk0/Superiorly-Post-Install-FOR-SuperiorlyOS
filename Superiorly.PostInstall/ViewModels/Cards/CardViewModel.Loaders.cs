@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Superiorly.PostInstall.Models;
 using Superiorly.PostInstall.Services;
+using Superiorly.PostInstall.Services.Execution;
 
 namespace Superiorly.PostInstall.ViewModels;
 
@@ -31,18 +32,11 @@ public partial class CardViewModel : ObservableObject {
         try
         {
             if (_npiExe != null && File.Exists(_npiExe)) return _npiExe;
-            // shipped in Tools\, the Tools\npi copy is only left over from older builds
-            foreach (var candidate in new[]
-                     {
-                         Path.Combine(AppContext.BaseDirectory, "Tools", "nvidiaProfileInspector.exe"),
-                         Path.Combine(AppContext.BaseDirectory, "Tools", "npi", "nvidiaProfileInspector.exe"),
-                     })
+            var bundled = ToolAssets.Resolve("nvidiaProfileInspector.exe");
+            if (bundled != null)
             {
-                if (File.Exists(candidate))
-                {
-                    _npiExe = candidate;
-                    return candidate;
-                }
+                _npiExe = bundled;
+                return bundled;
             }
             return null;
         }
@@ -54,32 +48,7 @@ public partial class CardViewModel : ObservableObject {
         if (System.Threading.Interlocked.CompareExchange(ref _nipFetchState, 1, 0) != 0) return;
         try
         {
-            var nipDir = Path.Combine(AppContext.BaseDirectory, "Nvidia Profiles");
-            try { Directory.CreateDirectory(nipDir); } catch { return; }
-            foreach (var n in MirrorNips)
-            {
-                var dest = Path.Combine(nipDir, n.Name);
-                if (!File.Exists(dest))
-                {
-                    try
-                    {
-                        using var s = typeof(CardViewModel).Assembly.GetManifestResourceStream(n.Name);
-                        if (s == null) continue;
-                        using var fs = File.Create(dest);
-                        s.CopyTo(fs);
-                    }
-                    catch { continue; }
-                }
-                if (string.IsNullOrEmpty(n.Sha)) continue;
-                try
-                {
-                    using var sha = System.Security.Cryptography.SHA256.Create();
-                    using var fh = File.OpenRead(dest);
-                    if (!Convert.ToHexString(sha.ComputeHash(fh)).Equals(n.Sha, StringComparison.OrdinalIgnoreCase))
-                    { try { File.Delete(dest); } catch { } }
-                }
-                catch { }
-            }
+            // profiles live in the DLL; nothing is written until one is applied
             var d = System.Windows.Application.Current?.Dispatcher;
             if (d != null) await d.InvokeAsync(LoadNipProfiles);
         }
@@ -87,13 +56,14 @@ public partial class CardViewModel : ObservableObject {
     }
     private void LoadNipProfiles()
     {
-        var nipDir = Path.Combine(AppContext.BaseDirectory, "Nvidia Profiles");
         var keep = SelectedOption?.Label;
         Options.Clear();
-        string[] nipFiles = System.Array.Empty<string>();
-        try { if (Directory.Exists(nipDir)) nipFiles = Directory.GetFiles(nipDir, "*.nip"); } catch { }
-        System.Array.Sort(nipFiles, System.StringComparer.OrdinalIgnoreCase);
-        if (nipFiles.Length == 0)
+
+        // profiles stay inside the DLL; nothing is written until one is applied
+        var profiles = MirrorNips
+            .OrderBy(n => n.Name, System.StringComparer.OrdinalIgnoreCase)
+            .ToList();
+        if (profiles.Count == 0)
         {
             Options.Add(new OptionViewModel(this, new ActionOption { Label = TranslationService.GetUi("no_profiles_found", Lang), Commands = new List<string>() }));
             SelectedOption = null;
@@ -103,15 +73,17 @@ public partial class CardViewModel : ObservableObject {
             ApplyCommand.NotifyCanExecuteChanged();
             return;
         }
-        foreach (var file in nipFiles)
+        foreach (var profile in profiles)
         {
-            var name = Path.GetFileNameWithoutExtension(file);
+            var name = Path.GetFileNameWithoutExtension(profile.Name);
             var npi = EnsureNpiExe();
+            var tmp = npi != null ? ToolAssets.MaterializeTemp(profile.Name) : null;
             string cmd;
-            if (npi != null)
+            if (npi != null && tmp != null)
             {
+                // the profile is written to temp only so the inspector can read it, then removed
                 cmd = $"powershell -NoProfile -ExecutionPolicy Bypass -Command " +
-                    $"& '{npi}' -silentImport '{file}'";
+                      $"try {{ & '{npi}' -silentImport '{tmp}' }} finally {{ Remove-Item '{tmp}' -Force -EA 0 }}";
             }
             else
             {
@@ -130,8 +102,8 @@ public partial class CardViewModel : ObservableObject {
 
     private void LoadAmdTool()
     {
-        // the loose AMD tools sit in Tools\, only Radeon Software Slimmer needs its own folder
-        var toolsDir = Path.Combine(AppContext.BaseDirectory, "Tools");
+        // the loose AMD tools sit beside each other, only Radeon Software Slimmer needs its folder
+        var toolsDir = ToolAssets.Root;
         var amdDir = Path.Combine(toolsDir, "AMD Tweaks");
 
         var exeMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)

@@ -98,12 +98,13 @@
             </Setter>
         </Style>
 
-        <Style x:Key="OptionButton" TargetType="Button">
-            <Setter Property="MinWidth" Value="72"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="Margin" Value="0,0,8,0"/>
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="{DynamicResource B_CardBorder}"/>
+<Style x:Key="OptionButton" TargetType="Button">
+        <Setter Property="MinWidth" Value="72"/>
+        <!-- 40px is the Windows touch-target minimum; MinHeight lets it grow with the OS font scale -->
+        <Setter Property="MinHeight" Value="40"/>
+        <Setter Property="Margin" Value="0,0,8,0"/>
+        <Setter Property="Background" Value="{DynamicResource B_Card}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource B_CardBorder}"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="Foreground" Value="{DynamicResource B_TextPrimary}"/>
             <Setter Property="Cursor" Value="Hand"/>

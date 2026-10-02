@@ -667,17 +667,17 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object { $_.FullName -like '*x64*' }|Select -First 1;if(-not $f){$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if(-not $f){$z=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Add-Type -AssemblyName System.IO.Compression.FileSystem -EA 0;$a=[IO.Compression.ZipFile]::OpenRead($z);try{foreach($e in $a.Entries){if($e.Length -eq 0){continue};if($e.FullName -like 'NSudo Source Code/*' -or $e.FullName -like 'Website/*' -or $e.FullName -like '*.pdf' -or $e.FullName -like '*.pdb' -or $e.FullName -like '*People.txt'){continue};$t=Join-Path $d $e.FullName;$p=Split-Path $t -Parent;if(-not(Test-Path $p)){New-Item -ItemType Directory -Force -Path $p|Out-Null};[IO.Compression.ZipFileExtensions]::ExtractToFile($e,$t,$true)}}finally{$a.Dispose()};$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object { $_.FullName -like '*x64*' }|Select -First 1;if(-not $f){$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1}};if($f){Start-Process $f.FullName;exit 0};exit 1"
                             ]
                         }
                     ],
                     "tab": "software",
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\NSudo_8.2_All_Components.zip",
-                        "file:%SPIBINDIR%\\Tools\\nsudo\\**\\NSudoLG.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\NSudo_8.2_All_Components.zip",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\nsudo\\**\\NSudoLG.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\nsudo';$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object { $_.FullName -like '*x64*' }|Select -First 1;if(-not $f){$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1};if(-not $f){$z=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\NSudo_8.2_All_Components.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Add-Type -AssemblyName System.IO.Compression.FileSystem -EA 0;$a=[IO.Compression.ZipFile]::OpenRead($z);try{foreach($e in $a.Entries){if($e.Length -eq 0){continue};if($e.FullName -like 'NSudo Source Code/*' -or $e.FullName -like 'Website/*' -or $e.FullName -like '*.pdf' -or $e.FullName -like '*.pdb' -or $e.FullName -like '*People.txt'){continue};$t=Join-Path $d $e.FullName;$p=Split-Path $t -Parent;if(-not(Test-Path $p)){New-Item -ItemType Directory -Force -Path $p|Out-Null};[IO.Compression.ZipFileExtensions]::ExtractToFile($e,$t,$true)}}finally{$a.Dispose()};$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Where-Object { $_.FullName -like '*x64*' }|Select -First 1;if(-not $f){$f=Get-ChildItem $d -Recurse -Filter 'NSudoLG.exe' -EA 0|Select -First 1}};if($f){Start-Process $f.FullName;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -688,17 +688,17 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\driverview'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'DriverView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DriverView.exe not found locally. Place it in the app Tools folder, then retry.','DriverView',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\driverview'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'DriverView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DriverView.exe not found locally. Place it in the app Tools folder, then retry.','DriverView',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
                             ]
                         }
                     ],
                     "tab": "software",
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\driverview\\**\\DriverView.exe",
-                        "file:%SPIBINDIR%\\Tools\\driverview\\**\\DriverView.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\driverview\\**\\DriverView.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\driverview\\**\\DriverView.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\driverview')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\driverview')\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\driverview')\",\"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\driverview')\" -Recurse -Filter 'DriverView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -709,19 +709,19 @@
                         {
                             "label": "Open CRU",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\cru'; $f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('CRU.exe not found locally. Place it in WinGet Packages, ProgramFiles or TEMP Superiorly Tools cru, then retry.','CRU'',0,64); exit 1; exit 0"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\cru'; $f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('CRU.exe not found locally. Place it in WinGet Packages, ProgramFiles or TEMP Superiorly Tools cru, then retry.','CRU'',0,64); exit 1; exit 0"
                             ]
                         },
                         {
                             "label": "Restart Display Driver",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'restart64.exe' -EA 0|Select -First 1;  if(-not $r){$r=Get-ChildItem $d -Recurse -Filter 'restart.exe' -EA 0|Select -First 1}; if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU restart tool not found (restart64.exe / restart.exe).'; exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'restart64.exe' -EA 0|Select -First 1;  if(-not $r){$r=Get-ChildItem $d -Recurse -Filter 'restart.exe' -EA 0|Select -First 1}; if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU restart tool not found (restart64.exe / restart.exe).'; exit 1}"
                             ]
                         },
                         {
                             "label": "Reset All",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'reset-all.exe' -EA 0|Select -First 1;  if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU reset tool not found (reset-all.exe).'; exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\cru'; $r=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",$d -Recurse -Filter 'reset-all.exe' -EA 0|Select -First 1;  if($r){Start-Process $r.FullName -Wait; exit 0}else{Write-Host 'CRU reset tool not found (reset-all.exe).'; exit 1}"
                             ]
                         }
                     ],
@@ -730,11 +730,11 @@
                         "powershell -NoProfile -Command \"if (Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Custom Resolution*' -or $_.DisplayName -like '*CRU*' }) { exit 0 } else { exit 1 }\"",
                         "file:%ProgramFiles%\\**\\CRU.exe",
                         "file:%LOCALAPPDATA%\\Microsoft\\WinGet\\Packages\\ToastyX.CustomResolutionUtility*\\**\\CRU.exe",
-                        "file:%SPIBINDIR%\\Tools\\cru\\**\\CRU.exe",
-                        "file:%SPIBINDIR%\\Tools\\cru\\**\\CRU.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\cru\\**\\CRU.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\cru\\**\\CRU.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $app=Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Custom Resolution*' } | Select -First 1; $exe=if($app -and $app.DisplayIcon){($app.DisplayIcon -split ',')[0]}; if($exe -and (Test-Path $exe)){Start-Process $exe; exit 0}else{$f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\cru')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\cru')\" -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
+                        "powershell -NoProfile -Command $app=Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -EA 0 | Where-Object { $_.DisplayName -like '*Custom Resolution*' } | Select -First 1; $exe=if($app -and $app.DisplayIcon){($app.DisplayIcon -split ',')[0]}; if($exe -and (Test-Path $exe)){Start-Process $exe; exit 0}else{$f=Get-ChildItem \"$env:LOCALAPPDATA\\Microsoft\\WinGet\\Packages\",\"$env:ProgramFiles\",\"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\cru')\",\"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\cru')\" -Recurse -Filter 'CRU.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}}"
                     ],
                     "type": "download"
                 },
@@ -751,18 +751,18 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\wumgr'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'WuMgr.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('WuMgr.exe not found locally. Place it in the app Tools folder, then retry.','WuMgr',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\wumgr'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'WuMgr.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('WuMgr.exe not found locally. Place it in the app Tools folder, then retry.','WuMgr',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
                             ]
                         }
                     ],
                     "tab": "software",
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\wumgr\\**\\WuMgr.exe",
-                        "file:%SPIBINDIR%\\Tools\\wumgr\\**\\WuMgr.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\wumgr\\**\\WuMgr.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\wumgr\\**\\WuMgr.exe",
                         "file:%ProgramData%\\chocolatey\\lib\\wumgr\\**\\WuMgr.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\wumgr')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\wumgr')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\wumgr')\",\"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\wumgr')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'WuMgr.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -773,18 +773,18 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\geek'; $z=$d+'\\geek.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'geek.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('geek.exe not found locally. Place it in the app Tools folder, then retry.','GeekUninstaller',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\geek'; $z=$d+'\\geek.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'geek.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('geek.exe not found locally. Place it in the app Tools folder, then retry.','GeekUninstaller',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{ exit 1 }"
                             ]
                         }
                     ],
                     "tab": "software",
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\geek\\**\\geek.exe",
-                        "file:%SPIBINDIR%\\Tools\\geek\\**\\geek.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\geek\\**\\geek.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\geek\\**\\geek.exe",
                         "file:%ProgramData%\\chocolatey\\lib\\geekuninstaller\\**\\geek.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\geek')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\geek')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\geek')\",\"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\geek')\",\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'geek.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -801,17 +801,17 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\mt'; $z=$d+'\\Release_v1.4.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MouseTester.exe not found locally. Place it in the app Tools folder, then retry.','MouseTester',0,64); exit 1 }; $f=Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\mt'; $z=$d+'\\Release_v1.4.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MouseTester.exe not found locally. Place it in the app Tools folder, then retry.','MouseTester',0,64); exit 1 }; $f=Get-ChildItem $d -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1"
                             ]
                         }
                     ],
                     "tab": "software",
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\mt\\**\\MouseTester.exe",
-                        "file:%SPIBINDIR%\\Tools\\mt\\**\\MouseTester.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\mt\\**\\MouseTester.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\mt\\**\\MouseTester.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\mt')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\mt')\" -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\mt')\",\"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\mt')\" -Recurse -Filter 'MouseTester.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -822,13 +822,13 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "$d=Join-Path ($env:SPIBINDIR) 'Tools\\ms'; $exe=$d+'\\MeasureSleep.exe'; if(-not(Test-Path $exe)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MeasureSleep.exe not found locally. Place it in the app Tools folder, then retry.','MeasureSleep',0,64); exit 1 }; Start-Process $exe"
+                                "$d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\ms'; $exe=$d+'\\MeasureSleep.exe'; if(-not(Test-Path $exe)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('MeasureSleep.exe not found locally. Place it in the app Tools folder, then retry.','MeasureSleep',0,64); exit 1 }; Start-Process $exe"
                             ]
                         }
                     ],
                     "tab": "software",
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\ms\\MeasureSleep.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\ms\\MeasureSleep.exe"
                     ],
                     "launch": [
                         "$exe=$env:TEMP+'\\ms\\MeasureSleep.exe'; if(Test-Path $exe){Start-Process $exe}"
@@ -842,7 +842,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "$d=Join-Path ($env:SPIBINDIR) 'Tools\\ocat'; $exe=$d+'\\OCAT_v1.6.3.exe'; if(-not(Test-Path $exe)){ $f=Get-ChildItem \"${env:ProgramFiles(x86)}\\OCAT\",\"${env:ProgramFiles}\\OCAT\" -Recurse -Filter 'OCAT.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('OCAT.exe not found locally. Place it in the app Tools folder, then retry.','OCAT',0,64); exit 1 }; Start-Process $exe; exit 0"
+                                "$d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\ocat'; $exe=$d+'\\OCAT_v1.6.3.exe'; if(-not(Test-Path $exe)){ $f=Get-ChildItem \"${env:ProgramFiles(x86)}\\OCAT\",\"${env:ProgramFiles}\\OCAT\" -Recurse -Filter 'OCAT.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('OCAT.exe not found locally. Place it in the app Tools folder, then retry.','OCAT',0,64); exit 1 }; Start-Process $exe; exit 0"
                             ]
                         }
                     ],
@@ -851,7 +851,7 @@
                         "powershell -NoProfile -Command \"if (Get-ItemProperty 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKLM:\\SOFTWARE\\WOW6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*','HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*' -ErrorAction SilentlyContinue | Where-Object { $_.DisplayName -like '*Open Capture and Analytics Tool*' }) { exit 0 } else { exit 1 }\"",
                         "file:%ProgramFiles(x86)%\\OCAT\\**\\OCAT.exe",
                         "file:%ProgramFiles%\\OCAT\\**\\OCAT.exe",
-                        "file:%SPIBINDIR%\\Tools\\ocat\\OCAT_v1.6.3.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\ocat\\OCAT_v1.6.3.exe"
                     ],
                     "launch": [
                         "powershell -NoProfile -Command $f=Get-ChildItem \"${env:ProgramFiles(x86)}\\OCAT\",\"$env:ProgramFiles\\OCAT\" -Recurse -Filter 'OCAT.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}; $exe=$env:TEMP+'\\ocat\\OCAT_v1.6.3.exe'; if(Test-Path $exe){Start-Process $exe}"
@@ -887,17 +887,17 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                             ]
                         }
                     ],
                     "tab": "software",
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\PerformanceMeasurementTool_Danske101.zip",
-                        "file:%SPIBINDIR%\\Tools\\pmt\\**\\Performance Measurement Tool.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\PerformanceMeasurementTool_Danske101.zip",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\pmt\\**\\Performance Measurement Tool.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\pmt';$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\PerformanceMeasurementTool_Danske101.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Performance Measurement Tool.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -953,16 +953,16 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\dc'; $z=$d+'\\DeviceCleanup_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'DeviceCleanup.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DeviceCleanup.exe not found locally. Place it in the app Tools folder, then retry.','DeviceCleanup'',0,64); exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\dc'; $z=$d+'\\DeviceCleanup_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'DeviceCleanup.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('DeviceCleanup.exe not found locally. Place it in the app Tools folder, then retry.','DeviceCleanup'',0,64); exit 1 }"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\dc\\**\\DeviceCleanup.exe",
-                        "file:%SPIBINDIR%\\Tools\\dc\\**\\DeviceCleanup.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\dc\\**\\DeviceCleanup.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\dc\\**\\DeviceCleanup.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\dc')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\dc')\" -Recurse -Filter 'DeviceCleanup.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\dc')\",\"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\dc')\" -Recurse -Filter 'DeviceCleanup.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -974,13 +974,13 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\gip'; $e=$d+'\\GoInterruptPolicy.exe'; if(-not(Test-Path $e)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('GoInterruptPolicy.exe not found locally. Place it in the app Tools folder, then retry.','GoInterruptPolicy'',0,64); exit 1 }; if(Test-Path $e){Start-Process $e; exit 0}else{exit 1}"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\gip'; $e=$d+'\\GoInterruptPolicy.exe'; if(-not(Test-Path $e)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('GoInterruptPolicy.exe not found locally. Place it in the app Tools folder, then retry.','GoInterruptPolicy'',0,64); exit 1 }; if(Test-Path $e){Start-Process $e; exit 0}else{exit 1}"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\gip\\GoInterruptPolicy.exe",
-                        "file:%SPIBINDIR%\\Tools\\gip\\GoInterruptPolicy.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\gip\\GoInterruptPolicy.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\gip\\GoInterruptPolicy.exe",
                         "file:%ProgramData%\\chocolatey\\lib\\gointerruptpolicy\\**\\GoInterruptPolicy.exe"
                     ],
                     "launch": [
@@ -996,16 +996,16 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\serviwin'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'ServiWin.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('ServiWin.exe not found locally. Place it in the app Tools folder, then retry.','ServiWin'',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\serviwin'; $z=$d+'\\dl.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem $d -Recurse -Filter 'ServiWin.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('ServiWin.exe not found locally. Place it in the app Tools folder, then retry.','ServiWin'',0,64); exit 1 }; $f=Get-ChildItem $d,\"$env:ProgramData\\chocolatey\\lib\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1 }"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\serviwin\\**\\ServiWin.exe",
-                        "file:%SPIBINDIR%\\Tools\\serviwin\\**\\ServiWin.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\serviwin\\**\\ServiWin.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\serviwin\\**\\ServiWin.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\serviwin')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\serviwin')\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\serviwin')\",\"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\serviwin')\" -Recurse -Filter 'ServiWin.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -1017,16 +1017,16 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path ($env:SPIBINDIR) 'Tools\\utv'; $z=$d+'\\UsbTreeView_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'UsbTreeView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('UsbTreeView.exe not found locally. Place it in the app Tools folder, then retry.','UsbTreeView'',0,64); exit 1 }"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\utv'; $z=$d+'\\UsbTreeView_x64.zip'; New-Item -ItemType Directory -Force -Path $d|Out-Null; [Net.ServicePointManager]::SecurityProtocol=[Net.SecurityProtocolType]::Tls12; if(-not(Get-ChildItem  -Recurse -Filter 'UsbTreeView.exe' -EA 0)){ Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('UsbTreeView.exe not found locally. Place it in the app Tools folder, then retry.','UsbTreeView'',0,64); exit 1 }"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\utv\\**\\UsbTreeView.exe",
-                        "file:%SPIBINDIR%\\Tools\\utv\\**\\UsbTreeView.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\utv\\**\\UsbTreeView.exe",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\utv\\**\\UsbTreeView.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path ($env:SPIBINDIR) 'Tools\\utv')\",\"$(Join-Path ($env:SPIBINDIR) 'Tools\\utv')\" -Recurse -Filter 'UsbTreeView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
+                        "powershell -NoProfile -Command $f=Get-ChildItem \"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\utv')\",\"$(Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\utv')\" -Recurse -Filter 'UsbTreeView.exe' -EA 0|Select -First 1; if($f){Start-Process $f.FullName; exit 0}else{exit 1}"
                     ],
                     "type": "download"
                 },
@@ -1038,16 +1038,16 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\DDU_v18.1.5.3_Portable.zip",
-                        "file:%SPIBINDIR%\\Tools\\ddu\\**\\Display Driver Uninstaller.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\DDU_v18.1.5.3_Portable.zip",
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\ddu\\**\\Display Driver Uninstaller.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:SPIBINDIR 'Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:SPIBINDIR 'Tools\\DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $d=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\ddu';$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1;if(-not $f){$z=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\DDU_v18.1.5.3_Portable.zip';if(-not(Test-Path $z)){exit 1};New-Item -ItemType Directory -Force -Path $d|Out-Null;Expand-Archive -Path $z -DestinationPath $d -Force;$f=Get-ChildItem $d -Recurse -Filter 'Display Driver Uninstaller.exe' -EA 0|Select -First 1};if($f){Start-Process $f.FullName;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1059,15 +1059,15 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\FilterKeysSetter.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\FilterKeysSetter.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\FilterKeysSetter.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1140,15 +1140,15 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\AMD Tweaks\\RadeonSoftwareSlimmer\\RadeonSoftwareSlimmer.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1160,15 +1160,15 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:SPIBINDIR 'Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\MoreClockTool.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\MoreClockTool.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:SPIBINDIR 'Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1180,16 +1180,16 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\MorePowerTool.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\MorePowerTool.exe"
                     ],
                     "type": "download",
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ]
                 },
                 {
@@ -1200,16 +1200,16 @@
                         {
                             "label": "Run",
                             "commands": [
-"powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+"powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\RadeonMod.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\RadeonMod.exe"
                     ],
                     "type": "download",
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\RadeonMod.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ]
                 },
                 {
@@ -1242,15 +1242,15 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
                     "check": [
-                        "file:%SPIBINDIR%\\Tools\\nvidiaProfileInspector.exe"
+                        "file:%LOCALAPPDATA%\\Superiorly\\Tools\\nvidiaProfileInspector.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:SPIBINDIR 'Tools\\nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\nvidiaProfileInspector.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
