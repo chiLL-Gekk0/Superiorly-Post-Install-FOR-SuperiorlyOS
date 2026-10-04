@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_tr = new()
     {
- ["mainstream"]="Popüler", ["privacy"]="Gizlilik", ["forks"]="Çatal ve Özel", ["software"]="Yazılım", ["store-downloader"]="Microsoft Store İndiricisi", ["utilities"]="Yardımcı Programlar", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Kayıt Defteri İnce Ayarları", ["win32"]="Win32PrioritySeparation", ["powerplans"]="Güç Planları", ["connectivity"]="Bağlantı", ["devices"]="Cihazlar", ["security"]="Güvenlik", ["gaming"]="Oyun", ["ai"]="Yapay Zeka", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Popüler", ["privacy"]="Gizlilik", ["forks"]="Çatal ve Özel", ["software"]="Yazılım", ["store-downloader"]="Microsoft Store İndiricisi", ["utilities"]="Yardımcı Programlar", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Kayıt Defteri İnce Ayarları", ["win32"]="Win32Priority", ["powerplans"]="Güç Planları", ["connectivity"]="Bağlantı", ["devices"]="Cihazlar", ["security"]="Güvenlik", ["gaming"]="Oyun", ["ai"]="Yapay Zeka", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> Notifications_tr = new()
     {
@@ -60,7 +60,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_tr = new()
     {
- ["browsers|gaming"]="Oyun Tarayıcısı", ["tweaking|gaming"]="Oyun Hizmetleri" 
+ ["browsers|gaming"]="Oyun Tarayıcısı", ["tweaking|gaming"]="Oyun Hizmetleri" , ["troubleshooting|telemetry"]="Telemetri Düzeltmeleri"
     };
     private static readonly Dictionary<string, string> UiExtra_tr = new()
     {

@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_de = new()
     {
- ["mainstream"]="Mainstream", ["privacy"]="Datenschutz", ["forks"]="Forks & Angepasst", ["software"]="Software", ["store-downloader"]="Microsoft Store-Downloader", ["utilities"]="Dienstprogramme", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry-Optimierungen", ["win32"]="Win32PrioritySeparation", ["powerplans"]="Energiepläne", ["connectivity"]="Netzwerkverbindung", ["devices"]="Geräte", ["security"]="Sicherheit", ["gaming"]="Gaming", ["ai"]="KI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Mainstream", ["privacy"]="Datenschutz", ["forks"]="Forks & Angepasst", ["software"]="Software", ["store-downloader"]="Microsoft Store-Downloader", ["utilities"]="Dienstprogramme", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry-Optimierungen", ["win32"]="Win32Priority", ["powerplans"]="Energiepläne", ["connectivity"]="Netzwerkverbindung", ["devices"]="Geräte", ["security"]="Sicherheit", ["gaming"]="Gaming", ["ai"]="KI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> Notifications_de = new()
     {
@@ -72,5 +72,21 @@ public static partial class TranslationService
             ["powerplan_custom"]="Benutzerdefiniert", ["powerplan_restore"]="Offizielle wiederherstellen",
             ["update_available"]="Update {0} verfügbar", ["new_update"]="Neues Update: {0}", ["up_to_date"]="Auf dem neuesten Stand", ["update_check_failed"]="Updateprüfung fehlgeschlagen",
         
+    };
+    private static readonly Dictionary<string, string> TabDescs_de = new()
+    {
+ ["mainstream"]="Alltags-Browser.", ["privacy"]="Browser für Privatsphäre und Anonymität.", ["forks"]="Community-Builds auf Basis von Chromium und Firefox.", ["utilities"]="Werkzeuge für System- und Hardwarediagnose.", ["amd"]="AMD-GPU-Werkzeuge für Treiber, Takt, Spannung und Registry.", ["nvidia"]="NVIDIA-Werkzeuge für saubere Installationen, Profile und P-States.", ["connectivity"]="Wi-Fi-, Bluetooth- und Hotspot-Hop-Limit-Einstellungen.", ["devices"]="Drucker-, Task-Manager- und Texteingabe-Korrekturen.", ["security"]="Kernisolierung, Firewall, UAC, Treiber-Blockliste und Speicherschutz.", ["gaming"]="Xbox-Dienste und Opera GX.", ["ai"]="Chromium-, WebKit- und KI-orientiertes Browsen.", ["debloat"]="Browser-Datenschutzrichtlinien und Telemetrie-Schalter der Anbieter: Chrome, Edge, Firefox und Office.", ["system"]="Windows-Update-Treiber, Startmenü- und Intel-Panel-Korrekturen." , ["telemetry"]="Telemetrie-, Vorschlags-, Werbe- und Datenerfassungs-Schalter der Anbieter."
+    };
+    private static readonly Dictionary<string, string> SectionTabDescs_de = new()
+    {
+ ["browsers|gaming"]="Opera GX mit eingebauten CPU-, RAM- und Netzwerkbegrenzungen.", ["tweaking|gaming"]="Xbox-Dienste und sichere FiveM/Minecraft-Dienste." 
+    };
+    private static readonly Dictionary<string, string> TabBannerTitles_de = new()
+    {
+ ["mainstream"]="Alltags-Browser", ["privacy"]="Anonymes Browsen", ["forks"]="Unabhängige Forks", ["utilities"]="Systemwerkzeuge", ["amd"]="Radeon-Werkzeuge", ["nvidia"]="GeForce-Werkzeuge", ["connectivity"]="Drahtlos-Einstellungen", ["devices"]="Gerätekorrekturen", ["security"]="Systemschutz", ["gaming"]="Spieledienste", ["ai"]="KI-Browser", ["debloat"]="Browser-Debloat", ["system"]="Windows-Korrekturen" , ["telemetry"]="Telemetrie-Korrekturen"
+    };
+    private static readonly Dictionary<string, string> SectionTabTitles_de = new()
+    {
+ ["browsers|gaming"]="Gaming-Browser", ["tweaking|gaming"]="Spieledienste" , ["troubleshooting|telemetry"]="Telemetrie-Korrekturen"
     };
 }

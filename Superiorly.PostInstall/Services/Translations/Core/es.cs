@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_es = new()
     {
- ["mainstream"]="Principal", ["privacy"]="Privacidad", ["forks"]="Derivados y personalizados", ["software"]="Software", ["store-downloader"]="Descargador de Microsoft Store", ["utilities"]="Utilidades", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustes del registro", ["win32"]="Win32PrioritySeparation", ["powerplans"]="Planes de energía", ["connectivity"]="Conectividad", ["devices"]="Dispositivos", ["security"]="Seguridad", ["gaming"]="Juegos", ["ai"]="Inteligencia artificial", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetría"
+ ["mainstream"]="Principal", ["privacy"]="Privacidad", ["forks"]="Derivados y personalizados", ["software"]="Software", ["store-downloader"]="Descargador de Microsoft Store", ["utilities"]="Utilidades", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustes del registro", ["win32"]="Win32Priority", ["powerplans"]="Planes de energía", ["connectivity"]="Conectividad", ["devices"]="Dispositivos", ["security"]="Seguridad", ["gaming"]="Juegos", ["ai"]="Inteligencia artificial", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetría"
     };
     private static readonly Dictionary<string, string> Notifications_es = new()
     {
@@ -76,5 +76,17 @@ public static partial class TranslationService
             ["powerplan_custom"]="Personalizado", ["powerplan_restore"]="Restaurar oficiales",
             ["update_available"]="Actualización {0} disponible", ["new_update"]="Nueva actualización: {0}", ["up_to_date"]="Está actualizado", ["update_check_failed"]="No se pudo buscar actualizaciones",
         
+    };
+    private static readonly Dictionary<string, string> SectionTabDescs_es = new()
+    {
+ ["browsers|gaming"]="Opera GX con limitadores integrados de CPU, RAM y red.", ["tweaking|gaming"]="Servicios de Xbox y servicios seguros de FiveM/Minecraft." 
+    };
+    private static readonly Dictionary<string, string> TabBannerTitles_es = new()
+    {
+ ["mainstream"]="Navegadores populares", ["privacy"]="Navegación anónima", ["forks"]="Derivados independientes", ["utilities"]="Utilidades del sistema", ["amd"]="Herramientas Radeon", ["nvidia"]="Herramientas GeForce", ["connectivity"]="Ajustes inalámbricos", ["devices"]="Correcciones de dispositivos", ["security"]="Protecciones del sistema", ["gaming"]="Servicios de juego", ["ai"]="Navegadores con IA", ["debloat"]="Limpieza de navegadores", ["system"]="Correcciones de Windows" , ["telemetry"]="Correcciones de telemetría"
+    };
+    private static readonly Dictionary<string, string> SectionTabTitles_es = new()
+    {
+ ["browsers|gaming"]="Navegador gaming", ["tweaking|gaming"]="Servicios de juego" , ["troubleshooting|telemetry"]="Correcciones de telemetría"
     };
 }

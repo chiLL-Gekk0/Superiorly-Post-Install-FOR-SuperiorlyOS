@@ -48,30 +48,19 @@
                                                         </Button>
                                     </WrapPanel>
                                                 </StackPanel>
-                                                    <Border Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0"
-                                                            Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1"
-                                                            CornerRadius="{DynamicResource R_S}" Padding="8"
-                                                            Visibility="{Binding IsPowerPlanCard, Converter={StaticResource BoolToVis}}">
-                                                        <StackPanel>
-                                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                                                <TextBlock Text="{Binding CpuIdleCard.Title}" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" VerticalAlignment="Center" Margin="0,0,6,0"/>
-                                                                <TextBlock Text="&#xE946;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="13" Foreground="{DynamicResource B_TextSecondary}" VerticalAlignment="Center" Margin="0,0,8,0" ToolTip="{Binding CpuIdleCard.InfoText}" Visibility="{Binding CpuIdleCard.HasInfo, Converter={StaticResource BoolToVis}}"/>
-                                                                <StackPanel Orientation="Horizontal" DataContext="{Binding CpuIdleCard}" Visibility="{Binding HasToggle, Converter={StaticResource BoolToVis}}">
-                                                                    <ToggleButton Style="{DynamicResource SwitchToggle}" IsChecked="{Binding IsOn}" Command="{Binding ToggleCommand}" AutomationProperties.Name="{Binding Title}"/>
-                                                                </StackPanel>
-                                                            </StackPanel>
-                                                            <TextBlock Text="{Binding CpuIdleCard.Description}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" TextWrapping="Wrap" Margin="0,4,0,0"/>
-                                                        </StackPanel>
-                                                    </Border>
                                                 </Grid>
 
                                                 <Grid Grid.Row="1">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"/>
+                                                        <RowDefinition Height="Auto"/>
+                                                    </Grid.RowDefinitions>
                                                     <Grid.ColumnDefinitions>
                                                         <ColumnDefinition Width="*"/>
                                                         <ColumnDefinition Width="12"/>
                                                         <ColumnDefinition Width="*"/>
                                                     </Grid.ColumnDefinitions>
-                                                    <Border Grid.Column="0" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" VerticalAlignment="Top"
+                                                    <Border Grid.Column="0" Grid.Row="0" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" VerticalAlignment="Top"
                                                             BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="8" MaxHeight="300">
                                                         <StackPanel>
                                                             <TextBlock Text="Microsoft" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Margin="4,0,0,6"/>
@@ -106,7 +95,22 @@
                                                             </ListBox>
                                                         </StackPanel>
                                                     </Border>
-                                                    <Border Grid.Column="2" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" VerticalAlignment="Top"
+                                                    <Border Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,8,0,0"
+                                                            Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1"
+                                                            CornerRadius="{DynamicResource R_S}" Padding="8"
+                                                            Visibility="{Binding IsPowerPlanCard, Converter={StaticResource BoolToVis}}">
+                                                        <StackPanel>
+                                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                                <TextBlock Text="{Binding CpuIdleCard.Title}" FontSize="12" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" VerticalAlignment="Center" Margin="0,0,6,0"/>
+                                                                <TextBlock Text="&#xE946;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="13" Foreground="{DynamicResource B_TextSecondary}" VerticalAlignment="Center" Margin="0,0,8,0" ToolTip="{Binding CpuIdleCard.InfoText}" Visibility="{Binding CpuIdleCard.HasInfo, Converter={StaticResource BoolToVis}}"/>
+                                                                <StackPanel Orientation="Horizontal" DataContext="{Binding CpuIdleCard}" Visibility="{Binding HasToggle, Converter={StaticResource BoolToVis}}">
+                                                                    <ToggleButton Style="{DynamicResource SwitchToggle}" IsChecked="{Binding IsOn}" Command="{Binding ToggleCommand}" AutomationProperties.Name="{Binding Title}"/>
+                                                                </StackPanel>
+                                                            </StackPanel>
+                                                            <TextBlock Text="{Binding CpuIdleCard.Description}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" TextWrapping="Wrap" Margin="0,4,0,0"/>
+                                                        </StackPanel>
+                                                    </Border>
+                                                    <Border Grid.Column="2" Grid.Row="0" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" VerticalAlignment="Top"
                                                             BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="8" MaxHeight="300">
                                                         <StackPanel>
                                                             <TextBlock Text="Custom" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Margin="4,0,0,6"/>

@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ko = new()
     {
- ["mainstream"]="일반", ["privacy"]="개인정보 보호", ["forks"]="포크 및 커스텀", ["software"]="소프트웨어", ["store-downloader"]="Microsoft Store 다운로더", ["utilities"]="유틸리티", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="레지스트리 조정", ["win32"]="Win32PrioritySeparation", ["powerplans"]="전원 계획", ["connectivity"]="연결", ["devices"]="장치", ["security"]="보안", ["gaming"]="게임", ["ai"]="인공지능", ["debloat"]="Debloat", ["system"]="시스템" , ["telemetry"]="Telemetry"
+ ["mainstream"]="일반", ["privacy"]="개인정보 보호", ["forks"]="포크 및 커스텀", ["software"]="소프트웨어", ["store-downloader"]="Microsoft Store 다운로더", ["utilities"]="유틸리티", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="레지스트리 조정", ["win32"]="Win32Priority", ["powerplans"]="전원 계획", ["connectivity"]="연결", ["devices"]="장치", ["security"]="보안", ["gaming"]="게임", ["ai"]="인공지능", ["debloat"]="Debloat", ["system"]="시스템" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> Notifications_ko = new()
     {
@@ -60,7 +60,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ko = new()
     {
- ["browsers|gaming"]="게이밍 브라우저", ["tweaking|gaming"]="게임 서비스" 
+ ["browsers|gaming"]="게이밍 브라우저", ["tweaking|gaming"]="게임 서비스" , ["troubleshooting|telemetry"]="텔레메트리 수정"
     };
     private static readonly Dictionary<string, string> UiExtra_ko = new()
     {

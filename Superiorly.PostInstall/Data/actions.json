@@ -1160,7 +1160,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$hasAdlx=(Test-Path \"$env:WINDIR\\System32\\amdadlx64.dll\") -or (Test-Path \"$env:ProgramFiles\\AMD\\CIM\");if(-not $hasAdlx){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD Adrenalin drivers. Install them from amd.com, then retry.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
@@ -1168,7 +1168,7 @@
                         "file:%LOCALAPPDATA%\\Superiorly\\Tools\\MoreClockTool.exe"
                     ],
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAmd=Get-CimInstance Win32_VideoController -EA 0 | Where-Object { $_.PNPDeviceID -like '*VEN_1002*' -or $_.Name -like '*AMD*' -or $_.Name -like '*Radeon*' };if(-not $hasAmd){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD GPU. No AMD GPU detected.','MoreClockTool',0,48);exit 0};$hasAdlx=(Test-Path \"$env:WINDIR\\System32\\amdadlx64.dll\") -or (Test-Path \"$env:ProgramFiles\\AMD\\CIM\");if(-not $hasAdlx){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD Adrenalin drivers. Install them from amd.com, then retry.','MoreClockTool',0,48);exit 0};$p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MoreClockTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ],
                     "type": "download"
                 },
@@ -1180,7 +1180,7 @@
                         {
                             "label": "Run",
                             "commands": [
-                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                                "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAdlx=(Test-Path \"$env:WINDIR\\System32\\amdadlx64.dll\") -or (Test-Path \"$env:ProgramFiles\\AMD\\CIM\");if(-not $hasAdlx){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD Adrenalin drivers. Install them from amd.com, then retry.','MorePowerTool',0,48);exit 0};$p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                             ]
                         }
                     ],
@@ -1189,7 +1189,7 @@
                     ],
                     "type": "download",
                     "launch": [
-                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
+                        "powershell -NoProfile -ExecutionPolicy Bypass -Command $hasAdlx=(Test-Path \"$env:WINDIR\\System32\\amdadlx64.dll\") -or (Test-Path \"$env:ProgramFiles\\AMD\\CIM\");if(-not $hasAdlx){Add-Type -AssemblyName System.Windows.Forms -EA 0;[System.Windows.Forms.MessageBox]::Show('ADLX requires AMD Adrenalin drivers. Install them from amd.com, then retry.','MorePowerTool',0,48);exit 0};$p=Join-Path $env:LOCALAPPDATA '\\Superiorly\\Tools\\MorePowerTool.exe';if(Test-Path $p){Start-Process $p;exit 0};exit 1"
                     ]
                 },
                 {

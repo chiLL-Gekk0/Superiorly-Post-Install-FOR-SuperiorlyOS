@@ -45,3 +45,13 @@ Type: files; Name: "{app}\Superiorly.PostInstall.dll"
 
 [Run]
 Filename: "{app}\Superiorly Post-Install.exe"; Description: "Launch Superiorly Post-Install"; Flags: nowait postinstall
+
+; legacy folders from builds that shipped tools or profiles next to the exe, plus the
+; per-user tool store; specific paths only, never an {app}\* wildcard, which would take user files too
+[UninstallDelete]
+Type: filesandordirs; Name: "{app}\Nvidia Profiles"
+Type: filesandordirs; Name: "{app}\AMD Tweaks"
+Type: filesandordirs; Name: "{app}\Tools"
+Type: filesandordirs; Name: "{app}\DDU"
+Type: filesandordirs; Name: "{app}\Data"
+Type: filesandordirs; Name: "{localappdata}\Superiorly"

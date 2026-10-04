@@ -68,8 +68,8 @@
                                                         <TextBlock Text="{Binding Icon}" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="28" Foreground="{DynamicResource B_TextPrimary}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                                     </Border>
                                                     <Border x:Name="InfoIconBorder" HorizontalAlignment="Right" VerticalAlignment="Top" Width="20" Height="20" Background="Transparent" Cursor="Hand"
-                                                            Visibility="{Binding HasInfo, Converter={StaticResource BoolToVis}}"
-                                                            MouseEnter="InfoIcon_MouseEnter" MouseLeave="InfoIcon_MouseLeave">
+                                                        Visibility="{Binding HasInfo, Converter={StaticResource BoolToVis}}"
+                                                        MouseEnter="InfoIcon_MouseEnter" MouseLeave="InfoIcon_MouseLeave">
                                                         <Grid>
                                                         <Popup x:Name="InfoPopup" Placement="Right" PlacementTarget="{Binding ElementName=InfoIconBorder}" AllowsTransparency="True" HorizontalOffset="8" StaysOpen="True" PopupAnimation="Fade">
                                                             <Border Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="0" Margin="4,0"

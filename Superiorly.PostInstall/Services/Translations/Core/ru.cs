@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ru = new()
     {
- ["mainstream"]="Основное", ["privacy"]="Конфиденциальность", ["forks"]="Форки и кастомизация", ["software"]="Программы", ["store-downloader"]="Загрузчик Microsoft Store", ["utilities"]="Утилиты", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Настройки реестра", ["win32"]="Win32PrioritySeparation", ["powerplans"]="Схемы питания", ["connectivity"]="Подключение", ["devices"]="Устройства", ["security"]="Безопасность", ["gaming"]="Игры", ["ai"]="ИИ", ["debloat"]="Debloat", ["system"]="Система" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Основное", ["privacy"]="Конфиденциальность", ["forks"]="Форки и кастомизация", ["software"]="Программы", ["store-downloader"]="Загрузчик Microsoft Store", ["utilities"]="Утилиты", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Настройки реестра", ["win32"]="Win32Priority", ["powerplans"]="Схемы питания", ["connectivity"]="Подключение", ["devices"]="Устройства", ["security"]="Безопасность", ["gaming"]="Игры", ["ai"]="ИИ", ["debloat"]="Debloat", ["system"]="Система" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> Notifications_ru = new()
     {
@@ -72,5 +72,21 @@ public static partial class TranslationService
             ["powerplan_custom"]="Пользовательская", ["powerplan_restore"]="Восстановить официальные",
             ["update_available"]="Доступно обновление {0}", ["new_update"]="Новое обновление: {0}", ["up_to_date"]="Установлена последняя версия", ["update_check_failed"]="Не удалось проверить обновления",
         
+    };
+    private static readonly Dictionary<string, string> TabDescs_ru = new()
+    {
+ ["mainstream"]="Браузеры на каждый день.", ["privacy"]="Браузеры для приватности и анонимности.", ["forks"]="Сборки сообщества на основе Chromium и Firefox.", ["utilities"]="Инструменты для диагностики системы и оборудования.", ["amd"]="Инструменты AMD GPU для драйверов, частот, напряжения и реестра.", ["nvidia"]="Инструменты NVIDIA для чистой установки, профилей и P-States.", ["connectivity"]="Настройки Wi-Fi, Bluetooth и лимита хопов хотспота.", ["devices"]="Исправления принтера, диспетчера задач и ввода текста.", ["security"]="Изоляция ядра, брандмауэр, UAC, чёрный список драйверов и защита памяти.", ["gaming"]="Службы Xbox и Opera GX.", ["ai"]="Браузеры Chromium, WebKit и с приоритетом ИИ.", ["debloat"]="Политики приватности браузеров и переключатели телеметрии вендоров: Chrome, Edge, Firefox и Office.", ["system"]="Драйверы через Windows Update, меню «Пуск» и исправления панели Intel." , ["telemetry"]="Переключатели телеметрии, рекомендаций, рекламы и сбора данных вендоров."
+    };
+    private static readonly Dictionary<string, string> SectionTabDescs_ru = new()
+    {
+ ["browsers|gaming"]="Opera GX со встроенными ограничителями CPU, RAM и сети.", ["tweaking|gaming"]="Службы Xbox и безопасные службы FiveM/Minecraft." 
+    };
+    private static readonly Dictionary<string, string> TabBannerTitles_ru = new()
+    {
+ ["mainstream"]="Браузеры на каждый день", ["privacy"]="Анонимный просмотр", ["forks"]="Независимые форки", ["utilities"]="Системные утилиты", ["amd"]="Инструменты Radeon", ["nvidia"]="Инструменты GeForce", ["connectivity"]="Беспроводные настройки", ["devices"]="Исправления устройств", ["security"]="Защита системы", ["gaming"]="Игровые службы", ["ai"]="ИИ-браузеры", ["debloat"]="Деблоат браузеров", ["system"]="Исправления Windows" , ["telemetry"]="Исправления телеметрии"
+    };
+    private static readonly Dictionary<string, string> SectionTabTitles_ru = new()
+    {
+ ["browsers|gaming"]="Игровой браузер", ["tweaking|gaming"]="Игровые службы" , ["troubleshooting|telemetry"]="Исправления телеметрии"
     };
 }

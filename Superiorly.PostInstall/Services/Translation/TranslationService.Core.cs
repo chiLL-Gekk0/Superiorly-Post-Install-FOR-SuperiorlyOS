@@ -2,7 +2,7 @@ namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
-    public static readonly string[] Supported = ["en", "zh", "es", "ja", "pt", "de", "ru", "fr", "ko", "tr", "pl"];
+    public static readonly string[] Supported = ["en", "zh", "es", "ja", "pt", "de", "ru", "fr", "ko", "tr", "pl", "it", "uk", "vi", "id", "zht", "ar", "pt-BR", "hi", "th", "fa", "ur", "bn"];
 
     public static string Normalize(string? lang) =>
         string.IsNullOrEmpty(lang) ? "en" : Supported.Contains(lang) ? lang : "en";
@@ -30,6 +30,18 @@ public static partial class TranslationService
             ["ko"] = UiExtra_ko,
             ["tr"] = UiExtra_tr,
             ["pl"] = UiExtra_pl,
+            ["it"] = UiExtra_it,
+            ["uk"] = UiExtra_uk,
+            ["vi"] = UiExtra_vi,
+            ["id"] = UiExtra_id,
+            ["zht"] = UiExtra_zht,
+            ["ar"] = UiExtra_ar,
+            ["pt-BR"] = UiExtra_ptBR,
+            ["hi"] = UiExtra_hi,
+            ["th"] = UiExtra_th,
+            ["fa"] = UiExtra_fa,
+            ["ur"] = UiExtra_ur,
+            ["bn"] = UiExtra_bn,
         };
         SectionTabTitles = new()
         {
@@ -38,6 +50,24 @@ public static partial class TranslationService
             ["ko"] = SectionTabTitles_ko,
             ["tr"] = SectionTabTitles_tr,
             ["pl"] = SectionTabTitles_pl,
+            ["de"] = SectionTabTitles_de,
+            ["es"] = SectionTabTitles_es,
+            ["ja"] = SectionTabTitles_ja,
+            ["pt"] = SectionTabTitles_pt,
+            ["ru"] = SectionTabTitles_ru,
+            ["zh"] = SectionTabTitles_zh,
+            ["it"] = SectionTabTitles_it,
+            ["uk"] = SectionTabTitles_uk,
+            ["vi"] = SectionTabTitles_vi,
+            ["id"] = SectionTabTitles_id,
+            ["zht"] = SectionTabTitles_zht,
+            ["ar"] = SectionTabTitles_ar,
+            ["pt-BR"] = SectionTabTitles_ptBR,
+            ["hi"] = SectionTabTitles_hi,
+            ["th"] = SectionTabTitles_th,
+            ["fa"] = SectionTabTitles_fa,
+            ["ur"] = SectionTabTitles_ur,
+            ["bn"] = SectionTabTitles_bn,
         };
         TabBannerTitles = new()
         {
@@ -46,6 +76,24 @@ public static partial class TranslationService
             ["ko"] = TabBannerTitles_ko,
             ["tr"] = TabBannerTitles_tr,
             ["pl"] = TabBannerTitles_pl,
+            ["de"] = TabBannerTitles_de,
+            ["es"] = TabBannerTitles_es,
+            ["ja"] = TabBannerTitles_ja,
+            ["pt"] = TabBannerTitles_pt,
+            ["ru"] = TabBannerTitles_ru,
+            ["zh"] = TabBannerTitles_zh,
+            ["it"] = TabBannerTitles_it,
+            ["uk"] = TabBannerTitles_uk,
+            ["vi"] = TabBannerTitles_vi,
+            ["id"] = TabBannerTitles_id,
+            ["zht"] = TabBannerTitles_zht,
+            ["ar"] = TabBannerTitles_ar,
+            ["pt-BR"] = TabBannerTitles_ptBR,
+            ["hi"] = TabBannerTitles_hi,
+            ["th"] = TabBannerTitles_th,
+            ["fa"] = TabBannerTitles_fa,
+            ["ur"] = TabBannerTitles_ur,
+            ["bn"] = TabBannerTitles_bn,
         };
         SectionTabDescs = new()
         {
@@ -54,6 +102,24 @@ public static partial class TranslationService
             ["ko"] = SectionTabDescs_ko,
             ["tr"] = SectionTabDescs_tr,
             ["pl"] = SectionTabDescs_pl,
+            ["de"] = SectionTabDescs_de,
+            ["es"] = SectionTabDescs_es,
+            ["ja"] = SectionTabDescs_ja,
+            ["pt"] = SectionTabDescs_pt,
+            ["ru"] = SectionTabDescs_ru,
+            ["zh"] = SectionTabDescs_zh,
+            ["it"] = SectionTabDescs_it,
+            ["uk"] = SectionTabDescs_uk,
+            ["vi"] = SectionTabDescs_vi,
+            ["id"] = SectionTabDescs_id,
+            ["zht"] = SectionTabDescs_zht,
+            ["ar"] = SectionTabDescs_ar,
+            ["pt-BR"] = SectionTabDescs_ptBR,
+            ["hi"] = SectionTabDescs_hi,
+            ["th"] = SectionTabDescs_th,
+            ["fa"] = SectionTabDescs_fa,
+            ["ur"] = SectionTabDescs_ur,
+            ["bn"] = SectionTabDescs_bn,
         };
         TabDescs = new()
         {
@@ -63,6 +129,23 @@ public static partial class TranslationService
             ["ko"] = TabDescs_ko,
             ["tr"] = TabDescs_tr,
             ["pl"] = TabDescs_pl,
+            ["zh"] = TabDescs_zh,
+            ["ja"] = TabDescs_ja,
+            ["pt"] = TabDescs_pt,
+            ["de"] = TabDescs_de,
+            ["ru"] = TabDescs_ru,
+            ["it"] = TabDescs_it,
+            ["uk"] = TabDescs_uk,
+            ["vi"] = TabDescs_vi,
+            ["id"] = TabDescs_id,
+            ["zht"] = TabDescs_zht,
+            ["ar"] = TabDescs_ar,
+            ["pt-BR"] = TabDescs_ptBR,
+            ["hi"] = TabDescs_hi,
+            ["th"] = TabDescs_th,
+            ["fa"] = TabDescs_fa,
+            ["ur"] = TabDescs_ur,
+            ["bn"] = TabDescs_bn,
         };
         OptionLabels = new()
         {
@@ -77,6 +160,18 @@ public static partial class TranslationService
             ["ko"] = OptionLabels_ko,
             ["tr"] = OptionLabels_tr,
             ["pl"] = OptionLabels_pl,
+            ["it"] = OptionLabels_it,
+            ["uk"] = OptionLabels_uk,
+            ["vi"] = OptionLabels_vi,
+            ["id"] = OptionLabels_id,
+            ["zht"] = OptionLabels_zht,
+            ["ar"] = OptionLabels_ar,
+            ["pt-BR"] = OptionLabels_ptBR,
+            ["hi"] = OptionLabels_hi,
+            ["th"] = OptionLabels_th,
+            ["fa"] = OptionLabels_fa,
+            ["ur"] = OptionLabels_ur,
+            ["bn"] = OptionLabels_bn,
         };
         Ui = new()
         {
@@ -91,6 +186,18 @@ public static partial class TranslationService
             ["ko"] = Ui_ko,
             ["tr"] = Ui_tr,
             ["pl"] = Ui_pl,
+            ["it"] = Ui_it,
+            ["uk"] = Ui_uk,
+            ["vi"] = Ui_vi,
+            ["id"] = Ui_id,
+            ["zht"] = Ui_zht,
+            ["ar"] = Ui_ar,
+            ["pt-BR"] = Ui_ptBR,
+            ["hi"] = Ui_hi,
+            ["th"] = Ui_th,
+            ["fa"] = Ui_fa,
+            ["ur"] = Ui_ur,
+            ["bn"] = Ui_bn,
         };
         Notifications = new()
         {
@@ -105,6 +212,18 @@ public static partial class TranslationService
             ["ko"] = Notifications_ko,
             ["tr"] = Notifications_tr,
             ["pl"] = Notifications_pl,
+            ["it"] = Notifications_it,
+            ["uk"] = Notifications_uk,
+            ["vi"] = Notifications_vi,
+            ["id"] = Notifications_id,
+            ["zht"] = Notifications_zht,
+            ["ar"] = Notifications_ar,
+            ["pt-BR"] = Notifications_ptBR,
+            ["hi"] = Notifications_hi,
+            ["th"] = Notifications_th,
+            ["fa"] = Notifications_fa,
+            ["ur"] = Notifications_ur,
+            ["bn"] = Notifications_bn,
         };
         TabTitles = new()
         {
@@ -119,6 +238,18 @@ public static partial class TranslationService
             ["ko"] = TabTitles_ko,
             ["tr"] = TabTitles_tr,
             ["pl"] = TabTitles_pl,
+            ["it"] = TabTitles_it,
+            ["uk"] = TabTitles_uk,
+            ["vi"] = TabTitles_vi,
+            ["id"] = TabTitles_id,
+            ["zht"] = TabTitles_zht,
+            ["ar"] = TabTitles_ar,
+            ["pt-BR"] = TabTitles_ptBR,
+            ["hi"] = TabTitles_hi,
+            ["th"] = TabTitles_th,
+            ["fa"] = TabTitles_fa,
+            ["ur"] = TabTitles_ur,
+            ["bn"] = TabTitles_bn,
         };
         SectionDescs = new()
         {
@@ -133,6 +264,18 @@ public static partial class TranslationService
             ["ko"] = SectionDescs_ko,
             ["tr"] = SectionDescs_tr,
             ["pl"] = SectionDescs_pl,
+            ["it"] = SectionDescs_it,
+            ["uk"] = SectionDescs_uk,
+            ["vi"] = SectionDescs_vi,
+            ["id"] = SectionDescs_id,
+            ["zht"] = SectionDescs_zht,
+            ["ar"] = SectionDescs_ar,
+            ["pt-BR"] = SectionDescs_ptBR,
+            ["hi"] = SectionDescs_hi,
+            ["th"] = SectionDescs_th,
+            ["fa"] = SectionDescs_fa,
+            ["ur"] = SectionDescs_ur,
+            ["bn"] = SectionDescs_bn,
         };
         SectionTitles = new()
         {
@@ -147,6 +290,18 @@ public static partial class TranslationService
             ["ko"] = SectionTitles_ko,
             ["tr"] = SectionTitles_tr,
             ["pl"] = SectionTitles_pl,
+            ["it"] = SectionTitles_it,
+            ["uk"] = SectionTitles_uk,
+            ["vi"] = SectionTitles_vi,
+            ["id"] = SectionTitles_id,
+            ["zht"] = SectionTitles_zht,
+            ["ar"] = SectionTitles_ar,
+            ["pt-BR"] = SectionTitles_ptBR,
+            ["hi"] = SectionTitles_hi,
+            ["th"] = SectionTitles_th,
+            ["fa"] = SectionTitles_fa,
+            ["ur"] = SectionTitles_ur,
+            ["bn"] = SectionTitles_bn,
         };
         ActionDescriptions = new()
         {
@@ -161,6 +316,18 @@ public static partial class TranslationService
             ["ko"] = ActionDescriptions_ko,
             ["tr"] = ActionDescriptions_tr,
             ["pl"] = ActionDescriptions_pl,
+            ["it"] = ActionDescriptions_it,
+            ["uk"] = ActionDescriptions_uk,
+            ["vi"] = ActionDescriptions_vi,
+            ["id"] = ActionDescriptions_id,
+            ["zht"] = ActionDescriptions_zht,
+            ["ar"] = ActionDescriptions_ar,
+            ["pt-BR"] = ActionDescriptions_ptBR,
+            ["hi"] = ActionDescriptions_hi,
+            ["th"] = ActionDescriptions_th,
+            ["fa"] = ActionDescriptions_fa,
+            ["ur"] = ActionDescriptions_ur,
+            ["bn"] = ActionDescriptions_bn,
         };
         ActionTitles = new()
         {
@@ -175,6 +342,18 @@ public static partial class TranslationService
             ["ko"] = ActionTitles_ko,
             ["tr"] = ActionTitles_tr,
             ["pl"] = ActionTitles_pl,
+            ["it"] = ActionTitles_it,
+            ["uk"] = ActionTitles_uk,
+            ["vi"] = ActionTitles_vi,
+            ["id"] = ActionTitles_id,
+            ["zht"] = ActionTitles_zht,
+            ["ar"] = ActionTitles_ar,
+            ["pt-BR"] = ActionTitles_ptBR,
+            ["hi"] = ActionTitles_hi,
+            ["th"] = ActionTitles_th,
+            ["fa"] = ActionTitles_fa,
+            ["ur"] = ActionTitles_ur,
+            ["bn"] = ActionTitles_bn,
         };
         ActionInfo = new()
         {
@@ -189,6 +368,18 @@ public static partial class TranslationService
             ["ko"] = ActionInfo_ko,
             ["tr"] = ActionInfo_tr,
             ["pl"] = ActionInfo_pl,
+            ["it"] = ActionInfo_it,
+            ["uk"] = ActionInfo_uk,
+            ["vi"] = ActionInfo_vi,
+            ["id"] = ActionInfo_id,
+            ["zht"] = ActionInfo_zht,
+            ["ar"] = ActionInfo_ar,
+            ["pt-BR"] = ActionInfo_ptBR,
+            ["hi"] = ActionInfo_hi,
+            ["th"] = ActionInfo_th,
+            ["fa"] = ActionInfo_fa,
+            ["ur"] = ActionInfo_ur,
+            ["bn"] = ActionInfo_bn,
         };
         TooltipData = new()
         {
@@ -203,6 +394,18 @@ public static partial class TranslationService
             ["ko"] = TooltipData_ko,
             ["tr"] = TooltipData_tr,
             ["pl"] = TooltipData_pl,
+            ["it"] = TooltipData_it,
+            ["uk"] = TooltipData_uk,
+            ["vi"] = TooltipData_vi,
+            ["id"] = TooltipData_id,
+            ["zht"] = TooltipData_zht,
+            ["ar"] = TooltipData_ar,
+            ["pt-BR"] = TooltipData_ptBR,
+            ["hi"] = TooltipData_hi,
+            ["th"] = TooltipData_th,
+            ["fa"] = TooltipData_fa,
+            ["ur"] = TooltipData_ur,
+            ["bn"] = TooltipData_bn,
         };
         TooltipControversy = new()
         {
@@ -217,6 +420,18 @@ public static partial class TranslationService
             ["ko"] = TooltipControversy_ko,
             ["tr"] = TooltipControversy_tr,
             ["pl"] = TooltipControversy_pl,
+            ["it"] = TooltipControversy_it,
+            ["uk"] = TooltipControversy_uk,
+            ["vi"] = TooltipControversy_vi,
+            ["id"] = TooltipControversy_id,
+            ["zht"] = TooltipControversy_zht,
+            ["ar"] = TooltipControversy_ar,
+            ["pt-BR"] = TooltipControversy_ptBR,
+            ["hi"] = TooltipControversy_hi,
+            ["th"] = TooltipControversy_th,
+            ["fa"] = TooltipControversy_fa,
+            ["ur"] = TooltipControversy_ur,
+            ["bn"] = TooltipControversy_bn,
         };
     }
 }

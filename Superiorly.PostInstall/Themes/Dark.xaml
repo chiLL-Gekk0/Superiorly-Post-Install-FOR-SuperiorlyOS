@@ -8,6 +8,8 @@
     <SolidColorBrush x:Key="B_Card" Color="#1E1E26" />
     <SolidColorBrush x:Key="B_CardHover" Color="#2A2A36" />
     <SolidColorBrush x:Key="B_CardBorder" Color="#33333B" />
+    <!-- checkbox outline needs 3:1 on the card, which B_CardBorder cannot reach -->
+    <SolidColorBrush x:Key="B_CheckboxBorder" Color="#6E6E78" />
     <SolidColorBrush x:Key="B_TextPrimary" Color="#F5F0E8" />
     <SolidColorBrush x:Key="B_TextSecondary" Color="#B5B5BD" />
     <SolidColorBrush x:Key="B_TextOnColor" Color="#FFFFFF"/>

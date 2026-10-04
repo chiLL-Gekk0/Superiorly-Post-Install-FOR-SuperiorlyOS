@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_zh = new()
     {
- ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32PrioritySeparation", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="安全", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="Debloat", ["system"]="系统" , ["telemetry"]="Telemetry"
+ ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32Priority", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="安全", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="Debloat", ["system"]="系统" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> Notifications_zh = new()
     {
@@ -72,5 +72,21 @@ public static partial class TranslationService
             ["powerplan_custom"]="自定义", ["powerplan_restore"]="恢复官方",
             ["update_available"]="有可用更新 {0}", ["new_update"]="新版本：{0}", ["up_to_date"]="已是最新版本", ["update_check_failed"]="无法检查更新",
         
+    };
+    private static readonly Dictionary<string, string> TabDescs_zh = new()
+    {
+ ["mainstream"]="日常浏览器。", ["privacy"]="注重隐私和匿名的浏览器。", ["forks"]="基于Chromium和Firefox的社区版本。", ["utilities"]="系统和硬件诊断工具。", ["amd"]="用于驱动、频率、电压和注册表的AMD GPU工具。", ["nvidia"]="用于干净安装、配置文件和P-State的NVIDIA工具。", ["connectivity"]="Wi-Fi、蓝牙和热点跳数限制设置。", ["devices"]="打印机、任务管理器和文本输入修复。", ["security"]="内核隔离、防火墙、UAC、驱动程序阻止列表和内存保护。", ["gaming"]="Xbox服务和Opera GX。", ["ai"]="Chromium、WebKit和AI优先浏览。", ["debloat"]="浏览器隐私策略和供应商遥测开关：Chrome、Edge、Firefox和Office。", ["system"]="Windows Update驱动、开始菜单和Intel面板修复。" , ["telemetry"]="遥测、建议、广告和供应商数据收集开关。"
+    };
+    private static readonly Dictionary<string, string> SectionTabDescs_zh = new()
+    {
+ ["browsers|gaming"]="内置CPU、RAM和网络限制器的Opera GX。", ["tweaking|gaming"]="Xbox服务和安全的FiveM/Minecraft服务。" 
+    };
+    private static readonly Dictionary<string, string> TabBannerTitles_zh = new()
+    {
+ ["mainstream"]="日常浏览器", ["privacy"]="匿名浏览", ["forks"]="独立分支", ["utilities"]="系统实用工具", ["amd"]="Radeon工具", ["nvidia"]="GeForce工具", ["connectivity"]="无线设置", ["devices"]="设备修复", ["security"]="系统保护", ["gaming"]="游戏服务", ["ai"]="AI浏览器", ["debloat"]="浏览器精简", ["system"]="Windows修复" , ["telemetry"]="遥测修复"
+    };
+    private static readonly Dictionary<string, string> SectionTabTitles_zh = new()
+    {
+ ["browsers|gaming"]="游戏浏览器", ["tweaking|gaming"]="游戏服务" , ["troubleshooting|telemetry"]="遥测修复"
     };
 }

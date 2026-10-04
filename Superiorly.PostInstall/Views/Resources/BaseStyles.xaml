@@ -51,9 +51,9 @@
             <Style.Triggers>
                 <EventTrigger RoutedEvent="ToolTip.Opened">
                     <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.18"/>
-                        </Storyboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.15"/>
+                    </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
             </Style.Triggers>
@@ -76,7 +76,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="CheckBox">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                            <Border x:Name="box" Width="15" Height="15" BorderThickness="1" CornerRadius="{DynamicResource R_S}" BorderBrush="{DynamicResource B_CardBorder}" Background="{DynamicResource B_Surface}" VerticalAlignment="Center">
+                            <Border x:Name="box" Width="15" Height="15" BorderThickness="1" CornerRadius="{DynamicResource R_S}" BorderBrush="{DynamicResource B_CheckboxBorder}" Background="{DynamicResource B_Surface}" VerticalAlignment="Center">
                                 <TextBlock x:Name="check" Text="&#xE73E;" FontFamily="Segoe Fluent Icons, Segoe MDL2 Assets" FontSize="10" Foreground="{DynamicResource B_TextPrimary}" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
                             </Border>
                             <ContentPresenter x:Name="content" Margin="6,0,0,0" VerticalAlignment="Center" RecognizesAccessKey="True"/>

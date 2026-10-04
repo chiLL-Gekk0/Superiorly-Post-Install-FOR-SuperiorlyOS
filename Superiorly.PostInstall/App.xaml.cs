@@ -18,6 +18,22 @@ public partial class App : Application
 
     private static Mutex? _singleInstance;
 
+    // tooltips fire on their owner, and the default 500ms is not inheritable,
+    // so it cannot be lowered from a ToolTip style; inherit it down the tree instead
+    static App()
+    {
+        try
+        {
+            System.Windows.Controls.ToolTipService.InitialShowDelayProperty.OverrideMetadata(
+                typeof(System.Windows.FrameworkElement),
+                new System.Windows.FrameworkPropertyMetadata(300, System.Windows.FrameworkPropertyMetadataOptions.Inherits));
+            System.Windows.Controls.ToolTipService.BetweenShowDelayProperty.OverrideMetadata(
+                typeof(System.Windows.FrameworkElement),
+                new System.Windows.FrameworkPropertyMetadata(100, System.Windows.FrameworkPropertyMetadataOptions.Inherits));
+        }
+        catch { }
+    }
+
     public App()
     {
         DispatcherUnhandledException += (_, e) => { try { System.Diagnostics.Debug.WriteLine(e.Exception.ToString()); try { System.IO.Directory.CreateDirectory(System.IO.Path.Combine(System.IO.Path.GetTempPath(), "Superiorly.PostInstall")); System.IO.File.AppendAllText(System.IO.Path.Combine(System.IO.Path.GetTempPath(), "Superiorly.PostInstall", "ui-error.log"), System.DateTime.UtcNow.ToString("O") + " " + e.Exception.ToString() + "\n"); } catch { } } catch { } e.Handled = true; };

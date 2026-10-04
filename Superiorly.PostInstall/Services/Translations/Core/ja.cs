@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ja = new()
     {
- ["mainstream"]="メインストリーム", ["privacy"]="プライバシー", ["forks"]="フォークとカスタム", ["software"]="ソフトウェア", ["store-downloader"]="Microsoft Store ダウンローダー", ["utilities"]="ユーティリティ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="レジストリ調整", ["win32"]="Win32PrioritySeparation", ["powerplans"]="電源プラン", ["connectivity"]="接続", ["devices"]="デバイス", ["security"]="セキュリティ", ["gaming"]="ゲーム", ["ai"]="人工知能", ["debloat"]="Debloat", ["system"]="システム" , ["telemetry"]="Telemetry"
+ ["mainstream"]="メインストリーム", ["privacy"]="プライバシー", ["forks"]="フォークとカスタム", ["software"]="ソフトウェア", ["store-downloader"]="Microsoft Store ダウンローダー", ["utilities"]="ユーティリティ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="レジストリ調整", ["win32"]="Win32Priority", ["powerplans"]="電源プラン", ["connectivity"]="接続", ["devices"]="デバイス", ["security"]="セキュリティ", ["gaming"]="ゲーム", ["ai"]="人工知能", ["debloat"]="Debloat", ["system"]="システム" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> Notifications_ja = new()
     {
@@ -72,5 +72,21 @@ public static partial class TranslationService
             ["powerplan_custom"]="カスタム", ["powerplan_restore"]="公式を復元",
             ["update_available"]="更新 {0} があります", ["new_update"]="新しいアップデート：{0}", ["up_to_date"]="最新版です", ["update_check_failed"]="更新を確認できませんでした",
         
+    };
+    private static readonly Dictionary<string, string> TabDescs_ja = new()
+    {
+ ["mainstream"]="日常使いのブラウザ。", ["privacy"]="プライバシーと匿名性のためのブラウザ。", ["forks"]="ChromiumとFirefoxベースのコミュニティビルド。", ["utilities"]="システムとハードウェア診断のためのツール。", ["amd"]="ドライバー、クロック、電圧、レジストリ用のAMD GPUツール。", ["nvidia"]="クリーンインストール、プロファイル、P-State用のNVIDIAツール。", ["connectivity"]="Wi-Fi、Bluetooth、ホットスポットホップ制限の設定。", ["devices"]="プリンター、タスクマネージャー、テキスト入力の修正。", ["security"]="コア分離、ファイアウォール、UAC、ドライバーブロックリスト、メモリ保護。", ["gaming"]="XboxサービスとOpera GX。", ["ai"]="Chromium、WebKit、AIファーストのブラウジング。", ["debloat"]="ブラウザーのプライバシーポリシーとベンダーテレメトリスイッチ: Chrome、Edge、Firefox、Office。", ["system"]="Windows Updateドライバー、スタートメニュー、Intelパネルの修正。" , ["telemetry"]="テレメトリ、提案、広告、ベンダーデータ収集のスイッチ。"
+    };
+    private static readonly Dictionary<string, string> SectionTabDescs_ja = new()
+    {
+ ["browsers|gaming"]="CPU、RAM、ネットワーク制限内蔵のOpera GX。", ["tweaking|gaming"]="XboxサービスとFiveM/Minecraftセーフサービス。" 
+    };
+    private static readonly Dictionary<string, string> TabBannerTitles_ja = new()
+    {
+ ["mainstream"]="日常のブラウザ", ["privacy"]="匿名ブラウジング", ["forks"]="独立フォーク", ["utilities"]="システムユーティリティ", ["amd"]="Radeonツール", ["nvidia"]="GeForceツール", ["connectivity"]="ワイヤレス設定", ["devices"]="デバイス修正", ["security"]="システム保護", ["gaming"]="ゲームサービス", ["ai"]="AIブラウザ", ["debloat"]="ブラウザーデブロート", ["system"]="Windows修正" , ["telemetry"]="テレメトリ修正"
+    };
+    private static readonly Dictionary<string, string> SectionTabTitles_ja = new()
+    {
+ ["browsers|gaming"]="ゲーミングブラウザ", ["tweaking|gaming"]="ゲームサービス" , ["troubleshooting|telemetry"]="テレメトリ修正"
     };
 }

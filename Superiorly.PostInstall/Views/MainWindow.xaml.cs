@@ -20,9 +20,9 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         DataContext = viewModel;
-        _settings = settings;
+          _settings = settings;
 
-        var s = settings.Load();
+          var s = settings.Load();
         if (s.WindowLeft.HasValue && s.WindowTop.HasValue)
         {
             double l = s.WindowLeft.Value, t = s.WindowTop.Value;

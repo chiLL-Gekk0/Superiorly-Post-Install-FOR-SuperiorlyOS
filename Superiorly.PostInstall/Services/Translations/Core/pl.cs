@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_pl = new()
     {
- ["mainstream"]="Popularne", ["privacy"]="Prywatność", ["forks"]="Forki i niestandardowe", ["software"]="Oprogramowanie", ["store-downloader"]="Program pobierający Microsoft Store", ["utilities"]="Narzędzia", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Poprawki rejestru", ["win32"]="Win32PrioritySeparation", ["powerplans"]="Plany zasilania", ["connectivity"]="Łączność", ["devices"]="Urządzenia", ["security"]="Zabezpieczenia", ["gaming"]="Gry", ["ai"]="SI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Popularne", ["privacy"]="Prywatność", ["forks"]="Forki i niestandardowe", ["software"]="Oprogramowanie", ["store-downloader"]="Program pobierający Microsoft Store", ["utilities"]="Narzędzia", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Poprawki rejestru", ["win32"]="Win32Priority", ["powerplans"]="Plany zasilania", ["connectivity"]="Łączność", ["devices"]="Urządzenia", ["security"]="Zabezpieczenia", ["gaming"]="Gry", ["ai"]="SI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> Notifications_pl = new()
     {
@@ -60,7 +60,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_pl = new()
     {
- ["browsers|gaming"]="Przeglądarka dla graczy", ["tweaking|gaming"]="Usługi gier" 
+ ["browsers|gaming"]="Przeglądarka dla graczy", ["tweaking|gaming"]="Usługi gier" , ["troubleshooting|telemetry"]="Poprawki Telemetria"
     };
     private static readonly Dictionary<string, string> UiExtra_pl = new()
     {
