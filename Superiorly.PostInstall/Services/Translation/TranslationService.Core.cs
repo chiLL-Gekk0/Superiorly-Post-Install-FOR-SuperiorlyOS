@@ -2,15 +2,23 @@ namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
-    public static readonly string[] Supported = ["en", "zh", "es", "ja", "pt", "de", "ru", "fr", "ko", "tr", "pl", "it", "uk", "vi", "id", "zht", "ar", "hi", "th", "fa", "ur", "bn"];
+    public static readonly string[] Supported = ["en", "zh", "es", "ja", "pt-BR", "pt-PT", "de", "ru", "fr", "ko", "tr", "pl", "it", "uk", "vi", "id", "zht", "ar", "hi", "th", "fa", "ur", "bn"];
+
+    // settings.json written before the pt/pt-BR/pt-PT split stored the code as "pt"
+    private static readonly Dictionary<string, string> LegacyLangCodes = new() { ["pt"] = "pt-BR" };
 
     public static string Normalize(string? lang) =>
-        string.IsNullOrEmpty(lang) ? "en" : Supported.Contains(lang) ? lang : "en";
+        string.IsNullOrEmpty(lang) ? "en"
+        : Supported.Contains(lang) ? lang
+        : LegacyLangCodes.TryGetValue(lang, out var alias) ? alias : "en";
 
     // en is the canonical key set; no english prose hardcoded at call sites
     public static bool HasActionInfo(string id) =>
         ActionInfo.TryGetValue("en", out var d) && d.ContainsKey(id);
 
+    // ponytail: pt-PT is a complete copy of pt-BR plus the verified European overrides, so no
+    // pt-PT -> pt-BR fallback chain is needed yet. Add one here (and in the Tabs lookups,
+    // which bypass Get) the first time a key is dropped from pt-PT.
     private static string Get(Dictionary<string, Dictionary<string, string>> composite, string id, string lang) =>
         composite.TryGetValue(Normalize(lang), out var d) && d.TryGetValue(id, out var v) ? v
         : composite.TryGetValue("en", out var e) && e.TryGetValue(id, out var w) ? w : id;
@@ -23,7 +31,8 @@ public static partial class TranslationService
             ["zh"] = UiExtra_zh,
             ["es"] = UiExtra_es,
             ["ja"] = UiExtra_ja,
-            ["pt"] = UiExtra_pt,
+            ["pt-BR"] = UiExtra_ptBR,
+            ["pt-PT"] = UiExtra_ptPT,
             ["de"] = UiExtra_de,
             ["ru"] = UiExtra_ru,
             ["fr"] = UiExtra_fr,
@@ -51,7 +60,8 @@ public static partial class TranslationService
             ["de"] = SectionTabTitles_de,
             ["es"] = SectionTabTitles_es,
             ["ja"] = SectionTabTitles_ja,
-            ["pt"] = SectionTabTitles_pt,
+            ["pt-BR"] = SectionTabTitles_ptBR,
+            ["pt-PT"] = SectionTabTitles_ptPT,
             ["ru"] = SectionTabTitles_ru,
             ["zh"] = SectionTabTitles_zh,
             ["it"] = SectionTabTitles_it,
@@ -75,7 +85,8 @@ public static partial class TranslationService
             ["de"] = TabBannerTitles_de,
             ["es"] = TabBannerTitles_es,
             ["ja"] = TabBannerTitles_ja,
-            ["pt"] = TabBannerTitles_pt,
+            ["pt-BR"] = TabBannerTitles_ptBR,
+            ["pt-PT"] = TabBannerTitles_ptPT,
             ["ru"] = TabBannerTitles_ru,
             ["zh"] = TabBannerTitles_zh,
             ["it"] = TabBannerTitles_it,
@@ -99,7 +110,8 @@ public static partial class TranslationService
             ["de"] = SectionTabDescs_de,
             ["es"] = SectionTabDescs_es,
             ["ja"] = SectionTabDescs_ja,
-            ["pt"] = SectionTabDescs_pt,
+            ["pt-BR"] = SectionTabDescs_ptBR,
+            ["pt-PT"] = SectionTabDescs_ptPT,
             ["ru"] = SectionTabDescs_ru,
             ["zh"] = SectionTabDescs_zh,
             ["it"] = SectionTabDescs_it,
@@ -123,7 +135,8 @@ public static partial class TranslationService
             ["pl"] = TabDescs_pl,
             ["zh"] = TabDescs_zh,
             ["ja"] = TabDescs_ja,
-            ["pt"] = TabDescs_pt,
+            ["pt-BR"] = TabDescs_ptBR,
+            ["pt-PT"] = TabDescs_ptPT,
             ["de"] = TabDescs_de,
             ["ru"] = TabDescs_ru,
             ["it"] = TabDescs_it,
@@ -143,7 +156,8 @@ public static partial class TranslationService
             ["zh"] = OptionLabels_zh,
             ["es"] = OptionLabels_es,
             ["ja"] = OptionLabels_ja,
-            ["pt"] = OptionLabels_pt,
+            ["pt-BR"] = OptionLabels_ptBR,
+            ["pt-PT"] = OptionLabels_ptPT,
             ["de"] = OptionLabels_de,
             ["ru"] = OptionLabels_ru,
             ["fr"] = OptionLabels_fr,
@@ -167,7 +181,8 @@ public static partial class TranslationService
             ["zh"] = Ui_zh,
             ["es"] = Ui_es,
             ["ja"] = Ui_ja,
-            ["pt"] = Ui_pt,
+            ["pt-BR"] = Ui_ptBR,
+            ["pt-PT"] = Ui_ptPT,
             ["de"] = Ui_de,
             ["ru"] = Ui_ru,
             ["fr"] = Ui_fr,
@@ -191,7 +206,8 @@ public static partial class TranslationService
             ["zh"] = Notifications_zh,
             ["es"] = Notifications_es,
             ["ja"] = Notifications_ja,
-            ["pt"] = Notifications_pt,
+            ["pt-BR"] = Notifications_ptBR,
+            ["pt-PT"] = Notifications_ptPT,
             ["de"] = Notifications_de,
             ["ru"] = Notifications_ru,
             ["fr"] = Notifications_fr,
@@ -215,7 +231,8 @@ public static partial class TranslationService
             ["zh"] = TabTitles_zh,
             ["es"] = TabTitles_es,
             ["ja"] = TabTitles_ja,
-            ["pt"] = TabTitles_pt,
+            ["pt-BR"] = TabTitles_ptBR,
+            ["pt-PT"] = TabTitles_ptPT,
             ["de"] = TabTitles_de,
             ["ru"] = TabTitles_ru,
             ["fr"] = TabTitles_fr,
@@ -239,7 +256,8 @@ public static partial class TranslationService
             ["zh"] = SectionDescs_zh,
             ["es"] = SectionDescs_es,
             ["ja"] = SectionDescs_ja,
-            ["pt"] = SectionDescs_pt,
+            ["pt-BR"] = SectionDescs_ptBR,
+            ["pt-PT"] = SectionDescs_ptPT,
             ["de"] = SectionDescs_de,
             ["ru"] = SectionDescs_ru,
             ["fr"] = SectionDescs_fr,
@@ -263,7 +281,8 @@ public static partial class TranslationService
             ["zh"] = SectionTitles_zh,
             ["es"] = SectionTitles_es,
             ["ja"] = SectionTitles_ja,
-            ["pt"] = SectionTitles_pt,
+            ["pt-BR"] = SectionTitles_ptBR,
+            ["pt-PT"] = SectionTitles_ptPT,
             ["de"] = SectionTitles_de,
             ["ru"] = SectionTitles_ru,
             ["fr"] = SectionTitles_fr,
@@ -287,7 +306,8 @@ public static partial class TranslationService
             ["zh"] = ActionDescriptions_zh,
             ["es"] = ActionDescriptions_es,
             ["ja"] = ActionDescriptions_ja,
-            ["pt"] = ActionDescriptions_pt,
+            ["pt-BR"] = ActionDescriptions_ptBR,
+            ["pt-PT"] = ActionDescriptions_ptPT,
             ["de"] = ActionDescriptions_de,
             ["ru"] = ActionDescriptions_ru,
             ["fr"] = ActionDescriptions_fr,
@@ -311,7 +331,8 @@ public static partial class TranslationService
             ["zh"] = ActionTitles_zh,
             ["es"] = ActionTitles_es,
             ["ja"] = ActionTitles_ja,
-            ["pt"] = ActionTitles_pt,
+            ["pt-BR"] = ActionTitles_ptBR,
+            ["pt-PT"] = ActionTitles_ptPT,
             ["de"] = ActionTitles_de,
             ["ru"] = ActionTitles_ru,
             ["fr"] = ActionTitles_fr,
@@ -335,7 +356,8 @@ public static partial class TranslationService
             ["zh"] = ActionInfo_zh,
             ["es"] = ActionInfo_es,
             ["ja"] = ActionInfo_ja,
-            ["pt"] = ActionInfo_pt,
+            ["pt-BR"] = ActionInfo_ptBR,
+            ["pt-PT"] = ActionInfo_ptPT,
             ["de"] = ActionInfo_de,
             ["ru"] = ActionInfo_ru,
             ["fr"] = ActionInfo_fr,
@@ -359,7 +381,8 @@ public static partial class TranslationService
             ["zh"] = TooltipData_zh,
             ["es"] = TooltipData_es,
             ["ja"] = TooltipData_ja,
-            ["pt"] = TooltipData_pt,
+            ["pt-BR"] = TooltipData_ptBR,
+            ["pt-PT"] = TooltipData_ptPT,
             ["de"] = TooltipData_de,
             ["ru"] = TooltipData_ru,
             ["fr"] = TooltipData_fr,
@@ -383,7 +406,8 @@ public static partial class TranslationService
             ["zh"] = TooltipControversy_zh,
             ["es"] = TooltipControversy_es,
             ["ja"] = TooltipControversy_ja,
-            ["pt"] = TooltipControversy_pt,
+            ["pt-BR"] = TooltipControversy_ptBR,
+            ["pt-PT"] = TooltipControversy_ptPT,
             ["de"] = TooltipControversy_de,
             ["ru"] = TooltipControversy_ru,
             ["fr"] = TooltipControversy_fr,

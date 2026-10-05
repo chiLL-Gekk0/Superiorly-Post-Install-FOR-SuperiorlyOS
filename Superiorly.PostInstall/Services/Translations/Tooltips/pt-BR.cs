@@ -2,7 +2,7 @@ namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
-    private static readonly Dictionary<string, string> TooltipControversy_pt = new()
+    private static readonly Dictionary<string, string> TooltipControversy_ptBR = new()
     {
 
             ["arc"]="Desenvolvimento congelado (2025) enquanto a empresa migra para o navegador de IA Dia, mas ainda recebe atualizações de segurança do Chromium toda semana; no CVE-2024-45489, ACLs do Firebase mal configuradas permitiram executar JavaScript arbitrário no contexto de sincronização privilegiado de outro usuário (relatado por xyz3va; nenhum usuário afetado); a equipe de segurança cresceu de 1 para 5.",
@@ -35,7 +35,7 @@ public static partial class TranslationService
             ["cachy-browser"]="Build de nicho feito pela comunidade do CachyOS (Arch); exige AVX2; superfície de revisão mínima, então menos olhos no código do que nos navegadores mais usados.",
         
     };
-    private static readonly Dictionary<string, string> TooltipData_pt = new()
+    private static readonly Dictionary<string, string> TooltipData_ptBR = new()
     {
 
             ["arc"]="Sincronização por conta via servidores da The Browser Company; recursos de IA enviam o conteúdo da página aos provedores de serviço OpenAI e Anthropic, com opt-in por recurso.",

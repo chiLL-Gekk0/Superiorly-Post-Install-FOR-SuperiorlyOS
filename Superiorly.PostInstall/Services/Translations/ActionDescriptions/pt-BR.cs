@@ -2,7 +2,7 @@ namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
-    private static readonly Dictionary<string, string> ActionDescriptions_pt = new()
+    private static readonly Dictionary<string, string> ActionDescriptions_ptBR = new()
     {
 
             ["group-sys-services"]="Serviços em segundo plano, drivers e indexação.", ["group-sys-network"]="Protocols, throttling and network sharing.", ["group-sys-shell"]="Start menu, taskbar and File Explorer behavior.", ["group-sys-recovery"]="Filesystem, backups and sleep behavior.", ["group-sys-privacy"]="Data collection and suggested content.",
