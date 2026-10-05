@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["search-index"]="禁用会减慢文件搜索，但可减少磁盘/CPU 负担，且关闭期间会破坏“开始”/Outlook 搜索。重新启用会恢复延迟启动。需要重启。",
             ["telemetry-services"]="停止 DiagTrack、diagnosticshub、dmwappushservice 和 WdiServiceHost。反馈工具将不再上报。需要重启。",
             ["modern-standby"]="禁用会强制使用 S3。请先运行 powercfg /a：在仅支持 S0 的硬件上睡眠可能会消失。Microsoft 仅支持通过重新安装来切换。需要重启。",
-            ["widgets-board"]="按用户设置。较新的 Windows 11 构建可能再次显示它；计算机级策略位于“新闻和兴趣”中。立即生效。",
+            ["hibernation"]="调用 powercfg。完整为出厂设置，约为内存的 40%；精简约为 20%；禁用为 0%。精简和禁用会从菜单中移除“休眠”。先执行 /size 0，因为只要自定义大小超过 40%，powercfg 就会拒绝更改类型。", ["rdp-unsigned-warnings"]="在 HKLM Policies Terminal Services Client 写入 RedirectionWarningDialogVersion=1，并在 HKCU Terminal Server Client 写入 RdpLaunchConsentAccepted=1。适用于 Windows 10 22H2 和 Windows 11。警告：此操作会关闭一项安全警告，Microsoft 可能在未来的更新中移除该机制。", ["widgets-board"]="按用户设置。较新的 Windows 11 构建可能再次显示它；计算机级策略位于“新闻和兴趣”中。立即生效。",
             ["news-interests"]="EnableFeeds 是旧版 Win10 键，在 Win11 上无害。无需重启。",
             ["store-updates"]="阻止在新配置文件上自动安装类似 Candy Crush 的应用。商店本身仍可正常使用。无需重启。",
             ["telemetry-tasks"]="禁用 CEIP、Compatibility Appraiser、Disk Diagnostics 和反馈任务。时间同步、SmartScreen、商店更新和文件历史任务特意保持不变。无状态指示（不支持检查）。",

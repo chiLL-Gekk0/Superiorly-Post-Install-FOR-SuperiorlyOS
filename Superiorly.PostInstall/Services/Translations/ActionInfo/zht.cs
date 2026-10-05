@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["search-index"]="停用會減慢檔案搜尋，但節省磁碟/CPU 耗用，且停用期間開始/Outlook 搜尋會損壞。重新啟用會還原延遲啟動。需要重新啟動。",
             ["telemetry-services"]="停止 DiagTrack、diagnosticshub、dmwappushservice 與 WdiServiceHost。意見反應工具會安靜。需要重新啟動。",
             ["modern-standby"]="停用會強制 S3。請先執行 powercfg /a：在僅 S0 硬體上睡眠可能消失。Microsoft 僅支援透過重新安裝切換。需要重新啟動。",
-            ["widgets-board"]="每使用者。近期 Windows 11 版本可能重新顯示；電腦範圍原則位於新聞和興趣中。立即生效。",
+            ["hibernation"]="執行 powercfg。完整為出廠設定，約為記憶體的 40%；精簡約為 20%；停用為 0%。精簡與停用會從功能表移除「休眠」。先執行 /size 0，因為只要自訂大小超過 40%，powercfg 就會拒絕變更類型。", ["rdp-unsigned-warnings"]="在 HKLM Policies Terminal Services Client 寫入 RedirectionWarningDialogVersion=1，並在 HKCU Terminal Server Client 寫入 RdpLaunchConsentAccepted=1。適用於 Windows 10 22H2 與 Windows 11。警告：此操作會停用一項安全性警告，Microsoft 可能在後續更新中移除此機制。", ["widgets-board"]="每使用者。近期 Windows 11 版本可能重新顯示；電腦範圍原則位於新聞和興趣中。立即生效。",
             ["news-interests"]="EnableFeeds 是舊版 Win10 機碼，在 Win11 上無害。無需重新啟動。",
             ["store-updates"]="停止新設定檔上的 Candy Crush 式自動安裝。市集本身仍可運作。無需重新啟動。",
             ["telemetry-tasks"]="停用 CEIP、相容性評定程式、磁碟診斷與意見反應工作。時間同步、SmartScreen、市集更新與檔案歷程記錄工作刻意保留。不支援狀態指示器 (不支援檢查)。",

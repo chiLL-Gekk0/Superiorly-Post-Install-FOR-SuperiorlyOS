@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["search-index"]="無効にするとファイル検索が遅くなりますが、ディスクと CPU の無駄な負荷は抑えられます。停止中はスタートと Outlook の検索が使えなくなります。再度有効にすると遅延開始に戻ります。再起動が必要です。",
             ["telemetry-services"]="DiagTrack、diagnosticshub、dmwappushservice、WdiServiceHost を停止します。フィードバック機能は静かになります。再起動が必要です。",
             ["modern-standby"]="無効にすると S3 に強制されます。先に powercfg /a を実行してください。S0 のみのハードウェアではスリープが消える場合があります。Microsoft がサポートする切り替えは再インストールだけです。再起動が必要です。",
-            ["widgets-board"]="ユーザーごとの設定です。最近の Windows 11 ビルドでは再表示される場合があります。マシン全体のポリシーはニュースと関心にあります。即時に反映されます。",
+            ["hibernation"]="powercfg を実行します。フルは出荷既定で約 40% の RAM、縮小は約 20%、無効は 0% です。縮小と無効はメニューの「休止状態」を削除します。/size 0 を先に実行するのは、40% を超えるカスタムサイズが設定されている間、powercfg が種類変更を拒否するためです。", ["rdp-unsigned-warnings"]="HKLM Policies Terminal Services Client に RedirectionWarningDialogVersion=1、HKCU Terminal Server Client に RdpLaunchConsentAccepted=1 を書き込みます。Windows 10 22H2 と Windows 11 が対象です。警告: セキュリティ警告を無効化します。Microsoft は今後の更新でこの仕組みを削除する可能性があります。", ["widgets-board"]="ユーザーごとの設定です。最近の Windows 11 ビルドでは再表示される場合があります。マシン全体のポリシーはニュースと関心にあります。即時に反映されます。",
             ["news-interests"]="EnableFeeds は Win10 の旧来のキーであり、Win11 でも害はありません。再起動は不要です。",
             ["store-updates"]="新しいプロファイルでの Candy Crush 形式の自動インストールを停止します。ストア自体は引き続き動作します。再起動は不要です。",
             ["telemetry-tasks"]="CEIP、Compatibility Appraiser、Disk Diagnostics、フィードバックの各タスクを無効化します。時刻同期、SmartScreen、ストア更新、File History のタスクは意図的に変更しません。状態表示はありません（チェック非対応）。",

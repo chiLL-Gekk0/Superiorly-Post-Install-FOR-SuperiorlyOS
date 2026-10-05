@@ -53,7 +53,7 @@ public partial class CardViewModel : ObservableObject {
         ExportPowerPlanCommand = new AsyncRelayCommand(ExportPowerPlanAsync, () => !IsBusy && HasCheckedItems);
 
         SelectedOption = Options.FirstOrDefault();
-        if (IsCombo && _action.Id is "hop-limit" or "nx-mode" or "fivem-safe-services")
+        if (IsCombo && _action.Id is "hop-limit" or "nx-mode" or "fivem-safe-services" or "hibernation")
             TryDetectComboSelection();
         var subscribed = new HashSet<object>();
         void Track(object it)

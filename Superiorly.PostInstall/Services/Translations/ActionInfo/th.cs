@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["search-index"]="ปิดค้นไฟล์ช้าลงแต่ประหยัดดิสก์/CPU และทำค้นหา Start/Outlook พังขณะปิด เปิดคืนแบบหน่วง ต้องรีบูต",
             ["telemetry-services"]="หยุด DiagTrack diagnosticshub dmwappushservice และ WdiServiceHost เครื่องมือติชมเงียบ ต้องรีบูต",
             ["modern-standby"]="ปิดบังคับ S3 รัน powercfg /a ก่อน: บนฮาร์ดแวร์ S0-only สลีปอาจหาย Microsoft รองรับสลับเฉพาะติดตั้งใหม่ ต้องรีบูต",
-            ["widgets-board"]="ต่อผู้ใช้ บิลด์ Windows 11 ใหม่บางตัวอาจโชว์อีก นโยบายระดับเครื่องอยู่ใน News and interests มีผลทันที",
+            ["hibernation"]="เรียก powercfg แบบเต็มคือค่าเริ่มต้นจากโรงงานราว 40% ของ RAM แบบขนาดย่อราว 20% และแบบปิดใช้งานคือ 0% แบบขนาดย่อและแบบปิดใช้งานจะเอารายการการไฮเบอร์เนตออกจากเมนู คำสั่ง /size 0 ทำงานก่อนเพราะ powercfg จะปฏิเสธการเปลี่ยนชนิดตราบใดที่ตั้งขนาดกำหนดเองเกิน 40%", ["rdp-unsigned-warnings"]="เขียน RedirectionWarningDialogVersion=1 ใน HKLM Policies Terminal Services Client และ RdpLaunchConsentAccepted=1 ใน HKCU Terminal Server Client มีผลกับ Windows 10 22H2 และ Windows 11 คำเตือน: การดำเนินการนี้ปิดคำเตือนความปลอดภัย และ Microsoft อาจถอนกลไกนี้ในการอัปเดตในอนาคต", ["widgets-board"]="ต่อผู้ใช้ บิลด์ Windows 11 ใหม่บางตัวอาจโชว์อีก นโยบายระดับเครื่องอยู่ใน News and interests มีผลทันที",
             ["news-interests"]="EnableFeeds เป็นคีย์ Win10 เก่า ไม่เป็นอันตรายบน Win11 ไม่ต้องรีบูต",
             ["store-updates"]="หยุดติดตั้งอัตโนมัติแบบ Candy Crush บนโปรไฟล์ใหม่ Store เองยังใช้ได้ ไม่ต้องรีบูต",
             ["telemetry-tasks"]="ปิดงาน CEIP Compatibility Appraiser Disk Diagnostics และติชม งานซิงก์เวลา SmartScreen อัปเดต Store และ File History ไม่แตะโดยตั้งใจ ไม่มีตัวบอกสถานะ (ตรวจไม่รองรับ)",

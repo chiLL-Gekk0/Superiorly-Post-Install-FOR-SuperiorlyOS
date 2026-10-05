@@ -287,6 +287,21 @@ public partial class CardViewModel : ObservableObject {
                 var opt = Options.FirstOrDefault(o => o.Option.Label == label);
                 if (opt != null) SelectedOption = opt;
             }
+            else if (_action.Id == "hibernation")
+            {
+                using var k = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\Power");
+                var explicitOn = k?.GetValue("HibernateEnabled") as int?;
+                var fallbackOn = k?.GetValue("HibernateEnabledDefault") as int?;
+                // a factory install can have neither value, so fall back to the file itself
+                var hiber = System.IO.Path.Combine(Environment.GetEnvironmentVariable("SystemDrive") ?? "C:", "hiberfil.sys");
+                var enabled = explicitOn == 1 || (explicitOn is null && fallbackOn != 0) || System.IO.File.Exists(hiber);
+                // HiberFileType only counts while HiberFileSizePercent < 40; above it the file is full
+                var percent = k?.GetValue("HiberFileSizePercent") as int?;
+                var type = k?.GetValue("HiberFileType") as int?;
+                var label = !enabled ? "Disabled" : type == 1 && (percent is null || percent < 40) ? "Reduced" : "Full";
+                var opt = Options.FirstOrDefault(o => o.Option.Label == label);
+                if (opt != null) SelectedOption = opt;
+            }
         } catch { }
     }
 }

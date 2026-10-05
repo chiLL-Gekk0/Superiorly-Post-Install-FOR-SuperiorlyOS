@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["search-index"]="비활성화하면 파일 검색이 느려지지만 디스크/CPU 부담이 줄어들며, 꺼져 있는 동안 시작 메뉴/Outlook 검색이 동작하지 않습니다. 다시 활성화하면 지연 시작이 복원됩니다. 재부팅 필요.",
             ["telemetry-services"]="DiagTrack, diagnosticshub, dmwappushservice 및 WdiServiceHost를 중지합니다. 피드백 도구가 조용해집니다. 재부팅 필요.",
             ["modern-standby"]="비활성화하면 S3가 강제됩니다. 먼저 powercfg /a를 실행하십시오. S3만 지원하는 하드웨어에서는 절전 기능이 사라질 수 있습니다. Microsoft는 재설치를 통해서만 전환을 지원합니다. 재부팅 필요.",
-            ["widgets-board"]="사용자별 설정입니다. 최신 Windows 11 빌드에서 다시 표시될 수 있으며, 컴퓨터 전체 정책은 뉴스 및 관심사에 있습니다. 즉시 적용됩니다.",
+            ["hibernation"]="powercfg를 실행합니다. 전체는 출하 설정으로 약 40%의 RAM, 축소는 약 20%, 사용 안 함은 0%입니다. 축소와 사용 안 함은 메뉴에서 최대 절전 항목을 제거합니다. 40%를 넘는 사용자 지정 크기가 설정된 동안 powercfg가 형식 변경을 거부하므로 /size 0을 먼저 실행합니다.", ["rdp-unsigned-warnings"]="HKLM Policies Terminal Services Client에 RedirectionWarningDialogVersion=1을, HKCU Terminal Server Client에 RdpLaunchConsentAccepted=1을 씁니다. Windows 10 22H2 및 Windows 11에 적용됩니다. 경고: 보안 경고를 비활성화하며 Microsoft가 향후 업데이트에서 이 메커니즘을 제거할 수 있습니다.", ["widgets-board"]="사용자별 설정입니다. 최신 Windows 11 빌드에서 다시 표시될 수 있으며, 컴퓨터 전체 정책은 뉴스 및 관심사에 있습니다. 즉시 적용됩니다.",
             ["news-interests"]="EnableFeeds는 레거시 Win10 키이며 Win11에서는 해롭지 않습니다. 재부팅 불필요.",
             ["store-updates"]="새 프로필에서 Candy Crush류 앱의 자동 설치를 중지합니다. Store 자체는 계속 정상적으로 작동합니다. 재부팅 불필요.",
             ["telemetry-tasks"]="CEIP, Compatibility Appraiser, Disk Diagnostics 및 피드백 작업을 비활성화합니다. 시간 동기화, SmartScreen, Store 업데이트 및 File History 작업은 의도적으로 건드리지 않습니다. 상태 표시등이 없습니다(확인 미지원).",

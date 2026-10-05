@@ -3579,6 +3579,36 @@
                     ]
                 },
                 {
+                    "id": "hibernation",
+                    "tab": "system",
+                    "icon": "",
+                    "options": [
+                        {
+                            "label": "Full",
+                            "commands": [
+                                "powercfg /h /size 0",
+                                "powercfg /h /type full"
+                            ]
+                        },
+                        {
+                            "label": "Reduced",
+                            "commands": [
+                                "powercfg /h /size 0",
+                                "powercfg /h /type reduced"
+                            ]
+                        },
+                        {
+                            "label": "Disabled",
+                            "commands": [
+                                "powercfg /h off"
+                            ]
+                        }
+                    ],
+                    "check": [
+                        "!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Power\" /v HibernateEnabled | findstr \"0x0\""
+                    ]
+                },
+                {
                     "id": "group-sys-privacy",
                     "type": "group-header",
                     "tab": "system",
@@ -5643,6 +5673,30 @@
                     ],
                     "check": [
                         "!reg query \"HKLM\\SYSTEM\\CurrentControlSet\\Services\\WFDSConMgrSvc\" /v Start | findstr \"0x4\""
+                    ]
+                },
+                {
+                    "id": "rdp-unsigned-warnings",
+                    "tab": "security",
+                    "icon": "",
+                    "options": [
+                        {
+                            "label": "enable",
+                            "commands": [
+                                "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services\\Client\" /v \"RedirectionWarningDialogVersion\" /f ; exit 0",
+                                "reg delete \"HKCU\\Software\\Microsoft\\Terminal Server Client\" /v \"RdpLaunchConsentAccepted\" /f ; exit 0"
+                            ]
+                        },
+                        {
+                            "label": "disable",
+                            "commands": [
+                                "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services\\Client\" /v \"RedirectionWarningDialogVersion\" /t REG_DWORD /d \"1\" /f",
+                                "reg add \"HKCU\\Software\\Microsoft\\Terminal Server Client\" /v \"RdpLaunchConsentAccepted\" /t REG_DWORD /d \"1\" /f"
+                            ]
+                        }
+                    ],
+                    "check": [
+                        "reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services\\Client\" /v RedirectionWarningDialogVersion | findstr \"0x1\""
                     ]
                 },
                 {
