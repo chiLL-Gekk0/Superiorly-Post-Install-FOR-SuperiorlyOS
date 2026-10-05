@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,20 +12,21 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_fr = new()
     {
- ["mainstream"]="Populaires", ["privacy"]="Confidentialité", ["forks"]="Forks et personnalisés", ["software"]="Logiciels", ["store-downloader"]="Téléchargeur Microsoft Store", ["utilities"]="Utilitaires", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustements du registre", ["win32"]="Win32Priority", ["powerplans"]="Plans d’alimentation", ["connectivity"]="Connectivité", ["devices"]="Appareils", ["security"]="Sécurité", ["gaming"]="Jeux", ["ai"]="Intelligence artificielle", ["debloat"]="Debloat", ["system"]="Système" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Populaires", ["privacy"]="Confidentialité", ["forks"]="Forks et personnalisés", ["software"]="Logiciels", ["store-downloader"]="Téléchargeur Microsoft Store", ["utilities"]="Utilitaires", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustements du registre", ["win32"]="Win32Priority", ["powerplans"]="Plans d’alimentation", ["connectivity"]="Connectivité", ["devices"]="Appareils", ["security"]="Sécurité", ["gaming"]="Jeux", ["ai"]="Intelligence artificielle", ["debloat"]="Debloat", ["system"]="Système" , ["telemetry"]="Télémétrie",
+["app-privacy"]="Confidentialité des applications",
     };
     private static readonly Dictionary<string, string> Notifications_fr = new()
     {
- ["opened"]="Ouvert - lancé", ["installed"]="Installé avec succès", ["failed"]="Échec de l’installation", ["open_failed"]="Échec de l’ouverture", ["enabled"]="Activé", ["disabled"]="Désactivé", ["apply_failed"]="Échec de l’application", ["applied"]="Appliqué" , ["telemetry"]="Telemetry"
+ ["opened"]="Ouvert - lancé", ["installed"]="Installé avec succès", ["failed"]="Échec de l’installation", ["open_failed"]="Échec de l’ouverture", ["enabled"]="Activé", ["disabled"]="Désactivé", ["apply_failed"]="Échec de l’application", ["applied"]="Appliqué" , ["telemetry"]="Télémétrie"
     };
     private static readonly Dictionary<string, string> Ui_fr = new()
     {
 
-            ["settings"]="Paramètres", ["language"]="Langue", ["theme"]="Thème", ["dark"]="Sombre", ["light"]="Clair", ["auto"]="Auto", ["default_theme"]="Thème par défaut",
+            ["settings"]="Paramètres", ["language"]="Langue", ["theme"]="Thème", ["dark"]="Sombre", ["light"]="Clair", ["auto"]="Automatique", ["default_theme"]="Thème par défaut",
             ["style"]="Style", ["win10_style"]="Style Windows 10", ["win11_style"]="Style Windows 11", ["close"]="Fermer",
             ["search_placeholder"]="Rechercher par nom, URL ou ID.", ["store_no_results"]="Aucun résultat. Essayez une autre recherche.", ["search"]="Rechercher", ["install"]="Installer",
             ["run"]="Exécuter", ["download"]="Télécharger", ["open"]="Ouvrir", ["apply"]="Appliquer",
-            ["check_updates"]="Vérifier les mises à jour", ["update"]="Update", ["disclaimer"]="Vous êtes seul responsable des modifications.",
+            ["check_updates"]="Vérifier les mises à jour", ["update"]="Mettre à jour", ["disclaimer"]="Vous êtes seul responsable des modifications.",
             ["quantum_title"]="Carte Quantum", ["quantum_subtitle"]="Toutes les valeurs valides de Win32PrioritySeparation. Cliquez sur une ligne pour l’appliquer.",
             ["open_quantum"]="Ouvrir la carte Quantum", ["current_win32"]="Win32PrioritySeparation actuel",
             ["load_list"]="Charger la liste", ["unload_list"]="Fermer la liste", ["activate"]="Activer", ["import"]="Importer", ["export"]="Exporter",
@@ -44,11 +45,12 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> OptionLabels_fr = new()
     {
- ["run"]="Exécuter", ["download"]="Télécharger", ["apply"]="Appliquer", ["enable"]="Activer", ["disable"]="Désactiver", ["search"]="Rechercher", ["install"]="Installer", ["load list"]="Charger la liste", ["uninstall"]="Désinstaller", ["activate"]="Activer", ["delete"]="Supprimer", ["import .pow"]="Importer .pow", ["default"]="Par défaut", ["custom"]="Personnalisé", ["minimum"]="Minimum", ["disable mmcss"]="Désactiver MMCSS", ["bypass"]="Bypass", ["repeater"]="Répéteur", ["realtime"]="Temps réel", ["high"]="Haute", ["abovenormal"]="Supérieur à la normale", ["normal"]="Normal", ["belownormal"]="Inférieur à la normale", ["enhanced"]="Amélioré", ["legacy"]="Hérité", ["disabled"]="Désactivé", ["enabled"]="Activé", ["alwayson"]="Toujours activé", ["alwaysoff"]="Toujours désactivé", ["optin"]="Activation sélective", ["optout"]="Désactivation sélective", ["open cru"]="Ouvrir CRU", ["coming soon"]="Bientôt disponible", ["safe fivem/minecraft services"]="Services sécurisés FiveM/Minecraft", ["kernelos default"]="Superiorly par défaut" , ["telemetry"]="Telemetry"
+ ["run"]="Exécuter", ["download"]="Télécharger", ["apply"]="Appliquer", ["enable"]="Activer", ["disable"]="Désactiver", ["search"]="Rechercher", ["install"]="Installer", ["load list"]="Charger la liste", ["uninstall"]="Désinstaller", ["activate"]="Activer", ["delete"]="Supprimer", ["import .pow"]="Importer .pow", ["default"]="Par défaut", ["custom"]="Personnalisé", ["minimum"]="Minimale", ["disable mmcss"]="Désactiver MMCSS", ["bypass"]="Contournement", ["repeater"]="Répéteur", ["realtime"]="Temps réel", ["high"]="Haute", ["abovenormal"]="Supérieur à la normale", ["normal"]="Normale", ["belownormal"]="Inférieur à la normale", ["enhanced"]="Amélioré", ["legacy"]="Hérité", ["disabled"]="Désactivé", ["enabled"]="Activé", ["alwayson"]="Toujours activé", ["alwaysoff"]="Toujours désactivé", ["optin"]="Activation sélective", ["optout"]="Désactivation sélective", ["open cru"]="Ouvrir CRU", ["coming soon"]="Bientôt disponible", ["safe fivem/minecraft services"]="Services sécurisés FiveM/Minecraft", ["kernelos default"]="Superiorly par défaut" , ["telemetry"]="Télémétrie"
     };
     private static readonly Dictionary<string, string> TabDescs_fr = new()
     {
- ["mainstream"]="Navigateurs du quotidien.", ["privacy"]="Navigateurs axés sur la confidentialité et l’anonymat.", ["forks"]="Versions communautaires basées sur Chromium et Firefox.", ["utilities"]="Outils de diagnostic du système et du matériel.", ["amd"]="Outils AMD GPU pour pilotes, fréquence, tension et registre.", ["nvidia"]="Outils NVIDIA pour installations propres, profils et P-States.", ["connectivity"]="Paramètres Wi-Fi, Bluetooth et limite de sauts du point d’accès.", ["devices"]="Correctifs pour imprimante, Gestionnaire des tâches et saisie de texte.", ["security"]="Isolation du noyau, pare-feu, UAC, liste de blocage des pilotes et protections mémoire.", ["gaming"]="Services Xbox et Opera GX.", ["ai"]="Navigation Chromium, WebKit et axée sur l’IA.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Pilotes via Windows Update, menu Démarrer et correctifs du panneau Intel." , ["telemetry"]="Commutateurs de télémétrie, suggestions, publicités et collecte de données des éditeurs."
+ ["mainstream"]="Navigateurs du quotidien.", ["privacy"]="Navigateurs axés sur la confidentialité et l’anonymat.", ["forks"]="Versions communautaires basées sur Chromium et Firefox.", ["utilities"]="Outils de diagnostic du système et du matériel.", ["amd"]="Outils AMD GPU pour pilotes, fréquence, tension et registre.", ["nvidia"]="Outils NVIDIA pour installations propres, profils et P-States.", ["connectivity"]="Paramètres Wi-Fi, Bluetooth et limite de sauts du point d’accès.", ["devices"]="Correctifs pour imprimante, Gestionnaire des tâches et saisie de texte.", ["security"]="Isolation du noyau, pare-feu, UAC, liste de blocage des pilotes et protections mémoire.", ["gaming"]="Services Xbox et Opera GX.", ["ai"]="Navigation Chromium, WebKit et axée sur l’IA.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Pilotes via Windows Update, menu Démarrer et correctifs du panneau Intel." , ["telemetry"]="Commutateurs de télémétrie, suggestions, publicités et collecte de données des éditeurs.",
+["app-privacy"]="Autorisations d'applications et options de confidentialité.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_fr = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_fr = new()
     {
- ["mainstream"]="Navigateurs du quotidien", ["privacy"]="Navigation anonyme", ["forks"]="Forks indépendants", ["utilities"]="Utilitaires système", ["amd"]="Outils Radeon", ["nvidia"]="Outils GeForce", ["connectivity"]="Paramètres sans fil", ["devices"]="Correctifs des appareils", ["security"]="Protections système", ["gaming"]="Services de jeu", ["ai"]="Navigateurs IA", ["debloat"]="Allègement des navigateurs", ["system"]="Correctifs Windows" , ["telemetry"]="Telemetry Fixes"
+ ["mainstream"]="Navigateurs du quotidien", ["privacy"]="Navigation anonyme", ["forks"]="Forks indépendants", ["utilities"]="Utilitaires système", ["amd"]="Outils Radeon", ["nvidia"]="Outils GeForce", ["connectivity"]="Paramètres sans fil", ["devices"]="Correctifs des appareils", ["security"]="Protections système", ["gaming"]="Services de jeu", ["ai"]="Navigateurs IA", ["debloat"]="Allègement des navigateurs", ["system"]="Correctifs Windows" , ["telemetry"]="Correctifs de télémétrie",
+["app-privacy"]="Confidentialité des applications",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_fr = new()
     {
@@ -70,7 +73,7 @@ public static partial class TranslationService
             ["delete_plans"]="Supprimer {0} plan(s) ?",
             ["cant_delete_active"]="Vous ne pouvez pas supprimer le plan actif. Basculez d’abord vers un autre plan.",
             ["import_plan"]="Importer un plan d’alimentation", ["export_plan"]="Exporter un plan d’alimentation",
-            ["ratio"]="ratio", ["long"]="Long", ["short"]="Court", ["fixed"]="Fixe", ["variable"]="Variable", ["boost"]="boost", ["current"]="actuel",
+            ["ratio"]="ratio", ["long"]="Long", ["short"]="Court", ["fixed"]="Fixe", ["variable"]="Variable", ["boost"]="Accélération", ["current"]="actuel",
             ["needs_admin"]="Cette action requiert des privilèges d’administrateur.",
             ["restart_driver"]="Redémarrer le pilote d’affichage", ["reset_all"]="Tout réinitialiser", ["download_cru"]="Télécharger CRU",
             ["modify_quantum"]="Modifier Quantum", ["quantum_length"]="Longueur de Quantum", ["quantum_interval"]="Intervalle de Quantum",

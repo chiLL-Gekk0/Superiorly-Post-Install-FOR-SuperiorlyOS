@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_hi = new()
     {
- ["mainstream"]="मुख्यधारा", ["privacy"]="गोपनीयता", ["forks"]="फोर्क और कस्टम", ["software"]="सॉफ़्टवेयर", ["store-downloader"]="Microsoft Store डाउनलोडर", ["utilities"]="उपयोगिताएँ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="रजिस्ट्री", ["win32"]="Win32Priority", ["powerplans"]="पावर प्लान", ["connectivity"]="कनेक्टिविटी", ["devices"]="डिवाइस", ["security"]="सुरक्षा", ["gaming"]="गेमिंग", ["ai"]="AI", ["debloat"]="डीब्लोट", ["system"]="सिस्टम" , ["telemetry"]="टेलीमेट्री"
+ ["mainstream"]="मुख्यधारा", ["privacy"]="गोपनीयता", ["forks"]="फोर्क और कस्टम", ["software"]="सॉफ़्टवेयर", ["store-downloader"]="Microsoft Store डाउनलोडर", ["utilities"]="उपयोगिताएँ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="रजिस्ट्री", ["win32"]="Win32Priority", ["powerplans"]="पावर प्लान", ["connectivity"]="कनेक्टिविटी", ["devices"]="डिवाइस", ["security"]="सुरक्षा", ["gaming"]="गेमिंग", ["ai"]="AI", ["debloat"]="डीब्लोट", ["system"]="सिस्टम" , ["telemetry"]="टेलीमेट्री",
+["app-privacy"]="ऐप गोपनीयता",
     };
     private static readonly Dictionary<string, string> Notifications_hi = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_hi = new()
     {
- ["mainstream"]="रोज़मर्रा के ब्राउज़र।", ["privacy"]="गोपनीयता और गुमनामी के लिए बने ब्राउज़र।", ["forks"]="Chromium और Firefox पर आधारित समुदाय बिल्ड।", ["utilities"]="सिस्टम और हार्डवेयर निदान के लिए उपकरण।", ["amd"]="ड्राइवर, क्लॉक, वोल्टेज और रजिस्ट्री के लिए AMD GPU उपकरण।", ["nvidia"]="क्लीन इंस्टॉल, प्रोफाइल और P-States के लिए NVIDIA उपकरण।", ["connectivity"]="Wi-Fi, Bluetooth और हॉटस्पॉट हॉप सीमा सेटिंग्स।", ["devices"]="प्रिंटर, टास्क मैनेजर और टेक्स्ट इनपुट सुधार।", ["security"]="कोर आइसोलेशन, फ़ायरवॉल, UAC, ड्राइवर ब्लॉकलिस्ट और मेमोरी सुरक्षा।", ["gaming"]="Xbox सेवाएँ और Opera GX।", ["ai"]="Chromium, WebKit और AI-प्रथम ब्राउज़िंग।", ["debloat"]="ब्राउज़र गोपनीयता नीतियाँ और विक्रेता टेलीमेट्री स्विच: Chrome, Edge, Firefox और Office।", ["system"]="Windows Update ड्राइवर, स्टार्ट मेनू और Intel पैनल सुधार।" , ["telemetry"]="टेलीमेट्री, सुझाव, विज्ञापन और विक्रेता डेटा संग्रह स्विच।"
+ ["mainstream"]="रोज़मर्रा के ब्राउज़र।", ["privacy"]="गोपनीयता और गुमनामी के लिए बने ब्राउज़र।", ["forks"]="Chromium और Firefox पर आधारित समुदाय बिल्ड।", ["utilities"]="सिस्टम और हार्डवेयर निदान के लिए उपकरण।", ["amd"]="ड्राइवर, क्लॉक, वोल्टेज और रजिस्ट्री के लिए AMD GPU उपकरण।", ["nvidia"]="क्लीन इंस्टॉल, प्रोफाइल और P-States के लिए NVIDIA उपकरण।", ["connectivity"]="Wi-Fi, Bluetooth और हॉटस्पॉट हॉप सीमा सेटिंग्स।", ["devices"]="प्रिंटर, टास्क मैनेजर और टेक्स्ट इनपुट सुधार।", ["security"]="कोर आइसोलेशन, फ़ायरवॉल, UAC, ड्राइवर ब्लॉकलिस्ट और मेमोरी सुरक्षा।", ["gaming"]="Xbox सेवाएँ और Opera GX।", ["ai"]="Chromium, WebKit और AI-प्रथम ब्राउज़िंग।", ["debloat"]="ब्राउज़र गोपनीयता नीतियाँ और विक्रेता टेलीमेट्री स्विच: Chrome, Edge, Firefox और Office।", ["system"]="Windows Update ड्राइवर, स्टार्ट मेनू और Intel पैनल सुधार।" , ["telemetry"]="टेलीमेट्री, सुझाव, विज्ञापन और विक्रेता डेटा संग्रह स्विच।",
+["app-privacy"]="ऐप अनुमतियाँ और गोपनीयता सेटिंग्स।",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_hi = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_hi = new()
     {
- ["mainstream"]="रोज़मर्रा के ब्राउज़र", ["privacy"]="गुमनाम ब्राउज़िंग", ["forks"]="स्वतंत्र फोर्क", ["utilities"]="सिस्टम उपयोगिताएँ", ["amd"]="Radeon उपकरण", ["nvidia"]="GeForce उपकरण", ["connectivity"]="वायरलेस सेटिंग्स", ["devices"]="डिवाइस सुधार", ["security"]="सिस्टम सुरक्षा", ["gaming"]="गेम सेवाएँ", ["ai"]="AI ब्राउज़र", ["debloat"]="ब्राउज़र डीब्लोट", ["system"]="Windows सुधार" , ["telemetry"]="टेलीमेट्री सुधार"
+ ["mainstream"]="रोज़मर्रा के ब्राउज़र", ["privacy"]="गुमनाम ब्राउज़िंग", ["forks"]="स्वतंत्र फोर्क", ["utilities"]="सिस्टम उपयोगिताएँ", ["amd"]="Radeon उपकरण", ["nvidia"]="GeForce उपकरण", ["connectivity"]="वायरलेस सेटिंग्स", ["devices"]="डिवाइस सुधार", ["security"]="सिस्टम सुरक्षा", ["gaming"]="गेम सेवाएँ", ["ai"]="AI ब्राउज़र", ["debloat"]="ब्राउज़र डीब्लोट", ["system"]="Windows सुधार" , ["telemetry"]="टेलीमेट्री सुधार",
+["app-privacy"]="ऐप गोपनीयता",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_hi = new()
     {

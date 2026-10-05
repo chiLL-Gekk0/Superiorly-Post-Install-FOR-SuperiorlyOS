@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_zh = new()
     {
- ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32Priority", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="安全", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="Debloat", ["system"]="系统" , ["telemetry"]="Telemetry"
+ ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32Priority", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="安全", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="Debloat", ["system"]="系统" , ["telemetry"]="Telemetry",
+["app-privacy"]="应用隐私修复",
     };
     private static readonly Dictionary<string, string> Notifications_zh = new()
     {
@@ -25,7 +26,7 @@ public static partial class TranslationService
             ["style"]="样式", ["win10_style"]="Windows 10 样式", ["win11_style"]="Windows 11 样式", ["close"]="关闭",
             ["search_placeholder"]="按名称、URL 或 ID 搜索。", ["store_no_results"]="未找到结果。请尝试其他搜索。", ["search"]="搜索", ["install"]="安装",
             ["run"]="运行", ["download"]="下载", ["open"]="打开", ["apply"]="应用",
-            ["check_updates"]="检查更新", ["update"]="Update", ["disclaimer"]="修改由您自行负责。",
+            ["check_updates"]="检查更新", ["update"]="更新", ["disclaimer"]="修改由您自行负责。",
             ["quantum_title"]="Quantum 映射", ["quantum_subtitle"]="所有有效的 Win32PrioritySeparation 值。单击一行即可应用。",
             ["open_quantum"]="打开 Quantum 映射", ["current_win32"]="当前 Win32PrioritySeparation",
             ["load_list"]="加载列表", ["unload_list"]="关闭列表", ["activate"]="激活", ["import"]="导入", ["export"]="导出",
@@ -75,7 +76,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_zh = new()
     {
- ["mainstream"]="日常浏览器。", ["privacy"]="注重隐私和匿名的浏览器。", ["forks"]="基于Chromium和Firefox的社区版本。", ["utilities"]="系统和硬件诊断工具。", ["amd"]="用于驱动、频率、电压和注册表的AMD GPU工具。", ["nvidia"]="用于干净安装、配置文件和P-State的NVIDIA工具。", ["connectivity"]="Wi-Fi、蓝牙和热点跳数限制设置。", ["devices"]="打印机、任务管理器和文本输入修复。", ["security"]="内核隔离、防火墙、UAC、驱动程序阻止列表和内存保护。", ["gaming"]="Xbox服务和Opera GX。", ["ai"]="Chromium、WebKit和AI优先浏览。", ["debloat"]="浏览器隐私策略和供应商遥测开关：Chrome、Edge、Firefox和Office。", ["system"]="Windows Update驱动、开始菜单和Intel面板修复。" , ["telemetry"]="遥测、建议、广告和供应商数据收集开关。"
+ ["mainstream"]="日常浏览器。", ["privacy"]="注重隐私和匿名的浏览器。", ["forks"]="基于Chromium和Firefox的社区版本。", ["utilities"]="系统和硬件诊断工具。", ["amd"]="用于驱动、频率、电压和注册表的AMD GPU工具。", ["nvidia"]="用于干净安装、配置文件和P-State的NVIDIA工具。", ["connectivity"]="Wi-Fi、蓝牙和热点跳数限制设置。", ["devices"]="打印机、任务管理器和文本输入修复。", ["security"]="内核隔离、防火墙、UAC、驱动程序阻止列表和内存保护。", ["gaming"]="Xbox服务和Opera GX。", ["ai"]="Chromium、WebKit和AI优先浏览。", ["debloat"]="浏览器隐私策略和供应商遥测开关：Chrome、Edge、Firefox和Office。", ["system"]="Windows Update驱动、开始菜单和Intel面板修复。" , ["telemetry"]="遥测、建议、广告和供应商数据收集开关。",
+["app-privacy"]="应用权限与隐私设置。",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_zh = new()
     {
@@ -83,7 +85,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_zh = new()
     {
- ["mainstream"]="日常浏览器", ["privacy"]="匿名浏览", ["forks"]="独立分支", ["utilities"]="系统实用工具", ["amd"]="Radeon工具", ["nvidia"]="GeForce工具", ["connectivity"]="无线设置", ["devices"]="设备修复", ["security"]="系统保护", ["gaming"]="游戏服务", ["ai"]="AI浏览器", ["debloat"]="浏览器精简", ["system"]="Windows修复" , ["telemetry"]="遥测修复"
+ ["mainstream"]="日常浏览器", ["privacy"]="匿名浏览", ["forks"]="独立分支", ["utilities"]="系统实用工具", ["amd"]="Radeon工具", ["nvidia"]="GeForce工具", ["connectivity"]="无线设置", ["devices"]="设备修复", ["security"]="系统保护", ["gaming"]="游戏服务", ["ai"]="AI浏览器", ["debloat"]="浏览器精简", ["system"]="Windows修复" , ["telemetry"]="遥测修复",
+["app-privacy"]="应用隐私修复",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_zh = new()
     {

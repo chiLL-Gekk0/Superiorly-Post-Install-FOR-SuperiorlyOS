@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_th = new()
     {
- ["mainstream"]="ทั่วไป", ["privacy"]="ความเป็นส่วนตัว", ["forks"]="ฟอร์กและกำหนดเอง", ["software"]="ซอฟต์แวร์", ["store-downloader"]="ตัวดาวน์โหลด Microsoft Store", ["utilities"]="ยูทิลิตี้", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="รีจิสทรี", ["win32"]="Win32Priority", ["powerplans"]="แผนพลังงาน", ["connectivity"]="การเชื่อมต่อ", ["devices"]="อุปกรณ์", ["security"]="ความปลอดภัย", ["gaming"]="เกม", ["ai"]="AI", ["debloat"]="ดีโบลต", ["system"]="ระบบ" , ["telemetry"]="เทเลเมทรี"
+ ["mainstream"]="ทั่วไป", ["privacy"]="ความเป็นส่วนตัว", ["forks"]="ฟอร์กและกำหนดเอง", ["software"]="ซอฟต์แวร์", ["store-downloader"]="ตัวดาวน์โหลด Microsoft Store", ["utilities"]="ยูทิลิตี้", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="รีจิสทรี", ["win32"]="Win32Priority", ["powerplans"]="แผนพลังงาน", ["connectivity"]="การเชื่อมต่อ", ["devices"]="อุปกรณ์", ["security"]="ความปลอดภัย", ["gaming"]="เกม", ["ai"]="AI", ["debloat"]="ดีโบลต", ["system"]="ระบบ" , ["telemetry"]="เทเลเมทรี",
+["app-privacy"]="ความเป็นส่วนตัวของแอป",
     };
     private static readonly Dictionary<string, string> Notifications_th = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_th = new()
     {
- ["mainstream"]="เบราว์เซอร์ใช้ประจำวัน", ["privacy"]="เบราว์เซอร์ที่สร้างมาเพื่อความเป็นส่วนตัวและการไม่เปิดเผยตัวตน", ["forks"]="บิลด์ชุมชนที่พัฒนาจาก Chromium และ Firefox", ["utilities"]="เครื่องมือวินิจฉัยระบบและฮาร์ดแวร์", ["amd"]="เครื่องมือ GPU AMD สำหรับไดรเวอร์ นาฬิกา แรงดันไฟฟ้า และรีจิสทรี", ["nvidia"]="เครื่องมือ NVIDIA สำหรับติดตั้งแบบสะอาด โปรไฟล์ และ P-State", ["connectivity"]="การตั้งค่า Wi-Fi Bluetooth และขีดจำกัด Hop ของฮอตสปอต", ["devices"]="การแก้ไขเครื่องพิมพ์ Task Manager และการป้อนข้อความ", ["security"]="การแยกคอร์ ไฟร์วอลล์ UAC บัญชีดำไดรเวอร์ และการป้องกันหน่วยความจำ", ["gaming"]="บริการ Xbox และ Opera GX", ["ai"]="การท่องเว็บแบบ Chromium WebKit และ AI-first", ["debloat"]="นโยบายความเป็นส่วนตัวของเบราว์เซอร์และสวิตช์เทเลเมทรีของผู้จำหน่าย: Chrome, Edge, Firefox และ Office", ["system"]="การแก้ไขไดรเวอร์ Windows Update เมนู Start และแผง Intel" , ["telemetry"]="สวิตช์เทเลเมทรี คำแนะนำ โฆษณา และการเก็บข้อมูลของผู้จำหน่าย"
+ ["mainstream"]="เบราว์เซอร์ใช้ประจำวัน", ["privacy"]="เบราว์เซอร์ที่สร้างมาเพื่อความเป็นส่วนตัวและการไม่เปิดเผยตัวตน", ["forks"]="บิลด์ชุมชนที่พัฒนาจาก Chromium และ Firefox", ["utilities"]="เครื่องมือวินิจฉัยระบบและฮาร์ดแวร์", ["amd"]="เครื่องมือ GPU AMD สำหรับไดรเวอร์ นาฬิกา แรงดันไฟฟ้า และรีจิสทรี", ["nvidia"]="เครื่องมือ NVIDIA สำหรับติดตั้งแบบสะอาด โปรไฟล์ และ P-State", ["connectivity"]="การตั้งค่า Wi-Fi Bluetooth และขีดจำกัด Hop ของฮอตสปอต", ["devices"]="การแก้ไขเครื่องพิมพ์ Task Manager และการป้อนข้อความ", ["security"]="การแยกคอร์ ไฟร์วอลล์ UAC บัญชีดำไดรเวอร์ และการป้องกันหน่วยความจำ", ["gaming"]="บริการ Xbox และ Opera GX", ["ai"]="การท่องเว็บแบบ Chromium WebKit และ AI-first", ["debloat"]="นโยบายความเป็นส่วนตัวของเบราว์เซอร์และสวิตช์เทเลเมทรีของผู้จำหน่าย: Chrome, Edge, Firefox และ Office", ["system"]="การแก้ไขไดรเวอร์ Windows Update เมนู Start และแผง Intel" , ["telemetry"]="สวิตช์เทเลเมทรี คำแนะนำ โฆษณา และการเก็บข้อมูลของผู้จำหน่าย",
+["app-privacy"]="สิทธิ์ของแอปและการตั้งค่าความเป็นส่วนตัว",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_th = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_th = new()
     {
- ["mainstream"]="เบราว์เซอร์ประจำวัน", ["privacy"]="ท่องเว็บแบบไม่เปิดเผยตัวตน", ["forks"]="ฟอร์กอิสระ", ["utilities"]="ยูทิลิตี้ระบบ", ["amd"]="เครื่องมือ Radeon", ["nvidia"]="เครื่องมือ GeForce", ["connectivity"]="การตั้งค่าไร้สาย", ["devices"]="การแก้ไขอุปกรณ์", ["security"]="การป้องกันระบบ", ["gaming"]="บริการเกม", ["ai"]="เบราว์เซอร์ AI", ["debloat"]="ดีโบลตเบราว์เซอร์", ["system"]="การแก้ไข Windows" , ["telemetry"]="การแก้ไขเทเลเมทรี"
+ ["mainstream"]="เบราว์เซอร์ประจำวัน", ["privacy"]="ท่องเว็บแบบไม่เปิดเผยตัวตน", ["forks"]="ฟอร์กอิสระ", ["utilities"]="ยูทิลิตี้ระบบ", ["amd"]="เครื่องมือ Radeon", ["nvidia"]="เครื่องมือ GeForce", ["connectivity"]="การตั้งค่าไร้สาย", ["devices"]="การแก้ไขอุปกรณ์", ["security"]="การป้องกันระบบ", ["gaming"]="บริการเกม", ["ai"]="เบราว์เซอร์ AI", ["debloat"]="ดีโบลตเบราว์เซอร์", ["system"]="การแก้ไข Windows" , ["telemetry"]="การแก้ไขเทเลเมทรี",
+["app-privacy"]="ความเป็นส่วนตัวของแอป",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_th = new()
     {

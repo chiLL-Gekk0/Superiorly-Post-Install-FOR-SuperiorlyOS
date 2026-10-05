@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_pl = new()
     {
- ["mainstream"]="Popularne", ["privacy"]="Prywatność", ["forks"]="Forki i niestandardowe", ["software"]="Oprogramowanie", ["store-downloader"]="Program pobierający Microsoft Store", ["utilities"]="Narzędzia", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Poprawki rejestru", ["win32"]="Win32Priority", ["powerplans"]="Plany zasilania", ["connectivity"]="Łączność", ["devices"]="Urządzenia", ["security"]="Zabezpieczenia", ["gaming"]="Gry", ["ai"]="SI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Popularne", ["privacy"]="Prywatność", ["forks"]="Forki i niestandardowe", ["software"]="Oprogramowanie", ["store-downloader"]="Program pobierający Microsoft Store", ["utilities"]="Narzędzia", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Poprawki rejestru", ["win32"]="Win32Priority", ["powerplans"]="Plany zasilania", ["connectivity"]="Łączność", ["devices"]="Urządzenia", ["security"]="Zabezpieczenia", ["gaming"]="Gry", ["ai"]="SI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry",
+["app-privacy"]="Prywatność aplikacji",
     };
     private static readonly Dictionary<string, string> Notifications_pl = new()
     {
@@ -25,7 +26,7 @@ public static partial class TranslationService
             ["style"]="Styl", ["win10_style"]="Styl Windows 10", ["win11_style"]="Styl Windows 11", ["close"]="Zamknij",
             ["search_placeholder"]="Wyszukiwanie według nazwy, adresu URL lub identyfikatora.", ["store_no_results"]="Nie znaleziono wyników. Proszę spróbować innego wyszukiwania.", ["search"]="Szukaj", ["install"]="Instaluj",
             ["run"]="Uruchom", ["download"]="Pobierz", ["open"]="Otwórz", ["apply"]="Zastosuj",
-            ["check_updates"]="Sprawdź aktualizacje", ["update"]="Update", ["disclaimer"]="Modyfikacje wykonywane są na własną odpowiedzialność.",
+            ["check_updates"]="Sprawdź aktualizacje", ["update"]="Aktualizuj", ["disclaimer"]="Modyfikacje wykonywane są na własną odpowiedzialność.",
             ["quantum_title"]="Mapa Quantum", ["quantum_subtitle"]="Wszystkie prawidłowe wartości Win32PrioritySeparation. Wybranie wiersza powoduje zastosowanie wartości.",
             ["open_quantum"]="Otwórz mapę Quantum", ["current_win32"]="Bieżący Win32PrioritySeparation",
             ["load_list"]="Załaduj listę", ["unload_list"]="Zamknij listę", ["activate"]="Aktywuj", ["import"]="Importuj", ["export"]="Eksportuj",
@@ -44,11 +45,12 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> OptionLabels_pl = new()
     {
- ["run"]="Uruchom", ["download"]="Pobierz", ["apply"]="Zastosuj", ["enable"]="Włącz", ["disable"]="Wyłącz", ["search"]="Szukaj", ["install"]="Instaluj", ["load list"]="Załaduj listę", ["uninstall"]="Odinstaluj", ["activate"]="Aktywuj", ["delete"]="Usuń", ["import .pow"]="Importuj .pow", ["default"]="Domyślne", ["custom"]="Niestandardowe", ["minimum"]="Minimalne", ["disable mmcss"]="Wyłącz MMCSS", ["bypass"]="Obejście", ["repeater"]="Repeater", ["realtime"]="Czas rzeczywisty", ["high"]="Wysoki", ["abovenormal"]="Powyżej normalnego", ["normal"]="Normalny", ["belownormal"]="Poniżej normalnego", ["enhanced"]="Ulepszony", ["legacy"]="Starszy", ["disabled"]="Wyłączono", ["enabled"]="Włączono", ["alwayson"]="Zawsze włączone", ["alwaysoff"]="Zawsze wyłączone", ["optin"]="Selektywne włączenie", ["optout"]="Selektywne wyłączenie", ["open cru"]="Otwórz CRU", ["coming soon"]="Wkrótce", ["safe fivem/minecraft services"]="Bezpieczne usługi FiveM/Minecraft", ["kernelos default"]="Domyślne Superiorly" , ["telemetry"]="Telemetry"
+ ["run"]="Uruchom", ["download"]="Pobierz", ["apply"]="Zastosuj", ["enable"]="Włącz", ["disable"]="Wyłącz", ["search"]="Szukaj", ["install"]="Instaluj", ["load list"]="Załaduj listę", ["uninstall"]="Odinstaluj", ["activate"]="Aktywuj", ["delete"]="Usuń", ["import .pow"]="Importuj .pow", ["default"]="Domyślne", ["custom"]="Niestandardowe", ["minimum"]="Minimalne", ["disable mmcss"]="Wyłącz MMCSS", ["bypass"]="Obejście", ["repeater"]="Powtarzacz", ["realtime"]="Czas rzeczywisty", ["high"]="Wysoki", ["abovenormal"]="Powyżej normalnego", ["normal"]="Normalny", ["belownormal"]="Poniżej normalnego", ["enhanced"]="Ulepszony", ["legacy"]="Starszy", ["disabled"]="Wyłączono", ["enabled"]="Włączono", ["alwayson"]="Zawsze włączone", ["alwaysoff"]="Zawsze wyłączone", ["optin"]="Selektywne włączenie", ["optout"]="Selektywne wyłączenie", ["open cru"]="Otwórz CRU", ["coming soon"]="Wkrótce", ["safe fivem/minecraft services"]="Bezpieczne usługi FiveM/Minecraft", ["kernelos default"]="Domyślne Superiorly" , ["telemetry"]="Telemetry"
     };
     private static readonly Dictionary<string, string> TabDescs_pl = new()
     {
- ["mainstream"]="Codzienne przeglądarki.", ["privacy"]="Przeglądarki nastawione na prywatność i anonimowość.", ["forks"]="Społecznościowe kompilacje oparte na Chromium i Firefox.", ["utilities"]="Narzędzia do diagnostyki systemu i sprzętu.", ["amd"]="Narzędzia AMD GPU do sterowników, taktowania, napięcia i rejestru.", ["nvidia"]="Narzędzia NVIDIA do czystej instalacji, profili i stanów P-States.", ["connectivity"]="Ustawienia Wi-Fi, Bluetooth i limitu przeskoków hotspotu.", ["devices"]="Poprawki drukarki, Menedżera zadań i wprowadzania tekstu.", ["security"]="Izolacja rdzenia, zapora, UAC, lista blokowanych sterowników i ochrona pamięci.", ["gaming"]="Usługi Xbox i Opera GX.", ["ai"]="Przeglądanie Chromium, WebKit i oparte na SI.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Sterowniki przez Windows Update, menu Start i poprawki panelu Intel." , ["telemetry"]="Przełączniki telemetrii, sugestii, reklam i zbierania danych przez dostawców."
+ ["mainstream"]="Codzienne przeglądarki.", ["privacy"]="Przeglądarki nastawione na prywatność i anonimowość.", ["forks"]="Społecznościowe kompilacje oparte na Chromium i Firefox.", ["utilities"]="Narzędzia do diagnostyki systemu i sprzętu.", ["amd"]="Narzędzia AMD GPU do sterowników, taktowania, napięcia i rejestru.", ["nvidia"]="Narzędzia NVIDIA do czystej instalacji, profili i stanów P-States.", ["connectivity"]="Ustawienia Wi-Fi, Bluetooth i limitu przeskoków hotspotu.", ["devices"]="Poprawki drukarki, Menedżera zadań i wprowadzania tekstu.", ["security"]="Izolacja rdzenia, zapora, UAC, lista blokowanych sterowników i ochrona pamięci.", ["gaming"]="Usługi Xbox i Opera GX.", ["ai"]="Przeglądanie Chromium, WebKit i oparte na SI.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Sterowniki przez Windows Update, menu Start i poprawki panelu Intel." , ["telemetry"]="Przełączniki telemetrii, sugestii, reklam i zbierania danych przez dostawców.",
+["app-privacy"]="Uprawnienia aplikacji i ustawienia prywatności.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_pl = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_pl = new()
     {
- ["mainstream"]="Codzienne przeglądarki", ["privacy"]="Anonimowe przeglądanie", ["forks"]="Niezależne forki", ["utilities"]="Narzędzia systemowe", ["amd"]="Narzędzia Radeon", ["nvidia"]="Narzędzia GeForce", ["connectivity"]="Ustawienia bezprzewodowe", ["devices"]="Poprawki urządzeń", ["security"]="Ochrona systemu", ["gaming"]="Usługi gier", ["ai"]="Przeglądarki SI", ["debloat"]="Odchudzanie przeglądarek", ["system"]="Poprawki Windows" , ["telemetry"]="Telemetry Fixes"
+ ["mainstream"]="Codzienne przeglądarki", ["privacy"]="Anonimowe przeglądanie", ["forks"]="Niezależne forki", ["utilities"]="Narzędzia systemowe", ["amd"]="Narzędzia Radeon", ["nvidia"]="Narzędzia GeForce", ["connectivity"]="Ustawienia bezprzewodowe", ["devices"]="Poprawki urządzeń", ["security"]="Ochrona systemu", ["gaming"]="Usługi gier", ["ai"]="Przeglądarki SI", ["debloat"]="Odchudzanie przeglądarek", ["system"]="Poprawki Windows" , ["telemetry"]="Poprawki telemetrii",
+["app-privacy"]="Prywatność aplikacji",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_pl = new()
     {
@@ -80,7 +83,7 @@ public static partial class TranslationService
             ["join"]="DOŁĄCZ", ["follow"]="OBSERWUJ", ["visit"]="ODWIEDŹ", ["copy_link"]="Kopiuj link", ["copied"]="Skopiowano",
             ["no_profiles_found"]="Nie znaleziono profili. Umieść pliki .nip w folderze Nvidia Profiles.",
             ["confirm_disable"]="Wyłączyć tę ochronę?",
-            ["home_discord_desc"]="Superiorly Community",
+            ["home_discord_desc"]="Społeczność Superiorly",
             ["home_instagram_desc"]="@sebastianportella",
             ["home_github_desc"]="chiLL-Gekk0",
             ["security"]="Zabezpieczenia: ", ["power_plan_filter"]="Plan zasilania",

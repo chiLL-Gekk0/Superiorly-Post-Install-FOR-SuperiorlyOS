@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_en = new()
     {
- ["mainstream"]="Mainstream", ["privacy"]="Privacy", ["forks"]="Forks & Custom", ["software"]="Software", ["store-downloader"]="Microsoft Store Downloader", ["utilities"]="Utilities", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry", ["win32"]="Win32Priority", ["powerplans"]="Power Plans", ["connectivity"]="Connectivity", ["devices"]="Devices", ["security"]="Security", ["gaming"]="Gaming", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Mainstream", ["privacy"]="Privacy", ["forks"]="Forks & Custom", ["software"]="Software", ["store-downloader"]="Microsoft Store Downloader", ["utilities"]="Utilities", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry", ["win32"]="Win32Priority", ["powerplans"]="Power Plans", ["connectivity"]="Connectivity", ["devices"]="Devices", ["security"]="Security", ["gaming"]="Gaming", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry",
+["app-privacy"]="App Privacy Fixes",
     };
     private static readonly Dictionary<string, string> Notifications_en = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_en = new()
     {
- ["mainstream"]="Everyday Browsers.", ["privacy"]="Browsers Built For Privacy And Anonymity.", ["forks"]="Community Builds Based On Chromium And Firefox.", ["utilities"]="Tools For System And Hardware Diagnostics.", ["amd"]="AMD GPU Tools For Drivers, Clock, Voltage And Registry.", ["nvidia"]="NVIDIA Tools For Clean Installs, Profiles And P-States.", ["connectivity"]="Wi-Fi, Bluetooth And Hotspot Hop Limit Settings.", ["devices"]="Printer, Task Manager And Text Input Fixes.", ["security"]="Core Isolation, Firewall, UAC, Driver Blocklist And Memory Protections.", ["gaming"]="Xbox Services And Opera GX.", ["ai"]="Chromium, WebKit And AI-First Browsing.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Windows Update Driver, Start Menu And Intel Panel Fixes." , ["telemetry"]="Telemetry, suggestions, ads and vendor data collection switches."
+ ["mainstream"]="Everyday Browsers.", ["privacy"]="Browsers Built For Privacy And Anonymity.", ["forks"]="Community Builds Based On Chromium And Firefox.", ["utilities"]="Tools For System And Hardware Diagnostics.", ["amd"]="AMD GPU Tools For Drivers, Clock, Voltage And Registry.", ["nvidia"]="NVIDIA Tools For Clean Installs, Profiles And P-States.", ["connectivity"]="Wi-Fi, Bluetooth And Hotspot Hop Limit Settings.", ["devices"]="Printer, Task Manager And Text Input Fixes.", ["security"]="Core Isolation, Firewall, UAC, Driver Blocklist And Memory Protections.", ["gaming"]="Xbox Services And Opera GX.", ["ai"]="Chromium, WebKit And AI-First Browsing.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Windows Update Driver, Start Menu And Intel Panel Fixes." , ["telemetry"]="Telemetry, suggestions, ads and vendor data collection switches.",
+["app-privacy"]="Windows application permissions and privacy toggles.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_en = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_en = new()
     {
- ["mainstream"]="Everyday Browsers", ["privacy"]="Anonymous Browsing", ["forks"]="Independent Forks", ["utilities"]="System Utilities", ["amd"]="Radeon Tools", ["nvidia"]="GeForce Tools", ["connectivity"]="Wireless Settings", ["devices"]="Device Fixes", ["security"]="System Protections", ["gaming"]="Game Services", ["ai"]="AI Browsers", ["debloat"]="Browser Debloat", ["system"]="Windows Fixes" , ["telemetry"]="Telemetry Fixes"
+ ["mainstream"]="Everyday Browsers", ["privacy"]="Anonymous Browsing", ["forks"]="Independent Forks", ["utilities"]="System Utilities", ["amd"]="Radeon Tools", ["nvidia"]="GeForce Tools", ["connectivity"]="Wireless Settings", ["devices"]="Device Fixes", ["security"]="System Protections", ["gaming"]="Game Services", ["ai"]="AI Browsers", ["debloat"]="Browser Debloat", ["system"]="Windows Fixes" , ["telemetry"]="Telemetry Fixes",
+["app-privacy"]="App Privacy Fixes",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_en = new()
     {

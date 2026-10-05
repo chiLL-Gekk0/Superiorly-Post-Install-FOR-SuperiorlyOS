@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_uk = new()
     {
- ["mainstream"]="Популярні", ["privacy"]="Конфіденційність", ["forks"]="Форки та кастомні", ["software"]="Програми", ["store-downloader"]="Завантажувач Microsoft Store", ["utilities"]="Утиліти", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Реєстр", ["win32"]="Win32Priority", ["powerplans"]="Схеми живлення", ["connectivity"]="Підключення", ["devices"]="Пристрої", ["security"]="Безпека", ["gaming"]="Ігри", ["ai"]="ШІ", ["debloat"]="Деблот", ["system"]="Система" , ["telemetry"]="Телеметрія"
+ ["mainstream"]="Популярні", ["privacy"]="Конфіденційність", ["forks"]="Форки та кастомні", ["software"]="Програми", ["store-downloader"]="Завантажувач Microsoft Store", ["utilities"]="Утиліти", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Реєстр", ["win32"]="Win32Priority", ["powerplans"]="Схеми живлення", ["connectivity"]="Підключення", ["devices"]="Пристрої", ["security"]="Безпека", ["gaming"]="Ігри", ["ai"]="ШІ", ["debloat"]="Деблот", ["system"]="Система" , ["telemetry"]="Телеметрія",
+["app-privacy"]="Приватність застосунків",
     };
     private static readonly Dictionary<string, string> Notifications_uk = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_uk = new()
     {
- ["mainstream"]="Браузери на щодень.", ["privacy"]="Браузери для конфіденційності та анонімності.", ["forks"]="Збірки спільноти на основі Chromium і Firefox.", ["utilities"]="Інструменти для діагностики системи та обладнання.", ["amd"]="Інструменти AMD GPU для драйверів, частот, напруги та реєстру.", ["nvidia"]="Інструменти NVIDIA для чистого встановлення, профілів і P-станів.", ["connectivity"]="Налаштування Wi-Fi, Bluetooth і ліміту Hotspot Hop.", ["devices"]="Виправлення принтера, диспетчера завдань і введення тексту.", ["security"]="Ізоляція ядра, брандмауер, UAC, список заблокованих драйверів і захист пам'яті.", ["gaming"]="Служби Xbox та Opera GX.", ["ai"]="Браузери на Chromium, WebKit і з ШІ.", ["debloat"]="Політики конфіденційності браузерів і перемикачі телеметрії вендорів: Chrome, Edge, Firefox та Office.", ["system"]="Драйвери через Windows Update, виправлення меню Пуск і панелі Intel." , ["telemetry"]="Перемикачі телеметрії, рекомендацій, реклами та збору даних вендорами."
+ ["mainstream"]="Браузери на щодень.", ["privacy"]="Браузери для конфіденційності та анонімності.", ["forks"]="Збірки спільноти на основі Chromium і Firefox.", ["utilities"]="Інструменти для діагностики системи та обладнання.", ["amd"]="Інструменти AMD GPU для драйверів, частот, напруги та реєстру.", ["nvidia"]="Інструменти NVIDIA для чистого встановлення, профілів і P-станів.", ["connectivity"]="Налаштування Wi-Fi, Bluetooth і ліміту Hotspot Hop.", ["devices"]="Виправлення принтера, диспетчера завдань і введення тексту.", ["security"]="Ізоляція ядра, брандмауер, UAC, список заблокованих драйверів і захист пам'яті.", ["gaming"]="Служби Xbox та Opera GX.", ["ai"]="Браузери на Chromium, WebKit і з ШІ.", ["debloat"]="Політики конфіденційності браузерів і перемикачі телеметрії вендорів: Chrome, Edge, Firefox та Office.", ["system"]="Драйвери через Windows Update, виправлення меню Пуск і панелі Intel." , ["telemetry"]="Перемикачі телеметрії, рекомендацій, реклами та збору даних вендорами.",
+["app-privacy"]="Дозволи застосунків і параметри приватності.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_uk = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_uk = new()
     {
- ["mainstream"]="Браузери на щодень", ["privacy"]="Анонімний перегляд", ["forks"]="Незалежні форки", ["utilities"]="Системні утиліти", ["amd"]="Інструменти Radeon", ["nvidia"]="Інструменти GeForce", ["connectivity"]="Бездротові налаштування", ["devices"]="Виправлення пристроїв", ["security"]="Захист системи", ["gaming"]="Ігрові служби", ["ai"]="ШІ-браузери", ["debloat"]="Деблот браузерів", ["system"]="Виправлення Windows" , ["telemetry"]="Виправлення телеметрії"
+ ["mainstream"]="Браузери на щодень", ["privacy"]="Анонімний перегляд", ["forks"]="Незалежні форки", ["utilities"]="Системні утиліти", ["amd"]="Інструменти Radeon", ["nvidia"]="Інструменти GeForce", ["connectivity"]="Бездротові налаштування", ["devices"]="Виправлення пристроїв", ["security"]="Захист системи", ["gaming"]="Ігрові служби", ["ai"]="ШІ-браузери", ["debloat"]="Деблот браузерів", ["system"]="Виправлення Windows" , ["telemetry"]="Виправлення телеметрії",
+["app-privacy"]="Приватність застосунків",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_uk = new()
     {

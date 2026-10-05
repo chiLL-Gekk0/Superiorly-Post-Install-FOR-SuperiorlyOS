@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_id = new()
     {
- ["mainstream"]="Populer", ["privacy"]="Privasi", ["forks"]="Fork & Kustom", ["software"]="Perangkat Lunak", ["store-downloader"]="Pengunduh Microsoft Store", ["utilities"]="Utilitas", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registri", ["win32"]="Win32Priority", ["powerplans"]="Paket Daya", ["connectivity"]="Konektivitas", ["devices"]="Perangkat", ["security"]="Keamanan", ["gaming"]="Game", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri"
+ ["mainstream"]="Populer", ["privacy"]="Privasi", ["forks"]="Fork & Kustom", ["software"]="Perangkat Lunak", ["store-downloader"]="Pengunduh Microsoft Store", ["utilities"]="Utilitas", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registri", ["win32"]="Win32Priority", ["powerplans"]="Paket Daya", ["connectivity"]="Konektivitas", ["devices"]="Perangkat", ["security"]="Keamanan", ["gaming"]="Game", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri",
+["app-privacy"]="Privasi Aplikasi",
     };
     private static readonly Dictionary<string, string> Notifications_id = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_id = new()
     {
- ["mainstream"]="Browser sehari-hari.", ["privacy"]="Browser yang dibuat untuk privasi dan anonimitas.", ["forks"]="Build komunitas berbasis Chromium dan Firefox.", ["utilities"]="Alat untuk diagnostik sistem dan perangkat keras.", ["amd"]="Alat GPU AMD untuk driver, clock, voltase, dan registri.", ["nvidia"]="Alat NVIDIA untuk instalasi bersih, profil, dan P-State.", ["connectivity"]="Pengaturan Wi-Fi, Bluetooth, dan batas hop hotspot.", ["devices"]="Perbaikan printer, Task Manager, dan input teks.", ["security"]="Isolasi inti, firewall, UAC, daftar blokir driver, dan proteksi memori.", ["gaming"]="Layanan Xbox dan Opera GX.", ["ai"]="Penjelajahan Chromium, WebKit, dan berbasis AI.", ["debloat"]="Kebijakan privasi browser dan sakelar telemetri vendor: Chrome, Edge, Firefox, dan Office.", ["system"]="Driver Windows Update, Menu Mulai, dan perbaikan panel Intel." , ["telemetry"]="Sakelar telemetri, saran, iklan, dan pengumpulan data vendor."
+ ["mainstream"]="Browser sehari-hari.", ["privacy"]="Browser yang dibuat untuk privasi dan anonimitas.", ["forks"]="Build komunitas berbasis Chromium dan Firefox.", ["utilities"]="Alat untuk diagnostik sistem dan perangkat keras.", ["amd"]="Alat GPU AMD untuk driver, clock, voltase, dan registri.", ["nvidia"]="Alat NVIDIA untuk instalasi bersih, profil, dan P-State.", ["connectivity"]="Pengaturan Wi-Fi, Bluetooth, dan batas hop hotspot.", ["devices"]="Perbaikan printer, Task Manager, dan input teks.", ["security"]="Isolasi inti, firewall, UAC, daftar blokir driver, dan proteksi memori.", ["gaming"]="Layanan Xbox dan Opera GX.", ["ai"]="Penjelajahan Chromium, WebKit, dan berbasis AI.", ["debloat"]="Kebijakan privasi browser dan sakelar telemetri vendor: Chrome, Edge, Firefox, dan Office.", ["system"]="Driver Windows Update, Menu Mulai, dan perbaikan panel Intel." , ["telemetry"]="Sakelar telemetri, saran, iklan, dan pengumpulan data vendor.",
+["app-privacy"]="Izin aplikasi dan opsi privasi.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_id = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_id = new()
     {
- ["mainstream"]="Browser Sehari-hari", ["privacy"]="Penjelajahan Anonim", ["forks"]="Fork Independen", ["utilities"]="Utilitas Sistem", ["amd"]="Alat Radeon", ["nvidia"]="Alat GeForce", ["connectivity"]="Pengaturan Nirkabel", ["devices"]="Perbaikan Perangkat", ["security"]="Proteksi Sistem", ["gaming"]="Layanan Game", ["ai"]="Browser AI", ["debloat"]="Debloat Browser", ["system"]="Perbaikan Windows" , ["telemetry"]="Perbaikan Telemetri"
+ ["mainstream"]="Browser Sehari-hari", ["privacy"]="Penjelajahan Anonim", ["forks"]="Fork Independen", ["utilities"]="Utilitas Sistem", ["amd"]="Alat Radeon", ["nvidia"]="Alat GeForce", ["connectivity"]="Pengaturan Nirkabel", ["devices"]="Perbaikan Perangkat", ["security"]="Proteksi Sistem", ["gaming"]="Layanan Game", ["ai"]="Browser AI", ["debloat"]="Debloat Browser", ["system"]="Perbaikan Windows" , ["telemetry"]="Perbaikan Telemetri",
+["app-privacy"]="Privasi Aplikasi",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_id = new()
     {

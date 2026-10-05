@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ur = new()
     {
- ["mainstream"]="عام", ["privacy"]="رازداری", ["forks"]="فورکس اور کسٹم", ["software"]="سافٹ ویئر", ["store-downloader"]="Microsoft Store ڈاؤنلوڈر", ["utilities"]="یوٹیلیٹیز", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجسٹری", ["win32"]="Win32Priority", ["powerplans"]="پاور پلانز", ["connectivity"]="کنیکٹیویٹی", ["devices"]="ڈیوائسز", ["security"]="سیکیورٹی", ["gaming"]="گیمنگ", ["ai"]="مصنوعی ذہانت", ["debloat"]="ڈیبلوٹ", ["system"]="سسٹم" , ["telemetry"]="ٹیلی میٹری"
+ ["mainstream"]="عام", ["privacy"]="رازداری", ["forks"]="فورکس اور کسٹم", ["software"]="سافٹ ویئر", ["store-downloader"]="Microsoft Store ڈاؤنلوڈر", ["utilities"]="یوٹیلیٹیز", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجسٹری", ["win32"]="Win32Priority", ["powerplans"]="پاور پلانز", ["connectivity"]="کنیکٹیویٹی", ["devices"]="ڈیوائسز", ["security"]="سیکیورٹی", ["gaming"]="گیمنگ", ["ai"]="مصنوعی ذہانت", ["debloat"]="ڈیبلوٹ", ["system"]="سسٹم" , ["telemetry"]="ٹیلی میٹری",
+["app-privacy"]="ایپ پرائیویسی",
     };
     private static readonly Dictionary<string, string> Notifications_ur = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_ur = new()
     {
- ["mainstream"]="روزمرہ کے براؤزرز۔", ["privacy"]="رازداری اور گمنامی کے لیے بنائے گئے براؤزرز۔", ["forks"]="Chromium اور Firefox پر مبنی کمیونٹی بلڈز۔", ["utilities"]="سسٹم اور ہارڈ ویئر کی تشخیص کے ٹولز۔", ["amd"]="AMD GPU ٹولز برائے ڈرائیورز، کلاک، وولٹیج اور رجسٹری۔", ["nvidia"]="NVIDIA ٹولز برائے کلین انسٹال، پروفائلز اور P-States۔", ["connectivity"]="Wi-Fi، Bluetooth اور ہاٹ اسپاٹ ہاپ لمٹ سیٹنگز۔", ["devices"]="پرنٹر، ٹاسک مینیجر اور ٹیکسٹ ان پٹ اصلاحات۔", ["security"]="کور آئسولیشن، فائر وال، UAC، ڈرائیور بلاک لسٹ اور میموری تحفظات۔", ["gaming"]="Xbox سروسز اور Opera GX۔", ["ai"]="Chromium، WebKit اور AI-فرسٹ براؤزنگ۔", ["debloat"]="براؤزر پرائیویسی پالیسیز اور وینڈر ٹیلی میٹری سوئچز: Chrome، Edge، Firefox اور Office۔", ["system"]="Windows Update ڈرائیور، اسٹارٹ مینیو اور Intel پینل اصلاحات۔" , ["telemetry"]="ٹیلی میٹری، تجاویز، اشتہارات اور وینڈر ڈیٹا کلیکشن سوئچز۔"
+ ["mainstream"]="روزمرہ کے براؤزرز۔", ["privacy"]="رازداری اور گمنامی کے لیے بنائے گئے براؤزرز۔", ["forks"]="Chromium اور Firefox پر مبنی کمیونٹی بلڈز۔", ["utilities"]="سسٹم اور ہارڈ ویئر کی تشخیص کے ٹولز۔", ["amd"]="AMD GPU ٹولز برائے ڈرائیورز، کلاک، وولٹیج اور رجسٹری۔", ["nvidia"]="NVIDIA ٹولز برائے کلین انسٹال، پروفائلز اور P-States۔", ["connectivity"]="Wi-Fi، Bluetooth اور ہاٹ اسپاٹ ہاپ لمٹ سیٹنگز۔", ["devices"]="پرنٹر، ٹاسک مینیجر اور ٹیکسٹ ان پٹ اصلاحات۔", ["security"]="کور آئسولیشن، فائر وال، UAC، ڈرائیور بلاک لسٹ اور میموری تحفظات۔", ["gaming"]="Xbox سروسز اور Opera GX۔", ["ai"]="Chromium، WebKit اور AI-فرسٹ براؤزنگ۔", ["debloat"]="براؤزر پرائیویسی پالیسیز اور وینڈر ٹیلی میٹری سوئچز: Chrome، Edge، Firefox اور Office۔", ["system"]="Windows Update ڈرائیور، اسٹارٹ مینیو اور Intel پینل اصلاحات۔" , ["telemetry"]="ٹیلی میٹری، تجاویز، اشتہارات اور وینڈر ڈیٹا کلیکشن سوئچز۔",
+["app-privacy"]="ایپ اجازتیں اور پرائیویسی سیٹنگز۔",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_ur = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_ur = new()
     {
- ["mainstream"]="روزمرہ کے براؤزرز", ["privacy"]="گمنام براؤزنگ", ["forks"]="آزاد فورکس", ["utilities"]="سسٹم یوٹیلیٹیز", ["amd"]="Radeon ٹولز", ["nvidia"]="GeForce ٹولز", ["connectivity"]="وائرلیس سیٹنگز", ["devices"]="ڈیوائس اصلاحات", ["security"]="سسٹم تحفظات", ["gaming"]="گیم سروسز", ["ai"]="AI براؤزرز", ["debloat"]="براؤزر ڈیبلوٹ", ["system"]="Windows اصلاحات" , ["telemetry"]="ٹیلی میٹری اصلاحات"
+ ["mainstream"]="روزمرہ کے براؤزرز", ["privacy"]="گمنام براؤزنگ", ["forks"]="آزاد فورکس", ["utilities"]="سسٹم یوٹیلیٹیز", ["amd"]="Radeon ٹولز", ["nvidia"]="GeForce ٹولز", ["connectivity"]="وائرلیس سیٹنگز", ["devices"]="ڈیوائس اصلاحات", ["security"]="سسٹم تحفظات", ["gaming"]="گیم سروسز", ["ai"]="AI براؤزرز", ["debloat"]="براؤزر ڈیبلوٹ", ["system"]="Windows اصلاحات" , ["telemetry"]="ٹیلی میٹری اصلاحات",
+["app-privacy"]="ایپ پرائیویسی",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ur = new()
     {

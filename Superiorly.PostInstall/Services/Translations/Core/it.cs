@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_it = new()
     {
- ["mainstream"]="Principali", ["privacy"]="Privacy", ["forks"]="Fork e personalizzati", ["software"]="Software", ["store-downloader"]="Downloader Microsoft Store", ["utilities"]="Utilità", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registro", ["win32"]="Win32Priority", ["powerplans"]="Piani di alimentazione", ["connectivity"]="Connettività", ["devices"]="Dispositivi", ["security"]="Sicurezza", ["gaming"]="Giochi", ["ai"]="IA", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetria"
+ ["mainstream"]="Principali", ["privacy"]="Privacy", ["forks"]="Fork e personalizzati", ["software"]="Software", ["store-downloader"]="Downloader Microsoft Store", ["utilities"]="Utilità", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registro", ["win32"]="Win32Priority", ["powerplans"]="Piani di alimentazione", ["connectivity"]="Connettività", ["devices"]="Dispositivi", ["security"]="Sicurezza", ["gaming"]="Giochi", ["ai"]="IA", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetria",
+["app-privacy"]="Privacy delle app",
     };
     private static readonly Dictionary<string, string> Notifications_it = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_it = new()
     {
- ["mainstream"]="Browser per tutti i giorni.", ["privacy"]="Browser progettati per la privacy e l'anonimato.", ["forks"]="Build della community basate su Chromium e Firefox.", ["utilities"]="Strumenti per la diagnostica di sistema e hardware.", ["amd"]="Strumenti AMD GPU per driver, clock, voltaggi e Registro.", ["nvidia"]="Strumenti NVIDIA per installazioni pulite, profili e P-State.", ["connectivity"]="Impostazioni Wi-Fi, Bluetooth e limite hop dell'hotspot.", ["devices"]="Correzioni per stampante, Gestione attività e input di testo.", ["security"]="Isolamento del core, firewall, UAC, blocklist dei driver e protezioni della memoria.", ["gaming"]="Servizi Xbox e Opera GX.", ["ai"]="Navigazione Chromium, WebKit e incentrata sull'IA.", ["debloat"]="Criteri privacy dei browser e interruttori di telemetria dei vendor: Chrome, Edge, Firefox e Office.", ["system"]="Driver tramite Windows Update, menu Start e correzioni del pannello Intel." , ["telemetry"]="Interruttori per telemetria, suggerimenti, annunci e raccolta dati dei vendor."
+ ["mainstream"]="Browser per tutti i giorni.", ["privacy"]="Browser progettati per la privacy e l'anonimato.", ["forks"]="Build della community basate su Chromium e Firefox.", ["utilities"]="Strumenti per la diagnostica di sistema e hardware.", ["amd"]="Strumenti AMD GPU per driver, clock, voltaggi e Registro.", ["nvidia"]="Strumenti NVIDIA per installazioni pulite, profili e P-State.", ["connectivity"]="Impostazioni Wi-Fi, Bluetooth e limite hop dell'hotspot.", ["devices"]="Correzioni per stampante, Gestione attività e input di testo.", ["security"]="Isolamento del core, firewall, UAC, blocklist dei driver e protezioni della memoria.", ["gaming"]="Servizi Xbox e Opera GX.", ["ai"]="Navigazione Chromium, WebKit e incentrata sull'IA.", ["debloat"]="Criteri privacy dei browser e interruttori di telemetria dei vendor: Chrome, Edge, Firefox e Office.", ["system"]="Driver tramite Windows Update, menu Start e correzioni del pannello Intel." , ["telemetry"]="Interruttori per telemetria, suggerimenti, annunci e raccolta dati dei vendor.",
+["app-privacy"]="Autorizzazioni delle app e opzioni privacy.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_it = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_it = new()
     {
- ["mainstream"]="Browser quotidiani", ["privacy"]="Navigazione anonima", ["forks"]="Fork indipendenti", ["utilities"]="Utilità di sistema", ["amd"]="Strumenti Radeon", ["nvidia"]="Strumenti GeForce", ["connectivity"]="Impostazioni wireless", ["devices"]="Correzioni dispositivi", ["security"]="Protezioni di sistema", ["gaming"]="Servizi di gioco", ["ai"]="Browser IA", ["debloat"]="Debloat browser", ["system"]="Correzioni Windows" , ["telemetry"]="Correzioni telemetria"
+ ["mainstream"]="Browser quotidiani", ["privacy"]="Navigazione anonima", ["forks"]="Fork indipendenti", ["utilities"]="Utilità di sistema", ["amd"]="Strumenti Radeon", ["nvidia"]="Strumenti GeForce", ["connectivity"]="Impostazioni wireless", ["devices"]="Correzioni dispositivi", ["security"]="Protezioni di sistema", ["gaming"]="Servizi di gioco", ["ai"]="Browser IA", ["debloat"]="Debloat browser", ["system"]="Correzioni Windows" , ["telemetry"]="Correzioni telemetria",
+["app-privacy"]="Privacy delle app",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_it = new()
     {

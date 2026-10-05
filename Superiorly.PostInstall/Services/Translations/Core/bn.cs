@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_bn = new()
     {
- ["mainstream"]="মূলধারা", ["privacy"]="গোপনীয়তা", ["forks"]="ফোর্ক ও কাস্টম", ["software"]="সফটওয়্যার", ["store-downloader"]="Microsoft Store ডাউনলোডার", ["utilities"]="ইউটিলিটি", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="রেজিস্ট্রি", ["win32"]="Win32Priority", ["powerplans"]="পাওয়ার প্ল্যান", ["connectivity"]="সংযোগ", ["devices"]="ডিভাইস", ["security"]="নিরাপত্তা", ["gaming"]="গেমিং", ["ai"]="এআই", ["debloat"]="ডিব্লোট", ["system"]="সিস্টেম" , ["telemetry"]="টেলিমেট্রি"
+ ["mainstream"]="মূলধারা", ["privacy"]="গোপনীয়তা", ["forks"]="ফোর্ক ও কাস্টম", ["software"]="সফটওয়্যার", ["store-downloader"]="Microsoft Store ডাউনলোডার", ["utilities"]="ইউটিলিটি", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="রেজিস্ট্রি", ["win32"]="Win32Priority", ["powerplans"]="পাওয়ার প্ল্যান", ["connectivity"]="সংযোগ", ["devices"]="ডিভাইস", ["security"]="নিরাপত্তা", ["gaming"]="গেমিং", ["ai"]="এআই", ["debloat"]="ডিব্লোট", ["system"]="সিস্টেম" , ["telemetry"]="টেলিমেট্রি",
+["app-privacy"]="অ্যাপ গোপনীয়তা",
     };
     private static readonly Dictionary<string, string> Notifications_bn = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_bn = new()
     {
- ["mainstream"]="প্রতিদিনের ব্রাউজার।", ["privacy"]="গোপনীয়তা ও বেনামে ব্যবহারের জন্য তৈরি ব্রাউজার।", ["forks"]="Chromium ও Firefox ভিত্তিক কমিউনিটি বিল্ড।", ["utilities"]="সিস্টেম ও হার্ডওয়্যার নির্ণয়ের টুলস।", ["amd"]="ড্রাইভার, ক্লক, ভোল্টেজ ও রেজিস্ট্রির জন্য AMD GPU টুলস।", ["nvidia"]="ক্লিন ইনস্টল, প্রোফাইল ও P-State এর জন্য NVIDIA টুলস।", ["connectivity"]="Wi-Fi, Bluetooth ও হটস্পট হপ সীমার সেটিংস।", ["devices"]="প্রিন্টার, টাস্ক ম্যানেজার ও টেক্সট ইনপুট সমাধান।", ["security"]="কোর আইসোলেশন, ফায়ারওয়াল, UAC, ড্রাইভার ব্লকলিস্ট ও মেমোরি সুরক্ষা।", ["gaming"]="Xbox পরিষেবা ও Opera GX।", ["ai"]="Chromium, WebKit ও এআই-প্রথম ব্রাউজিং।", ["debloat"]="ব্রাউজার গোপনীয়তা নীতি ও ভেন্ডর টেলিমেট্রি সুইচ: Chrome, Edge, Firefox ও Office।", ["system"]="Windows Update ড্রাইভার, স্টার্ট মেনু ও Intel প্যানেল সমাধান।" , ["telemetry"]="টেলিমেট্রি, পরামর্শ, বিজ্ঞাপন ও ভেন্ডর ডেটা সংগ্রহ সুইচ।"
+ ["mainstream"]="প্রতিদিনের ব্রাউজার।", ["privacy"]="গোপনীয়তা ও বেনামে ব্যবহারের জন্য তৈরি ব্রাউজার।", ["forks"]="Chromium ও Firefox ভিত্তিক কমিউনিটি বিল্ড।", ["utilities"]="সিস্টেম ও হার্ডওয়্যার নির্ণয়ের টুলস।", ["amd"]="ড্রাইভার, ক্লক, ভোল্টেজ ও রেজিস্ট্রির জন্য AMD GPU টুলস।", ["nvidia"]="ক্লিন ইনস্টল, প্রোফাইল ও P-State এর জন্য NVIDIA টুলস।", ["connectivity"]="Wi-Fi, Bluetooth ও হটস্পট হপ সীমার সেটিংস।", ["devices"]="প্রিন্টার, টাস্ক ম্যানেজার ও টেক্সট ইনপুট সমাধান।", ["security"]="কোর আইসোলেশন, ফায়ারওয়াল, UAC, ড্রাইভার ব্লকলিস্ট ও মেমোরি সুরক্ষা।", ["gaming"]="Xbox পরিষেবা ও Opera GX।", ["ai"]="Chromium, WebKit ও এআই-প্রথম ব্রাউজিং।", ["debloat"]="ব্রাউজার গোপনীয়তা নীতি ও ভেন্ডর টেলিমেট্রি সুইচ: Chrome, Edge, Firefox ও Office।", ["system"]="Windows Update ড্রাইভার, স্টার্ট মেনু ও Intel প্যানেল সমাধান।" , ["telemetry"]="টেলিমেট্রি, পরামর্শ, বিজ্ঞাপন ও ভেন্ডর ডেটা সংগ্রহ সুইচ।",
+["app-privacy"]="অ্যাপ পারমিশন ও গোপনীয়তা সেটিংস।",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_bn = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_bn = new()
     {
- ["mainstream"]="প্রতিদিনের ব্রাউজার", ["privacy"]="বেনামে ব্রাউজিং", ["forks"]="স্বতন্ত্র ফোর্ক", ["utilities"]="সিস্টেম ইউটিলিটি", ["amd"]="Radeon টুলস", ["nvidia"]="GeForce টুলস", ["connectivity"]="ওয়্যারলেস সেটিংস", ["devices"]="ডিভাইস সমাধান", ["security"]="সিস্টেম সুরক্ষা", ["gaming"]="গেম পরিষেবা", ["ai"]="এআই ব্রাউজার", ["debloat"]="ব্রাউজার ডিব্লোট", ["system"]="Windows সমাধান" , ["telemetry"]="টেলিমেট্রি সমাধান"
+ ["mainstream"]="প্রতিদিনের ব্রাউজার", ["privacy"]="বেনামে ব্রাউজিং", ["forks"]="স্বতন্ত্র ফোর্ক", ["utilities"]="সিস্টেম ইউটিলিটি", ["amd"]="Radeon টুলস", ["nvidia"]="GeForce টুলস", ["connectivity"]="ওয়্যারলেস সেটিংস", ["devices"]="ডিভাইস সমাধান", ["security"]="সিস্টেম সুরক্ষা", ["gaming"]="গেম পরিষেবা", ["ai"]="এআই ব্রাউজার", ["debloat"]="ব্রাউজার ডিব্লোট", ["system"]="Windows সমাধান" , ["telemetry"]="টেলিমেট্রি সমাধান",
+["app-privacy"]="অ্যাপ গোপনীয়তা",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_bn = new()
     {

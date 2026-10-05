@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_zht = new()
     {
- ["mainstream"]="主流", ["privacy"]="隱私", ["forks"]="分支與自訂", ["software"]="軟體", ["store-downloader"]="Microsoft Store 下載器", ["utilities"]="公用程式", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="登錄檔", ["win32"]="Win32Priority", ["powerplans"]="電源計畫", ["connectivity"]="連線", ["devices"]="裝置", ["security"]="安全性", ["gaming"]="遊戲", ["ai"]="AI", ["debloat"]="精簡", ["system"]="系統" , ["telemetry"]="遙測"
+ ["mainstream"]="主流", ["privacy"]="隱私", ["forks"]="分支與自訂", ["software"]="軟體", ["store-downloader"]="Microsoft Store 下載器", ["utilities"]="公用程式", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="登錄檔", ["win32"]="Win32Priority", ["powerplans"]="電源計畫", ["connectivity"]="連線", ["devices"]="裝置", ["security"]="安全性", ["gaming"]="遊戲", ["ai"]="AI", ["debloat"]="精簡", ["system"]="系統" , ["telemetry"]="遙測",
+["app-privacy"]="應用程式隱私",
     };
     private static readonly Dictionary<string, string> Notifications_zht = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_zht = new()
     {
- ["mainstream"]="日常使用的瀏覽器。", ["privacy"]="為隱私與匿名打造的瀏覽器。", ["forks"]="以 Chromium 與 Firefox 為基礎的社群版本。", ["utilities"]="系統與硬體診斷工具。", ["amd"]="AMD GPU 驅動程式、時脈、電壓與登錄檔工具。", ["nvidia"]="NVIDIA 乾淨安裝、設定檔與 P-State 工具。", ["connectivity"]="Wi-Fi、藍牙與熱點 Hop Limit 設定。", ["devices"]="印表機、工作管理員與文字輸入修正。", ["security"]="核心隔離、防火牆、UAC、驅動程式封鎖清單與記憶體保護。", ["gaming"]="Xbox 服務與 Opera GX。", ["ai"]="Chromium、WebKit 與 AI 優先瀏覽。", ["debloat"]="瀏覽器隱私權原則與廠商遙測開關：Chrome、Edge、Firefox 與 Office。", ["system"]="Windows Update 驅動程式、開始功能表與 Intel 面板修正。" , ["telemetry"]="遙測、建議、廣告與廠商資料收集開關。"
+ ["mainstream"]="日常使用的瀏覽器。", ["privacy"]="為隱私與匿名打造的瀏覽器。", ["forks"]="以 Chromium 與 Firefox 為基礎的社群版本。", ["utilities"]="系統與硬體診斷工具。", ["amd"]="AMD GPU 驅動程式、時脈、電壓與登錄檔工具。", ["nvidia"]="NVIDIA 乾淨安裝、設定檔與 P-State 工具。", ["connectivity"]="Wi-Fi、藍牙與熱點 Hop Limit 設定。", ["devices"]="印表機、工作管理員與文字輸入修正。", ["security"]="核心隔離、防火牆、UAC、驅動程式封鎖清單與記憶體保護。", ["gaming"]="Xbox 服務與 Opera GX。", ["ai"]="Chromium、WebKit 與 AI 優先瀏覽。", ["debloat"]="瀏覽器隱私權原則與廠商遙測開關：Chrome、Edge、Firefox 與 Office。", ["system"]="Windows Update 驅動程式、開始功能表與 Intel 面板修正。" , ["telemetry"]="遙測、建議、廣告與廠商資料收集開關。",
+["app-privacy"]="應用程式權限與隱私設定。",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_zht = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_zht = new()
     {
- ["mainstream"]="日常瀏覽器", ["privacy"]="匿名瀏覽", ["forks"]="獨立分支", ["utilities"]="系統公用程式", ["amd"]="Radeon 工具", ["nvidia"]="GeForce 工具", ["connectivity"]="無線設定", ["devices"]="裝置修正", ["security"]="系統保護", ["gaming"]="遊戲服務", ["ai"]="AI 瀏覽器", ["debloat"]="瀏覽器精簡", ["system"]="Windows 修正" , ["telemetry"]="遙測修正"
+ ["mainstream"]="日常瀏覽器", ["privacy"]="匿名瀏覽", ["forks"]="獨立分支", ["utilities"]="系統公用程式", ["amd"]="Radeon 工具", ["nvidia"]="GeForce 工具", ["connectivity"]="無線設定", ["devices"]="裝置修正", ["security"]="系統保護", ["gaming"]="遊戲服務", ["ai"]="AI 瀏覽器", ["debloat"]="瀏覽器精簡", ["system"]="Windows 修正" , ["telemetry"]="遙測修正",
+["app-privacy"]="應用程式隱私",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_zht = new()
     {

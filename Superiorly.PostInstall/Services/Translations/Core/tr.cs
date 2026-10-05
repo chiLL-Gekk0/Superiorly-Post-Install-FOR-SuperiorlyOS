@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_tr = new()
     {
- ["mainstream"]="Popüler", ["privacy"]="Gizlilik", ["forks"]="Çatal ve Özel", ["software"]="Yazılım", ["store-downloader"]="Microsoft Store İndiricisi", ["utilities"]="Yardımcı Programlar", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Kayıt Defteri İnce Ayarları", ["win32"]="Win32Priority", ["powerplans"]="Güç Planları", ["connectivity"]="Bağlantı", ["devices"]="Cihazlar", ["security"]="Güvenlik", ["gaming"]="Oyun", ["ai"]="Yapay Zeka", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetry"
+ ["mainstream"]="Popüler", ["privacy"]="Gizlilik", ["forks"]="Çatal ve Özel", ["software"]="Yazılım", ["store-downloader"]="Microsoft Store İndiricisi", ["utilities"]="Yardımcı Programlar", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Kayıt Defteri İnce Ayarları", ["win32"]="Win32Priority", ["powerplans"]="Güç Planları", ["connectivity"]="Bağlantı", ["devices"]="Cihazlar", ["security"]="Güvenlik", ["gaming"]="Oyun", ["ai"]="Yapay Zeka", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetry",
+["app-privacy"]="Uygulama Gizliliği",
     };
     private static readonly Dictionary<string, string> Notifications_tr = new()
     {
@@ -25,7 +26,7 @@ public static partial class TranslationService
             ["style"]="Stil", ["win10_style"]="Windows 10 stili", ["win11_style"]="Windows 11 stili", ["close"]="Kapat",
             ["search_placeholder"]="Ad, URL veya kimliğe göre arayın.", ["store_no_results"]="Sonuç bulunamadı. Başka bir arama deneyin.", ["search"]="Ara", ["install"]="Yükle",
             ["run"]="Çalıştır", ["download"]="İndir", ["open"]="Aç", ["apply"]="Uygula",
-            ["check_updates"]="Güncelleştirmeleri denetle", ["update"]="Update", ["disclaimer"]="Değişiklikler tamamen sizin sorumluluğunuzdadır.",
+            ["check_updates"]="Güncelleştirmeleri denetle", ["update"]="Güncelleştir", ["disclaimer"]="Değişiklikler tamamen sizin sorumluluğunuzdadır.",
             ["quantum_title"]="Quantum Haritası", ["quantum_subtitle"]="Tüm geçerli Win32PrioritySeparation değerleri. Uygulamak için bir satıra tıklayın.",
             ["open_quantum"]="Quantum Haritasını Aç", ["current_win32"]="Geçerli Win32PrioritySeparation",
             ["load_list"]="Listeyi yükle", ["unload_list"]="Listeyi kapat", ["activate"]="Etkinleştir", ["import"]="İçeri aktar", ["export"]="Dışarı aktar",
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_tr = new()
     {
- ["mainstream"]="Günlük tarayıcılar.", ["privacy"]="Gizlilik ve anonimlik odaklı tarayıcılar.", ["forks"]="Chromium ve Firefox tabanlı topluluk derlemeleri.", ["utilities"]="Sistem ve donanım tanılama araçları.", ["amd"]="Sürücüler, saat hızı, voltaj ve kayıt defteri için AMD GPU araçları.", ["nvidia"]="Temiz yükleme, profiller ve P-States için NVIDIA araçları.", ["connectivity"]="Wi-Fi, Bluetooth ve erişim noktası atlama sınırı ayarları.", ["devices"]="Yazıcı, Görev Yöneticisi ve metin girişi düzeltmeleri.", ["security"]="Çekirdek yalıtım, güvenlik duvarı, UAC, sürücü engelleme listesi ve bellek korumaları.", ["gaming"]="Xbox hizmetleri ve Opera GX.", ["ai"]="Chromium, WebKit ve yapay zeka odaklı göz atma.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Windows Update sürücüsü, Başlat menüsü ve Intel paneli düzeltmeleri." , ["telemetry"]=""
+ ["mainstream"]="Günlük tarayıcılar.", ["privacy"]="Gizlilik ve anonimlik odaklı tarayıcılar.", ["forks"]="Chromium ve Firefox tabanlı topluluk derlemeleri.", ["utilities"]="Sistem ve donanım tanılama araçları.", ["amd"]="Sürücüler, saat hızı, voltaj ve kayıt defteri için AMD GPU araçları.", ["nvidia"]="Temiz yükleme, profiller ve P-States için NVIDIA araçları.", ["connectivity"]="Wi-Fi, Bluetooth ve erişim noktası atlama sınırı ayarları.", ["devices"]="Yazıcı, Görev Yöneticisi ve metin girişi düzeltmeleri.", ["security"]="Çekirdek yalıtım, güvenlik duvarı, UAC, sürücü engelleme listesi ve bellek korumaları.", ["gaming"]="Xbox hizmetleri ve Opera GX.", ["ai"]="Chromium, WebKit ve yapay zeka odaklı göz atma.", ["debloat"]="Tarayıcı gizlilik ilkeleri ve satıcı telemetri anahtarları: Chrome, Edge, Firefox ve Office.", ["system"]="Windows Update sürücüsü, Başlat menüsü ve Intel paneli düzeltmeleri." , ["telemetry"]="Telemetri, öneriler, reklamlar ve satıcı veri toplama anahtarları.",
+["app-privacy"]="Uygulama izinleri ve gizlilik ayarları.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_tr = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_tr = new()
     {
- ["mainstream"]="Günlük Tarayıcılar", ["privacy"]="Anonim Göz Atma", ["forks"]="Bağımsız Çatallar", ["utilities"]="Sistem Yardımcı Programları", ["amd"]="Radeon Araçları", ["nvidia"]="GeForce Araçları", ["connectivity"]="Kablosuz Ayarları", ["devices"]="Cihaz Düzeltmeleri", ["security"]="Sistem Korumaları", ["gaming"]="Oyun Hizmetleri", ["ai"]="YZ Tarayıcıları", ["debloat"]="Tarayıcı Temizleme", ["system"]="Windows Düzeltmeleri" , ["telemetry"]="Telemetry Fixes"
+ ["mainstream"]="Günlük Tarayıcılar", ["privacy"]="Anonim Göz Atma", ["forks"]="Bağımsız Çatallar", ["utilities"]="Sistem Yardımcı Programları", ["amd"]="Radeon Araçları", ["nvidia"]="GeForce Araçları", ["connectivity"]="Kablosuz Ayarları", ["devices"]="Cihaz Düzeltmeleri", ["security"]="Sistem Korumaları", ["gaming"]="Oyun Hizmetleri", ["ai"]="YZ Tarayıcıları", ["debloat"]="Tarayıcı Temizleme", ["system"]="Windows Düzeltmeleri" , ["telemetry"]="Telemetri Düzeltmeleri",
+["app-privacy"]="Uygulama Gizliliği",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_tr = new()
     {

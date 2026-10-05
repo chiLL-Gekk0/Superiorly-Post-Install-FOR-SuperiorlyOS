@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_vi = new()
     {
- ["mainstream"]="Phổ thông", ["privacy"]="Riêng tư", ["forks"]="Bản phân nhánh & tùy chỉnh", ["software"]="Phần mềm", ["store-downloader"]="Trình tải Microsoft Store", ["utilities"]="Tiện ích", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Sổ đăng ký", ["win32"]="Win32Priority", ["powerplans"]="Gói điện", ["connectivity"]="Kết nối", ["devices"]="Thiết bị", ["security"]="Bảo mật", ["gaming"]="Chơi game", ["ai"]="AI", ["debloat"]="Gỡ bloat", ["system"]="Hệ thống" , ["telemetry"]="Dữ liệu chẩn đoán"
+ ["mainstream"]="Phổ thông", ["privacy"]="Riêng tư", ["forks"]="Bản phân nhánh & tùy chỉnh", ["software"]="Phần mềm", ["store-downloader"]="Trình tải Microsoft Store", ["utilities"]="Tiện ích", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Sổ đăng ký", ["win32"]="Win32Priority", ["powerplans"]="Gói điện", ["connectivity"]="Kết nối", ["devices"]="Thiết bị", ["security"]="Bảo mật", ["gaming"]="Chơi game", ["ai"]="AI", ["debloat"]="Gỡ bloat", ["system"]="Hệ thống" , ["telemetry"]="Dữ liệu chẩn đoán",
+["app-privacy"]="Quyền riêng tư ứng dụng",
     };
     private static readonly Dictionary<string, string> Notifications_vi = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_vi = new()
     {
- ["mainstream"]="Trình duyệt hằng ngày.", ["privacy"]="Trình duyệt được xây dựng cho quyền riêng tư và ẩn danh.", ["forks"]="Bản dựng cộng đồng dựa trên Chromium và Firefox.", ["utilities"]="Công cụ chẩn đoán hệ thống và phần cứng.", ["amd"]="Công cụ AMD GPU cho trình điều khiển, xung nhịp, điện áp và sổ đăng ký.", ["nvidia"]="Công cụ NVIDIA cho cài đặt sạch, hồ sơ và P-State.", ["connectivity"]="Cài đặt giới hạn Wi-Fi, Bluetooth và điểm phát sóng.", ["devices"]="Bản sửa lỗi máy in, Trình quản lý Tác vụ và nhập liệu văn bản.", ["security"]="Cách ly lõi, tường lửa, UAC, danh sách chặn trình điều khiển và bảo vệ bộ nhớ.", ["gaming"]="Dịch vụ Xbox và Opera GX.", ["ai"]="Trình duyệt Chromium, WebKit và ưu tiên AI.", ["debloat"]="Chính sách riêng tư trình duyệt và công tắc đo lường từ xa của nhà cung cấp: Chrome, Edge, Firefox và Office.", ["system"]="Trình điều khiển Windows Update, Menu Bắt đầu và bản sửa lỗi bảng Intel." , ["telemetry"]="Công tắc dữ liệu chẩn đoán, gợi ý, quảng cáo và thu thập dữ liệu của nhà cung cấp."
+ ["mainstream"]="Trình duyệt hằng ngày.", ["privacy"]="Trình duyệt được xây dựng cho quyền riêng tư và ẩn danh.", ["forks"]="Bản dựng cộng đồng dựa trên Chromium và Firefox.", ["utilities"]="Công cụ chẩn đoán hệ thống và phần cứng.", ["amd"]="Công cụ AMD GPU cho trình điều khiển, xung nhịp, điện áp và sổ đăng ký.", ["nvidia"]="Công cụ NVIDIA cho cài đặt sạch, hồ sơ và P-State.", ["connectivity"]="Cài đặt giới hạn Wi-Fi, Bluetooth và điểm phát sóng.", ["devices"]="Bản sửa lỗi máy in, Trình quản lý Tác vụ và nhập liệu văn bản.", ["security"]="Cách ly lõi, tường lửa, UAC, danh sách chặn trình điều khiển và bảo vệ bộ nhớ.", ["gaming"]="Dịch vụ Xbox và Opera GX.", ["ai"]="Trình duyệt Chromium, WebKit và ưu tiên AI.", ["debloat"]="Chính sách riêng tư trình duyệt và công tắc đo lường từ xa của nhà cung cấp: Chrome, Edge, Firefox và Office.", ["system"]="Trình điều khiển Windows Update, Menu Bắt đầu và bản sửa lỗi bảng Intel." , ["telemetry"]="Công tắc dữ liệu chẩn đoán, gợi ý, quảng cáo và thu thập dữ liệu của nhà cung cấp.",
+["app-privacy"]="Quyền ứng dụng và tùy chọn quyền riêng tư.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_vi = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_vi = new()
     {
- ["mainstream"]="Trình duyệt hằng ngày", ["privacy"]="Duyệt web ẩn danh", ["forks"]="Bản phân nhánh độc lập", ["utilities"]="Tiện ích hệ thống", ["amd"]="Công cụ Radeon", ["nvidia"]="Công cụ GeForce", ["connectivity"]="Cài đặt không dây", ["devices"]="Sửa lỗi thiết bị", ["security"]="Bảo vệ hệ thống", ["gaming"]="Dịch vụ trò chơi", ["ai"]="Trình duyệt AI", ["debloat"]="Gỡ bloat trình duyệt", ["system"]="Sửa lỗi Windows" , ["telemetry"]="Sửa lỗi dữ liệu chẩn đoán"
+ ["mainstream"]="Trình duyệt hằng ngày", ["privacy"]="Duyệt web ẩn danh", ["forks"]="Bản phân nhánh độc lập", ["utilities"]="Tiện ích hệ thống", ["amd"]="Công cụ Radeon", ["nvidia"]="Công cụ GeForce", ["connectivity"]="Cài đặt không dây", ["devices"]="Sửa lỗi thiết bị", ["security"]="Bảo vệ hệ thống", ["gaming"]="Dịch vụ trò chơi", ["ai"]="Trình duyệt AI", ["debloat"]="Gỡ bloat trình duyệt", ["system"]="Sửa lỗi Windows" , ["telemetry"]="Sửa lỗi dữ liệu chẩn đoán",
+["app-privacy"]="Quyền riêng tư ứng dụng",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_vi = new()
     {

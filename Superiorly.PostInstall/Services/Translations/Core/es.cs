@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_es = new()
     {
- ["mainstream"]="Principal", ["privacy"]="Privacidad", ["forks"]="Derivados y personalizados", ["software"]="Software", ["store-downloader"]="Descargador de Microsoft Store", ["utilities"]="Utilidades", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustes del registro", ["win32"]="Win32Priority", ["powerplans"]="Planes de energía", ["connectivity"]="Conectividad", ["devices"]="Dispositivos", ["security"]="Seguridad", ["gaming"]="Juegos", ["ai"]="Inteligencia artificial", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetría"
+ ["mainstream"]="Principal", ["privacy"]="Privacidad", ["forks"]="Derivados y personalizados", ["software"]="Software", ["store-downloader"]="Descargador de Microsoft Store", ["utilities"]="Utilidades", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustes del registro", ["win32"]="Win32Priority", ["powerplans"]="Planes de energía", ["connectivity"]="Conectividad", ["devices"]="Dispositivos", ["security"]="Seguridad", ["gaming"]="Juegos", ["ai"]="Inteligencia artificial", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetría",
+["app-privacy"]="Privacidad de Apps",
     };
     private static readonly Dictionary<string, string> Notifications_es = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_es = new()
     {
- ["mainstream"]="Navegadores populares, listos para instalar.", ["privacy"]="Navegadores centrados en privacidad y anonimato.", ["forks"]="Derivados alternativos de Chromium y Firefox.", ["utilities"]="Utilidades portátiles de sistema y hardware.", ["amd"]="Herramientas GPU AMD: drivers ligeros, frecuencia, voltaje y registro.", ["nvidia"]="Herramientas NVIDIA: instalación limpia, inspector, perfiles y P-states.", ["connectivity"]="Controles de red: Wi-Fi, Bluetooth y límite de saltos.", ["devices"]="Impresoras, reemplazo del Administrador de tareas y entrada de texto.", ["security"]="Aislamiento de núcleo, firewall, UAC y protecciones de memoria.", ["gaming"]="Servicios de Xbox y Opera GX.", ["ai"]="Navegadores Chromium, WebKit e IA.", ["debloat"]="Políticas de privacidad de navegadores y telemetría de proveedores: Chrome, Edge, Firefox y Office.", ["system"]="Controladores por Windows Update, menú Inicio y panel Intel." , ["telemetry"]="Interruptores de telemetría, sugerencias, anuncios y recopilación de datos."
+ ["mainstream"]="Navegadores populares, listos para instalar.", ["privacy"]="Navegadores centrados en privacidad y anonimato.", ["forks"]="Derivados alternativos de Chromium y Firefox.", ["utilities"]="Utilidades portátiles de sistema y hardware.", ["amd"]="Herramientas GPU AMD: drivers ligeros, frecuencia, voltaje y registro.", ["nvidia"]="Herramientas NVIDIA: instalación limpia, inspector, perfiles y P-states.", ["connectivity"]="Controles de red: Wi-Fi, Bluetooth y límite de saltos.", ["devices"]="Impresoras, reemplazo del Administrador de tareas y entrada de texto.", ["security"]="Aislamiento de núcleo, firewall, UAC y protecciones de memoria.", ["gaming"]="Servicios de Xbox y Opera GX.", ["ai"]="Navegadores Chromium, WebKit e IA.", ["debloat"]="Políticas de privacidad de navegadores y telemetría de proveedores: Chrome, Edge, Firefox y Office.", ["system"]="Controladores por Windows Update, menú Inicio y panel Intel." , ["telemetry"]="Interruptores de telemetría, sugerencias, anuncios y recopilación de datos.",
+["app-privacy"]="Permisos de aplicaciones y opciones de privacidad.",
     };
     private static readonly Dictionary<string, string> UiExtra_es = new()
     {
@@ -83,7 +85,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_es = new()
     {
- ["mainstream"]="Navegadores populares", ["privacy"]="Navegación anónima", ["forks"]="Derivados independientes", ["utilities"]="Utilidades del sistema", ["amd"]="Herramientas Radeon", ["nvidia"]="Herramientas GeForce", ["connectivity"]="Ajustes inalámbricos", ["devices"]="Correcciones de dispositivos", ["security"]="Protecciones del sistema", ["gaming"]="Servicios de juego", ["ai"]="Navegadores con IA", ["debloat"]="Limpieza de navegadores", ["system"]="Correcciones de Windows" , ["telemetry"]="Correcciones de telemetría"
+ ["mainstream"]="Navegadores populares", ["privacy"]="Navegación anónima", ["forks"]="Derivados independientes", ["utilities"]="Utilidades del sistema", ["amd"]="Herramientas Radeon", ["nvidia"]="Herramientas GeForce", ["connectivity"]="Ajustes inalámbricos", ["devices"]="Correcciones de dispositivos", ["security"]="Protecciones del sistema", ["gaming"]="Servicios de juego", ["ai"]="Navegadores con IA", ["debloat"]="Limpieza de navegadores", ["system"]="Correcciones de Windows" , ["telemetry"]="Correcciones de telemetría",
+["app-privacy"]="Privacidad de Apps",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_es = new()
     {

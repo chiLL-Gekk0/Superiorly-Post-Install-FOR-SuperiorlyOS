@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_fa = new()
     {
- ["mainstream"]="رایج", ["privacy"]="حریم خصوصی", ["forks"]="فورک‌ها و سفارشی", ["software"]="نرم‌افزار", ["store-downloader"]="دانلودکننده Microsoft Store", ["utilities"]="ابزارهای کمکی", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجیستری", ["win32"]="Win32Priority", ["powerplans"]="طرح‌های انرژی", ["connectivity"]="اتصال‌پذیری", ["devices"]="دستگاه‌ها", ["security"]="امنیت", ["gaming"]="بازی", ["ai"]="هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار", ["system"]="سیستم" , ["telemetry"]="تله‌متری"
+ ["mainstream"]="رایج", ["privacy"]="حریم خصوصی", ["forks"]="فورک‌ها و سفارشی", ["software"]="نرم‌افزار", ["store-downloader"]="دانلودکننده Microsoft Store", ["utilities"]="ابزارهای کمکی", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجیستری", ["win32"]="Win32Priority", ["powerplans"]="طرح‌های انرژی", ["connectivity"]="اتصال‌پذیری", ["devices"]="دستگاه‌ها", ["security"]="امنیت", ["gaming"]="بازی", ["ai"]="هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار", ["system"]="سیستم" , ["telemetry"]="تله‌متری",
+["app-privacy"]="حریم خصوصی برنامه‌ها",
     };
     private static readonly Dictionary<string, string> Notifications_fa = new()
     {
@@ -48,7 +49,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_fa = new()
     {
- ["mainstream"]="مرورگرهای روزمره.", ["privacy"]="مرورگرهای ساخته‌شده برای حریم خصوصی و ناشناسی.", ["forks"]="بیلدهای اجتماعی مبتنی بر Chromium و Firefox.", ["utilities"]="ابزارهای تشخیص سیستم و سخت‌افزار.", ["amd"]="ابزارهای GPU ساخت AMD برای درایور، کلاک، ولتاژ و رجیستری.", ["nvidia"]="ابزارهای NVIDIA برای نصب تمیز، پروفایل‌ها و P-Stateها.", ["connectivity"]="تنظیمات Wi-Fi، بلوتوث و محدودیت هاپ هات‌اسپات.", ["devices"]="رفع‌اشکال‌های چاپگر، Task Manager و ورودی متن.", ["security"]="ایزولاسیون هسته، فایروال، UAC، فهرست blocked درایورها و محافظت‌های حافظه.", ["gaming"]="سرویس‌های Xbox و Opera GX.", ["ai"]="مرور Chromium، WebKit و مرورگرهای هوش‌مصنوعی‌محور.", ["debloat"]="سیاست‌های حریم خصوصی مرورگر و کلیدهای تله‌متری vendorها: Chrome، Edge، Firefox و Office.", ["system"]="رفع‌اشکال‌های درایور Windows Update، منوی Start و پنل Intel." , ["telemetry"]="کلیدهای تله‌متری، پیشنهادها، تبلیغات و جمع‌آوری داده vendorها."
+ ["mainstream"]="مرورگرهای روزمره.", ["privacy"]="مرورگرهای ساخته‌شده برای حریم خصوصی و ناشناسی.", ["forks"]="بیلدهای اجتماعی مبتنی بر Chromium و Firefox.", ["utilities"]="ابزارهای تشخیص سیستم و سخت‌افزار.", ["amd"]="ابزارهای GPU ساخت AMD برای درایور، کلاک، ولتاژ و رجیستری.", ["nvidia"]="ابزارهای NVIDIA برای نصب تمیز، پروفایل‌ها و P-Stateها.", ["connectivity"]="تنظیمات Wi-Fi، بلوتوث و محدودیت هاپ هات‌اسپات.", ["devices"]="رفع‌اشکال‌های چاپگر، Task Manager و ورودی متن.", ["security"]="ایزولاسیون هسته، فایروال، UAC، فهرست blocked درایورها و محافظت‌های حافظه.", ["gaming"]="سرویس‌های Xbox و Opera GX.", ["ai"]="مرور Chromium، WebKit و مرورگرهای هوش‌مصنوعی‌محور.", ["debloat"]="سیاست‌های حریم خصوصی مرورگر و کلیدهای تله‌متری vendorها: Chrome، Edge، Firefox و Office.", ["system"]="رفع‌اشکال‌های درایور Windows Update، منوی Start و پنل Intel." , ["telemetry"]="کلیدهای تله‌متری، پیشنهادها، تبلیغات و جمع‌آوری داده vendorها.",
+["app-privacy"]="دسترسی‌های برنامه‌ها و تنظیمات حریم خصوصی.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_fa = new()
     {
@@ -56,7 +58,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_fa = new()
     {
- ["mainstream"]="مرورگرهای روزمره", ["privacy"]="مرور ناشناس", ["forks"]="فورک‌های مستقل", ["utilities"]="ابزارهای سیستمی", ["amd"]="ابزارهای Radeon", ["nvidia"]="ابزارهای GeForce", ["connectivity"]="تنظیمات بی‌سیم", ["devices"]="رفع‌اشکال دستگاه‌ها", ["security"]="محافظت‌های سیستم", ["gaming"]="سرویس‌های بازی", ["ai"]="مرورگرهای هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار مرورگر", ["system"]="رفع‌اشکال‌های Windows" , ["telemetry"]="رفع‌اشکال‌های تله‌متری"
+ ["mainstream"]="مرورگرهای روزمره", ["privacy"]="مرور ناشناس", ["forks"]="فورک‌های مستقل", ["utilities"]="ابزارهای سیستمی", ["amd"]="ابزارهای Radeon", ["nvidia"]="ابزارهای GeForce", ["connectivity"]="تنظیمات بی‌سیم", ["devices"]="رفع‌اشکال دستگاه‌ها", ["security"]="محافظت‌های سیستم", ["gaming"]="سرویس‌های بازی", ["ai"]="مرورگرهای هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار مرورگر", ["system"]="رفع‌اشکال‌های Windows" , ["telemetry"]="رفع‌اشکال‌های تله‌متری",
+["app-privacy"]="حریم خصوصی برنامه‌ها",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_fa = new()
     {

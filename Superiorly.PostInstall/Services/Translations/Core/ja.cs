@@ -1,4 +1,4 @@
-namespace Superiorly.PostInstall.Services;
+﻿namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -12,7 +12,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ja = new()
     {
- ["mainstream"]="メインストリーム", ["privacy"]="プライバシー", ["forks"]="フォークとカスタム", ["software"]="ソフトウェア", ["store-downloader"]="Microsoft Store ダウンローダー", ["utilities"]="ユーティリティ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="レジストリ調整", ["win32"]="Win32Priority", ["powerplans"]="電源プラン", ["connectivity"]="接続", ["devices"]="デバイス", ["security"]="セキュリティ", ["gaming"]="ゲーム", ["ai"]="人工知能", ["debloat"]="Debloat", ["system"]="システム" , ["telemetry"]="Telemetry"
+ ["mainstream"]="メインストリーム", ["privacy"]="プライバシー", ["forks"]="フォークとカスタム", ["software"]="ソフトウェア", ["store-downloader"]="Microsoft Store ダウンローダー", ["utilities"]="ユーティリティ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="レジストリ調整", ["win32"]="Win32Priority", ["powerplans"]="電源プラン", ["connectivity"]="接続", ["devices"]="デバイス", ["security"]="セキュリティ", ["gaming"]="ゲーム", ["ai"]="人工知能", ["debloat"]="Debloat", ["system"]="システム" , ["telemetry"]="Telemetry",
+["app-privacy"]="アプリのプライバシー",
     };
     private static readonly Dictionary<string, string> Notifications_ja = new()
     {
@@ -25,7 +26,7 @@ public static partial class TranslationService
             ["style"]="スタイル", ["win10_style"]="Windows 10 スタイル", ["win11_style"]="Windows 11 スタイル", ["close"]="閉じる",
             ["search_placeholder"]="名前、URL、または ID で検索します。", ["store_no_results"]="結果が見つかりません。別の検索をお試しください。", ["search"]="検索", ["install"]="インストール",
             ["run"]="実行", ["download"]="ダウンロード", ["open"]="開く", ["apply"]="適用",
-            ["check_updates"]="更新を確認します", ["update"]="Update", ["disclaimer"]="変更はお客様の責任において行ってください。",
+            ["check_updates"]="更新を確認します", ["update"]="更新", ["disclaimer"]="変更はお客様の責任において行ってください。",
             ["quantum_title"]="Quantum マップ", ["quantum_subtitle"]="有効な Win32PrioritySeparation の値一覧です。行をクリックして適用します。",
             ["open_quantum"]="Quantum マップを開きます", ["current_win32"]="現在の Win32PrioritySeparation",
             ["load_list"]="一覧を読み込みます", ["unload_list"]="一覧を閉じます", ["activate"]="有効にします", ["import"]="インポートします", ["export"]="エクスポートします",
@@ -75,7 +76,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_ja = new()
     {
- ["mainstream"]="日常使いのブラウザ。", ["privacy"]="プライバシーと匿名性のためのブラウザ。", ["forks"]="ChromiumとFirefoxベースのコミュニティビルド。", ["utilities"]="システムとハードウェア診断のためのツール。", ["amd"]="ドライバー、クロック、電圧、レジストリ用のAMD GPUツール。", ["nvidia"]="クリーンインストール、プロファイル、P-State用のNVIDIAツール。", ["connectivity"]="Wi-Fi、Bluetooth、ホットスポットホップ制限の設定。", ["devices"]="プリンター、タスクマネージャー、テキスト入力の修正。", ["security"]="コア分離、ファイアウォール、UAC、ドライバーブロックリスト、メモリ保護。", ["gaming"]="XboxサービスとOpera GX。", ["ai"]="Chromium、WebKit、AIファーストのブラウジング。", ["debloat"]="ブラウザーのプライバシーポリシーとベンダーテレメトリスイッチ: Chrome、Edge、Firefox、Office。", ["system"]="Windows Updateドライバー、スタートメニュー、Intelパネルの修正。" , ["telemetry"]="テレメトリ、提案、広告、ベンダーデータ収集のスイッチ。"
+ ["mainstream"]="日常使いのブラウザ。", ["privacy"]="プライバシーと匿名性のためのブラウザ。", ["forks"]="ChromiumとFirefoxベースのコミュニティビルド。", ["utilities"]="システムとハードウェア診断のためのツール。", ["amd"]="ドライバー、クロック、電圧、レジストリ用のAMD GPUツール。", ["nvidia"]="クリーンインストール、プロファイル、P-State用のNVIDIAツール。", ["connectivity"]="Wi-Fi、Bluetooth、ホットスポットホップ制限の設定。", ["devices"]="プリンター、タスクマネージャー、テキスト入力の修正。", ["security"]="コア分離、ファイアウォール、UAC、ドライバーブロックリスト、メモリ保護。", ["gaming"]="XboxサービスとOpera GX。", ["ai"]="Chromium、WebKit、AIファーストのブラウジング。", ["debloat"]="ブラウザーのプライバシーポリシーとベンダーテレメトリスイッチ: Chrome、Edge、Firefox、Office。", ["system"]="Windows Updateドライバー、スタートメニュー、Intelパネルの修正。" , ["telemetry"]="テレメトリ、提案、広告、ベンダーデータ収集のスイッチ。",
+["app-privacy"]="アプリ権限とプライバシー設定。",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_ja = new()
     {
@@ -83,7 +85,8 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_ja = new()
     {
- ["mainstream"]="日常のブラウザ", ["privacy"]="匿名ブラウジング", ["forks"]="独立フォーク", ["utilities"]="システムユーティリティ", ["amd"]="Radeonツール", ["nvidia"]="GeForceツール", ["connectivity"]="ワイヤレス設定", ["devices"]="デバイス修正", ["security"]="システム保護", ["gaming"]="ゲームサービス", ["ai"]="AIブラウザ", ["debloat"]="ブラウザーデブロート", ["system"]="Windows修正" , ["telemetry"]="テレメトリ修正"
+ ["mainstream"]="日常のブラウザ", ["privacy"]="匿名ブラウジング", ["forks"]="独立フォーク", ["utilities"]="システムユーティリティ", ["amd"]="Radeonツール", ["nvidia"]="GeForceツール", ["connectivity"]="ワイヤレス設定", ["devices"]="デバイス修正", ["security"]="システム保護", ["gaming"]="ゲームサービス", ["ai"]="AIブラウザ", ["debloat"]="ブラウザーデブロート", ["system"]="Windows修正" , ["telemetry"]="テレメトリ修正",
+["app-privacy"]="アプリのプライバシー",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ja = new()
     {
