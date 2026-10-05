@@ -6,7 +6,7 @@ public static partial class TranslationService
     {
 
             ["group-sys-services"]="سرویس‌ها و عملکرد", ["group-sys-network"]="شبکه و اشتراک‌گذاری", ["group-sys-shell"]="اکسپلورر، Start و نوار وظیفه", ["group-sys-recovery"]="فایل‌ها، بازیابی و انرژی", ["group-sys-privacy"]="تله‌متری و پیشنهادها",
-            ["show-tray-icons"]="نمایش آیکون‌های سینی", ["menus-delay"]="تأخیر منوها", ["network-throttling"]="محدودسازی شبکه", ["error-reporting"]="گزارش خطا", ["compat-assistant"]="دستیار سازگاری", ["sticky-keys"]="کلیدهای چسبان", ["smb1"]="پروتکل SMBv1", ["smb2"]="پروتکل SMBv2", ["ntfs-timestamp"]="برچسب زمانی NTFS", ["system-restore"]="بازیابی سیستم", ["superfetch"]="Superfetch", ["homegroup"]="HomeGroup", ["media-sharing"]="اشتراک‌گذاری رسانه", ["regbackup"]="پشتیبان‌گیری دوره‌ای رجیستری", ["compact-mode"]="حالت فشرده", ["long-paths"]="مسیرهای طولانی", ["quickaccess-history"]="تاریخچه دسترسی سریع", ["insider-service"]="سرویس Insider", ["sensor-services"]="سرویس‌های حسگر", ["search-index"]="نمایه جستجو", ["telemetry-services"]="سرویس‌های تله‌متری", ["modern-standby"]="استندبای مدرن", ["widgets-board"]="تخته ویجت‌ها", ["news-interests"]="اخبار و علایق", ["store-updates"]="برنامه‌های پیشنهادی Store", ["telemetry-tasks"]="وظایف تله‌متری", ["cortana"]="Cortana و جستجوی وب", ["startmenu-ads"]="تبلیغات منوی Start", ["gamebar"]="نوار بازی و DVR", ["gamemode"]="حالت بازی", ["ink-workspace"]="فضای کاری Windows Ink", ["spelling-typing"]="املا و تایپ", ["cloud-clipboard"]="کلیپ‌برد ابری", ["cast-to-device"]="ارسال به دستگاه", ["chrome-debloat"]="حذف نفخ‌افزار Chrome", ["firefox-debloat"]="حذف نفخ‌افزار Firefox", ["office-debloat"]="حذف نفخ‌افزار Office", ["vs-telemetry"]="تله‌متری Visual Studio", ["nvidia-telemetry"]="تله‌متری NVIDIA", ["vscode"]="VS Code",
+            ["show-tray-icons"]="نمایش آیکون‌های سینی", ["menus-delay"]="تأخیر منوها", ["network-throttling"]="محدودسازی شبکه", ["error-reporting"]="گزارش خطا", ["compat-assistant"]="دستیار سازگاری", ["sticky-keys"]="کلیدهای چسبان", ["smb1"]="پروتکل SMBv1", ["smb2"]="پروتکل SMBv2", ["ntfs-timestamp"]="برچسب زمانی NTFS", ["system-restore"]="بازیابی سیستم", ["superfetch"]="Superfetch", ["homegroup"]="HomeGroup", ["media-sharing"]="اشتراک‌گذاری رسانه", ["regbackup"]="پشتیبان‌گیری دوره‌ای رجیستری", ["compact-mode"]="حالت فشرده", ["long-paths"]="مسیرهای طولانی", ["quickaccess-history"]="تاریخچه دسترسی سریع", ["insider-service"]="سرویس Insider", ["sensor-services"]="سرویس‌های حسگر", ["search-index"]="نمایه جستجو", ["telemetry-services"]="سرویس‌های تله‌متری", ["modern-standby"]="استندبای مدرن", ["widgets-board"]="تخته ویجت‌ها", ["news-interests"]="اخبار و علایق", ["store-updates"]="برنامه‌های پیشنهادی Store", ["telemetry-tasks"]="وظایف تله‌متری", ["cortana"]="Cortana و جستجوی وب", ["startmenu-ads"]="تبلیغات منوی Start", ["gamebar"]="Game Bar و DVR", ["gamemode"]="حالت بازی", ["ink-workspace"]="فضای کاری Windows Ink", ["spelling-typing"]="املا و تایپ", ["cloud-clipboard"]="کلیپ‌برد ابری", ["cast-to-device"]="ارسال به دستگاه", ["chrome-debloat"]="حذف نفخ‌افزار Chrome", ["firefox-debloat"]="حذف نفخ‌افزار Firefox", ["office-debloat"]="حذف نفخ‌افزار Office", ["vs-telemetry"]="تله‌متری Visual Studio", ["nvidia-telemetry"]="تله‌متری NVIDIA", ["vscode"]="VS Code",
             ["chrome"]="Google Chrome", ["firefox"]="Mozilla Firefox", ["librewolf"]="LibreWolf", ["brave"]="Brave",
             ["thorium"]="Thorium AVX2", ["edge"]="Microsoft Edge", ["vivaldi"]="Vivaldi", ["opera"]="Opera",
             ["operagx"]="Opera GX", ["comet"]="Perplexity Comet", ["floorp"]="Floorp", ["waterfox"]="Waterfox",
@@ -42,7 +42,7 @@ public static partial class TranslationService
             ["force-flip-true-immediate"]="تحمیل حالت Flip True Immediate", ["group-memory-io"]="حافظه و ورودی/خروجی",
             ["disablepagingexecutive"]="DisablePagingExecutive", ["disablepagecombining"]="DisablePageCombining",
             ["queued-present-limit"]="محدودیت صف ارائه", ["win32priorityseparation"]="Win32PrioritySeparation",
-            ["powerplan-manager"]="طرح‌های انرژی", ["wifi"]="Wi-Fi", ["bluetooth"]="بلوتوث",
+            ["powerplan-manager"]="طرح‌های انرژی", ["wifi"]="Wi-Fi", ["bluetooth"]="Bluetooth",
             ["hop-limit"]="HopLimit (هات‌اسپات)", ["printer"]="چاپگرها",
             ["task-manager"]="Task Manager به Process Explorer", ["textinputhost"]="TextInputHost",
             ["vbs"]="VBS (امنیت مبتنی بر مجازی‌سازی)", ["hvci"]="HVCI (یکپارچگی حافظه)",
@@ -135,7 +135,7 @@ public static partial class TranslationService
             ["lm-bluetooth-off"]="Bluetooth Radio",
             ["lm-remote-assist"]="Remote Assistance",
             ["lm-remote-desktop"]="Remote Desktop",
-            ["lm-kms-activation"]="KMS Online Activation",
+            ["lm-kms-activation"]="KMS Client Activation Telemetry",
             ["lm-nfc"]="NFC",
             ["lm-wifidirect"]="WiFi Direct",
             ["group-lm-privacy"]="Local Machine Privacy",

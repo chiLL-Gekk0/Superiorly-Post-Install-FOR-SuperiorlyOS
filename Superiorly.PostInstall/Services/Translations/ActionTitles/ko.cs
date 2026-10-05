@@ -6,7 +6,7 @@ public static partial class TranslationService
     {
 
             ["group-sys-services"]="서비스 및 성능", ["group-sys-network"]="네트워크 및 공유", ["group-sys-shell"]="탐색기, 시작 및 작업 표시줄", ["group-sys-recovery"]="파일, 복구 및 전원", ["group-sys-privacy"]="텔레메트리 및 제안",
-            ["show-tray-icons"]="알림 영역 아이콘 표시", ["menus-delay"]="메뉴 지연", ["network-throttling"]="네트워크 스로틀링", ["error-reporting"]="오류 보고", ["compat-assistant"]="프로그램 호환성 관리자", ["sticky-keys"]="고정 키", ["smb1"]="SMBv1 프로토콜", ["smb2"]="SMBv2 프로토콜", ["ntfs-timestamp"]="NTFS 타임스탬프", ["system-restore"]="시스템 복원", ["superfetch"]="Superfetch", ["homegroup"]="HomeGroup", ["media-sharing"]="미디어 공유", ["regbackup"]="주기적 레지스트리 백업", ["compact-mode"]="간결한 보기", ["long-paths"]="긴 경로", ["quickaccess-history"]="빠른 액세스 기록", ["insider-service"]="Insider 서비스", ["sensor-services"]="센서 서비스", ["search-index"]="검색 인덱스", ["telemetry-services"]="텔레메트리 서비스", ["modern-standby"]="모던 대기 모드", ["widgets-board"]="위젯 보드", ["news-interests"]="뉴스 및 관심사", ["store-updates"]="Store 추천 앱", ["telemetry-tasks"]="텔레메트리 작업", ["cortana"]="Cortana 및 웹 검색", ["startmenu-ads"]="시작 메뉴 광고", ["gamebar"]="Game Bar 및 DVR", ["gamemode"]="게임 모드", ["ink-workspace"]="Windows 잉크 작업 공간", ["spelling-typing"]="철자 검사 및 입력", ["cloud-clipboard"]="클라우드 클립보드", ["cast-to-device"]="디바이스로 전송", ["chrome-debloat"]="Chrome 경량화", ["firefox-debloat"]="Firefox 경량화", ["office-debloat"]="Office 경량화", ["vs-telemetry"]="Visual Studio 텔레메트리", ["nvidia-telemetry"]="NVIDIA 텔레메트리", ["vscode"]="VS Code",
+            ["show-tray-icons"]="알림 영역 아이콘 표시", ["menus-delay"]="메뉴 지연", ["network-throttling"]="네트워크 스로틀링", ["error-reporting"]="오류 보고", ["compat-assistant"]="프로그램 호환성 관리자", ["sticky-keys"]="고정 키", ["smb1"]="SMBv1 프로토콜", ["smb2"]="SMBv2 프로토콜", ["ntfs-timestamp"]="NTFS 타임스탬프", ["system-restore"]="시스템 복원", ["superfetch"]="Superfetch", ["homegroup"]="HomeGroup", ["media-sharing"]="미디어 공유", ["regbackup"]="주기적 레지스트리 백업", ["compact-mode"]="간결한 보기", ["long-paths"]="긴 경로", ["quickaccess-history"]="빠른 액세스 기록", ["insider-service"]="Insider 서비스", ["sensor-services"]="센서 서비스", ["search-index"]="검색 인덱스", ["telemetry-services"]="텔레메트리 서비스", ["modern-standby"]="모던 대기 모드", ["widgets-board"]="위젯 보드", ["news-interests"]="뉴스 및 관심사", ["store-updates"]="Store 추천 앱", ["telemetry-tasks"]="텔레메트리 작업", ["cortana"]="Cortana 및 웹 검색", ["startmenu-ads"]="시작 메뉴 광고", ["gamebar"]="Game Bar 및 DVR", ["gamemode"]="게임 모드", ["ink-workspace"]="Windows Ink 작업 공간", ["spelling-typing"]="철자 검사 및 입력", ["cloud-clipboard"]="클라우드 클립보드", ["cast-to-device"]="디바이스로 전송", ["chrome-debloat"]="Chrome 경량화", ["firefox-debloat"]="Firefox 경량화", ["office-debloat"]="Office 경량화", ["vs-telemetry"]="Visual Studio 텔레메트리", ["nvidia-telemetry"]="NVIDIA 텔레메트리", ["vscode"]="VS Code",
             ["chrome"]="Google Chrome", ["firefox"]="Mozilla Firefox", ["librewolf"]="LibreWolf", ["brave"]="Brave",
             ["thorium"]="Thorium AVX2", ["edge"]="Microsoft Edge", ["vivaldi"]="Vivaldi", ["opera"]="Opera",
             ["operagx"]="Opera GX", ["comet"]="Perplexity Comet", ["floorp"]="Floorp", ["waterfox"]="Waterfox",
@@ -116,7 +116,7 @@ public static partial class TranslationService
             ["lm-bluetooth-off"]="Bluetooth Radio",
             ["lm-remote-assist"]="Remote Assistance",
             ["lm-remote-desktop"]="Remote Desktop",
-            ["lm-kms-activation"]="KMS Online Activation",
+            ["lm-kms-activation"]="KMS Client Activation Telemetry",
             ["lm-nfc"]="NFC",
             ["lm-wifidirect"]="WiFi Direct",
             ["group-lm-privacy"]="Local Machine Privacy",

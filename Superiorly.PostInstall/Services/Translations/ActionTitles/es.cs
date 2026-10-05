@@ -52,7 +52,7 @@ public static partial class TranslationService
             ["windows-update-drivers"]="Controladores de Windows Update", ["start-menu"]="Menú Inicio",
             ["use-default-tile"]="Usar mosaico predeterminado",             ["fix-intel-panel"]="Reparar panel de Intel",
         
-            ["mitigations-off"]="Mitigaciones anti-exploit",
+            ["mitigations-off"]="Desactivar mitigaciones anti-exploit",
             ["disable-pca"]="Asistente de compatibilidad (PCA)",
             ["spectre-meltdown-off"]="Mitigaciones Spectre/Meltdown",
             ["group-app-permissions"]="App Permissions",
@@ -135,7 +135,7 @@ public static partial class TranslationService
             ["lm-bluetooth-off"]="Bluetooth Radio",
             ["lm-remote-assist"]="Remote Assistance",
             ["lm-remote-desktop"]="Remote Desktop",
-            ["lm-kms-activation"]="KMS Online Activation",
+            ["lm-kms-activation"]="KMS Client Activation Telemetry",
             ["lm-nfc"]="NFC",
             ["lm-wifidirect"]="WiFi Direct",
             ["group-lm-privacy"]="Local Machine Privacy",

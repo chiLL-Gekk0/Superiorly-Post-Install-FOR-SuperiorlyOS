@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ru = new()
     {
- ["mainstream"]="Основное", ["privacy"]="Конфиденциальность", ["forks"]="Форки и кастомизация", ["software"]="Программы", ["store-downloader"]="Загрузчик Microsoft Store", ["utilities"]="Утилиты", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Настройки реестра", ["win32"]="Win32Priority", ["powerplans"]="Схемы питания", ["connectivity"]="Подключение", ["devices"]="Устройства", ["security"]="Безопасность", ["gaming"]="Игры", ["ai"]="ИИ", ["debloat"]="Debloat", ["system"]="Система" , ["telemetry"]="Telemetry",
+ ["mainstream"]="Основное", ["privacy"]="Конфиденциальность", ["forks"]="Форки и кастомизация", ["software"]="Программы", ["store-downloader"]="Загрузчик Microsoft Store", ["utilities"]="Утилиты", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Настройки реестра", ["win32"]="Win32Priority", ["powerplans"]="Схемы питания", ["connectivity"]="Подключение", ["devices"]="Устройства", ["security"]="Рейтинг приватности: ", ["gaming"]="Игры", ["ai"]="ИИ", ["debloat"]="Деблоат", ["system"]="Система" , ["telemetry"]="Телеметрия",
 ["app-privacy"]="Конфиденциальность приложений",
     };
     private static readonly Dictionary<string, string> Notifications_ru = new()
@@ -90,6 +90,6 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ru = new()
     {
- ["browsers|gaming"]="Игровой браузер", ["tweaking|gaming"]="Игровые службы" , ["troubleshooting|telemetry"]="Исправления телеметрии"
+ ["browsers|gaming"]="Игровой браузер"
     };
 }

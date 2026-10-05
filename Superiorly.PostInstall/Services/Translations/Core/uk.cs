@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_uk = new()
     {
- ["mainstream"]="Популярні", ["privacy"]="Конфіденційність", ["forks"]="Форки та кастомні", ["software"]="Програми", ["store-downloader"]="Завантажувач Microsoft Store", ["utilities"]="Утиліти", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Реєстр", ["win32"]="Win32Priority", ["powerplans"]="Схеми живлення", ["connectivity"]="Підключення", ["devices"]="Пристрої", ["security"]="Безпека", ["gaming"]="Ігри", ["ai"]="ШІ", ["debloat"]="Деблот", ["system"]="Система" , ["telemetry"]="Телеметрія",
+ ["mainstream"]="Популярні", ["privacy"]="Конфіденційність", ["forks"]="Форки та кастомні", ["software"]="Програми", ["store-downloader"]="Завантажувач Microsoft Store", ["utilities"]="Утиліти", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Реєстр", ["win32"]="Win32Priority", ["powerplans"]="Схеми живлення", ["connectivity"]="Підключення", ["devices"]="Пристрої", ["security"]="Рейтинг приватності: ", ["gaming"]="Ігри", ["ai"]="ШІ", ["debloat"]="Деблот", ["system"]="Система" , ["telemetry"]="Телеметрія",
 ["app-privacy"]="Приватність застосунків",
     };
     private static readonly Dictionary<string, string> Notifications_uk = new()
@@ -63,7 +63,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_uk = new()
     {
- ["browsers|gaming"]="Ігровий браузер", ["tweaking|gaming"]="Ігрові служби" , ["troubleshooting|telemetry"]="Виправлення телеметрії"
+ ["browsers|gaming"]="Ігровий браузер"
     };
     private static readonly Dictionary<string, string> UiExtra_uk = new()
     {

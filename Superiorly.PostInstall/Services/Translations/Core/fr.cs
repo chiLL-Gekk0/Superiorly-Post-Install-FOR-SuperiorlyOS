@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_fr = new()
     {
- ["mainstream"]="Populaires", ["privacy"]="Confidentialité", ["forks"]="Forks et personnalisés", ["software"]="Logiciels", ["store-downloader"]="Téléchargeur Microsoft Store", ["utilities"]="Utilitaires", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustements du registre", ["win32"]="Win32Priority", ["powerplans"]="Plans d’alimentation", ["connectivity"]="Connectivité", ["devices"]="Appareils", ["security"]="Sécurité", ["gaming"]="Jeux", ["ai"]="Intelligence artificielle", ["debloat"]="Debloat", ["system"]="Système" , ["telemetry"]="Télémétrie",
+ ["mainstream"]="Populaires", ["privacy"]="Confidentialité", ["forks"]="Forks et personnalisés", ["software"]="Logiciels", ["store-downloader"]="Téléchargeur Microsoft Store", ["utilities"]="Utilitaires", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustements du registre", ["win32"]="Win32Priority", ["powerplans"]="Plans d’alimentation", ["connectivity"]="Connectivité", ["devices"]="Appareils", ["security"]="Note de confidentialité : ", ["gaming"]="Jeux", ["ai"]="Intelligence artificielle", ["debloat"]="Debloat", ["system"]="Système" , ["telemetry"]="Télémétrie",
 ["app-privacy"]="Confidentialité des applications",
     };
     private static readonly Dictionary<string, string> Notifications_fr = new()
@@ -49,7 +49,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_fr = new()
     {
- ["mainstream"]="Navigateurs du quotidien.", ["privacy"]="Navigateurs axés sur la confidentialité et l’anonymat.", ["forks"]="Versions communautaires basées sur Chromium et Firefox.", ["utilities"]="Outils de diagnostic du système et du matériel.", ["amd"]="Outils AMD GPU pour pilotes, fréquence, tension et registre.", ["nvidia"]="Outils NVIDIA pour installations propres, profils et P-States.", ["connectivity"]="Paramètres Wi-Fi, Bluetooth et limite de sauts du point d’accès.", ["devices"]="Correctifs pour imprimante, Gestionnaire des tâches et saisie de texte.", ["security"]="Isolation du noyau, pare-feu, UAC, liste de blocage des pilotes et protections mémoire.", ["gaming"]="Services Xbox et Opera GX.", ["ai"]="Navigation Chromium, WebKit et axée sur l’IA.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Pilotes via Windows Update, menu Démarrer et correctifs du panneau Intel." , ["telemetry"]="Commutateurs de télémétrie, suggestions, publicités et collecte de données des éditeurs.",
+ ["mainstream"]="Navigateurs du quotidien.", ["privacy"]="Navigateurs axés sur la confidentialité et l’anonymat.", ["forks"]="Versions communautaires basées sur Chromium et Firefox.", ["utilities"]="Outils de diagnostic du système et du matériel.", ["amd"]="Outils AMD GPU pour pilotes, fréquence, tension et registre.", ["nvidia"]="Outils NVIDIA pour installations propres, profils et P-States.", ["connectivity"]="Paramètres Wi-Fi, Bluetooth et limite de sauts du point d’accès.", ["devices"]="Correctifs pour imprimante, Gestionnaire des tâches et saisie de texte.", ["security"]="Isolation du noyau, pare-feu, UAC, liste de blocage des pilotes et protections mémoire.", ["gaming"]="Services Xbox et Opera GX.", ["ai"]="Navigation Chromium, WebKit et axée sur l’IA.", ["debloat"]="Politiques de confidentialité des navigateurs et commutateurs de télémétrie des éditeurs : Chrome, Edge, Firefox et Office.", ["system"]="Pilotes via Windows Update, menu Démarrer et correctifs du panneau Intel." , ["telemetry"]="Commutateurs de télémétrie, suggestions, publicités et collecte de données des éditeurs.",
 ["app-privacy"]="Autorisations d'applications et options de confidentialité.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_fr = new()
@@ -63,7 +63,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_fr = new()
     {
- ["browsers|gaming"]="Navigateur de jeu", ["tweaking|gaming"]="Services de jeu" , ["troubleshooting|telemetry"]="Correctifs Télémétrie"
+ ["browsers|gaming"]="Navigateur de jeu"
     };
     private static readonly Dictionary<string, string> UiExtra_fr = new()
     {

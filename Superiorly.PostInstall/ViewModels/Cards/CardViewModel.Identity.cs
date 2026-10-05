@@ -16,8 +16,8 @@ public partial class CardViewModel : ObservableObject {
     public bool HasToggle => _enableOption != null && _disableOption != null;
     public bool IsCombo => !HasToggle && Options.Count > 1;
     public bool IsPresetCombo => IsCombo && !IsDownloadCard;
-    private static readonly System.Collections.Generic.HashSet<string> DestructiveIds = new() { "smb2", "system-restore", "modern-standby" };
-    private static readonly System.Collections.Generic.HashSet<string> ConfirmIds = new() { "brave-debloat", "edge-debloat", "chrome-debloat", "firefox-debloat", "office-debloat", "nvidia-telemetry" };
+    private static readonly System.Collections.Generic.HashSet<string> DestructiveIds = new() { "smb2", "system-restore", "modern-standby", "wu-disable-auto", "onedrive-disable", "lm-remote-desktop", "lm-ncsi", "lm-biometrics-off", "lm-nfc", "lm-wifidirect" };
+    private static readonly System.Collections.Generic.HashSet<string> ConfirmIds = new() { "brave-debloat", "edge-debloat", "chrome-debloat", "firefox-debloat", "office-debloat", "nvidia-telemetry", "wu-disable-auto", "onedrive-disable", "lm-remote-desktop", "lm-ncsi", "lm-biometrics-off" };
     private static readonly System.Collections.Generic.HashSet<string> ConfirmDisableIds = new() { "mitigations-off" };
     public bool IsDestructive => DestructiveIds.Contains(_action.Id);
     public bool IsSearchCard => _action.Type == "search";
@@ -44,6 +44,5 @@ public partial class CardViewModel : ObservableObject {
     public string TipData => TipText(_action.Tip?.Data);
     public int TipSecurity => _action.Tip?.Security ?? 0;
     public string TipSecurityText => $"{TipSecurity}/10";
-    // debloat has no security score; hide ranking there
-    public bool ShowSecurity => HasTip && TipSecurity > 0 && ActionId is not "brave-debloat" and not "edge-debloat";
+    public bool ShowSecurity => HasTip && TipSecurity > 0;
 }

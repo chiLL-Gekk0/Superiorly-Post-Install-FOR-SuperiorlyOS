@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_zht = new()
     {
- ["mainstream"]="主流", ["privacy"]="隱私", ["forks"]="分支與自訂", ["software"]="軟體", ["store-downloader"]="Microsoft Store 下載器", ["utilities"]="公用程式", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="登錄檔", ["win32"]="Win32Priority", ["powerplans"]="電源計畫", ["connectivity"]="連線", ["devices"]="裝置", ["security"]="安全性", ["gaming"]="遊戲", ["ai"]="AI", ["debloat"]="精簡", ["system"]="系統" , ["telemetry"]="遙測",
+ ["mainstream"]="主流", ["privacy"]="隱私", ["forks"]="分支與自訂", ["software"]="軟體", ["store-downloader"]="Microsoft Store 下載器", ["utilities"]="公用程式", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="登錄檔", ["win32"]="Win32Priority", ["powerplans"]="電源計畫", ["connectivity"]="連線", ["devices"]="裝置", ["security"]="隱私評級：", ["gaming"]="遊戲", ["ai"]="AI", ["debloat"]="精簡", ["system"]="系統" , ["telemetry"]="遙測",
 ["app-privacy"]="應用程式隱私",
     };
     private static readonly Dictionary<string, string> Notifications_zht = new()
@@ -63,7 +63,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_zht = new()
     {
- ["browsers|gaming"]="遊戲瀏覽器", ["tweaking|gaming"]="遊戲服務" , ["troubleshooting|telemetry"]="遙測修正"
+ ["browsers|gaming"]="遊戲瀏覽器"
     };
     private static readonly Dictionary<string, string> UiExtra_zht = new()
     {

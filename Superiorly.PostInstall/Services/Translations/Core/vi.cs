@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_vi = new()
     {
- ["mainstream"]="Phổ thông", ["privacy"]="Riêng tư", ["forks"]="Bản phân nhánh & tùy chỉnh", ["software"]="Phần mềm", ["store-downloader"]="Trình tải Microsoft Store", ["utilities"]="Tiện ích", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Sổ đăng ký", ["win32"]="Win32Priority", ["powerplans"]="Gói điện", ["connectivity"]="Kết nối", ["devices"]="Thiết bị", ["security"]="Bảo mật", ["gaming"]="Chơi game", ["ai"]="AI", ["debloat"]="Gỡ bloat", ["system"]="Hệ thống" , ["telemetry"]="Dữ liệu chẩn đoán",
+ ["mainstream"]="Phổ thông", ["privacy"]="Riêng tư", ["forks"]="Bản phân nhánh & tùy chỉnh", ["software"]="Phần mềm", ["store-downloader"]="Trình tải Microsoft Store", ["utilities"]="Tiện ích", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Sổ đăng ký", ["win32"]="Win32Priority", ["powerplans"]="Gói điện", ["connectivity"]="Kết nối", ["devices"]="Thiết bị", ["security"]="Xep hang rieng tu: ", ["gaming"]="Chơi game", ["ai"]="AI", ["debloat"]="Gỡ bloat", ["system"]="Hệ thống" , ["telemetry"]="Dữ liệu chẩn đoán",
 ["app-privacy"]="Quyền riêng tư ứng dụng",
     };
     private static readonly Dictionary<string, string> Notifications_vi = new()
@@ -63,7 +63,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_vi = new()
     {
- ["browsers|gaming"]="Trình duyệt chơi game", ["tweaking|gaming"]="Dịch vụ trò chơi" , ["troubleshooting|telemetry"]="Sửa lỗi dữ liệu chẩn đoán"
+ ["browsers|gaming"]="Trình duyệt chơi game"
     };
     private static readonly Dictionary<string, string> UiExtra_vi = new()
     {

@@ -5,8 +5,8 @@ public static partial class TranslationService
     private static readonly Dictionary<string, string> ActionTitles_ar = new()
     {
 
-            ["group-sys-services"]="الخدمات والأداء", ["group-sys-network"]="الشبكة والمشاركة", ["group-sys-shell"]="المستكشف وابدأ وشريط المهام", ["group-sys-recovery"]="الملفات والاسترداد والطاقة", ["group-sys-privacy"]="القياس عن بُعد والاقتراحات",
-            ["show-tray-icons"]="إظهار أيقونات الدرج", ["menus-delay"]="تأخير القوائم", ["network-throttling"]="اختناق الشبكة", ["error-reporting"]="الإبلاغ عن الأخطاء", ["compat-assistant"]="مساعد التوافق", ["sticky-keys"]="المفاتيح اللاصقة", ["smb1"]="بروتوكول SMBv1", ["smb2"]="بروتوكول SMBv2", ["ntfs-timestamp"]="الطابع الزمني NTFS", ["system-restore"]="استعادة النظام", ["superfetch"]="Superfetch", ["homegroup"]="HomeGroup", ["media-sharing"]="مشاركة الوسائط", ["regbackup"]="النسخ الاحتياطي الدوري للسجل", ["compact-mode"]="الوضع المضغوط", ["long-paths"]="المسارات الطويلة", ["quickaccess-history"]="سجل الوصول السريع", ["insider-service"]="خدمة Insider", ["sensor-services"]="خدمات الاستشعار", ["search-index"]="فهرس البحث", ["telemetry-services"]="خدمات القياس عن بُعد", ["modern-standby"]="الاستعداد الحديث", ["widgets-board"]="لوحة الودجات", ["news-interests"]="الأخبار والاهتمامات", ["store-updates"]="تطبيقات المتجر المقترحة", ["telemetry-tasks"]="مهام القياس عن بُعد", ["cortana"]="Cortana والبحث على الويب", ["startmenu-ads"]="إعلانات قائمة ابدأ", ["gamebar"]="شريط الألعاب وDVR", ["gamemode"]="وضع الألعاب", ["ink-workspace"]="مساحة Windows Ink", ["spelling-typing"]="التدقيق الإملائي والكتابة", ["cloud-clipboard"]="الحافظة السحابية", ["cast-to-device"]="البث إلى الجهاز", ["chrome-debloat"]="تنظيف Chrome", ["firefox-debloat"]="تنظيف Firefox", ["office-debloat"]="تنظيف Office", ["vs-telemetry"]="القياس عن بُعد في Visual Studio", ["nvidia-telemetry"]="القياس عن بُعد في NVIDIA", ["vscode"]="VS Code",
+            ["group-sys-services"]="الخدمات والأداء", ["group-sys-network"]="الشبكة والمشاركة", ["group-sys-shell"]="File Explorer وStart وشريط المهام", ["group-sys-recovery"]="الملفات والاسترداد والطاقة", ["group-sys-privacy"]="القياس عن بُعد والاقتراحات",
+            ["show-tray-icons"]="إظهار أيقونات الدرج", ["menus-delay"]="تأخير القوائم", ["network-throttling"]="اختناق الشبكة", ["error-reporting"]="الإبلاغ عن الأخطاء", ["compat-assistant"]="مساعد التوافق", ["sticky-keys"]="المفاتيح اللاصقة", ["smb1"]="بروتوكول SMBv1", ["smb2"]="بروتوكول SMBv2", ["ntfs-timestamp"]="الطابع الزمني NTFS", ["system-restore"]="استعادة النظام", ["superfetch"]="Superfetch", ["homegroup"]="HomeGroup", ["media-sharing"]="مشاركة الوسائط", ["regbackup"]="النسخ الاحتياطي الدوري للسجل", ["compact-mode"]="الوضع المضغوط", ["long-paths"]="المسارات الطويلة", ["quickaccess-history"]="سجل الوصول السريع", ["insider-service"]="خدمة Insider", ["sensor-services"]="خدمات الاستشعار", ["search-index"]="فهرس البحث", ["telemetry-services"]="خدمات القياس عن بُعد", ["modern-standby"]="الاستعداد الحديث", ["widgets-board"]="لوحة الودجات", ["news-interests"]="الأخبار والاهتمامات", ["store-updates"]="تطبيقات Store المقترحة", ["telemetry-tasks"]="مهام القياس عن بُعد", ["cortana"]="Cortana والبحث على الويب", ["startmenu-ads"]="إعلانات قائمة Start", ["gamebar"]="شريط الألعاب وDVR", ["gamemode"]="وضع الألعاب", ["ink-workspace"]="مساحة Windows Ink", ["spelling-typing"]="التدقيق الإملائي والكتابة", ["cloud-clipboard"]="الحافظة السحابية", ["cast-to-device"]="البث إلى الجهاز", ["chrome-debloat"]="تنظيف Chrome", ["firefox-debloat"]="تنظيف Firefox", ["office-debloat"]="تنظيف Office", ["vs-telemetry"]="القياس عن بُعد في Visual Studio", ["nvidia-telemetry"]="القياس عن بُعد في NVIDIA", ["vscode"]="VS Code",
             ["chrome"]="Google Chrome", ["firefox"]="Mozilla Firefox", ["librewolf"]="LibreWolf", ["brave"]="Brave",
             ["thorium"]="Thorium AVX2", ["edge"]="Microsoft Edge", ["vivaldi"]="Vivaldi", ["opera"]="Opera",
             ["operagx"]="Opera GX", ["comet"]="Perplexity Comet", ["floorp"]="Floorp", ["waterfox"]="Waterfox",
@@ -49,7 +49,7 @@ public static partial class TranslationService
  ["firewall"]="جدار الحماية", ["lua"]="UAC / LUA",
             ["vulnerable-driver-blocklist"]="قائمة برامج التشغيل الضعيفة المحظورة", ["nx-mode"]="وضع عدم التنفيذ (NX)",
             ["xbox"]="خدمات Xbox", ["fivem-safe-services"]="خدمات FiveM/Minecraft الآمنة",
-            ["windows-update-drivers"]="برامج التشغيل عبر Windows Update", ["start-menu"]="قائمة ابدأ",
+            ["windows-update-drivers"]="برامج التشغيل عبر Windows Update", ["start-menu"]="قائمة Start",
             ["use-default-tile"]="استخدام المربع الافتراضي",             ["fix-intel-panel"]="إصلاح لوحة تحكم Intel",
         
             ["mitigations-off"]="تعطيل تخفيفات الاستغلال",
@@ -135,7 +135,7 @@ public static partial class TranslationService
             ["lm-bluetooth-off"]="Bluetooth Radio",
             ["lm-remote-assist"]="Remote Assistance",
             ["lm-remote-desktop"]="Remote Desktop",
-            ["lm-kms-activation"]="KMS Online Activation",
+            ["lm-kms-activation"]="KMS Client Activation Telemetry",
             ["lm-nfc"]="NFC",
             ["lm-wifidirect"]="WiFi Direct",
             ["group-lm-privacy"]="Local Machine Privacy",

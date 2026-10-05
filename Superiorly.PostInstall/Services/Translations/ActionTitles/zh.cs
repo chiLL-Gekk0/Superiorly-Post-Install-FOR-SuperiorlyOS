@@ -6,7 +6,7 @@ public static partial class TranslationService
     {
 
             ["group-sys-services"]="服务与性能", ["group-sys-network"]="网络与共享", ["group-sys-shell"]="资源管理器、开始与任务栏", ["group-sys-recovery"]="文件、恢复与电源", ["group-sys-privacy"]="遥测与建议",
-            ["show-tray-icons"]="显示托盘图标", ["menus-delay"]="菜单延迟", ["network-throttling"]="网络限制", ["error-reporting"]="错误报告", ["compat-assistant"]="兼容性助理", ["sticky-keys"]="粘滞键", ["smb1"]="SMBv1 协议", ["smb2"]="SMBv2 协议", ["ntfs-timestamp"]="NTFS 时间戳", ["system-restore"]="系统还原", ["superfetch"]="Superfetch", ["homegroup"]="HomeGroup", ["media-sharing"]="媒体共享", ["regbackup"]="定期注册表备份", ["compact-mode"]="紧凑模式", ["long-paths"]="长路径", ["quickaccess-history"]="快速访问历史记录", ["insider-service"]="Insider 服务", ["sensor-services"]="传感器服务", ["search-index"]="搜索索引", ["telemetry-services"]="遥测服务", ["modern-standby"]="新式待机", ["widgets-board"]="小组件面板", ["news-interests"]="新闻和兴趣", ["store-updates"]="商店推荐应用", ["telemetry-tasks"]="遥测任务", ["cortana"]="Cortana 与网页搜索", ["startmenu-ads"]="开始菜单广告", ["gamebar"]="Game Bar 与 DVR", ["gamemode"]="游戏模式", ["ink-workspace"]="Windows 墨迹工作区", ["spelling-typing"]="拼写和输入", ["cloud-clipboard"]="云剪贴板", ["cast-to-device"]="投放到设备", ["chrome-debloat"]="Chrome 精简", ["firefox-debloat"]="Firefox 精简", ["office-debloat"]="Office 精简", ["vs-telemetry"]="Visual Studio 遥测", ["nvidia-telemetry"]="NVIDIA 遥测", ["vscode"]="VS Code",
+            ["show-tray-icons"]="显示托盘图标", ["menus-delay"]="菜单延迟", ["network-throttling"]="网络节流", ["error-reporting"]="错误报告", ["compat-assistant"]="兼容性助理服务服务服务", ["sticky-keys"]="粘滞键", ["smb1"]="SMBv1 协议", ["smb2"]="SMBv2 协议", ["ntfs-timestamp"]="NTFS 时间戳", ["system-restore"]="系统还原", ["superfetch"]="Superfetch", ["homegroup"]="HomeGroup", ["media-sharing"]="媒体共享", ["regbackup"]="定期注册表备份", ["compact-mode"]="紧凑模式", ["long-paths"]="长路径", ["quickaccess-history"]="快速访问历史记录", ["insider-service"]="Insider 服务", ["sensor-services"]="传感器服务", ["search-index"]="搜索索引", ["telemetry-services"]="遥测服务", ["modern-standby"]="新式待机", ["widgets-board"]="小组件面板", ["news-interests"]="新闻和兴趣", ["store-updates"]="商店推荐应用", ["telemetry-tasks"]="遥测任务", ["cortana"]="Cortana 与网页搜索", ["startmenu-ads"]="开始菜单广告", ["gamebar"]="Game Bar 与 DVR", ["gamemode"]="游戏模式", ["ink-workspace"]="Windows Ink 工作区", ["spelling-typing"]="拼写和输入", ["cloud-clipboard"]="云剪贴板", ["cast-to-device"]="投放到设备", ["chrome-debloat"]="Chrome 精简", ["firefox-debloat"]="Firefox 精简", ["office-debloat"]="Office 精简", ["vs-telemetry"]="Visual Studio 遥测", ["nvidia-telemetry"]="NVIDIA 遥测", ["vscode"]="VS Code",
             ["chrome"]="Google Chrome", ["firefox"]="Mozilla Firefox", ["librewolf"]="LibreWolf", ["brave"]="Brave",
             ["thorium"]="Thorium AVX2", ["edge"]="Microsoft Edge", ["vivaldi"]="Vivaldi", ["opera"]="Opera",
             ["operagx"]="Opera GX", ["comet"]="Perplexity Comet", ["floorp"]="Floorp", ["waterfox"]="Waterfox",
@@ -14,7 +14,7 @@ public static partial class TranslationService
             ["mullvad"]="Mullvad Browser", ["pale-moon"]="Pale Moon", ["yandex"]="Yandex Browser",
             ["epic-browser"]="Epic Privacy Browser", ["cachy-browser"]="Cachy Browser", ["kagi-orion"]="Kagi Orion",
             ["tor-browser"]="Tor Browser", ["chromium"]="Chromium", ["avast-secure"]="Avast Secure Browser",
-            ["whale"]="Naver Whale", ["falkon"]="Falkon", ["dia"]="Dia", ["brave-debloat"]="Brave Debloat", ["edge-debloat"]="Edge Debloat",
+            ["whale"]="Naver Whale", ["falkon"]="Falkon", ["dia"]="Dia", ["brave-debloat"]="Brave 精简", ["edge-debloat"]="Edge 精简",
             ["process-explorer"]="Process Explorer", ["nsudo"]="NSudo", ["driverview"]="DriverView",
             ["cru"]="自定义分辨率工具 (CRU)", ["windows-update-manager"]="Windows 更新管理器",
             ["mousetester"]="MouseTester", ["geek-uninstaller"]="Geek Uninstaller", ["measuresleep"]="MeasureSleep",
@@ -132,7 +132,7 @@ public static partial class TranslationService
             ["lm-bluetooth-off"]="Bluetooth Radio",
             ["lm-remote-assist"]="Remote Assistance",
             ["lm-remote-desktop"]="Remote Desktop",
-            ["lm-kms-activation"]="KMS Online Activation",
+            ["lm-kms-activation"]="KMS Client Activation Telemetry",
             ["lm-nfc"]="NFC",
             ["lm-wifidirect"]="WiFi Direct",
             ["group-lm-privacy"]="Local Machine Privacy",
@@ -171,7 +171,7 @@ public static partial class TranslationService
             ["lm-cortana-lockscreen"]="Cortana Above Lock Screen",
             ["lm-search-highlights"]="Search Highlights in Taskbar",
             ["mitigations-off"]="关闭漏洞缓解措施",
-            ["disable-pca"]="兼容性助理 (PCA)",
+            ["disable-pca"]="兼容性助理提示 (PCA)",
             ["spectre-meltdown-off"]="Spectre/Meltdown 缓解措施",
     };
 }

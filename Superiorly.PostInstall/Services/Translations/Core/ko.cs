@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ko = new()
     {
- ["mainstream"]="일반", ["privacy"]="개인정보 보호", ["forks"]="포크 및 커스텀", ["software"]="소프트웨어", ["store-downloader"]="Microsoft Store 다운로더", ["utilities"]="유틸리티", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="레지스트리 조정", ["win32"]="Win32Priority", ["powerplans"]="전원 계획", ["connectivity"]="연결", ["devices"]="장치", ["security"]="보안", ["gaming"]="게임", ["ai"]="인공지능", ["debloat"]="Debloat", ["system"]="시스템" , ["telemetry"]="텔레메트리",
+ ["mainstream"]="일반", ["privacy"]="개인정보 보호", ["forks"]="포크 및 커스텀", ["software"]="소프트웨어", ["store-downloader"]="Microsoft Store 다운로더", ["utilities"]="유틸리티", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="레지스트리 조정", ["win32"]="Win32Priority", ["powerplans"]="전원 계획", ["connectivity"]="연결", ["devices"]="장치", ["security"]="개인정보 등급: ", ["gaming"]="게임", ["ai"]="인공지능", ["debloat"]="경량화", ["system"]="시스템" , ["telemetry"]="텔레메트리",
 ["app-privacy"]="앱 개인정보",
     };
     private static readonly Dictionary<string, string> Notifications_ko = new()
@@ -49,7 +49,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_ko = new()
     {
- ["mainstream"]="일상적인 브라우저입니다.", ["privacy"]="개인정보 보호 및 익명성을 위한 브라우저입니다.", ["forks"]="Chromium 및 Firefox 기반 커뮤니티 빌드입니다.", ["utilities"]="시스템 및 하드웨어 진단 도구입니다.", ["amd"]="드라이버, 클록, 전압 및 레지스트리용 AMD GPU 도구입니다.", ["nvidia"]="클린 설치, 프로필 및 P-States용 NVIDIA 도구입니다.", ["connectivity"]="Wi-Fi, Bluetooth 및 핫스팟 홉 제한 설정입니다.", ["devices"]="프린터, 작업 관리자 및 텍스트 입력 수정 사항입니다.", ["security"]="코어 격리, 방화벽, UAC, 드라이버 차단 목록 및 메모리 보호입니다.", ["gaming"]="Xbox 서비스 및 Opera GX입니다.", ["ai"]="Chromium, WebKit 및 AI 우선 브라우징입니다.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Windows Update 드라이버, 시작 메뉴 및 Intel 패널 수정 사항입니다." , ["telemetry"]="텔레메리, 제안, 광고 및 공급업체 데이터 수집 스위치.",
+ ["mainstream"]="일상적인 브라우저입니다.", ["privacy"]="개인정보 보호 및 익명성을 위한 브라우저입니다.", ["forks"]="Chromium 및 Firefox 기반 커뮤니티 빌드입니다.", ["utilities"]="시스템 및 하드웨어 진단 도구입니다.", ["amd"]="드라이버, 클록, 전압 및 레지스트리용 AMD GPU 도구입니다.", ["nvidia"]="클린 설치, 프로필 및 P-States용 NVIDIA 도구입니다.", ["connectivity"]="Wi-Fi, Bluetooth 및 핫스팟 홉 제한 설정입니다.", ["devices"]="프린터, 작업 관리자 및 텍스트 입력 수정 사항입니다.", ["security"]="코어 격리, 방화벽, UAC, 드라이버 차단 목록 및 메모리 보호입니다.", ["gaming"]="Xbox 서비스 및 Opera GX입니다.", ["ai"]="Chromium, WebKit 및 AI 우선 브라우징입니다.", ["debloat"]="브라우저 개인정보 정책 및 공급업체 텔레메트리 스위치: Chrome, Edge, Firefox 및 Office.", ["system"]="Windows Update 드라이버, 시작 메뉴 및 Intel 패널 수정 사항입니다." , ["telemetry"]="텔레메리, 제안, 광고 및 공급업체 데이터 수집 스위치.",
 ["app-privacy"]="앱 권한 및 개인정보 설정.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_ko = new()
@@ -63,7 +63,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ko = new()
     {
- ["browsers|gaming"]="게이밍 브라우저", ["tweaking|gaming"]="게임 서비스" , ["troubleshooting|telemetry"]="텔레메트리 수정"
+ ["browsers|gaming"]="게이밍 브라우저"
     };
     private static readonly Dictionary<string, string> UiExtra_ko = new()
     {

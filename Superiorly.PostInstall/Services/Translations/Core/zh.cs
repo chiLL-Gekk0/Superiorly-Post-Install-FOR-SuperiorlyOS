@@ -8,11 +8,11 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionDescs_zh = new()
     {
- ["home"]="欢迎使用您的工具箱", ["browsers"]="浏览器相关工具和修复", ["tools"]="下载并运行便携式工具", ["tweaking"]="驱动、GPU和系统调整。", ["troubleshooting"]="快速切换和系统修复。" 
+ ["home"]="欢迎使用您的工具箱", ["browsers"]="浏览器相关工具和修复", ["tools"]="下载并运行便携式工具", ["tweaking"]="驱动、GPU 和系统调整。", ["troubleshooting"]="快速切换和系统修复。" 
     };
     private static readonly Dictionary<string, string> TabTitles_zh = new()
     {
- ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32Priority", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="安全", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="Debloat", ["system"]="系统" , ["telemetry"]="Telemetry",
+ ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32Priority", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="隐私评级：", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="精简", ["system"]="系统" , ["telemetry"]="遥测",
 ["app-privacy"]="应用隐私修复",
     };
     private static readonly Dictionary<string, string> Notifications_zh = new()
@@ -29,7 +29,7 @@ public static partial class TranslationService
             ["check_updates"]="检查更新", ["update"]="更新", ["disclaimer"]="修改由您自行负责。",
             ["quantum_title"]="Quantum 映射", ["quantum_subtitle"]="所有有效的 Win32PrioritySeparation 值。单击一行即可应用。",
             ["open_quantum"]="打开 Quantum 映射", ["current_win32"]="当前 Win32PrioritySeparation",
-            ["load_list"]="加载列表", ["unload_list"]="关闭列表", ["activate"]="激活", ["import"]="导入", ["export"]="导出",
+            ["load_list"]="加载列表", ["unload_list"]="列表已关闭", ["activate"]="激活", ["import"]="导入", ["export"]="导出",
             ["select_all"]="全选", ["unselect_all"]="取消全选", ["uninstall"]="卸载", ["delete"]="删除",
             ["restore_default"]="恢复默认值", ["yes"]="是", ["no"]="否",
             ["searching_for"]="正在搜索“{0}”...", ["downloading"]="正在下载 {0}...", ["starting"]="正在启动 {0}...",
@@ -64,7 +64,7 @@ public static partial class TranslationService
             ["follow_theme"]="跟随 Windows 主题", ["square"]="直角", ["rounded"]="圆角",
             ["join"]="加入", ["follow"]="关注", ["visit"]="访问", ["copy_link"]="复制链接", ["copied"]="已复制",
             ["no_profiles_found"]="未找到配置文件。请将 .nip 文件放入 Nvidia Profiles 文件夹。",
-            ["confirm_disable"]="禁用此保护吗?",
+            ["confirm_disable"]="禁用此保护吗？",
             ["home_discord_desc"]="Superiorly Community",
             ["home_instagram_desc"]="@sebastianportella",
             ["home_github_desc"]="chiLL-Gekk0",
@@ -76,20 +76,20 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_zh = new()
     {
- ["mainstream"]="日常浏览器。", ["privacy"]="注重隐私和匿名的浏览器。", ["forks"]="基于Chromium和Firefox的社区版本。", ["utilities"]="系统和硬件诊断工具。", ["amd"]="用于驱动、频率、电压和注册表的AMD GPU工具。", ["nvidia"]="用于干净安装、配置文件和P-State的NVIDIA工具。", ["connectivity"]="Wi-Fi、蓝牙和热点跳数限制设置。", ["devices"]="打印机、任务管理器和文本输入修复。", ["security"]="内核隔离、防火墙、UAC、驱动程序阻止列表和内存保护。", ["gaming"]="Xbox服务和Opera GX。", ["ai"]="Chromium、WebKit和AI优先浏览。", ["debloat"]="浏览器隐私策略和供应商遥测开关：Chrome、Edge、Firefox和Office。", ["system"]="Windows Update驱动、开始菜单和Intel面板修复。" , ["telemetry"]="遥测、建议、广告和供应商数据收集开关。",
+ ["mainstream"]="日常浏览器。", ["privacy"]="注重隐私和匿名的浏览器。", ["forks"]="基于 Chromium 和 Firefox 的社区版本。", ["utilities"]="系统和硬件诊断工具。", ["amd"]="用于驱动、频率、电压和注册表的 AMD GPU 工具。", ["nvidia"]="用于干净安装、配置文件和 P-State 的 NVIDIA 工具。", ["connectivity"]="Wi-Fi、蓝牙和热点跳数限制设置。", ["devices"]="打印机、任务管理器和文本输入修复。", ["security"]="内核隔离、防火墙、UAC、驱动程序阻止列表和内存保护。", ["gaming"]="Xbox 服务和 Opera GX。", ["ai"]="Chromium、WebKit 和 AI 优先浏览。", ["debloat"]="浏览器隐私策略和供应商遥测开关：Chrome、Edge、Firefox 和 Office。", ["system"]="Windows Update 驱动、开始菜单和 Intel 面板修复。" , ["telemetry"]="遥测、建议、广告和供应商数据收集开关。",
 ["app-privacy"]="应用权限与隐私设置。",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_zh = new()
     {
- ["browsers|gaming"]="内置CPU、RAM和网络限制器的Opera GX。", ["tweaking|gaming"]="Xbox服务和安全的FiveM/Minecraft服务。" 
+ ["browsers|gaming"]="内置 CPU、RAM 和网络限制器的 Opera GX。", ["tweaking|gaming"]="Xbox 服务和安全的 FiveM/Minecraft 服务。" 
     };
     private static readonly Dictionary<string, string> TabBannerTitles_zh = new()
     {
- ["mainstream"]="日常浏览器", ["privacy"]="匿名浏览", ["forks"]="独立分支", ["utilities"]="系统实用工具", ["amd"]="Radeon工具", ["nvidia"]="GeForce工具", ["connectivity"]="无线设置", ["devices"]="设备修复", ["security"]="系统保护", ["gaming"]="游戏服务", ["ai"]="AI浏览器", ["debloat"]="浏览器精简", ["system"]="Windows修复" , ["telemetry"]="遥测修复",
+ ["mainstream"]="日常浏览器", ["privacy"]="匿名浏览", ["forks"]="独立分支", ["utilities"]="系统实用工具", ["amd"]="Radeon 工具", ["nvidia"]="GeForce 工具", ["connectivity"]="无线设置", ["devices"]="设备修复", ["security"]="系统保护", ["gaming"]="游戏服务", ["ai"]="AI 浏览器", ["debloat"]="浏览器精简", ["system"]="Windows 修复" , ["telemetry"]="遥测修复",
 ["app-privacy"]="应用隐私修复",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_zh = new()
     {
- ["browsers|gaming"]="游戏浏览器", ["tweaking|gaming"]="游戏服务" , ["troubleshooting|telemetry"]="遥测修复"
+ ["browsers|gaming"]="游戏浏览器"
     };
 }

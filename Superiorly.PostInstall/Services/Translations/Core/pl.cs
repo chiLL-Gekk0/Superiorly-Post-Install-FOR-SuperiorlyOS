@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_pl = new()
     {
- ["mainstream"]="Popularne", ["privacy"]="Prywatność", ["forks"]="Forki i niestandardowe", ["software"]="Oprogramowanie", ["store-downloader"]="Program pobierający Microsoft Store", ["utilities"]="Narzędzia", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Poprawki rejestru", ["win32"]="Win32Priority", ["powerplans"]="Plany zasilania", ["connectivity"]="Łączność", ["devices"]="Urządzenia", ["security"]="Zabezpieczenia", ["gaming"]="Gry", ["ai"]="SI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry",
+ ["mainstream"]="Popularne", ["privacy"]="Prywatność", ["forks"]="Forki i niestandardowe", ["software"]="Oprogramowanie", ["store-downloader"]="Program pobierający Microsoft Store", ["utilities"]="Narzędzia", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Poprawki rejestru", ["win32"]="Win32Priority", ["powerplans"]="Plany zasilania", ["connectivity"]="Łączność", ["devices"]="Urządzenia", ["security"]="Ocena prywatności: ", ["gaming"]="Gry", ["ai"]="SI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetria",
 ["app-privacy"]="Prywatność aplikacji",
     };
     private static readonly Dictionary<string, string> Notifications_pl = new()
@@ -49,7 +49,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_pl = new()
     {
- ["mainstream"]="Codzienne przeglądarki.", ["privacy"]="Przeglądarki nastawione na prywatność i anonimowość.", ["forks"]="Społecznościowe kompilacje oparte na Chromium i Firefox.", ["utilities"]="Narzędzia do diagnostyki systemu i sprzętu.", ["amd"]="Narzędzia AMD GPU do sterowników, taktowania, napięcia i rejestru.", ["nvidia"]="Narzędzia NVIDIA do czystej instalacji, profili i stanów P-States.", ["connectivity"]="Ustawienia Wi-Fi, Bluetooth i limitu przeskoków hotspotu.", ["devices"]="Poprawki drukarki, Menedżera zadań i wprowadzania tekstu.", ["security"]="Izolacja rdzenia, zapora, UAC, lista blokowanych sterowników i ochrona pamięci.", ["gaming"]="Usługi Xbox i Opera GX.", ["ai"]="Przeglądanie Chromium, WebKit i oparte na SI.", ["debloat"]="Browser privacy policies and vendor telemetry switches: Chrome, Edge, Firefox and Office.", ["system"]="Sterowniki przez Windows Update, menu Start i poprawki panelu Intel." , ["telemetry"]="Przełączniki telemetrii, sugestii, reklam i zbierania danych przez dostawców.",
+ ["mainstream"]="Codzienne przeglądarki.", ["privacy"]="Przeglądarki nastawione na prywatność i anonimowość.", ["forks"]="Społecznościowe kompilacje oparte na Chromium i Firefox.", ["utilities"]="Narzędzia do diagnostyki systemu i sprzętu.", ["amd"]="Narzędzia AMD GPU do sterowników, taktowania, napięcia i rejestru.", ["nvidia"]="Narzędzia NVIDIA do czystej instalacji, profili i stanów P-States.", ["connectivity"]="Ustawienia Wi-Fi, Bluetooth i limitu przeskoków hotspotu.", ["devices"]="Poprawki drukarki, Menedżera zadań i wprowadzania tekstu.", ["security"]="Izolacja rdzenia, zapora, UAC, lista blokowanych sterowników i ochrona pamięci.", ["gaming"]="Usługi Xbox i Opera GX.", ["ai"]="Przeglądanie Chromium, WebKit i oparte na SI.", ["debloat"]="Polityki prywatności przeglądarek i przełączniki telemetrii dostawców: Chrome, Edge, Firefox i Office.", ["system"]="Sterowniki przez Windows Update, menu Start i poprawki panelu Intel." , ["telemetry"]="Przełączniki telemetrii, sugestii, reklam i zbierania danych przez dostawców.",
 ["app-privacy"]="Uprawnienia aplikacji i ustawienia prywatności.",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_pl = new()
@@ -63,7 +63,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_pl = new()
     {
- ["browsers|gaming"]="Przeglądarka dla graczy", ["tweaking|gaming"]="Usługi gier" , ["troubleshooting|telemetry"]="Poprawki Telemetria"
+ ["browsers|gaming"]="Przeglądarka dla graczy"
     };
     private static readonly Dictionary<string, string> UiExtra_pl = new()
     {

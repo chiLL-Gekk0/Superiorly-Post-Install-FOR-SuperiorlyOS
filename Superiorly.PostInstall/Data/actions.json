@@ -3985,7 +3985,7 @@
                 {
                     "id": "perm-microphone",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4007,7 +4007,7 @@
                 {
                     "id": "perm-camera",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4029,7 +4029,7 @@
                 {
                     "id": "perm-location",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4051,7 +4051,7 @@
                 {
                     "id": "perm-notifications",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4073,7 +4073,7 @@
                 {
                     "id": "perm-messages",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4095,7 +4095,7 @@
                 {
                     "id": "perm-tasks",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4117,7 +4117,7 @@
                 {
                     "id": "perm-email",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4139,7 +4139,7 @@
                 {
                     "id": "perm-call-history",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4161,7 +4161,7 @@
                 {
                     "id": "perm-phone-calls",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4183,7 +4183,7 @@
                 {
                     "id": "perm-calendar",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4205,7 +4205,7 @@
                 {
                     "id": "perm-images",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4227,7 +4227,7 @@
                 {
                     "id": "perm-videos",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4249,7 +4249,7 @@
                 {
                     "id": "perm-contacts",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4271,7 +4271,7 @@
                 {
                     "id": "perm-wireless-connections",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4293,7 +4293,7 @@
                 {
                     "id": "perm-documents",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4315,7 +4315,7 @@
                 {
                     "id": "perm-diagnostics",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4337,7 +4337,7 @@
                 {
                     "id": "perm-user-account",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4359,7 +4359,7 @@
                 {
                     "id": "perm-movements",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4381,7 +4381,7 @@
                 {
                     "id": "perm-eye-tracking",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4403,7 +4403,7 @@
                 {
                     "id": "perm-file-system",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4425,7 +4425,7 @@
                 {
                     "id": "perm-loosely-coupled",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4447,7 +4447,7 @@
                 {
                     "id": "perm-wireless-tech",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4469,7 +4469,7 @@
                 {
                     "id": "perm-voice-activation",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4491,7 +4491,7 @@
                 {
                     "id": "perm-voice-activation-locked",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4513,7 +4513,7 @@
                 {
                     "id": "perm-headset-button",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4541,7 +4541,7 @@
                 {
                     "id": "clipboard-history",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4564,7 +4564,7 @@
                 {
                     "id": "appstarts-tracking",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4586,7 +4586,7 @@
                 {
                     "id": "background-apps",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4617,7 +4617,7 @@
                 {
                     "id": "advertising-id-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4642,7 +4642,7 @@
                 {
                     "id": "typing-info-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4664,7 +4664,7 @@
                 {
                     "id": "app-notifications-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4686,7 +4686,7 @@
                 {
                     "id": "browser-language-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4708,7 +4708,7 @@
                 {
                     "id": "feedback-reminders-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4732,7 +4732,7 @@
                 {
                     "id": "store-recommended-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4760,7 +4760,7 @@
                 {
                     "id": "spotlight-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4784,7 +4784,7 @@
                 {
                     "id": "lockscreen-tips-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4812,7 +4812,7 @@
                 {
                     "id": "copilot-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4834,7 +4834,7 @@
                 {
                     "id": "recall-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4862,7 +4862,7 @@
                 {
                     "id": "finish-setup-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4884,7 +4884,7 @@
                 {
                     "id": "finish-setup-prompt-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4906,7 +4906,7 @@
                 {
                     "id": "timeline-suggestions-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4928,7 +4928,7 @@
                 {
                     "id": "settings-suggestions-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4960,7 +4960,7 @@
                 {
                     "id": "sync-all-settings",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -4982,7 +4982,7 @@
                 {
                     "id": "sync-design-settings",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5004,7 +5004,7 @@
                 {
                     "id": "sync-browser-settings",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5026,7 +5026,7 @@
                 {
                     "id": "sync-credentials-settings",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5048,7 +5048,7 @@
                 {
                     "id": "sync-language-settings",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5070,7 +5070,7 @@
                 {
                     "id": "sync-accessibility-settings",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5092,7 +5092,7 @@
                 {
                     "id": "sync-other-windows-settings",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5120,7 +5120,7 @@
                 {
                     "id": "taskbar-search-box",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5142,7 +5142,7 @@
                 {
                     "id": "taskbar-people-icon",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5164,7 +5164,7 @@
                 {
                     "id": "taskbar-meet-now",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5194,7 +5194,7 @@
                 {
                     "id": "tailored-experiences",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5224,7 +5224,7 @@
                 {
                     "id": "jump-lists-off",
                     "tab": "app-privacy",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5252,7 +5252,7 @@
                 {
                     "id": "lm-password-reveal",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5274,7 +5274,7 @@
                 {
                     "id": "lm-wmdrm-online",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5296,29 +5296,29 @@
                 {
                     "id": "lm-biometrics-off",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
                             "commands": [
-                                "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Microsoft\\Biometrics\" /v Enabled /f ; exit 0"
+                                "reg delete \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Biometrics\" /v Enabled /f ; exit 0"
                             ]
                         },
                         {
                             "label": "disable",
                             "commands": [
-                                "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Microsoft\\Biometrics\" /v Enabled /t REG_DWORD /d \"0\" /f"
+                                "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Biometrics\" /v Enabled /t REG_DWORD /d \"0\" /f"
                             ]
                         }
                     ],
                     "check": [
-                        "!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\Microsoft\\Biometrics\" /v Enabled | findstr \"0x0\""
+                        "!reg query \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Biometrics\" /v Enabled | findstr \"0x0\""
                     ]
                 },
                 {
                     "id": "lm-lockscreen-camera",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5340,7 +5340,7 @@
                 {
                     "id": "lm-consumer-content",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5362,7 +5362,7 @@
                 {
                     "id": "lm-crashdump-limit",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5384,7 +5384,7 @@
                 {
                     "id": "lm-message-sync",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5406,7 +5406,7 @@
                 {
                     "id": "lm-spynet-membership",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5428,7 +5428,7 @@
                 {
                     "id": "lm-defender-samples",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5450,7 +5450,7 @@
                 {
                     "id": "lm-defender-report",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5472,7 +5472,7 @@
                 {
                     "id": "lm-miracast",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5494,7 +5494,7 @@
                 {
                     "id": "lm-wwan",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5516,7 +5516,7 @@
                 {
                     "id": "lm-bluetooth-off",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5538,7 +5538,7 @@
                 {
                     "id": "lm-remote-assist",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5560,7 +5560,7 @@
                 {
                     "id": "lm-remote-desktop",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5582,7 +5582,7 @@
                 {
                     "id": "lm-kms-activation",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5604,7 +5604,7 @@
                 {
                     "id": "lm-nfc",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5626,7 +5626,7 @@
                 {
                     "id": "lm-wifidirect",
                     "tab": "security",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5654,7 +5654,7 @@
                 {
                     "id": "lm-handwriting",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5676,7 +5676,7 @@
                 {
                     "id": "lm-handwriting-reports",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5698,7 +5698,7 @@
                 {
                     "id": "lm-activity-feed",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5720,7 +5720,7 @@
                 {
                     "id": "lm-upload-activities",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5742,7 +5742,7 @@
                 {
                     "id": "lm-bluetooth-ads",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5770,7 +5770,7 @@
                 {
                     "id": "wu-p2p-off",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5796,7 +5796,7 @@
                 {
                     "id": "wu-defer",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5822,7 +5822,7 @@
                 {
                     "id": "wu-optional-updates",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5844,7 +5844,7 @@
                 {
                     "id": "wu-disable-auto",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5874,7 +5874,7 @@
                 {
                     "id": "onedrive-disable",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5896,7 +5896,7 @@
                 {
                     "id": "onedrive-prelogin",
                     "tab": "system",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5924,7 +5924,7 @@
                 {
                     "id": "lm-locate-off",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5948,7 +5948,7 @@
                 {
                     "id": "lm-location-scripting",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5970,7 +5970,7 @@
                 {
                     "id": "lm-sensors-off",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -5992,7 +5992,7 @@
                 {
                     "id": "lm-findmydevice",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6014,7 +6014,7 @@
                 {
                     "id": "lm-geolocation-service",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6044,7 +6044,7 @@
                 {
                     "id": "lm-maps-download",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6066,7 +6066,7 @@
                 {
                     "id": "lm-maps-network",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6088,7 +6088,7 @@
                 {
                     "id": "lm-phone-pc-link",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6110,7 +6110,7 @@
                 {
                     "id": "lm-ncsi",
                     "tab": "devices",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6138,7 +6138,7 @@
                 {
                     "id": "lm-telemetry",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6164,7 +6164,7 @@
                 {
                     "id": "lm-diaglog",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6186,7 +6186,7 @@
                 {
                     "id": "lm-onesettings",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6208,7 +6208,7 @@
                 {
                     "id": "lm-device-name",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6236,7 +6236,7 @@
                 {
                     "id": "lm-online-speech",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6258,7 +6258,7 @@
                 {
                     "id": "lm-speech-models",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6282,7 +6282,7 @@
                 {
                     "id": "lm-cortana-lockscreen",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",
@@ -6304,7 +6304,7 @@
                 {
                     "id": "lm-search-highlights",
                     "tab": "telemetry",
-                    "icon": "",
+                    "icon": "",
                     "options": [
                         {
                             "label": "enable",

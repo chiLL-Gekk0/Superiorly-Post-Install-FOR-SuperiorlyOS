@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ja = new()
     {
- ["mainstream"]="メインストリーム", ["privacy"]="プライバシー", ["forks"]="フォークとカスタム", ["software"]="ソフトウェア", ["store-downloader"]="Microsoft Store ダウンローダー", ["utilities"]="ユーティリティ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="レジストリ調整", ["win32"]="Win32Priority", ["powerplans"]="電源プラン", ["connectivity"]="接続", ["devices"]="デバイス", ["security"]="セキュリティ", ["gaming"]="ゲーム", ["ai"]="人工知能", ["debloat"]="Debloat", ["system"]="システム" , ["telemetry"]="Telemetry",
+ ["mainstream"]="メインストリーム", ["privacy"]="プライバシー", ["forks"]="フォークとカスタム", ["software"]="ソフトウェア", ["store-downloader"]="Microsoft Store ダウンローダー", ["utilities"]="ユーティリティ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="レジストリ調整", ["win32"]="Win32Priority", ["powerplans"]="電源プラン", ["connectivity"]="接続", ["devices"]="デバイス", ["security"]="プライバシ評価: ", ["gaming"]="ゲーム", ["ai"]="人工知能", ["debloat"]="デブロート", ["system"]="システム" , ["telemetry"]="テレメトリ",
 ["app-privacy"]="アプリのプライバシー",
     };
     private static readonly Dictionary<string, string> Notifications_ja = new()
@@ -90,6 +90,6 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ja = new()
     {
- ["browsers|gaming"]="ゲーミングブラウザ", ["tweaking|gaming"]="ゲームサービス" , ["troubleshooting|telemetry"]="テレメトリ修正"
+ ["browsers|gaming"]="ゲーミングブラウザ"
     };
 }

@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_id = new()
     {
- ["mainstream"]="Populer", ["privacy"]="Privasi", ["forks"]="Fork & Kustom", ["software"]="Perangkat Lunak", ["store-downloader"]="Pengunduh Microsoft Store", ["utilities"]="Utilitas", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registri", ["win32"]="Win32Priority", ["powerplans"]="Paket Daya", ["connectivity"]="Konektivitas", ["devices"]="Perangkat", ["security"]="Keamanan", ["gaming"]="Game", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri",
+ ["mainstream"]="Populer", ["privacy"]="Privasi", ["forks"]="Fork & Kustom", ["software"]="Perangkat Lunak", ["store-downloader"]="Pengunduh Microsoft Store", ["utilities"]="Utilitas", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registri", ["win32"]="Win32Priority", ["powerplans"]="Paket Daya", ["connectivity"]="Konektivitas", ["devices"]="Perangkat", ["security"]="Peringkat privasi: ", ["gaming"]="Game", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri",
 ["app-privacy"]="Privasi Aplikasi",
     };
     private static readonly Dictionary<string, string> Notifications_id = new()
@@ -63,7 +63,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_id = new()
     {
- ["browsers|gaming"]="Browser Game", ["tweaking|gaming"]="Layanan Game" , ["troubleshooting|telemetry"]="Perbaikan Telemetri"
+ ["browsers|gaming"]="Browser Game"
     };
     private static readonly Dictionary<string, string> UiExtra_id = new()
     {

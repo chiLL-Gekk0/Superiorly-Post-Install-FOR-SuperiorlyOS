@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_fa = new()
     {
- ["mainstream"]="رایج", ["privacy"]="حریم خصوصی", ["forks"]="فورک‌ها و سفارشی", ["software"]="نرم‌افزار", ["store-downloader"]="دانلودکننده Microsoft Store", ["utilities"]="ابزارهای کمکی", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجیستری", ["win32"]="Win32Priority", ["powerplans"]="طرح‌های انرژی", ["connectivity"]="اتصال‌پذیری", ["devices"]="دستگاه‌ها", ["security"]="امنیت", ["gaming"]="بازی", ["ai"]="هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار", ["system"]="سیستم" , ["telemetry"]="تله‌متری",
+ ["mainstream"]="رایج", ["privacy"]="حریم خصوصی", ["forks"]="فورک‌ها و سفارشی", ["software"]="نرم‌افزار", ["store-downloader"]="دانلودکننده Microsoft Store", ["utilities"]="ابزارهای کمکی", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجیستری", ["win32"]="Win32Priority", ["powerplans"]="طرح‌های انرژی", ["connectivity"]="اتصال‌پذیری", ["devices"]="دستگاه‌ها", ["security"]="امتیاز حریم خصوصی: ", ["gaming"]="بازی", ["ai"]="هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار", ["system"]="سیستم" , ["telemetry"]="تله‌متری",
 ["app-privacy"]="حریم خصوصی برنامه‌ها",
     };
     private static readonly Dictionary<string, string> Notifications_fa = new()
@@ -63,7 +63,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_fa = new()
     {
- ["browsers|gaming"]="مرورگر بازی", ["tweaking|gaming"]="سرویس‌های بازی" , ["troubleshooting|telemetry"]="رفع‌اشکال‌های تله‌متری"
+ ["browsers|gaming"]="مرورگر بازی"
     };
     private static readonly Dictionary<string, string> UiExtra_fa = new()
     {

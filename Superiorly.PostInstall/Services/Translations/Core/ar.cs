@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ar = new()
     {
- ["mainstream"]="شائعة", ["privacy"]="الخصوصية", ["forks"]="التفرعات والمخصصة", ["software"]="البرامج", ["store-downloader"]="أداة تنزيل Microsoft Store", ["utilities"]="الأدوات المساعدة", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="السجل", ["win32"]="Win32Priority", ["powerplans"]="خطط الطاقة", ["connectivity"]="الاتصال", ["devices"]="الأجهزة", ["security"]="الأمان", ["gaming"]="الألعاب", ["ai"]="الذكاء الاصطناعي", ["debloat"]="إزالة الانتفاخ", ["system"]="النظام" , ["telemetry"]="القياس عن بُعد",
+ ["mainstream"]="شائعة", ["privacy"]="الخصوصية", ["forks"]="التفرعات والمخصصة", ["software"]="البرامج", ["store-downloader"]="أداة تنزيل Microsoft Store", ["utilities"]="الأدوات المساعدة", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="السجل", ["win32"]="Win32Priority", ["powerplans"]="خطط الطاقة", ["connectivity"]="الاتصال", ["devices"]="الأجهزة", ["security"]="تقييم الخصوصية: ", ["gaming"]="الألعاب", ["ai"]="الذكاء الاصطناعي", ["debloat"]="إزالة الانتفاخ", ["system"]="النظام" , ["telemetry"]="القياس عن بُعد",
 ["app-privacy"]="خصوصية التطبيقات",
     };
     private static readonly Dictionary<string, string> Notifications_ar = new()
@@ -63,7 +63,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ar = new()
     {
- ["browsers|gaming"]="متصفح الألعاب", ["tweaking|gaming"]="خدمات الألعاب" , ["troubleshooting|telemetry"]="إصلاحات القياس عن بُعد"
+ ["browsers|gaming"]="متصفح الألعاب"
     };
     private static readonly Dictionary<string, string> UiExtra_ar = new()
     {
