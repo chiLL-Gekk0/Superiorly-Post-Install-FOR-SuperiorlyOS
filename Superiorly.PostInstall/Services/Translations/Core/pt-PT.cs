@@ -4,7 +4,7 @@ public static partial class TranslationService
 {
     private static readonly Dictionary<string, string> SectionTitles_ptPT = new()
     {
- ["home"]="Bem-vindo à sua caixa de ferramentas", ["browsers"]="Navegadores", ["tools"]="Ferramentas", ["tweaking"]="Otimização", ["troubleshooting"]="Solução de problemas" 
+ ["home"]="Bem-vindo à sua caixa de ferramentas", ["browsers"]="Utilitários e correções de navegadores", ["tools"]="Baixe e execute utilitários portáteis", ["tweaking"]="Ajustes de drivers, GPU e sistema.", ["troubleshooting"]="Controles rápidos e correções do sistema." 
     };
     private static readonly Dictionary<string, string> SectionDescs_ptPT = new()
     {
@@ -12,12 +12,12 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ptPT = new()
     {
- ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Privacidade", ["forks"]="Derivados e personalizados", ["software"]="Software", ["store-downloader"]="Baixador da Microsoft Store", ["utilities"]="Utilitários", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustes do registo", ["win32"]="Win32Priority", ["powerplans"]="Planos de energia", ["connectivity"]="Conectividade", ["devices"]="Dispositivos", ["security"]="Classificação de privacidade: ", ["gaming"]="Jogos", ["ai"]="Inteligência artificial", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetria",
+ ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Navegação anônima", ["forks"]="Derivados independentes", ["software"]="Software", ["store-downloader"]="Baixador da Microsoft Store", ["utilities"]="Utilitários de sistema", ["amd"]="Ferramentas Radeon", ["nvidia"]="Ferramentas GeForce", ["registry"]="Ajustes do registo", ["win32"]="Win32Priority", ["powerplans"]="Planos de energia", ["connectivity"]="Ajustes sem fio", ["devices"]="Correções de dispositivos", ["security"]="Proteções do sistema", ["gaming"]="Serviços de jogos", ["ai"]="Navegadores com IA", ["debloat"]="Limpeza de navegadores", ["system"]="Correções do Windows" , ["telemetry"]="Correções de telemetria",
             ["app-privacy"]="Privacidade de Apps",
     };
     private static readonly Dictionary<string, string> Notifications_ptPT = new()
     {
- ["opened"]="Aberto - iniciado", ["installed"]="Instalado com sucesso", ["failed"]="Falha na instalação", ["open_failed"]="Não foi possível abrir", ["enabled"]="Ativado", ["disabled"]="Desativado", ["apply_failed"]="Não foi possível aplicar", ["applied"]="Aplicado" , ["telemetry"]="Telemetry"
+ ["opened"]="Aberto - iniciado", ["installed"]="Instalado com sucesso", ["failed"]="Falha", ["open_failed"]="Não foi possível abrir", ["enabled"]="Ativado", ["disabled"]="Desativado", ["apply_failed"]="Não foi possível aplicar", ["applied"]="Aplicado" , ["telemetry"]="Correções de telemetria"
     };
     private static readonly Dictionary<string, string> Ui_ptPT = new()
     {
@@ -45,7 +45,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> OptionLabels_ptPT = new()
     {
- ["run"]="Executar", ["download"]="Baixar", ["apply"]="Aplicar", ["enable"]="Ativar", ["disable"]="Desativar", ["search"]="Procurar", ["install"]="Instalar", ["load list"]="Carregar lista", ["uninstall"]="Desinstalar", ["activate"]="Ativar", ["delete"]="Eliminar", ["import .pow"]="Importar .pow", ["default"]="Padrão", ["custom"]="Personalizado", ["minimum"]="Mínimo", ["disable mmcss"]="Desativar MMCSS", ["bypass"]="Bypass", ["repeater"]="Repetidor", ["realtime"]="Tempo real", ["high"]="Alta", ["abovenormal"]="Acima do normal", ["normal"]="Normal", ["belownormal"]="Abaixo do normal", ["enhanced"]="Aprimorado", ["legacy"]="Legado", ["disabled"]="Desativado", ["enabled"]="Ativado", ["alwayson"]="Sempre ativado", ["alwaysoff"]="Sempre desativado", ["optin"]="Ativação seletiva", ["optout"]="Desativação seletiva", ["open cru"]="Abrir CRU", ["coming soon"]="Em breve", ["safe fivem/minecraft services"]="Serviços seguros FiveM/Minecraft", ["kernelos default"]="Padrão Superiorly" , ["telemetry"]="Telemetry"
+ ["run"]="Executar", ["download"]="Baixar", ["apply"]="Aplicar", ["enable"]="Ativar", ["disable"]="Desativar", ["search"]="Procurar", ["install"]="Instalar", ["load list"]="Carregar lista", ["uninstall"]="Desinstalar", ["activate"]="Ativar", ["delete"]="Eliminar", ["import .pow"]="Importar .pow", ["default"]="Padrão", ["custom"]="Personalizado", ["minimum"]="Mínimo", ["disable mmcss"]="Desativar MMCSS", ["bypass"]="Bypass", ["repeater"]="Repetidor", ["realtime"]="Tempo real", ["high"]="Alta", ["abovenormal"]="Acima do normal", ["normal"]="Normal", ["belownormal"]="Abaixo do normal", ["enhanced"]="Aprimorado", ["legacy"]="Legado", ["disabled"]="Desativado", ["enabled"]="Ativado", ["alwayson"]="Sempre ativado", ["alwaysoff"]="Sempre desativado", ["optin"]="Ativação seletiva", ["optout"]="Desativação seletiva", ["open cru"]="Abrir CRU", ["coming soon"]="Em breve", ["safe fivem/minecraft services"]="Serviços seguros FiveM/Minecraft", ["kernelos default"]="Padrão Superiorly" , ["telemetry"]="Correções de telemetria"
     };
     private static readonly Dictionary<string, string> UiExtra_ptPT = new()
     {
@@ -68,7 +68,7 @@ public static partial class TranslationService
             ["home_discord_desc"]="Comunidade Superiorly",
             ["home_instagram_desc"]="@sebastianportella",
             ["home_github_desc"]="chiLL-Gekk0",
-            ["security"]="Segurança: ", ["power_plan_filter"]="Plano de energia",
+            ["security"]="Proteções do sistema", ["power_plan_filter"]="Plano de energia",
             ["theme_changed"]="Tema alterado para {0}", ["style_changed"]="Estilo alterado para {0}",
             ["powerplan_custom"]="Personalizado", ["powerplan_restore"]="Restaurar oficiais",
             ["update_available"]="Atualização {0} disponível", ["new_update"]="Nova atualização: {0}", ["up_to_date"]="Está atualizado", ["update_check_failed"]="Não foi possível verificar atualizações",
@@ -76,12 +76,12 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabDescs_ptPT = new()
     {
- ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Navegadores focados em privacidade e anonimato.", ["forks"]="Compilações comunitárias baseadas em Chromium e Firefox.", ["utilities"]="Ferramentas de diagnóstico de sistema e hardware.", ["amd"]="Ferramentas GPU AMD para drivers, clock, voltagem e registro.", ["nvidia"]="Ferramentas NVIDIA para instalação limpa, perfis e P-States.", ["connectivity"]="Definições de Wi-Fi, Bluetooth e limite de saltos do hotspot.", ["devices"]="Correções de impressora, Gestor de tarefas e entrada de texto.", ["security"]="Isolamento de núcleo, firewall, UAC, lista de bloqueio de drivers e proteções de memória.", ["gaming"]="Serviços Xbox e Opera GX.", ["ai"]="Navegação Chromium, WebKit e focada em IA.", ["debloat"]="Políticas de privacidade de navegadores e chaves de telemetria de fornecedores: Chrome, Edge, Firefox e Office.", ["system"]="Drivers via Windows Update, menu Iniciar e correções do painel Intel." , ["telemetry"]="Chaves de telemetria, sugestões, anúncios e coleta de dados de fornecedores.",
-            ["app-privacy"]="Permissões de aplicações e opções de privacidade.",
+ ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Navegação anônima", ["forks"]="Derivados independentes", ["utilities"]="Utilitários de sistema", ["amd"]="Ferramentas Radeon", ["nvidia"]="Ferramentas GeForce", ["connectivity"]="Ajustes sem fio", ["devices"]="Correções de dispositivos", ["security"]="Proteções do sistema", ["gaming"]="Serviços de jogos", ["ai"]="Navegadores com IA", ["debloat"]="Limpeza de navegadores", ["system"]="Correções do Windows" , ["telemetry"]="Correções de telemetria",
+            ["app-privacy"]="Privacidade de Apps",
     };
     private static readonly Dictionary<string, string> SectionTabDescs_ptPT = new()
     {
- ["browsers|gaming"]="Opera GX com limitadores integrados de CPU, RAM e rede.", ["tweaking|gaming"]="Serviços Xbox e serviços seguros FiveM/Minecraft." 
+ ["browsers|gaming"]="Navegador gamer", ["tweaking|gaming"]="Serviços Xbox e serviços seguros FiveM/Minecraft." 
     };
     private static readonly Dictionary<string, string> TabBannerTitles_ptPT = new()
     {
