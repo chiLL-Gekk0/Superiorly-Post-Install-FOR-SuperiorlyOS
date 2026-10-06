@@ -8,6 +8,9 @@
     <SolidColorBrush x:Key="B_Surface" Color="#E9E9EF" />
     <SolidColorBrush x:Key="B_Card" Color="#F8F8FB" />
     <SolidColorBrush x:Key="B_CardHover" Color="#FFFFFF" />
+    <!-- nav/tab hover: kept at or below B_AccentSubtle so it never outshines the selected item -->
+    <SolidColorBrush x:Key="B_NavHover" Color="#EFEFF6"/>
+    <SolidColorBrush x:Key="B_NavBorder" Color="#7C7C88"/>
     <SolidColorBrush x:Key="B_CardBorder" Color="#B9B9C4" />
     <!-- checkbox outline needs 3:1 on the card, which B_CardBorder cannot reach -->
     <SolidColorBrush x:Key="B_CheckboxBorder" Color="#8A8A95" />

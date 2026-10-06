@@ -68,7 +68,9 @@
                                             </Grid>
                                             <ControlTemplate.Triggers>
                                                 <Trigger Property="IsMouseOver" Value="True">
-                                                    <Setter TargetName="bg" Property="Background" Value="{DynamicResource B_CardHover}"/>
+                                                    <Setter TargetName="bg" Property="Background" Value="{DynamicResource B_NavHover}"/>
+                                                    <Setter TargetName="accentBar" Property="Opacity" Value="0.65"/>
+                                                    <Setter TargetName="accentBar" Property="Visibility" Value="Visible"/>
                                                     <Setter Property="Foreground" Value="{DynamicResource B_TextPrimary}"/>
                                                 </Trigger>
                                                 <Trigger Property="IsSelected" Value="True">
@@ -211,7 +213,7 @@
                                     </Style.Triggers>
                                 </Style>
                             </Border.Style>
-                            <Viewbox Stretch="Uniform" HorizontalAlignment="Left" MaxHeight="{Binding ViewportHeight, ElementName=CardsScroll, Mode=OneWay, FallbackValue=480}">
+                            <Viewbox Stretch="Uniform" StretchDirection="DownOnly" HorizontalAlignment="Left" MaxHeight="{Binding ViewportHeight, ElementName=CardsScroll, Mode=OneWay, FallbackValue=480}">
                             <StackPanel Margin="16,0,16,8">
                                 <Grid HorizontalAlignment="Stretch" Margin="0">
                                     <Grid.ColumnDefinitions>
@@ -219,7 +221,7 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     <Border Grid.Column="0" VerticalAlignment="Center" Margin="-5,4.5,5,-1">
-                                        <TextBlock Text="WELCOME" FontFamily="/Assets/Fonts/#Climate Crisis 1979" FontSize="60" FontWeight="Black"
+                                        <TextBlock Text="{Binding HeroWelcomeText}" FontFamily="{Binding HeroFont}" FontSize="60" FontWeight="Black"
                                                    Foreground="{DynamicResource B_HomeBandText}" TextAlignment="Center" VerticalAlignment="Center">
                                             <TextBlock.LayoutTransform>
                                                 <RotateTransform Angle="90"/>
@@ -276,8 +278,8 @@
                                         </Border>
                                     </Grid>
                                 </Grid>
-                                <Viewbox Height="64" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,2,0,0">
-                                    <TextBlock Text="T O S U P E R I O R L Y" FontFamily="/Assets/Fonts/#Climate Crisis 1979" FontSize="48" FontWeight="Black" Foreground="{DynamicResource B_HomeBandText}" TextAlignment="Center"/>
+                                <Viewbox Height="{Binding HeroTaglineBoxHeight}" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,2,0,0">
+                                    <TextBlock Text="{Binding HeroTaglineText}" FontFamily="{Binding HeroFont}" FontSize="48" FontWeight="Black" Foreground="{DynamicResource B_HomeBandText}" TextAlignment="Center"/>
                                 </Viewbox>
                             </StackPanel>
                             </Viewbox>

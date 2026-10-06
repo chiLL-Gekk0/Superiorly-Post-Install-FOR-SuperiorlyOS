@@ -1,4 +1,4 @@
-﻿namespace Superiorly.PostInstall.Services;
+namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["no_profiles_found"]="Tidak ada profil ditemukan. Letakkan file .nip di folder Nvidia Profiles.",
             ["home_discord_desc"]="Superiorly Community",
             ["home_instagram_desc"]="@sebastianportella",
-            ["home_github_desc"]="chiLL-Gekk0",
+            ["home_github_desc"]="chiLL-Gekk0", ["welcome"]="SELAMAT DATANG", ["hero_tagline"]="KE SUPERIORLY",
             ["security"]="Keamanan: ", ["power_plan_filter"]="Paket Daya",
             ["theme_changed"]="Tema diubah ke {0}", ["style_changed"]="Gaya diubah ke {0}",
             ["powerplan_custom"]="Kustom", ["powerplan_restore"]="Pulihkan versi resmi",

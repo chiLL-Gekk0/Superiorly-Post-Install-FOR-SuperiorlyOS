@@ -5,5 +5,4 @@
         <converters:InverseBooleanConverter x:Key="InverseBool"/>
         <converters:SecurityColorConverter x:Key="SecurityColor"/>
         <converters:LogoConverter x:Key="LogoConverter"/>
-        <converters:RowWidthConverter x:Key="RowWidth"/>
 </ResourceDictionary>

@@ -1,4 +1,4 @@
-﻿namespace Superiorly.PostInstall.Services;
+namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["confirm_disable"]="Désactiver cette protection ?",
             ["home_discord_desc"]="Superiorly Community",
             ["home_instagram_desc"]="@sebastianportella",
-            ["home_github_desc"]="chiLL-Gekk0",
+            ["home_github_desc"]="chiLL-Gekk0", ["welcome"]="BIENVENUE", ["hero_tagline"]="SUR SUPERIORLY",
             ["security"]="Sécurité : ", ["power_plan_filter"]="Plan d’alimentation",
             ["theme_changed"]="Thème changé en {0}", ["style_changed"]="Style changé en {0}",
             ["powerplan_custom"]="Personnalisé", ["powerplan_restore"]="Restaurer les versions officielles",

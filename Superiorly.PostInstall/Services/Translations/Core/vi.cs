@@ -1,4 +1,4 @@
-﻿namespace Superiorly.PostInstall.Services;
+namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["no_profiles_found"]="Không tìm thấy hồ sơ. Hãy đặt tệp .nip vào thư mục NVIDIA Profiles.",
             ["home_discord_desc"]="Cộng đồng Superiorly",
             ["home_instagram_desc"]="@sebastianportella",
-            ["home_github_desc"]="chiLL-Gekk0",
+            ["home_github_desc"]="chiLL-Gekk0", ["welcome"]="CHÀO MỪNG", ["hero_tagline"]="VỚI SUPERIORLY",
             ["security"]="Bảo mật: ", ["power_plan_filter"]="Gói điện",
             ["theme_changed"]="Đã đổi chủ đề thành {0}", ["style_changed"]="Đã đổi kiểu thành {0}",
             ["powerplan_custom"]="Tùy chỉnh", ["powerplan_restore"]="Khôi phục bản chính thức",

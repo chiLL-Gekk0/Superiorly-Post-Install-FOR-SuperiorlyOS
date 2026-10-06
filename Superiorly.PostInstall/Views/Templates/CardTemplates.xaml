@@ -181,7 +181,7 @@
                                 <DataTemplate x:Key="GroupTemplate" DataType="{x:Type vm:GroupViewModel}">
                                     <Border x:Name="GroupPanel" Background="{DynamicResource B_Card}" BorderThickness="0" CornerRadius="{DynamicResource R_M}" Padding="10" Margin="2,2,2,8" UseLayoutRounding="True" SnapsToDevicePixels="True">
                                         <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
-                                            <Border x:Name="GroupHeader" Grid.Row="0" Background="{DynamicResource B_Accent}" Padding="16,8" CornerRadius="{DynamicResource R_M}" Margin="2,0,0,8" HorizontalAlignment="Left" Width="{Binding ActualWidth, ElementName=MembersList, Converter={StaticResource RowWidth}, ConverterParameter=4}" Visibility="{Binding ShowHeader, Converter={StaticResource BoolToVis}}">
+                                            <Border x:Name="GroupHeader" Grid.Row="0" Background="{DynamicResource B_Accent}" Padding="16,8" CornerRadius="{DynamicResource R_M}" Margin="2,0,2,8" HorizontalAlignment="Stretch" Visibility="{Binding ShowHeader, Converter={StaticResource BoolToVis}}">
                                                 <StackPanel>
                                                     <TextBlock x:Name="GroupTitleText" Text="{Binding Title}" FontSize="15" FontWeight="Bold" Foreground="{DynamicResource B_OnAccent}" TextAlignment="Center"/>
                                                     <TextBlock x:Name="GroupDesc" Text="{Binding Description}" FontSize="11" Foreground="{DynamicResource B_OnAccent}" TextWrapping="Wrap" Margin="0,3,0,0" TextAlignment="Center"/>

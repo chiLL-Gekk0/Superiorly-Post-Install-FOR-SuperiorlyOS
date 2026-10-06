@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["confirm_disable"]="Wyłączyć tę ochronę?",
             ["home_discord_desc"]="Społeczność Superiorly",
             ["home_instagram_desc"]="@sebastianportella",
-            ["home_github_desc"]="chiLL-Gekk0",
+            ["home_github_desc"]="chiLL-Gekk0", ["welcome"]="WITAJ", ["hero_tagline"]="DO SUPERIORLY",
             ["security"]="Zabezpieczenia: ", ["power_plan_filter"]="Plan zasilania",
             ["theme_changed"]="Zmieniono motyw na {0}", ["style_changed"]="Zmieniono styl na {0}",
             ["powerplan_custom"]="Niestandardowy", ["powerplan_restore"]="Przywróć oficjalne",

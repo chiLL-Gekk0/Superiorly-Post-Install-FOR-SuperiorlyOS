@@ -1,4 +1,4 @@
-﻿namespace Superiorly.PostInstall.Services;
+namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["no_profiles_found"]="No profiles found. Place .nip files in the Nvidia Profiles folder.",
             ["home_discord_desc"]="Superiorly Community",
             ["home_instagram_desc"]="@sebastianportella",
-            ["home_github_desc"]="chiLL-Gekk0",
+            ["home_github_desc"]="chiLL-Gekk0", ["welcome"]="WELCOME", ["hero_tagline"]="TO SUPERIORLY",
             ["security"]="Security: ", ["power_plan_filter"]="Power Plan",
             ["theme_changed"]="Theme changed to {0}", ["style_changed"]="Style changed to {0}",
             ["powerplan_custom"]="Custom", ["powerplan_restore"]="Restore official",

@@ -42,9 +42,9 @@
                         <TextBlock Text="{Binding StyleLabel}" FontSize="12" Foreground="{DynamicResource B_TextSecondary}" Margin="0,14,0,6"/>
                         <Grid>
                             <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
-                            <Button Grid.Column="0" Margin="0,0,4,0" Command="{Binding SetCornerStyleCommand}" CommandParameter="win10" Content="{Binding Win10StyleLabel}" ToolTip="{Binding SquareLabel}" Style="{DynamicResource SelectableWin10Button}">
+                            <Button Grid.Column="0" Margin="0,0,4,0" Command="{Binding SetCornerStyleCommand}" CommandParameter="win10" Content="{Binding Win10StyleLabel}" Style="{DynamicResource SelectableWin10Button}">
                             </Button>
-                            <Button Grid.Column="1" Margin="4,0,0,0" Command="{Binding SetCornerStyleCommand}" CommandParameter="win11" Content="{Binding Win11StyleLabel}" ToolTip="{Binding RoundedLabel}" Style="{DynamicResource SelectableWin11Button}">
+                            <Button Grid.Column="1" Margin="4,0,0,0" Command="{Binding SetCornerStyleCommand}" CommandParameter="win11" Content="{Binding Win11StyleLabel}" Style="{DynamicResource SelectableWin11Button}">
                             </Button>
                         </Grid>
                         <TextBlock Text="{Binding ThemeLabel}" FontSize="12" Foreground="{DynamicResource B_TextSecondary}" Margin="0,14,0,6"/>

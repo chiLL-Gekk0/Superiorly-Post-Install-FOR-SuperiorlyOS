@@ -1,4 +1,4 @@
-﻿namespace Superiorly.PostInstall.Services;
+namespace Superiorly.PostInstall.Services;
 
 public static partial class TranslationService
 {
@@ -85,7 +85,7 @@ public static partial class TranslationService
             ["no_profiles_found"]="找不到設定檔。請將 .nip 檔案放入 Nvidia Profiles 資料夾。",
             ["home_discord_desc"]="Superiorly 社群",
             ["home_instagram_desc"]="@sebastianportella",
-            ["home_github_desc"]="chiLL-Gekk0",
+            ["home_github_desc"]="chiLL-Gekk0", ["welcome"]="歡迎使用", ["hero_tagline"]="SUPERIORLY",
             ["security"]="安全性：", ["power_plan_filter"]="電源計畫",
             ["theme_changed"]="主題已變更為 {0}", ["style_changed"]="樣式已變更為 {0}",
             ["powerplan_custom"]="自訂", ["powerplan_restore"]="還原官方",
