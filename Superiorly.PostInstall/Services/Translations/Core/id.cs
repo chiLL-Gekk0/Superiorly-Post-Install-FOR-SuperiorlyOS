@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_id = new()
     {
- ["mainstream"]="Populer", ["privacy"]="Privasi", ["forks"]="Fork & Kustom", ["software"]="Perangkat Lunak", ["store-downloader"]="Pengunduh Microsoft Store", ["utilities"]="Utilitas", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registri", ["win32"]="Win32Priority", ["powerplans"]="Paket Daya", ["connectivity"]="Konektivitas", ["devices"]="Perangkat", ["security"]="Proteksi", ["gaming"]="Game", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri",
+ ["mainstream"]="Populer", ["privacy"]="Privasi", ["forks"]="Fork & Kustom", ["software"]="Perangkat Lunak", ["store-downloader"]="Pengunduh Microsoft Store", ["utilities"]="Utilitas", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registri", ["win32"]="Win32Priority", ["powerplans"]="Paket Daya", ["connectivity"]="Konektivitas", ["devices"]="Perangkat", ["security"]="Keamanan", ["gaming"]="Game", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri",
 ["app-privacy"]="Privasi Aplikasi",
     };
     private static readonly Dictionary<string, string> Notifications_id = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_id = new()
     {
- ["mainstream"]="Browser Sehari-hari", ["privacy"]="Penjelajahan Anonim", ["forks"]="Fork Independen", ["utilities"]="Utilitas Sistem", ["amd"]="Alat Radeon", ["nvidia"]="Alat GeForce", ["connectivity"]="Pengaturan Nirkabel", ["devices"]="Perbaikan Perangkat", ["security"]="Proteksi Sistem", ["gaming"]="Layanan Game", ["ai"]="Browser AI", ["debloat"]="Debloat Browser", ["system"]="Perbaikan Windows" , ["telemetry"]="Perbaikan Telemetri",
+ ["mainstream"]="Browser Sehari-hari", ["privacy"]="Penjelajahan Anonim", ["forks"]="Fork Independen", ["utilities"]="Utilitas Sistem", ["amd"]="Alat Radeon", ["nvidia"]="Alat GeForce", ["connectivity"]="Pengaturan Nirkabel", ["devices"]="Perbaikan Perangkat", ["security"]="Kontrol keamanan", ["gaming"]="Layanan Game", ["ai"]="Browser AI", ["debloat"]="Debloat Browser", ["system"]="Perbaikan Windows" , ["telemetry"]="Perbaikan Telemetri",
 ["app-privacy"]="Privasi Aplikasi",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_id = new()

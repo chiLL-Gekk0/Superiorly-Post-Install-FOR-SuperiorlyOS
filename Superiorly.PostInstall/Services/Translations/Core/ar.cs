@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ar = new()
     {
- ["mainstream"]="شائعة", ["privacy"]="الخصوصية", ["forks"]="التفرعات والمخصصة", ["software"]="البرامج", ["store-downloader"]="أداة تنزيل Microsoft Store", ["utilities"]="الأدوات المساعدة", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="السجل", ["win32"]="Win32Priority", ["powerplans"]="خطط الطاقة", ["connectivity"]="الاتصال", ["devices"]="الأجهزة", ["security"]="الحماية", ["gaming"]="الألعاب", ["ai"]="الذكاء الاصطناعي", ["debloat"]="إزالة الانتفاخ", ["system"]="النظام" , ["telemetry"]="القياس عن بُعد",
+ ["mainstream"]="شائعة", ["privacy"]="الخصوصية", ["forks"]="التفرعات والمخصصة", ["software"]="البرامج", ["store-downloader"]="أداة تنزيل Microsoft Store", ["utilities"]="الأدوات المساعدة", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="السجل", ["win32"]="Win32Priority", ["powerplans"]="خطط الطاقة", ["connectivity"]="الاتصال", ["devices"]="الأجهزة", ["security"]="الأمان", ["gaming"]="الألعاب", ["ai"]="الذكاء الاصطناعي", ["debloat"]="إزالة الانتفاخ", ["system"]="النظام" , ["telemetry"]="القياس عن بُعد",
 ["app-privacy"]="خصوصية التطبيقات",
     };
     private static readonly Dictionary<string, string> Notifications_ar = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_ar = new()
     {
- ["mainstream"]="متصفحات يومية", ["privacy"]="تصفح مجهول", ["forks"]="تفرعات مستقلة", ["utilities"]="أدوات النظام المساعدة", ["amd"]="أدوات Radeon", ["nvidia"]="أدوات GeForce", ["connectivity"]="إعدادات اللاسلكي", ["devices"]="إصلاحات الأجهزة", ["security"]="حماية النظام", ["gaming"]="خدمات الألعاب", ["ai"]="متصفحات الذكاء الاصطناعي", ["debloat"]="تنظيف المتصفح", ["system"]="إصلاحات Windows" , ["telemetry"]="إصلاحات القياس عن بُعد",
+ ["mainstream"]="متصفحات يومية", ["privacy"]="تصفح مجهول", ["forks"]="تفرعات مستقلة", ["utilities"]="أدوات النظام المساعدة", ["amd"]="أدوات Radeon", ["nvidia"]="أدوات GeForce", ["connectivity"]="إعدادات اللاسلكي", ["devices"]="إصلاحات الأجهزة", ["security"]="عناصر التحكم في الأمان", ["gaming"]="خدمات الألعاب", ["ai"]="متصفحات الذكاء الاصطناعي", ["debloat"]="تنظيف المتصفح", ["system"]="إصلاحات Windows" , ["telemetry"]="إصلاحات القياس عن بُعد",
 ["app-privacy"]="خصوصية التطبيقات",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ar = new()

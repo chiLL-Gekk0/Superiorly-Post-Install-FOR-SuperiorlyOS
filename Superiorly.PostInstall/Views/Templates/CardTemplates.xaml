@@ -118,8 +118,12 @@
                                                     </Border>
                                                 </Grid>
 
-                                                <StackPanel Grid.Row="1" Margin="0,0,0,4" HorizontalAlignment="Center">
-                                                    <TextBlock Text="{Binding Title}" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" TextWrapping="Wrap" TextAlignment="Center"/>
+                                                <StackPanel Grid.Row="1" Margin="0,0,0,4" HorizontalAlignment="Center" MaxWidth="276">
+                                                    <Border x:Name="TitleHost" ClipToBounds="True" MaxWidth="276" MouseEnter="TitleHost_MouseEnter" MouseLeave="TitleHost_MouseLeave" Background="Transparent">
+                                        <TextBlock x:Name="TitleText" Text="{Binding Title}" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" TextWrapping="NoWrap" TextAlignment="Center" ToolTip="{Binding Title}">
+                                            <TextBlock.RenderTransform><TranslateTransform x:Name="TitleSlide"/></TextBlock.RenderTransform>
+                                        </TextBlock>
+                                    </Border>
                                                     <TextBlock Text="{Binding Description}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" TextWrapping="Wrap" TextAlignment="Center" Margin="0,1,0,0" MaxWidth="276"/>
                                                 </StackPanel>
 

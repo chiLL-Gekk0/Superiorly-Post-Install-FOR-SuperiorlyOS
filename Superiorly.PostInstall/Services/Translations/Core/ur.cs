@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ur = new()
     {
- ["mainstream"]="عام", ["privacy"]="رازداری", ["forks"]="فورکس اور کسٹم", ["software"]="سافٹ ویئر", ["store-downloader"]="Microsoft Store ڈاؤنلوڈر", ["utilities"]="یوٹیلیٹیز", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجسٹری", ["win32"]="Win32Priority", ["powerplans"]="پاور پلانز", ["connectivity"]="کنیکٹیویٹی", ["devices"]="ڈیوائسز", ["security"]="حفاظت", ["gaming"]="گیمنگ", ["ai"]="مصنوعی ذہانت", ["debloat"]="ڈیبلوٹ", ["system"]="سسٹم" , ["telemetry"]="ٹیلی میٹری",
+ ["mainstream"]="عام", ["privacy"]="رازداری", ["forks"]="فورکس اور کسٹم", ["software"]="سافٹ ویئر", ["store-downloader"]="Microsoft Store ڈاؤنلوڈر", ["utilities"]="یوٹیلیٹیز", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجسٹری", ["win32"]="Win32Priority", ["powerplans"]="پاور پلانز", ["connectivity"]="کنیکٹیویٹی", ["devices"]="ڈیوائسز", ["security"]="سیکیورٹی", ["gaming"]="گیمنگ", ["ai"]="مصنوعی ذہانت", ["debloat"]="ڈیبلوٹ", ["system"]="سسٹم" , ["telemetry"]="ٹیلی میٹری",
 ["app-privacy"]="ایپ پرائیویسی",
     };
     private static readonly Dictionary<string, string> Notifications_ur = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_ur = new()
     {
- ["mainstream"]="روزمرہ کے براؤزرز", ["privacy"]="گمنام براؤزنگ", ["forks"]="آزاد فورکس", ["utilities"]="سسٹم یوٹیلیٹیز", ["amd"]="Radeon ٹولز", ["nvidia"]="GeForce ٹولز", ["connectivity"]="وائرلیس سیٹنگز", ["devices"]="ڈیوائس اصلاحات", ["security"]="سسٹم تحفظات", ["gaming"]="گیم سروسز", ["ai"]="AI براؤزرز", ["debloat"]="براؤزر ڈیبلوٹ", ["system"]="Windows اصلاحات" , ["telemetry"]="ٹیلی میٹری اصلاحات",
+ ["mainstream"]="روزمرہ کے براؤزرز", ["privacy"]="گمنام براؤزنگ", ["forks"]="آزاد فورکس", ["utilities"]="سسٹم یوٹیلیٹیز", ["amd"]="Radeon ٹولز", ["nvidia"]="GeForce ٹولز", ["connectivity"]="وائرلیس سیٹنگز", ["devices"]="ڈیوائس اصلاحات", ["security"]="سیکیورٹی کنٹرولز", ["gaming"]="گیم سروسز", ["ai"]="AI براؤزرز", ["debloat"]="براؤزر ڈیبلوٹ", ["system"]="Windows اصلاحات" , ["telemetry"]="ٹیلی میٹری اصلاحات",
 ["app-privacy"]="ایپ پرائیویسی",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ur = new()

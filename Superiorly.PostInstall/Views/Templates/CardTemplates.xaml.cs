@@ -1,4 +1,5 @@
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -10,6 +11,41 @@ namespace Superiorly.PostInstall.Views.Templates;
 public partial class CardTemplates : ResourceDictionary
 {
     public CardTemplates() => InitializeComponent();
+
+    // A card title that is wider than its box slides sideways while the pointer is over it
+    // and comes back afterwards. The font size is never changed. The animation is built here
+    // and targets the live TranslateTransform instance, so no name resolution across the
+    // DataTemplate namescope is involved.
+    private static TranslateTransform? TitleSlideOf(object? sender)
+        => sender is Border { Child: TextBlock tb } ? tb.RenderTransform as TranslateTransform : null;
+
+    private void TitleHost_MouseEnter(object sender, MouseEventArgs e)
+    {
+        var slide = TitleSlideOf(sender);
+        var host = sender as Border;
+        var tb = host?.Child as TextBlock;
+        if (slide is null || host is null || tb is null) return;
+        tb.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+        var overflow = tb.DesiredSize.Width - host.ActualWidth;
+        if (host.ActualWidth <= 0 || overflow <= 0.5) return;
+
+        var anim = new DoubleAnimation
+        {
+            From = 0,
+            To = -overflow,
+            Duration = TimeSpan.FromSeconds(Math.Clamp(overflow / 55.0, 1.2, 9.0)),
+            AutoReverse = true,
+            RepeatBehavior = RepeatBehavior.Forever
+        };
+        slide.BeginAnimation(TranslateTransform.XProperty, anim);
+    }
+
+    private void TitleHost_MouseLeave(object sender, MouseEventArgs e)
+    {
+        var slide = TitleSlideOf(sender);
+        slide?.BeginAnimation(TranslateTransform.XProperty, null);
+        if (slide is not null) slide.X = 0;
+    }
 
     private void InfoIcon_MouseEnter(object sender, MouseEventArgs e)
     {

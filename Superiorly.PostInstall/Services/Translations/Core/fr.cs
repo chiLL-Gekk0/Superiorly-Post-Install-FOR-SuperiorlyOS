@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_fr = new()
     {
- ["mainstream"]="Populaires", ["privacy"]="Confidentialité", ["forks"]="Forks et personnalisés", ["software"]="Logiciels", ["store-downloader"]="Téléchargeur Microsoft Store", ["utilities"]="Utilitaires", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustements du registre", ["win32"]="Win32Priority", ["powerplans"]="Plans d’alimentation", ["connectivity"]="Connectivité", ["devices"]="Appareils", ["security"]="Protection", ["gaming"]="Jeux", ["ai"]="Intelligence artificielle", ["debloat"]="Debloat", ["system"]="Système" , ["telemetry"]="Télémétrie",
+ ["mainstream"]="Populaires", ["privacy"]="Confidentialité", ["forks"]="Forks et personnalisés", ["software"]="Logiciels", ["store-downloader"]="Téléchargeur Microsoft Store", ["utilities"]="Utilitaires", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustements du registre", ["win32"]="Win32Priority", ["powerplans"]="Plans d’alimentation", ["connectivity"]="Connectivité", ["devices"]="Appareils", ["security"]="Sécurité", ["gaming"]="Jeux", ["ai"]="Intelligence artificielle", ["debloat"]="Debloat", ["system"]="Système" , ["telemetry"]="Télémétrie",
 ["app-privacy"]="Confidentialité des applications",
     };
     private static readonly Dictionary<string, string> Notifications_fr = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_fr = new()
     {
- ["mainstream"]="Navigateurs du quotidien", ["privacy"]="Navigation anonyme", ["forks"]="Forks indépendants", ["utilities"]="Utilitaires système", ["amd"]="Outils Radeon", ["nvidia"]="Outils GeForce", ["connectivity"]="Paramètres sans fil", ["devices"]="Correctifs des appareils", ["security"]="Protections système", ["gaming"]="Services de jeu", ["ai"]="Navigateurs IA", ["debloat"]="Allègement des navigateurs", ["system"]="Correctifs Windows" , ["telemetry"]="Correctifs de télémétrie",
+ ["mainstream"]="Navigateurs du quotidien", ["privacy"]="Navigation anonyme", ["forks"]="Forks indépendants", ["utilities"]="Utilitaires système", ["amd"]="Outils Radeon", ["nvidia"]="Outils GeForce", ["connectivity"]="Paramètres sans fil", ["devices"]="Correctifs des appareils", ["security"]="Contrôles de sécurité", ["gaming"]="Services de jeu", ["ai"]="Navigateurs IA", ["debloat"]="Allègement des navigateurs", ["system"]="Correctifs Windows" , ["telemetry"]="Correctifs de télémétrie",
 ["app-privacy"]="Confidentialité des applications",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_fr = new()

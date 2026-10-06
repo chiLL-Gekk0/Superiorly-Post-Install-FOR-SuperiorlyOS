@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_fa = new()
     {
- ["mainstream"]="رایج", ["privacy"]="حریم خصوصی", ["forks"]="فورک‌ها و سفارشی", ["software"]="نرم‌افزار", ["store-downloader"]="دانلودکننده Microsoft Store", ["utilities"]="ابزارهای کمکی", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجیستری", ["win32"]="Win32Priority", ["powerplans"]="طرح‌های انرژی", ["connectivity"]="اتصال‌پذیری", ["devices"]="دستگاه‌ها", ["security"]="حفاظت", ["gaming"]="بازی", ["ai"]="هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار", ["system"]="سیستم" , ["telemetry"]="تله‌متری",
+ ["mainstream"]="رایج", ["privacy"]="حریم خصوصی", ["forks"]="فورک‌ها و سفارشی", ["software"]="نرم‌افزار", ["store-downloader"]="دانلودکننده Microsoft Store", ["utilities"]="ابزارهای کمکی", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجیستری", ["win32"]="Win32Priority", ["powerplans"]="طرح‌های انرژی", ["connectivity"]="اتصال‌پذیری", ["devices"]="دستگاه‌ها", ["security"]="امنیت", ["gaming"]="بازی", ["ai"]="هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار", ["system"]="سیستم" , ["telemetry"]="تله‌متری",
 ["app-privacy"]="حریم خصوصی برنامه‌ها",
     };
     private static readonly Dictionary<string, string> Notifications_fa = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_fa = new()
     {
- ["mainstream"]="مرورگرهای روزمره", ["privacy"]="مرور ناشناس", ["forks"]="فورک‌های مستقل", ["utilities"]="ابزارهای سیستمی", ["amd"]="ابزارهای Radeon", ["nvidia"]="ابزارهای GeForce", ["connectivity"]="تنظیمات بی‌سیم", ["devices"]="رفع‌اشکال دستگاه‌ها", ["security"]="محافظت‌های سیستم", ["gaming"]="سرویس‌های بازی", ["ai"]="مرورگرهای هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار مرورگر", ["system"]="رفع‌اشکال‌های Windows" , ["telemetry"]="رفع‌اشکال‌های تله‌متری",
+ ["mainstream"]="مرورگرهای روزمره", ["privacy"]="مرور ناشناس", ["forks"]="فورک‌های مستقل", ["utilities"]="ابزارهای سیستمی", ["amd"]="ابزارهای Radeon", ["nvidia"]="ابزارهای GeForce", ["connectivity"]="تنظیمات بی‌سیم", ["devices"]="رفع‌اشکال دستگاه‌ها", ["security"]="کنترل‌های امنیتی", ["gaming"]="سرویس‌های بازی", ["ai"]="مرورگرهای هوش مصنوعی", ["debloat"]="حذف نفخ‌افزار مرورگر", ["system"]="رفع‌اشکال‌های Windows" , ["telemetry"]="رفع‌اشکال‌های تله‌متری",
 ["app-privacy"]="حریم خصوصی برنامه‌ها",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_fa = new()

@@ -192,29 +192,6 @@ public partial class CardViewModel : ObservableObject {
                     handled = true;
                     try
                     {
-                        if (c.Contains("AMD Tweaks", StringComparison.OrdinalIgnoreCase))
-                        {
-                            var baseDir = AppContext.BaseDirectory;
-                            bool amdFound = false;
-                            if (c.Contains("RadeonSoftwareSlimmer", StringComparison.OrdinalIgnoreCase)) amdFound = File.Exists(Path.Combine(baseDir, "AMD Tweaks", "RadeonSoftwareSlimmer", "RadeonSoftwareSlimmer.exe"));
-                            else if (c.Contains("MoreClockTool", StringComparison.OrdinalIgnoreCase)) amdFound = File.Exists(Path.Combine(baseDir, "AMD Tweaks", "MoreClockTool.exe"));
-                            else if (c.Contains("MorePowerTool", StringComparison.OrdinalIgnoreCase)) amdFound = File.Exists(Path.Combine(baseDir, "AMD Tweaks", "MorePowerTool.exe"));
-                            else if (c.Contains("RadeonMod", StringComparison.OrdinalIgnoreCase)) amdFound = File.Exists(Path.Combine(baseDir, "AMD Tweaks", "RadeonMod.exe"));
-                            else amdFound = Directory.Exists(Path.Combine(baseDir, "AMD Tweaks"));
-                            var hasOr = c.Contains("-or", StringComparison.OrdinalIgnoreCase);
-                            if (hasOr)
-                            {
-                                var matches = System.Text.RegularExpressions.Regex.Matches(c, @"Test-Path\s+""([^""]+)""");
-                                foreach (System.Text.RegularExpressions.Match mm in matches)
-                                {
-                                    var p2 = ExpandOsPaths(mm.Groups[1].Value);
-                                    p2 = p2.Replace("$env:LOCALAPPDATA", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)).Replace("$env:TEMP", Path.GetTempPath().TrimEnd('\\', '/')).Replace("$env:ProgramFiles", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
-                                    if (File.Exists(p2) || Directory.Exists(p2)) { amdFound = true; break; }
-                                }
-                            }
-                            if (amdFound) { result = true; break; }
-                            continue;
-                        }
                         var mcol = System.Text.RegularExpressions.Regex.Matches(c, @"Test-Path\s+""([^""]+)""", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
                         if (mcol.Count > 0)
                         {

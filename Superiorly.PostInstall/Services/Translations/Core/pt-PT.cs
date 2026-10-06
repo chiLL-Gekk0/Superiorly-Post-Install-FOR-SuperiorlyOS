@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ptPT = new()
     {
- ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Navegação anônima", ["forks"]="Derivados independentes", ["software"]="Software", ["store-downloader"]="Baixador da Microsoft Store", ["utilities"]="Utilitários de sistema", ["amd"]="Ferramentas Radeon", ["nvidia"]="Ferramentas GeForce", ["registry"]="Ajustes do registo", ["win32"]="Win32Priority", ["powerplans"]="Planos de energia", ["connectivity"]="Ajustes sem fio", ["devices"]="Correções de dispositivos", ["security"]="Proteção", ["gaming"]="Serviços de jogos", ["ai"]="Navegadores com IA", ["debloat"]="Limpeza de navegadores", ["system"]="Correções do Windows" , ["telemetry"]="Correções de telemetria",
+ ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Navegação anônima", ["forks"]="Derivados independentes", ["software"]="Software", ["store-downloader"]="Baixador da Microsoft Store", ["utilities"]="Utilitários de sistema", ["amd"]="Ferramentas Radeon", ["nvidia"]="Ferramentas GeForce", ["registry"]="Ajustes do registo", ["win32"]="Win32Priority", ["powerplans"]="Planos de energia", ["connectivity"]="Ajustes sem fio", ["devices"]="Correções de dispositivos", ["security"]="Segurança", ["gaming"]="Serviços de jogos", ["ai"]="Navegadores com IA", ["debloat"]="Limpeza de navegadores", ["system"]="Correções do Windows" , ["telemetry"]="Correções de telemetria",
             ["app-privacy"]="Privacidade de Apps",
     };
     private static readonly Dictionary<string, string> Notifications_ptPT = new()
@@ -85,7 +85,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_ptPT = new()
     {
- ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Navegação anônima", ["forks"]="Derivados independentes", ["utilities"]="Utilitários de sistema", ["amd"]="Ferramentas Radeon", ["nvidia"]="Ferramentas GeForce", ["connectivity"]="Ajustes sem fio", ["devices"]="Correções de dispositivos", ["security"]="Proteções do sistema", ["gaming"]="Serviços de jogos", ["ai"]="Navegadores com IA", ["debloat"]="Limpeza de navegadores", ["system"]="Correções do Windows" , ["telemetry"]="Correções de telemetria",
+ ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Navegação anônima", ["forks"]="Derivados independentes", ["utilities"]="Utilitários de sistema", ["amd"]="Ferramentas Radeon", ["nvidia"]="Ferramentas GeForce", ["connectivity"]="Ajustes sem fio", ["devices"]="Correções de dispositivos", ["security"]="Controlos de segurança", ["gaming"]="Serviços de jogos", ["ai"]="Navegadores com IA", ["debloat"]="Limpeza de navegadores", ["system"]="Correções do Windows" , ["telemetry"]="Correções de telemetria",
             ["app-privacy"]="Privacidade de Apps",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ptPT = new()

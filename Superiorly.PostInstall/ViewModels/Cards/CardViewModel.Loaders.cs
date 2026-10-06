@@ -120,34 +120,6 @@ public partial class CardViewModel : ObservableObject {
         SelectedOption = Options.FirstOrDefault();
     }
 
-    private void LoadCruTools()
-    {
-        var cruDir = Path.Combine(AppContext.BaseDirectory, "Tools", "cru");
-        string? foundDir = Directory.Exists(cruDir) ? cruDir : null;
-        string? cruExe = foundDir != null ? Directory.GetFiles(foundDir, "CRU.exe", SearchOption.AllDirectories).FirstOrDefault() : null;
-        string? restartExe = foundDir != null ? Directory.GetFiles(foundDir, "restart64.exe", SearchOption.AllDirectories).FirstOrDefault() : null;
-        string? resetExe = foundDir != null ? Directory.GetFiles(foundDir, "reset-all.exe", SearchOption.AllDirectories).FirstOrDefault() : null;
-
-        Options.Clear();
-
-        if (cruExe != null)
-        {
-            Options.Add(new OptionViewModel(this, new ActionOption { Label = "Open CRU", Commands = new List<string> { $"Start-Process '{cruExe}'" } }));
-            if (restartExe != null)
-                Options.Add(new OptionViewModel(this, new ActionOption { Label = "Restart Display Driver", Commands = new List<string> { $"Start-Process '{restartExe}' -ArgumentList '/q'" } }));
-            if (resetExe != null)
-                Options.Add(new OptionViewModel(this, new ActionOption { Label = "Reset All", Commands = new List<string> { $"Start-Process '{resetExe}' -ArgumentList '/q'" } }));
-        }
-
-        if (Options.Count == 0)
-        {
-            var dlCmd = "powershell -NoProfile -ExecutionPolicy Bypass -Command Add-Type -AssemblyName System.Windows.Forms -EA 0; [System.Windows.Forms.MessageBox]::Show('CRU not found locally. Place CRU.exe, restart64.exe and reset-all.exe in a CRU folder, then retry.','CRU',0,64); exit 1";
-            Options.Add(new OptionViewModel(this, new ActionOption { Label = "Download CRU", Commands = new List<string> { dlCmd } }));
-        }
-
-        SelectedOption = Options.FirstOrDefault();
-    }
-
     private void OpenQuantumMap()
     {
         _owner.ShowQuantumMap(Win32PreviewHex, hex =>

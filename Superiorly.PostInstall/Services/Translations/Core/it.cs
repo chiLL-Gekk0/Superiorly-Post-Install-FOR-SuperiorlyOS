@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_it = new()
     {
- ["mainstream"]="Principali", ["privacy"]="Privacy", ["forks"]="Fork e personalizzati", ["software"]="Software", ["store-downloader"]="Downloader Microsoft Store", ["utilities"]="Utilità", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registro", ["win32"]="Win32Priority", ["powerplans"]="Piani di alimentazione", ["connectivity"]="Connettività", ["devices"]="Dispositivi", ["security"]="Protezione", ["gaming"]="Giochi", ["ai"]="IA", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetria",
+ ["mainstream"]="Principali", ["privacy"]="Privacy", ["forks"]="Fork e personalizzati", ["software"]="Software", ["store-downloader"]="Downloader Microsoft Store", ["utilities"]="Utilità", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registro", ["win32"]="Win32Priority", ["powerplans"]="Piani di alimentazione", ["connectivity"]="Connettività", ["devices"]="Dispositivi", ["security"]="Sicurezza", ["gaming"]="Giochi", ["ai"]="IA", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetria",
 ["app-privacy"]="Privacy delle app",
     };
     private static readonly Dictionary<string, string> Notifications_it = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_it = new()
     {
- ["mainstream"]="Browser quotidiani", ["privacy"]="Navigazione anonima", ["forks"]="Fork indipendenti", ["utilities"]="Utilità di sistema", ["amd"]="Strumenti Radeon", ["nvidia"]="Strumenti GeForce", ["connectivity"]="Impostazioni wireless", ["devices"]="Correzioni dispositivi", ["security"]="Protezioni di sistema", ["gaming"]="Servizi di gioco", ["ai"]="Browser IA", ["debloat"]="Debloat browser", ["system"]="Correzioni Windows" , ["telemetry"]="Correzioni telemetria",
+ ["mainstream"]="Browser quotidiani", ["privacy"]="Navigazione anonima", ["forks"]="Fork indipendenti", ["utilities"]="Utilità di sistema", ["amd"]="Strumenti Radeon", ["nvidia"]="Strumenti GeForce", ["connectivity"]="Impostazioni wireless", ["devices"]="Correzioni dispositivi", ["security"]="Controlli di sicurezza", ["gaming"]="Servizi di gioco", ["ai"]="Browser IA", ["debloat"]="Debloat browser", ["system"]="Correzioni Windows" , ["telemetry"]="Correzioni telemetria",
 ["app-privacy"]="Privacy delle app",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_it = new()

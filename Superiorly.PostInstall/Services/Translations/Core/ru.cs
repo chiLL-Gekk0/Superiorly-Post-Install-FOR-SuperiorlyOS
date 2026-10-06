@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ru = new()
     {
- ["mainstream"]="Основное", ["privacy"]="Конфиденциальность", ["forks"]="Форки и кастомизация", ["software"]="Программы", ["store-downloader"]="Загрузчик Microsoft Store", ["utilities"]="Утилиты", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Настройки реестра", ["win32"]="Win32Priority", ["powerplans"]="Схемы питания", ["connectivity"]="Подключение", ["devices"]="Устройства", ["security"]="Защита", ["gaming"]="Игры", ["ai"]="ИИ", ["debloat"]="Деблоат", ["system"]="Система" , ["telemetry"]="Телеметрия",
+ ["mainstream"]="Основное", ["privacy"]="Конфиденциальность", ["forks"]="Форки и кастомизация", ["software"]="Программы", ["store-downloader"]="Загрузчик Microsoft Store", ["utilities"]="Утилиты", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Настройки реестра", ["win32"]="Win32Priority", ["powerplans"]="Схемы питания", ["connectivity"]="Подключение", ["devices"]="Устройства", ["security"]="Безопасность", ["gaming"]="Игры", ["ai"]="ИИ", ["debloat"]="Деблоат", ["system"]="Система" , ["telemetry"]="Телеметрия",
 ["app-privacy"]="Конфиденциальность приложений",
     };
     private static readonly Dictionary<string, string> Notifications_ru = new()
@@ -85,7 +85,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_ru = new()
     {
- ["mainstream"]="Браузеры на каждый день", ["privacy"]="Анонимный просмотр", ["forks"]="Независимые форки", ["utilities"]="Системные утилиты", ["amd"]="Инструменты Radeon", ["nvidia"]="Инструменты GeForce", ["connectivity"]="Беспроводные настройки", ["devices"]="Исправления устройств", ["security"]="Защита системы", ["gaming"]="Игровые службы", ["ai"]="ИИ-браузеры", ["debloat"]="Деблоат браузеров", ["system"]="Исправления Windows" , ["telemetry"]="Исправления телеметрии",
+ ["mainstream"]="Браузеры на каждый день", ["privacy"]="Анонимный просмотр", ["forks"]="Независимые форки", ["utilities"]="Системные утилиты", ["amd"]="Инструменты Radeon", ["nvidia"]="Инструменты GeForce", ["connectivity"]="Беспроводные настройки", ["devices"]="Исправления устройств", ["security"]="Средства защиты", ["gaming"]="Игровые службы", ["ai"]="ИИ-браузеры", ["debloat"]="Деблоат браузеров", ["system"]="Исправления Windows" , ["telemetry"]="Исправления телеметрии",
 ["app-privacy"]="Конфиденциальность приложений",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_ru = new()

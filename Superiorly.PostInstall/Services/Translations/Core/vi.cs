@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_vi = new()
     {
- ["mainstream"]="Phổ thông", ["privacy"]="Riêng tư", ["forks"]="Bản phân nhánh & tùy chỉnh", ["software"]="Phần mềm", ["store-downloader"]="Trình tải Microsoft Store", ["utilities"]="Tiện ích", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Sổ đăng ký", ["win32"]="Win32Priority", ["powerplans"]="Gói điện", ["connectivity"]="Kết nối", ["devices"]="Thiết bị", ["security"]="Bảo vệ", ["gaming"]="Chơi game", ["ai"]="AI", ["debloat"]="Gỡ bloat", ["system"]="Hệ thống" , ["telemetry"]="Dữ liệu chẩn đoán",
+ ["mainstream"]="Phổ thông", ["privacy"]="Riêng tư", ["forks"]="Bản phân nhánh & tùy chỉnh", ["software"]="Phần mềm", ["store-downloader"]="Trình tải Microsoft Store", ["utilities"]="Tiện ích", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Sổ đăng ký", ["win32"]="Win32Priority", ["powerplans"]="Gói điện", ["connectivity"]="Kết nối", ["devices"]="Thiết bị", ["security"]="Bảo mật", ["gaming"]="Chơi game", ["ai"]="AI", ["debloat"]="Gỡ bloat", ["system"]="Hệ thống" , ["telemetry"]="Dữ liệu chẩn đoán",
 ["app-privacy"]="Quyền riêng tư ứng dụng",
     };
     private static readonly Dictionary<string, string> Notifications_vi = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_vi = new()
     {
- ["mainstream"]="Trình duyệt hằng ngày", ["privacy"]="Duyệt web ẩn danh", ["forks"]="Bản phân nhánh độc lập", ["utilities"]="Tiện ích hệ thống", ["amd"]="Công cụ Radeon", ["nvidia"]="Công cụ GeForce", ["connectivity"]="Cài đặt không dây", ["devices"]="Sửa lỗi thiết bị", ["security"]="Bảo vệ hệ thống", ["gaming"]="Dịch vụ trò chơi", ["ai"]="Trình duyệt AI", ["debloat"]="Gỡ bloat trình duyệt", ["system"]="Sửa lỗi Windows" , ["telemetry"]="Sửa lỗi dữ liệu chẩn đoán",
+ ["mainstream"]="Trình duyệt hằng ngày", ["privacy"]="Duyệt web ẩn danh", ["forks"]="Bản phân nhánh độc lập", ["utilities"]="Tiện ích hệ thống", ["amd"]="Công cụ Radeon", ["nvidia"]="Công cụ GeForce", ["connectivity"]="Cài đặt không dây", ["devices"]="Sửa lỗi thiết bị", ["security"]="Kiểm soát bảo mật", ["gaming"]="Dịch vụ trò chơi", ["ai"]="Trình duyệt AI", ["debloat"]="Gỡ bloat trình duyệt", ["system"]="Sửa lỗi Windows" , ["telemetry"]="Sửa lỗi dữ liệu chẩn đoán",
 ["app-privacy"]="Quyền riêng tư ứng dụng",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_vi = new()

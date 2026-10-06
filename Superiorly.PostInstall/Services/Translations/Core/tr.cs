@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_tr = new()
     {
- ["mainstream"]="Popüler", ["privacy"]="Gizlilik", ["forks"]="Çatal ve Özel", ["software"]="Yazılım", ["store-downloader"]="Microsoft Store İndiricisi", ["utilities"]="Yardımcı Programlar", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Kayıt Defteri İnce Ayarları", ["win32"]="Win32Priority", ["powerplans"]="Güç Planları", ["connectivity"]="Bağlantı", ["devices"]="Cihazlar", ["security"]="Koruma", ["gaming"]="Oyun", ["ai"]="Yapay Zeka", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri",
+ ["mainstream"]="Popüler", ["privacy"]="Gizlilik", ["forks"]="Çatal ve Özel", ["software"]="Yazılım", ["store-downloader"]="Microsoft Store İndiricisi", ["utilities"]="Yardımcı Programlar", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Kayıt Defteri İnce Ayarları", ["win32"]="Win32Priority", ["powerplans"]="Güç Planları", ["connectivity"]="Bağlantı", ["devices"]="Cihazlar", ["security"]="Güvenlik", ["gaming"]="Oyun", ["ai"]="Yapay Zeka", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri",
 ["app-privacy"]="Uygulama Gizliliği",
     };
     private static readonly Dictionary<string, string> Notifications_tr = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_tr = new()
     {
- ["mainstream"]="Günlük Tarayıcılar", ["privacy"]="Anonim Göz Atma", ["forks"]="Bağımsız Çatallar", ["utilities"]="Sistem Yardımcı Programları", ["amd"]="Radeon Araçları", ["nvidia"]="GeForce Araçları", ["connectivity"]="Kablosuz Ayarları", ["devices"]="Cihaz Düzeltmeleri", ["security"]="Sistem Korumaları", ["gaming"]="Oyun Hizmetleri", ["ai"]="YZ Tarayıcıları", ["debloat"]="Tarayıcı Temizleme", ["system"]="Windows Düzeltmeleri" , ["telemetry"]="Telemetri Düzeltmeleri",
+ ["mainstream"]="Günlük Tarayıcılar", ["privacy"]="Anonim Göz Atma", ["forks"]="Bağımsız Çatallar", ["utilities"]="Sistem Yardımcı Programları", ["amd"]="Radeon Araçları", ["nvidia"]="GeForce Araçları", ["connectivity"]="Kablosuz Ayarları", ["devices"]="Cihaz Düzeltmeleri", ["security"]="Güvenlik denetimleri", ["gaming"]="Oyun Hizmetleri", ["ai"]="YZ Tarayıcıları", ["debloat"]="Tarayıcı Temizleme", ["system"]="Windows Düzeltmeleri" , ["telemetry"]="Telemetri Düzeltmeleri",
 ["app-privacy"]="Uygulama Gizliliği",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_tr = new()

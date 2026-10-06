@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_en = new()
     {
- ["mainstream"]="Mainstream", ["privacy"]="Privacy", ["forks"]="Forks & Custom", ["software"]="Software", ["store-downloader"]="Microsoft Store Downloader", ["utilities"]="Utilities", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry", ["win32"]="Win32Priority", ["powerplans"]="Power Plans", ["connectivity"]="Connectivity", ["devices"]="Devices", ["security"]="Protection", ["gaming"]="Gaming", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry",
+ ["mainstream"]="Mainstream", ["privacy"]="Privacy", ["forks"]="Forks & Custom", ["software"]="Software", ["store-downloader"]="Microsoft Store Downloader", ["utilities"]="Utilities", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Registry", ["win32"]="Win32Priority", ["powerplans"]="Power Plans", ["connectivity"]="Connectivity", ["devices"]="Devices", ["security"]="Security", ["gaming"]="Gaming", ["ai"]="AI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetry",
 ["app-privacy"]="App Privacy Fixes",
     };
     private static readonly Dictionary<string, string> Notifications_en = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_en = new()
     {
- ["mainstream"]="Everyday Browsers", ["privacy"]="Anonymous Browsing", ["forks"]="Independent Forks", ["utilities"]="System Utilities", ["amd"]="Radeon Tools", ["nvidia"]="GeForce Tools", ["connectivity"]="Wireless Settings", ["devices"]="Device Fixes", ["security"]="System Protections", ["gaming"]="Game Services", ["ai"]="AI Browsers", ["debloat"]="Browser Debloat", ["system"]="Windows Fixes" , ["telemetry"]="Telemetry Fixes",
+ ["mainstream"]="Everyday Browsers", ["privacy"]="Anonymous Browsing", ["forks"]="Independent Forks", ["utilities"]="System Utilities", ["amd"]="Radeon Tools", ["nvidia"]="GeForce Tools", ["connectivity"]="Wireless Settings", ["devices"]="Device Fixes", ["security"]="Security Controls", ["gaming"]="Game Services", ["ai"]="AI Browsers", ["debloat"]="Browser Debloat", ["system"]="Windows Fixes" , ["telemetry"]="Telemetry Fixes",
 ["app-privacy"]="App Privacy Fixes",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_en = new()

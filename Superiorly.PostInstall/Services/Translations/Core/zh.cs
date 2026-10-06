@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_zh = new()
     {
- ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32Priority", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="防护", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="精简", ["system"]="系统" , ["telemetry"]="遥测",
+ ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32Priority", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="安全", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="精简", ["system"]="系统" , ["telemetry"]="遥测",
 ["app-privacy"]="应用隐私修复",
     };
     private static readonly Dictionary<string, string> Notifications_zh = new()
@@ -85,7 +85,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_zh = new()
     {
- ["mainstream"]="日常浏览器", ["privacy"]="匿名浏览", ["forks"]="独立分支", ["utilities"]="系统实用工具", ["amd"]="Radeon 工具", ["nvidia"]="GeForce 工具", ["connectivity"]="无线设置", ["devices"]="设备修复", ["security"]="系统保护", ["gaming"]="游戏服务", ["ai"]="AI 浏览器", ["debloat"]="浏览器精简", ["system"]="Windows 修复" , ["telemetry"]="遥测修复",
+ ["mainstream"]="日常浏览器", ["privacy"]="匿名浏览", ["forks"]="独立分支", ["utilities"]="系统实用工具", ["amd"]="Radeon 工具", ["nvidia"]="GeForce 工具", ["connectivity"]="无线设置", ["devices"]="设备修复", ["security"]="安全控制", ["gaming"]="游戏服务", ["ai"]="AI 浏览器", ["debloat"]="浏览器精简", ["system"]="Windows 修复" , ["telemetry"]="遥测修复",
 ["app-privacy"]="应用隐私修复",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_zh = new()

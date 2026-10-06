@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_th = new()
     {
- ["mainstream"]="ทั่วไป", ["privacy"]="ความเป็นส่วนตัว", ["forks"]="ฟอร์กและกำหนดเอง", ["software"]="ซอฟต์แวร์", ["store-downloader"]="ตัวดาวน์โหลด Microsoft Store", ["utilities"]="ยูทิลิตี้", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="รีจิสทรี", ["win32"]="Win32Priority", ["powerplans"]="แผนพลังงาน", ["connectivity"]="การเชื่อมต่อ", ["devices"]="อุปกรณ์", ["security"]="การป้องกัน", ["gaming"]="เกม", ["ai"]="AI", ["debloat"]="ดีโบลต", ["system"]="ระบบ" , ["telemetry"]="เทเลเมทรี",
+ ["mainstream"]="ทั่วไป", ["privacy"]="ความเป็นส่วนตัว", ["forks"]="ฟอร์กและกำหนดเอง", ["software"]="ซอฟต์แวร์", ["store-downloader"]="ตัวดาวน์โหลด Microsoft Store", ["utilities"]="ยูทิลิตี้", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="รีจิสทรี", ["win32"]="Win32Priority", ["powerplans"]="แผนพลังงาน", ["connectivity"]="การเชื่อมต่อ", ["devices"]="อุปกรณ์", ["security"]="ความปลอดภัย", ["gaming"]="เกม", ["ai"]="AI", ["debloat"]="ดีโบลต", ["system"]="ระบบ" , ["telemetry"]="เทเลเมทรี",
 ["app-privacy"]="ความเป็นส่วนตัวของแอป",
     };
     private static readonly Dictionary<string, string> Notifications_th = new()
@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_th = new()
     {
- ["mainstream"]="เบราว์เซอร์ประจำวัน", ["privacy"]="ท่องเว็บแบบไม่เปิดเผยตัวตน", ["forks"]="ฟอร์กอิสระ", ["utilities"]="ยูทิลิตี้ระบบ", ["amd"]="เครื่องมือ Radeon", ["nvidia"]="เครื่องมือ GeForce", ["connectivity"]="การตั้งค่าไร้สาย", ["devices"]="การแก้ไขอุปกรณ์", ["security"]="การป้องกันระบบ", ["gaming"]="บริการเกม", ["ai"]="เบราว์เซอร์ AI", ["debloat"]="ดีโบลตเบราว์เซอร์", ["system"]="การแก้ไข Windows" , ["telemetry"]="การแก้ไขเทเลเมทรี",
+ ["mainstream"]="เบราว์เซอร์ประจำวัน", ["privacy"]="ท่องเว็บแบบไม่เปิดเผยตัวตน", ["forks"]="ฟอร์กอิสระ", ["utilities"]="ยูทิลิตี้ระบบ", ["amd"]="เครื่องมือ Radeon", ["nvidia"]="เครื่องมือ GeForce", ["connectivity"]="การตั้งค่าไร้สาย", ["devices"]="การแก้ไขอุปกรณ์", ["security"]="การควบคุมความปลอดภัย", ["gaming"]="บริการเกม", ["ai"]="เบราว์เซอร์ AI", ["debloat"]="ดีโบลตเบราว์เซอร์", ["system"]="การแก้ไข Windows" , ["telemetry"]="การแก้ไขเทเลเมทรี",
 ["app-privacy"]="ความเป็นส่วนตัวของแอป",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_th = new()

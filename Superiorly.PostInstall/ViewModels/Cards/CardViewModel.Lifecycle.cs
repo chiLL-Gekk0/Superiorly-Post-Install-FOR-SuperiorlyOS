@@ -99,8 +99,6 @@ public partial class CardViewModel : ObservableObject {
         if (_action.Id == "apply-nip") { LoadNipProfiles(); _ = EnsureNipsAsync(); }
         if (_action.Id is "radeonsoftwareslimmer" or "moreclocktool" or "morepowertool" or "radeonmod")
             LoadAmdTool();
-        if (_action.Id == "cru")
-            LoadCruTools();
         if (_action.Id == "powerplan-manager")
         {
             // paint from warmed cache, refresh in background

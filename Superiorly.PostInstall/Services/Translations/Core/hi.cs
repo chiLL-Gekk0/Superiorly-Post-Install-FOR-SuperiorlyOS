@@ -58,7 +58,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabBannerTitles_hi = new()
     {
- ["mainstream"]="रोज़मर्रा के ब्राउज़र", ["privacy"]="गुमनाम ब्राउज़िंग", ["forks"]="स्वतंत्र फोर्क", ["utilities"]="सिस्टम उपयोगिताएँ", ["amd"]="Radeon उपकरण", ["nvidia"]="GeForce उपकरण", ["connectivity"]="वायरलेस सेटिंग्स", ["devices"]="डिवाइस सुधार", ["security"]="सिस्टम सुरक्षा", ["gaming"]="गेम सेवाएँ", ["ai"]="AI ब्राउज़र", ["debloat"]="ब्राउज़र डीब्लोट", ["system"]="Windows सुधार" , ["telemetry"]="टेलीमेट्री सुधार",
+ ["mainstream"]="रोज़मर्रा के ब्राउज़र", ["privacy"]="गुमनाम ब्राउज़िंग", ["forks"]="स्वतंत्र फोर्क", ["utilities"]="सिस्टम उपयोगिताएँ", ["amd"]="Radeon उपकरण", ["nvidia"]="GeForce उपकरण", ["connectivity"]="वायरलेस सेटिंग्स", ["devices"]="डिवाइस सुधार", ["security"]="सुरक्षा नियंत्रण", ["gaming"]="गेम सेवाएँ", ["ai"]="AI ब्राउज़र", ["debloat"]="ब्राउज़र डीब्लोट", ["system"]="Windows सुधार" , ["telemetry"]="टेलीमेट्री सुधार",
 ["app-privacy"]="ऐप गोपनीयता",
     };
     private static readonly Dictionary<string, string> SectionTabTitles_hi = new()
