@@ -42,6 +42,15 @@ Name: "{autodesktop}\Superiorly Post-Install"; Filename: "{app}\Superiorly Post-
 [InstallDelete]
 Type: files; Name: "{app}\Superiorly.PostInstall.exe"
 Type: files; Name: "{app}\Superiorly.PostInstall.dll"
+; folders older builds shipped next to the exe. Deleting them on install, not only on
+; uninstall, matters because the catalog loader prefers a loose Data\actions.json over the
+; embedded copy, so a stale one would keep driving the app after an in-place upgrade.
+; Specific paths only, never an {app}\* wildcard. The per-user tool store is left alone.
+Type: filesandordirs; Name: "{app}\Nvidia Profiles"
+Type: filesandordirs; Name: "{app}\AMD Tweaks"
+Type: filesandordirs; Name: "{app}\Tools"
+Type: filesandordirs; Name: "{app}\DDU"
+Type: filesandordirs; Name: "{app}\Data"
 
 [Run]
 Filename: "{app}\Superiorly Post-Install.exe"; Description: "Launch Superiorly Post-Install"; Flags: nowait postinstall

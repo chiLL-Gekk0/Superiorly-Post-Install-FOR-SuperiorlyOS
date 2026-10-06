@@ -13,6 +13,8 @@ namespace Superiorly.PostInstall.ViewModels;
 
 public partial class MainViewModel : ObservableObject {
 
+    public const string HeroBrandSpaced = "S U P E R I O R L Y";
+
     // Verified against the cmap of Assets/Fonts/ClimateCrisis-1979.otf:
     // ru, uk, vi, ar, fa, ur, hi, th, bn, zh, zht, ja and ko have glyphs
     // missing from that font (Cyrillic, Arabic, CJK, Thai, Devanagari, Bengali
@@ -42,7 +44,12 @@ public partial class MainViewModel : ObservableObject {
         QuantumSubtitle = TranslationService.GetUi("quantum_subtitle", lang);
 
         HeroWelcomeText = TranslationService.GetUi("welcome", lang);
-        HeroTaglineText = TranslationService.GetUi("hero_tagline", lang);
+        // The bundled display font has no thin space, so the brand keeps the wide
+        // wordmark look by carrying spaces between its letters. Replacing the brand
+        // itself, not the last word, keeps this correct for the languages that put
+        // the preposition after it.
+        HeroTaglineText = TranslationService.GetUi("hero_tagline", lang)
+            .Replace("SUPERIORLY", HeroBrandSpaced);
         HeroFont = HeroDisplayFontLocales.Contains(lang) ? "/Assets/Fonts/#Climate Crisis 1979" : "";
         HeroTaglineBoxHeight = HeroFont.Length > 0 ? 64 : 92;
         ThemeToggleTip = TranslationService.GetUi("toggle_theme", lang);
