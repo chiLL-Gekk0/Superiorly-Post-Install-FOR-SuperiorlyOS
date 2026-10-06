@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ur = new()
     {
- ["mainstream"]="عام", ["privacy"]="رازداری", ["forks"]="فورکس اور کسٹم", ["software"]="سافٹ ویئر", ["store-downloader"]="Microsoft Store ڈاؤنلوڈر", ["utilities"]="یوٹیلیٹیز", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجسٹری", ["win32"]="Win32Priority", ["powerplans"]="پاور پلانز", ["connectivity"]="کنیکٹیویٹی", ["devices"]="ڈیوائسز", ["security"]="رازداری درجہ: ", ["gaming"]="گیمنگ", ["ai"]="مصنوعی ذہانت", ["debloat"]="ڈیبلوٹ", ["system"]="سسٹم" , ["telemetry"]="ٹیلی میٹری",
+ ["mainstream"]="عام", ["privacy"]="رازداری", ["forks"]="فورکس اور کسٹم", ["software"]="سافٹ ویئر", ["store-downloader"]="Microsoft Store ڈاؤنلوڈر", ["utilities"]="یوٹیلیٹیز", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="رجسٹری", ["win32"]="Win32Priority", ["powerplans"]="پاور پلانز", ["connectivity"]="کنیکٹیویٹی", ["devices"]="ڈیوائسز", ["security"]="حفاظت", ["gaming"]="گیمنگ", ["ai"]="مصنوعی ذہانت", ["debloat"]="ڈیبلوٹ", ["system"]="سسٹم" , ["telemetry"]="ٹیلی میٹری",
 ["app-privacy"]="ایپ پرائیویسی",
     };
     private static readonly Dictionary<string, string> Notifications_ur = new()

@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_zh = new()
     {
- ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32Priority", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="隐私评级：", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="精简", ["system"]="系统" , ["telemetry"]="遥测",
+ ["mainstream"]="主流", ["privacy"]="隐私", ["forks"]="分支和自定义", ["software"]="软件", ["store-downloader"]="Microsoft Store 下载器", ["utilities"]="实用工具", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="注册表调整", ["win32"]="Win32Priority", ["powerplans"]="电源计划", ["connectivity"]="网络连接", ["devices"]="设备", ["security"]="防护", ["gaming"]="游戏", ["ai"]="人工智能", ["debloat"]="精简", ["system"]="系统" , ["telemetry"]="遥测",
 ["app-privacy"]="应用隐私修复",
     };
     private static readonly Dictionary<string, string> Notifications_zh = new()

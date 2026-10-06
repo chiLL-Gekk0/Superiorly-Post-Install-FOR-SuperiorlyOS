@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_hi = new()
     {
- ["mainstream"]="मुख्यधारा", ["privacy"]="गोपनीयता", ["forks"]="फोर्क और कस्टम", ["software"]="सॉफ़्टवेयर", ["store-downloader"]="Microsoft Store डाउनलोडर", ["utilities"]="उपयोगिताएँ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="रजिस्ट्री", ["win32"]="Win32Priority", ["powerplans"]="पावर प्लान", ["connectivity"]="कनेक्टिविटी", ["devices"]="डिवाइस", ["security"]="गोपनीयता रेटिंग: ", ["gaming"]="गेमिंग", ["ai"]="AI", ["debloat"]="डीब्लोट", ["system"]="सिस्टम" , ["telemetry"]="टेलीमेट्री",
+ ["mainstream"]="मुख्यधारा", ["privacy"]="गोपनीयता", ["forks"]="फोर्क और कस्टम", ["software"]="सॉफ़्टवेयर", ["store-downloader"]="Microsoft Store डाउनलोडर", ["utilities"]="उपयोगिताएँ", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="रजिस्ट्री", ["win32"]="Win32Priority", ["powerplans"]="पावर प्लान", ["connectivity"]="कनेक्टिविटी", ["devices"]="डिवाइस", ["security"]="सुरक्षा", ["gaming"]="गेमिंग", ["ai"]="AI", ["debloat"]="डीब्लोट", ["system"]="सिस्टम" , ["telemetry"]="टेलीमेट्री",
 ["app-privacy"]="ऐप गोपनीयता",
     };
     private static readonly Dictionary<string, string> Notifications_hi = new()

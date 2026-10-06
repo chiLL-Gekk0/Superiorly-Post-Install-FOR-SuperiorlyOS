@@ -99,15 +99,7 @@ public partial class CardViewModel : ObservableObject {
     {
         var output = _powerPlanOutputCache ?? await Task.Run(() => CapturePowerShell("powercfg /list"));
         _powerPlanOutputCache = output;
-        var missingOfficial = OfficialPlanGuids.Where(g => !output.Contains(g, StringComparison.OrdinalIgnoreCase)).ToList();
-        var missingCustom = CustomPlanGuids.Where(g => !output.Contains(g, StringComparison.OrdinalIgnoreCase)).ToList();
-        var allMissing = missingOfficial.Concat(missingCustom).ToList();
-        if (allMissing.Count > 0)
-        {
-            foreach (var guid in allMissing)
-                await RunPowerShellElevatedAsync($"powercfg -duplicatescheme {guid} {guid}");
-            output = await Task.Run(() => CapturePowerShell("powercfg /list"));
-        }
+        // list only: opening this card must not create power schemes on the machine
         return ParsePlanOutput(output);
     }
 

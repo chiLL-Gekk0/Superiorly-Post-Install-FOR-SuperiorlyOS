@@ -213,7 +213,7 @@
                                     </Style.Triggers>
                                 </Style>
                             </Border.Style>
-                            <Viewbox Stretch="Uniform" StretchDirection="DownOnly" HorizontalAlignment="Left" MaxHeight="{Binding ViewportHeight, ElementName=CardsScroll, Mode=OneWay, FallbackValue=480}">
+                            <Viewbox Stretch="Uniform" HorizontalAlignment="Left" MaxHeight="{Binding ViewportHeight, ElementName=CardsScroll, Mode=OneWay, FallbackValue=480}">
                             <StackPanel Margin="16,0,16,8">
                                 <Grid HorizontalAlignment="Stretch" Margin="0">
                                     <Grid.ColumnDefinitions>

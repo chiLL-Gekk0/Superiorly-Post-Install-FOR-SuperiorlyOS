@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_tr = new()
     {
- ["mainstream"]="Popüler", ["privacy"]="Gizlilik", ["forks"]="Çatal ve Özel", ["software"]="Yazılım", ["store-downloader"]="Microsoft Store İndiricisi", ["utilities"]="Yardımcı Programlar", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Kayıt Defteri İnce Ayarları", ["win32"]="Win32Priority", ["powerplans"]="Güç Planları", ["connectivity"]="Bağlantı", ["devices"]="Cihazlar", ["security"]="Gizlilik puani: ", ["gaming"]="Oyun", ["ai"]="Yapay Zeka", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri",
+ ["mainstream"]="Popüler", ["privacy"]="Gizlilik", ["forks"]="Çatal ve Özel", ["software"]="Yazılım", ["store-downloader"]="Microsoft Store İndiricisi", ["utilities"]="Yardımcı Programlar", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Kayıt Defteri İnce Ayarları", ["win32"]="Win32Priority", ["powerplans"]="Güç Planları", ["connectivity"]="Bağlantı", ["devices"]="Cihazlar", ["security"]="Koruma", ["gaming"]="Oyun", ["ai"]="Yapay Zeka", ["debloat"]="Debloat", ["system"]="Sistem" , ["telemetry"]="Telemetri",
 ["app-privacy"]="Uygulama Gizliliği",
     };
     private static readonly Dictionary<string, string> Notifications_tr = new()

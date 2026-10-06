@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_bn = new()
     {
- ["mainstream"]="মূলধারা", ["privacy"]="গোপনীয়তা", ["forks"]="ফোর্ক ও কাস্টম", ["software"]="সফটওয়্যার", ["store-downloader"]="Microsoft Store ডাউনলোডার", ["utilities"]="ইউটিলিটি", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="রেজিস্ট্রি", ["win32"]="Win32Priority", ["powerplans"]="পাওয়ার প্ল্যান", ["connectivity"]="সংযোগ", ["devices"]="ডিভাইস", ["security"]="গোপনীয়তা রেটিং: ", ["gaming"]="গেমিং", ["ai"]="এআই", ["debloat"]="ডিব্লোট", ["system"]="সিস্টেম" , ["telemetry"]="টেলিমেট্রি",
+ ["mainstream"]="মূলধারা", ["privacy"]="গোপনীয়তা", ["forks"]="ফোর্ক ও কাস্টম", ["software"]="সফটওয়্যার", ["store-downloader"]="Microsoft Store ডাউনলোডার", ["utilities"]="ইউটিলিটি", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="রেজিস্ট্রি", ["win32"]="Win32Priority", ["powerplans"]="পাওয়ার প্ল্যান", ["connectivity"]="সংযোগ", ["devices"]="ডিভাইস", ["security"]="সুরক্ষা", ["gaming"]="গেমিং", ["ai"]="এআই", ["debloat"]="ডিব্লোট", ["system"]="সিস্টেম" , ["telemetry"]="টেলিমেট্রি",
 ["app-privacy"]="অ্যাপ গোপনীয়তা",
     };
     private static readonly Dictionary<string, string> Notifications_bn = new()

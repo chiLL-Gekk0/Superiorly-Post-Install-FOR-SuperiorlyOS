@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -43,10 +43,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Data\actions.json" LogicalName="Superiorly.PostInstall.data.actions.json" Condition="'$(Configuration)'!='Release'" />
+    <EmbeddedResource Include="Data\actions.json" LogicalName="Superiorly.PostInstall.data.actions.json" />
     <EmbeddedResource Include="Data\tooltips.json" LogicalName="Superiorly.PostInstall.data.tooltips.json" />
-    <Content Include="Data\actions.json" CopyToOutputDirectory="PreserveNewest" Link="Data\actions.json" />
-    <Content Include="Data\tooltips.json" CopyToOutputDirectory="PreserveNewest" Link="Data\tooltips.json" />
     <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF.nip" />
     <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF-V2.nip" />
     <EmbeddedResource Include="Assets\Bundle\NIP\EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" LogicalName="EXPERIMENTAL-LLM-ON-RENDERS-DEF-PREFETCH+RTCORE-V2.nip" />

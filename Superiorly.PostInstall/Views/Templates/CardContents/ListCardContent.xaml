@@ -60,7 +60,8 @@
                                                         <ColumnDefinition Width="12"/>
                                                         <ColumnDefinition Width="*"/>
                                                     </Grid.ColumnDefinitions>
-                                                    <Border Grid.Column="0" Grid.Row="0" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" VerticalAlignment="Top"
+                                                    <StackPanel Grid.Column="0">
+                                                    <Border Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" VerticalAlignment="Top"
                                                             BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="8" MaxHeight="300">
                                                         <StackPanel>
                                                             <TextBlock Text="Microsoft" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource B_TextPrimary}" Margin="4,0,0,6"/>
@@ -95,7 +96,7 @@
                                                             </ListBox>
                                                         </StackPanel>
                                                     </Border>
-                                                    <Border Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,8,0,0"
+                                                    <Border HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,8,0,0"
                                                             Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" BorderThickness="1"
                                                             CornerRadius="{DynamicResource R_S}" Padding="8"
                                                             Visibility="{Binding IsPowerPlanCard, Converter={StaticResource BoolToVis}}">
@@ -110,6 +111,7 @@
                                                             <TextBlock Text="{Binding CpuIdleCard.Description}" FontSize="11" Foreground="{DynamicResource B_TextSecondary}" TextWrapping="Wrap" Margin="0,4,0,0"/>
                                                         </StackPanel>
                                                     </Border>
+                                                    </StackPanel>
                                                     <Border Grid.Column="2" Grid.Row="0" Background="{DynamicResource B_Card}" BorderBrush="{DynamicResource B_CardBorder}" VerticalAlignment="Top"
                                                             BorderThickness="1" CornerRadius="{DynamicResource R_S}" Padding="8" MaxHeight="300">
                                                         <StackPanel>

@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_fr = new()
     {
- ["mainstream"]="Populaires", ["privacy"]="Confidentialité", ["forks"]="Forks et personnalisés", ["software"]="Logiciels", ["store-downloader"]="Téléchargeur Microsoft Store", ["utilities"]="Utilitaires", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustements du registre", ["win32"]="Win32Priority", ["powerplans"]="Plans d’alimentation", ["connectivity"]="Connectivité", ["devices"]="Appareils", ["security"]="Note de confidentialité : ", ["gaming"]="Jeux", ["ai"]="Intelligence artificielle", ["debloat"]="Debloat", ["system"]="Système" , ["telemetry"]="Télémétrie",
+ ["mainstream"]="Populaires", ["privacy"]="Confidentialité", ["forks"]="Forks et personnalisés", ["software"]="Logiciels", ["store-downloader"]="Téléchargeur Microsoft Store", ["utilities"]="Utilitaires", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustements du registre", ["win32"]="Win32Priority", ["powerplans"]="Plans d’alimentation", ["connectivity"]="Connectivité", ["devices"]="Appareils", ["security"]="Protection", ["gaming"]="Jeux", ["ai"]="Intelligence artificielle", ["debloat"]="Debloat", ["system"]="Système" , ["telemetry"]="Télémétrie",
 ["app-privacy"]="Confidentialité des applications",
     };
     private static readonly Dictionary<string, string> Notifications_fr = new()

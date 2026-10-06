@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_pl = new()
     {
- ["mainstream"]="Popularne", ["privacy"]="Prywatność", ["forks"]="Forki i niestandardowe", ["software"]="Oprogramowanie", ["store-downloader"]="Program pobierający Microsoft Store", ["utilities"]="Narzędzia", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Poprawki rejestru", ["win32"]="Win32Priority", ["powerplans"]="Plany zasilania", ["connectivity"]="Łączność", ["devices"]="Urządzenia", ["security"]="Ocena prywatności: ", ["gaming"]="Gry", ["ai"]="SI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetria",
+ ["mainstream"]="Popularne", ["privacy"]="Prywatność", ["forks"]="Forki i niestandardowe", ["software"]="Oprogramowanie", ["store-downloader"]="Program pobierający Microsoft Store", ["utilities"]="Narzędzia", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Poprawki rejestru", ["win32"]="Win32Priority", ["powerplans"]="Plany zasilania", ["connectivity"]="Łączność", ["devices"]="Urządzenia", ["security"]="Ochrona", ["gaming"]="Gry", ["ai"]="SI", ["debloat"]="Debloat", ["system"]="System" , ["telemetry"]="Telemetria",
 ["app-privacy"]="Prywatność aplikacji",
     };
     private static readonly Dictionary<string, string> Notifications_pl = new()

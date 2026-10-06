@@ -12,7 +12,7 @@ public static partial class TranslationService
     };
     private static readonly Dictionary<string, string> TabTitles_ptBR = new()
     {
- ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Privacidade", ["forks"]="Derivados e personalizados", ["software"]="Software", ["store-downloader"]="Baixador da Microsoft Store", ["utilities"]="Utilitários", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustes do registro", ["win32"]="Win32Priority", ["powerplans"]="Planos de energia", ["connectivity"]="Conectividade", ["devices"]="Dispositivos", ["security"]="Classificação de privacidade: ", ["gaming"]="Jogos", ["ai"]="Inteligência artificial", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetria",
+ ["mainstream"]="Navegadores do dia a dia", ["privacy"]="Privacidade", ["forks"]="Derivados e personalizados", ["software"]="Software", ["store-downloader"]="Baixador da Microsoft Store", ["utilities"]="Utilitários", ["amd"]="AMD", ["nvidia"]="NVIDIA", ["registry"]="Ajustes do registro", ["win32"]="Win32Priority", ["powerplans"]="Planos de energia", ["connectivity"]="Conectividade", ["devices"]="Dispositivos", ["security"]="Proteção", ["gaming"]="Jogos", ["ai"]="Inteligência artificial", ["debloat"]="Debloat", ["system"]="Sistema" , ["telemetry"]="Telemetria",
             ["app-privacy"]="Privacidade de Apps",
     };
     private static readonly Dictionary<string, string> Notifications_ptBR = new()
